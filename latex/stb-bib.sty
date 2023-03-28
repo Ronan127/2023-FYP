@@ -1,0 +1,36 @@
+\NeedsTeXFormat{LaTeX2e}[1999/12/01]
+\ProvidesPackage{stb-bib}[2023/01/16 1.0 (DNJ Els)]
+\RequirePackageWithOptions{natbib}
+
+\@ifundefined{AorE}{%
+    \edef\AFRstr{\string afrikaans}%
+    \DeclareRobustCommand{\AorE}[2]{%
+        \ifx\AFRstr\languagename #1\else #2\fi}}{}
+
+\newcommand*\InBibliographyTemp{thebibliography}%
+\newcommand*\InBibliography{%
+    \ifx\InBibliographyTemp\@currenvir\relax
+        \expandafter\@firstoftwo
+    \else
+        \expandafter\@secondoftwo
+    \fi}
+
+\newcommand\BIBand{\AorE{en}{and}}
+
+\@namedef{bibstyle@stb-bib-eng-a}{%
+    \bibpunct{(}{)}{;}{a}{,}{,}%
+    \gdef\BIBand{\InBibliography%
+        {\AorE{en}{and}}%
+        {\AorE{en}{and}}}}
+
+\@namedef{bibstyle@stb-bib-eng-n}{%
+    \bibpunct{[}{]}{;}{n}{,}{,}%
+    \gdef\BIBand{\InBibliography%
+        {\AorE{en}{and}}%
+        {\AorE{en}{and}}}}
+
+\newcommand{\citenamefont}[1]{#1}
+\newcommand{\bibnamefont}[1]{#1}
+\newcommand{\bibfnamefont}[1]{#1}
+
+\endinput

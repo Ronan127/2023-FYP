@@ -1,0 +1,60 @@
+\chapter{Planning Details}
+
+This appendix contains an approximate budget and Gantt chart for the planned activities.
+
+\newlength\colB \setlength\colB{1.5em}
+\newlength\colC \setlength\colC{3em}
+\newlength\combinedlength 
+\setlength\combinedlength{\dimexpr\colB+\colC+1\tabcolsep+0\arrayrulewidth\relax}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+
+\hyphenation{Literature}
+
+
+\begin{table}[h!]
+	\centering
+	\footnotesize
+	\caption{Estimated cost per activity}
+	\begin{tabular}{|p{6em}|R{\colB}|R{\colC}|R{3.5em}|R{3em}|R{3em}|R{2em}|R{2em}|R{3em}|R{3em}|} 
+		\hline
+		Activity & 
+		\multicolumn{2}{p{\combinedlength}|}{Engineering time} &
+		\multicolumn{1}{p{3.5em}|}{Running costs} &
+		\multicolumn{1}{p{3em}|}{Facility use} &
+		\multicolumn{1}{p{3em}|}{Capital costs} &
+		\multicolumn{2}{c|}{MMW Labour} &
+		\multicolumn{1}{p{3em}|}{MMW Material} &
+		\multicolumn{1}{p{3em}|}{TOTAL}\\ 
+		\hline
+		&hr & R & R & R & R & hr & R & R & R\\
+		\hline
+		Review Literature &25&11250&500&&&&&&11750\\
+		\hline
+		2D Simulation&25&11250&100&150&&&&&11500\\
+		\hline
+		Create Model&50&22500&200&&&&&&22700\\
+		\hline
+		Compile Design Requirements&25&11250&&&&&&&11250\\
+		\hline
+		Design Platform&100&45000&500&500&&&&&46000\\
+		\hline
+		Simulate Platform&75&33750&300&1000&&&&&35050\\
+		\hline
+		Produce Prototype&100&45000&3000&2000&3500&50&15000&1500&70000\\
+		\hline
+		Validate Model&25&11250&500&300&&&&&12050\\
+		\hline
+		Finalise Report&100&45000&100&&&&&&45100\\
+		\hline
+		Total&525&236250&5200&3950&3500&100&30000&1500&265400\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\noindent This budget is based on a standard rate of R450/h.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.6\textwidth,angle=90]{Gantt-short}
+	\caption{Gantt Chart}
+\end{figure}

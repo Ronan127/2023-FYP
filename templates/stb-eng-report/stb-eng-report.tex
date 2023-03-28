@@ -1,0 +1,118 @@
+\documentclass[12pt,a4paper,openany]{book} 
+\usepackage[typeblock=golden]{stb-titlepage}        
+
+%==== Language setup =================================================
+\usepackage[utf8]{inputenc}%...................... Unicode file format
+
+%==== Math setup =====================================================
+\usepackage{amsmath}%............................. Advanced math (before fonts)
+%\usepackage{amssymb}%............................ AMS Symbol fonts
+
+%==== Font setup (default is Computer Modern) ========================
+\usepackage[T1]{fontenc}%......................... Type 1 outline fonts 
+\usepackage[bitstream-charter]{mathdesign}%....... Roman+math - Charter
+\usepackage{roboto}%.............................. Sans serif - Roboto
+\usepackage{textcomp}%............................ Additional text character
+\usepackage{bm}%.................................. Bold math symbols (after fonts)
+
+%==== Units and numbers ==============================================
+\usepackage{siunitx}%............................. Unit, number and angle output
+    \sisetup{detect-all = true, detect-family = true}
+    \sisetup{output-decimal-marker = {.} ,
+             group-separator = {\,},
+             number-unit-product = {\,},
+             inter-unit-product = {{\cdot}},
+             exponent-product = {{\times}},
+             separate-uncertainty = true}
+         
+%==== Ref's, Bib's and Nomencl =======================================
+\usepackage{stb-nomencl}%......................... List of symbols 
+    \renewcommand*{\UnitLabel}[1]{~[\,\unit{#1}\,]}
+\usepackage{stb-bib}%............................. Bibliography (natbib internally)
+    \bibliographystyle{stb-bib-eng-a}
+    \renewcommand\bibfont{\small}
+
+%==== Tables + Graphics + Color =====================================
+\usepackage{array}%............................... Extended table defs 
+    \setlength{\extrarowheight}{2pt}
+\usepackage{longtable}%........................... Tables can break over pages
+\usepackage{graphicx}%............................ Included graphics
+\usepackage[font=small]{caption}%................. Customize captions  
+\usepackage[table]{xcolor}%....................... Color setup + colortbl 
+    
+%==== Extra defs for template ========================================
+\makeatletter
+%---- TOC entries and case
+    \renewcommand\contentsname{Table of contents}
+    \renewcommand\listfigurename{List of figures}
+    \renewcommand\listtablename{List of tables}
+    \renewcommand\bibname{List of references}
+    \renewcommand\tableofcontents{\chapter{\contentsname}\@starttoc{toc}}
+    \renewcommand\listoffigures{\chapter{\listfigurename}\@starttoc{lof}}
+    \renewcommand\listoftables{\chapter{\listtablename}\@starttoc{lot}}
+    \renewcommand\bibsection{\chapter{\bibname}}
+
+%---- Plagiarism signatures
+    \newcommand\tstrut[1][4ex]{\rule{0pt}{#1}}
+    \newcommand\tdots[1][5cm]{\makebox[#1]{\dotfill}}
+
+%---- Summary head line
+    \newcommand\sumheading{%
+        \rowcolor[gray]{.9}%
+        \centering\arraybackslash%
+        \bfseries\large}
+
+%==== User Defs ======================================================
+%
+% Please insert user defined commands here
+% and NOT in the document itself!
+%
+%
+\makeatother
+
+%==== Title Page =====================================================
+\title{\textbf{Title}\\[2ex]
+       \large Mechatronic Project 478\\Final Report\\[2ex]}                   
+\author{\Large Author: John Doe\\ 
+        \large 12345678 \\[5ex]
+        \Large Supervisor: Dr. DNJ Els}                
+\address{Department of Mechanical and Mechatronic Engineering\\
+        Stellenbosch University \\
+        Private Bag X1, Matieland 7602, South Africa.}
+\date{2023/01/05}                             
+
+%==== Main Document ==================================================
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{2}
+\raggedbottom
+\begin{document}   
+
+\frontmatter%---------------------------------------------------------                    
+\maketitle 
+
+\include{chaps-front/chap-plagiarism}
+\include{chaps-front/chap-summary}
+\include{chaps-front/chap-acknowledge}
+\tableofcontents
+\listoffigures
+\listoftables
+\include{chaps-front/chap-symbols}
+
+\mainmatter%----------------------------------------------------------
+\numberwithin{figure}{chapter}
+\numberwithin{table}{chapter}
+
+\include{chaps-main/chap-intro}
+\include{chaps-main/chap-literature}
+\include{chaps-main/chap-content-A}
+\include{chaps-main/chap-conclusion}
+
+\appendix%------------------------------------------------------------
+\include{chaps-append/chap-maths}
+\include{chaps-append/chap-experiment}
+
+\backmatter%----------------------------------------------------------
+\bibliography{bib/bib-sample}
+ 
+\end{document}   
+

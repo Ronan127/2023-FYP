@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: stb-eng-report.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+The style file: stb-bib-eng-a.bst
+Reallocating 'name_of_file' (item size: 1) to 32 items.
+A level-1 auxiliary file: chaps-front/chap-plagiarism.aux
+Reallocating 'name_of_file' (item size: 1) to 29 items.
+A level-1 auxiliary file: chaps-front/chap-summary.aux
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+A level-1 auxiliary file: chaps-main/chap-intro.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+Database file #1: bib/bib-sample.bib
+Warning--entry type for "Wilson-2013" isn't style-file defined
+--line 2 of file bib/bib-sample.bib
+Warning--entry type for "Haskel-2017" isn't style-file defined
+--line 11 of file bib/bib-sample.bib
+Warning--entry type for "Buchanan-2018" isn't style-file defined
+--line 20 of file bib/bib-sample.bib
+Warning--entry type for "Powrie-2019" isn't style-file defined
+--line 29 of file bib/bib-sample.bib
+Warning--entry type for "patent" isn't style-file defined
+--line 38 of file bib/bib-sample.bib
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+You've used 5 entries,
+            3324 wiz_defined-function locations,
+            680 strings with 5603 characters,
+and the built_in function-call counts, 2545 in all, are:
+= -- 201
+> -- 58
+< -- 5
++ -- 25
+- -- 18
+* -- 199
+:= -- 380
+add.period$ -- 10
+call.type$ -- 5
+change.case$ -- 31
+chr.to.int$ -- 5
+cite$ -- 5
+duplicate$ -- 233
+empty$ -- 230
+format.name$ -- 39
+if$ -- 487
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 26
+newline$ -- 42
+num.names$ -- 20
+pop$ -- 74
+preamble$ -- 1
+purify$ -- 26
+quote$ -- 0
+skip$ -- 80
+stack$ -- 0
+substring$ -- 121
+swap$ -- 80
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 45
+warning$ -- 0
+while$ -- 26
+width$ -- 0
+write$ -- 71
+(There were 5 warnings)
