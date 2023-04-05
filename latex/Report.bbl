@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{5}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -30,6 +30,16 @@
 \bibitem[{\citenamefont{Powrie}(2019)}]{Powrie-2019}
 \bibnamefont{Powrie}, \bibfnamefont{R.} (2019).
 \newblock Di-wheel robot.
+
+\bibitem[{\citenamefont{Smith} \emph{\bbletal{}}(2015)\citenamefont{Smith},
+  \citenamefont{Quinn}, \citenamefont{Johnson} \protect\BIBand{}
+  \citenamefont{Tuck}}]{Smith-2015}
+\bibnamefont{Smith}, \bibfnamefont{L.M.}, \bibnamefont{Quinn},
+  \bibfnamefont{R.D.}, \bibnamefont{Johnson}, \bibfnamefont{K.A.}
+  \protect\BIBand{} \bibnamefont{Tuck}, \bibfnamefont{W.R.} (2015).
+\newblock The tri-wheel: A novel wheel-leg mobility concept.
+\newblock \capitalize\bblin{}: \emph{2015 IEEE/RSJ International Conference on
+  Intelligent Robots and Systems (IROS)}, \bblpp{} 4146--4152.
 
 \bibitem[{\citenamefont{Wilson}(2013)}]{Wilson-2013}
 \bibnamefont{Wilson}, \bibfnamefont{M.} (2013).

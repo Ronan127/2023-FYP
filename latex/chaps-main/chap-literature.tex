@@ -4,7 +4,7 @@
 
 \section{USAR Robots}
 
-\section{Load-Intuitive Modules}
+\section{Load-Intuitive Modules} %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the right
 	\centering
@@ -13,14 +13,107 @@
 	\label{Wilson sketch-lit}
 \end{wrapfigure}
 
-A Load-Intuitive Module (LIM) refers to a wheel system proposed by Matthew Wilson, shown in Figure \ref{Wilson sketch-lit} \citep{Wilson-2013}. The LIM system uses a two outer "minor wheels" placed on a central hub that can be rotated as a "major wheel". The minor wheels are geared to the central hub such that they drive the vehicle, however if they experience high resistance, for example from hitting an obstacle, the torque will cause the major wheel to rotate instead, flipping one of the minor wheels over the obstacle to automatically climb it. The system is referred to as "Load-Intuitive" because it will intuitively climb over obstacles in response to increased load on the wheels. LIMs are designed to be used in low cost USAR robots, allowing them to climb over objects without the need for many actuators.
+A Load-Intuitive Module (LIM) refers to a wheel system proposed by Matthew Wilson, shown in Figure \ref{Wilson sketch-lit} \citep{Wilson-2013}. The LIM system uses a two outer "minor wheels" placed on a central hub that can be rotated as a "major wheel". The minor wheels are geared to the central hub such that they drive the vehicle, however if they experience high resistance, for example from hitting an obstacle, the torque will cause the major wheel to rotate instead, flipping one of the minor wheels over the obstacle to automatically climb it. The system is referred to as "Load-Intuitive" because it will intuitively climb over obstacles in response to increased load on the wheels. LIMs are designed to be used in low cost USAR robots, allowing them to climb over objects without the need for many actuators.\\
 
-\noindent "LIMed" robot platforms (platforms using LIMs for locomotion) were built individually by four final year students at UCT \citep{Wilson-2013},  \citep{Haskel-2017}, \citep{Buchanan-2018}, and \citep{Powrie-2019-lit}. One of these robots is shown in Figure \ref{Powrie robot}. These platforms show some success in climbing a single step, albeit inconsistently. None of the previous students were able to build a full system such that they can perform extensive tests on the system.
+\noindent "LIMed" robot platforms (platforms using LIMs for locomotion) were built individually by four final year students at UCT \citep{Wilson-2013},  \citep{Haskel-2017}, \citep{Buchanan-2018}, and \citep{Powrie-2019}. These platforms show some success in climbing a single step, albeit inconsistently.
+\newpage
 
+\subsection{Wilson's LIM robot} %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wilson designed and built the first LIM robot in 2013, shown in Figure \ref{Wilson robot}. This robot was designed as a prototype for a low cost USAR star-climbing robot. At first Wilson considered only using LIMs for the front set of wheels, with the rear set using regular wheels. However, after performing a 2D simulation in Algodoo shown in \ref{Wilson algodoo}, he concluded that using LIMs for the rear wheels was necessary as regular wheels provided little to no support to the climbing motion after the first step, presumably because the rear wheel would stop making contact with the stairs. Using LIMs for the rear wheels means they will be able to climb as well, and can always apply a forward force on the body.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Wilson-robot}
+	\caption{Wilson's Robot \citep{Wilson-2013}}
+	\label{Wilson robot}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.7\textwidth]{Wilson-algodoo}
+	\caption{Wilson's Algodoo simulation of stair climbing \citep{Wilson-2013}}
+	\label{Wilson algodoo}
+\end{figure}
+
+\begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the right
+	\centering
+	\includegraphics[width=0.35\textwidth]{Wilson-climbing}
+	\caption{Wilson's half assembly climbing a stair \citep{Wilson-2013}}
+	\label{Wilson climbing}
+\end{wrapfigure}
+
+Wilson's robot had some limitations that prevented him from performing extensive tests. Chiefly, it was unable to climb stairs as the motors would stall upon encountering an obstacle. To validate the LIM concept in spite of this issue, Wilson split the robot in half and tested stair climbing using only the front LIMs and the chassis dragging behind as a tail. This "tail-dragging half assembly" was able to climb a single step as shown in Figure \ref{Wilson climbing}. Wilson's project ran out of time before he was able to solve the climbing motion of the complete robot, however he was able to confirm that the LIM system can climb at least a single stair in the half assembly configuration.
+
+\subsection{Haskel's Theseus} %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Haskel designed and built a LIMed robot to further test the concept, which he named "Theseus", shown in Figure \ref{Haskel robot}. Unlike Wilson, Haskel assumes that using LIMs for rear wheels is not necessary for the stair climbing motion, and instead chooses to use a dragging tail to provide counter torque, similar to the tail-dragging half assembly used by Wilson. Theseus is much smaller and lighter than Wilson's robot.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Haskel-robot}
+	\caption{Haskel's Theseus \citep{Haskel-2017}}
+	\label{Haskel robot}
+\end{figure}
+
+Haskel tested different concepts for the tire tread, dragging tail, and gear ratios. However, none of his configurations could consistently climb an step. In the majority of step-climbing attempts, Theseus' LIMs would flip over to mount the step, but it would not be able to pull itself up. This can be attributed to a lack of grip or a lack of torque. Haskel intended to do further work on the project, however he ran out of time due to component shortages and protests at UCT.
+
+\subsection{Buchanan's Ascender} %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Buchanan designed and built "Ascender", a robot platform using LIMs for locomotion, shown in Figure \ref{Buch robot}. Buchanan iterated on the design several times in order to reduce mass and increase torque. The intention was build a drivetrain that could be combined with the electronics of Haskel's Theseus to produce a successful stair climbing robot. As such, the Ascender does not include any electronic control systems, and is instead controlled externally by power supplies connected to the motors.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.85\textwidth]{Buch-robot}
+	\caption{Buchanan's Ascender \citep{Buchanan-2018}}
+	\label{Buch robot}
+\end{figure}
+
+Buchanan's testing showed that the Ascender was able to climb a single step of 120 mm in 6 out of 10 attempts, and a step of 140mm in 2 out of 10 attempts. Buchanan noted a flaw in the design; after the LIMs flip over as part of the climbing motion, the body of the robot would lodge itself onto the the edge of the step and the wheels would spin freely, a phenomenon referred to as beaching. The LIMs would then spin until the top wheel makes contact with the top of the step, from there it would either grip and pull the robot up the step as intended, or it would dislodge the body and the robot would fall off the step. A successful climb is shown in Figure \ref{Buch climbing}.  Buchanan also reported that the Ascender was fragile to the point that it broke during the testing. Buchanan did not test the Ascender's ability to climb a staircase, but he concluded that it would be able to as a staircase is simply repeated single steps.
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Buch-climbing}
+	\caption{Buchanan's Ascender climbing a step \citep{Buchanan-2018}}
+	\label{Buch climbing}
+\end{figure}
+
+\newpage
+\subsection{Powrie's Di-Wheel robot}
+
+Powrie developed a robot using LIMs, however in his report he referred to LIMs as Di-Wheels. His reason for renaming them is that the behaviour of the LIMs does not only respond to external loads on the wheels, it also depends on the torque applied by the motors. He chose the name "Di-Wheel" in reference to a similar design by the name of "Tri-Wheel", which used three minor wheels instead of two, developed by Smith et. all \citep{Smith-2015}. Powrie's Di-Wheel robot is larger and more robust than Buchanan's Ascender, while being lighter than Wilson's LIMed robot. It is shown in Figure \ref{Powrie robot}.\\
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Powrie-device}
-	\caption{Powrie's "Di-Wheel" robot \citep{Powrie-2019}}
-	\label{Powrie robot-lit}
+	\caption{Powrie's Di-Wheel Robot \citep{Powrie-2019}}
+	\label{Powrie robot}
 \end{figure}
+
+\begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the right
+	\centering
+	\includegraphics[width=0.35\textwidth]{Powrie-falling}
+	\caption{The Di-Wheel robot falling due to unsynchronised LIMs \citep{Powrie-2019}}
+	\label{Powrie falling}
+\end{wrapfigure}
+
+
+
+The Di-Wheel robot was successful in climbing a single step of 220 mm, shown in Figure \ref{Powrie climbing}. Further testing was not performed as noise from the robot's motors would interfere with the control system, preventing untethered driving. Powrie ran out of time before he was able to solve this issue. Powrie also found that when both motors are powered on, one of the LIMs would flip first, putting all the weight on the other LIM so preventing it from flipping. The result is that the robot would fall on its side, as seen in Figure \ref{Powrie falling}.\\
+
+
+\newpage
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.75\textwidth]{Powrie-climbing}
+	\caption{Powrie's Di-Wheel robot climbing a step \citep{Powrie-2019}}
+	\label{Powrie climbing}
+\end{figure}
+
+\newpage
+
+\subsection{Gearing} %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+

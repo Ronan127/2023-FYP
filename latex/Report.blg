@@ -7,14 +7,8 @@ Reallocating 'name_of_file' (item size: 1) to 32 items.
 A level-1 auxiliary file: chaps-front/chap-plagiarism.aux
 Reallocating 'name_of_file' (item size: 1) to 29 items.
 A level-1 auxiliary file: chaps-front/chap-summary.aux
-Reallocating 'name_of_file' (item size: 1) to 26 items.
-A level-1 auxiliary file: chaps-main/chap-intro.aux
 Reallocating 'name_of_file' (item size: 1) to 31 items.
 A level-1 auxiliary file: chaps-main/chap-literature.aux
-Reallocating 'name_of_file' (item size: 1) to 30 items.
-A level-1 auxiliary file: chaps-main/chap-content-A.aux
-Reallocating 'name_of_file' (item size: 1) to 31 items.
-A level-1 auxiliary file: chaps-main/chap-conclusion.aux
 Reallocating 'name_of_file' (item size: 1) to 27 items.
 A level-1 auxiliary file: chaps-append/chap-ecsa.aux
 Reallocating 'name_of_file' (item size: 1) to 28 items.
@@ -31,49 +25,47 @@ Warning--entry type for "Buchanan-2018" isn't style-file defined
 --line 20 of file bib/bib-sample.bib
 Warning--entry type for "Powrie-2019" isn't style-file defined
 --line 29 of file bib/bib-sample.bib
-Warning--I didn't find a database entry for "Cundall-1979"
-Warning--I didn't find a database entry for "Lin:1997"
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 4 entries,
+You've used 5 entries,
             3324 wiz_defined-function locations,
-            685 strings with 5719 characters,
-and the built_in function-call counts, 1935 in all, are:
-= -- 152
-> -- 40
-< -- 4
-+ -- 18
-- -- 12
-* -- 138
-:= -- 296
-add.period$ -- 8
-call.type$ -- 4
-change.case$ -- 24
-chr.to.int$ -- 4
-cite$ -- 4
-duplicate$ -- 176
-empty$ -- 177
-format.name$ -- 24
-if$ -- 369
+            685 strings with 5834 characters,
+and the built_in function-call counts, 3224 in all, are:
+= -- 262
+> -- 74
+< -- 5
++ -- 33
+- -- 24
+* -- 257
+:= -- 442
+add.period$ -- 11
+call.type$ -- 5
+change.case$ -- 33
+chr.to.int$ -- 5
+cite$ -- 5
+duplicate$ -- 305
+empty$ -- 296
+format.name$ -- 47
+if$ -- 645
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 20
-newline$ -- 38
-num.names$ -- 16
-pop$ -- 56
+missing$ -- 33
+newline$ -- 43
+num.names$ -- 20
+pop$ -- 94
 preamble$ -- 1
-purify$ -- 20
+purify$ -- 28
 quote$ -- 0
-skip$ -- 65
+skip$ -- 101
 stack$ -- 0
-substring$ -- 94
-swap$ -- 56
-text.length$ -- 0
+substring$ -- 191
+swap$ -- 112
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 45
 warning$ -- 0
-while$ -- 20
+while$ -- 30
 width$ -- 0
-write$ -- 61
-(There were 6 warnings)
+write$ -- 74
+(There were 4 warnings)

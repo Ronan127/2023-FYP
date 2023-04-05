@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  27 MAR 2023 20:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  5 APR 2023 15:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -672,8 +672,7 @@ Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 101.
  (Report.aux
 (chaps-front/chap-plagiarism.aux) (chaps-front/chap-summary.aux)
-(chaps-main/chap-intro.aux) (chaps-main/chap-literature.aux)
-(chaps-main/chap-content-A.aux) (chaps-main/chap-conclusion.aux)
+(chaps-main/chap-literature.aux) (chaps-main/chap-2d-sim.aux)
 (chaps-append/chap-ecsa.aux) (chaps-append/chap-maths.aux)
 (chaps-append/chap-experiment.aux))
 \openout1 = `Report.aux'.
@@ -1046,31 +1045,21 @@ LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
  [5
 
 ]
-\openout2 = `chaps-main/chap-intro.aux'.
+\openout2 = `chaps-main/chap-literature.aux'.
 
- (chaps-main/chap-intro.tex
+ (chaps-main/chap-literature.tex
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/mdbch/b/n' will be
 (Font)              scaled to size 16.58891pt on input line 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
 <./figs//Wilson-sketch.png, id=37, 302.93175pt x 234.8775pt>
 File: ./figs//Wilson-sketch.png Graphic file (type png)
 <use ./figs//Wilson-sketch.png>
-Package pdftex.def Info: ./figs//Wilson-sketch.png  used on input line 9.
+Package pdftex.def Info: ./figs//Wilson-sketch.png  used on input line 11.
 (pdftex.def)             Requested size: 139.42838pt x 108.10588pt.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
-(Font)              scaled to size 10.51207pt on input line 10.
+(Font)              scaled to size 10.51207pt on input line 12.
 
-Underfull \hbox (badness 5490) in paragraph at lines 14--15
-\T1/mdbch/m/n/12 (+20) so res-cue or-gan-i-sa-tions use them spar-ingly.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
@@ -1085,59 +1074,139 @@ co-mo-tion) were built in-di-vid-u-ally
 
 
  <./figs//Wilson-sketch.png>]
-<./figs//Powrie-device.png, id=43, 666.69075pt x 499.8675pt>
-File: ./figs//Powrie-device.png Graphic file (type png)
-<use ./figs//Powrie-device.png>
-Package pdftex.def Info: ./figs//Powrie-device.png  used on input line 23.
-(pdftex.def)             Requested size: 318.68909pt x 238.94211pt.
-)
-LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
-(Font)              scaled to size 11.52008pt on input line 122.
- [2
-design size mismatch in local font md-chro8t in virtual font mdbchro8t.vf ignor
-ed. <./figs//Powrie-device.png>] [3]
-\openout2 = `chaps-main/chap-literature.aux'.
+<./figs//Wilson-robot.png, id=43, 838.93425pt x 631.76025pt>
+File: ./figs//Wilson-robot.png Graphic file (type png)
+<use ./figs//Wilson-robot.png>
+Package pdftex.def Info: ./figs//Wilson-robot.png  used on input line 27.
+(pdftex.def)             Requested size: 318.68909pt x 239.99426pt.
+<./figs//Wilson-algodoo.png, id=44, 896.148pt x 511.9125pt>
+File: ./figs//Wilson-algodoo.png Graphic file (type png)
+<use ./figs//Wilson-algodoo.png>
+Package pdftex.def Info: ./figs//Wilson-algodoo.png  used on input line 34.
+(pdftex.def)             Requested size: 278.85068pt x 159.2927pt.
+<./figs//Wilson-climbing.png, id=45, 408.3255pt x 306.54526pt>
+File: ./figs//Wilson-climbing.png Graphic file (type png)
+<use ./figs//Wilson-climbing.png>
+Package pdftex.def Info: ./figs//Wilson-climbing.png  used on input line 41.
+(pdftex.def)             Requested size: 139.42838pt x 104.67303pt.
 
- (chaps-main/chap-literature.tex
-Chapter 2.
-File: ./figs//Wilson-sketch.png Graphic file (type png)
-<use ./figs//Wilson-sketch.png>
-Package pdftex.def Info: ./figs//Wilson-sketch.png  used on input line 11.
-(pdftex.def)             Requested size: 139.42838pt x 108.10588pt.
-
-Package natbib Warning: Citation `Powrie-2019-lit' on page 4 undefined on input
- line 18.
-
-
-Overfull \hbox (16.00053pt too wide) in paragraph at lines 18--19
-\T1/mdbch/m/n/12 (-20) "LIMed" robot plat-forms (plat-forms us-ing LIMs for lo-
-co-mo-tion) were built in-di-vid-u-ally
+Underfull \hbox (badness 7814) in paragraph at lines 42--42
+[]\T1/mdbch/m/n/10.95 (+20) Figure 1.4: |Wil-son's half
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--42
+\T1/mdbch/m/n/10.95 (+20) as-sem-bly climb-ing a stair
+ []
+
+LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
+(Font)              scaled to size 11.52008pt on input line 46.
+[2
+design size mismatch in local font md-chro8t in virtual font mdbchro8t.vf ignor
+ed. <./figs//Wilson-robot.png> <./figs//Wilson-algodoo.png>]
+Underfull \hbox (badness 2970) in paragraph at lines 46--47
+[][]\T1/mdbch/m/n/12 (+20) Wilson's robot had some lim-i-ta-tions that
+ []
+
+<./figs//Haskel-robot.png, id=53, 514.92375pt x 275.8305pt>
+File: ./figs//Haskel-robot.png Graphic file (type png)
+<use ./figs//Haskel-robot.png>
+Package pdftex.def Info: ./figs//Haskel-robot.png  used on input line 54.
+(pdftex.def)             Requested size: 318.68909pt x 170.71431pt.
+
+Overfull \hbox (10.73128pt too wide) in paragraph at lines 63--64
+\T1/mdbch/m/n/12 (-20) Buchanan de-signed and built "As-cen-der", a robot plat-
+form us-ing LIMs for lo-co-mo-tion,
+ []
+
+[3 <./figs//Wilson-climbing.png> <./figs//Haskel-robot.png>]
+<./figs//Buch-robot.png, id=59, 780.516pt x 446.8695pt>
+File: ./figs//Buch-robot.png Graphic file (type png)
+<use ./figs//Buch-robot.png>
+Package pdftex.def Info: ./figs//Buch-robot.png  used on input line 67.
+(pdftex.def)             Requested size: 338.60829pt x 193.86162pt.
+ [4 <./figs//Buch-robot.png>]
+<./figs//Buch-climbing.png, id=64, 413.1435pt x 599.841pt>
+File: ./figs//Buch-climbing.png Graphic file (type png)
+<use ./figs//Buch-climbing.png>
+Package pdftex.def Info: ./figs//Buch-climbing.png  used on input line 76.
+(pdftex.def)             Requested size: 318.68909pt x 462.72105pt.
+ [5 <./figs//Buch-climbing.png>]
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 11.52008pt on input line 84.
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+<./figs//Powrie-device.png, id=69, 666.69075pt x 499.8675pt>
 File: ./figs//Powrie-device.png Graphic file (type png)
 <use ./figs//Powrie-device.png>
-Package pdftex.def Info: ./figs//Powrie-device.png  used on input line 23.
+Package pdftex.def Info: ./figs//Powrie-device.png  used on input line 88.
 (pdftex.def)             Requested size: 318.68909pt x 238.94211pt.
+<./figs//Powrie-falling.png, id=70, 614.295pt x 593.8185pt>
+File: ./figs//Powrie-falling.png Graphic file (type png)
+<use ./figs//Powrie-falling.png>
+Package pdftex.def Info: ./figs//Powrie-falling.png  used on input line 95.
+(pdftex.def)             Requested size: 139.42838pt x 134.78131pt.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [4
-
-
+Underfull \hbox (badness 2261) in paragraph at lines 102--103
+\T1/mdbch/m/n/12 (+20) a sin-gle step of 220 mm, shown in Fig-ure
+ []
 
 
-] [5]
-\openout2 = `chaps-main/chap-content-A.aux'.
+Underfull \hbox (badness 1221) in paragraph at lines 102--103
+\T1/mdbch/m/n/12 (+20) 1.10[]. Fur-ther test-ing was not per-formed as
+ []
 
- (chaps-main/chap-content-A.tex
-Chapter 3.
+
+Underfull \hbox (badness 1924) in paragraph at lines 102--103
+\T1/mdbch/m/n/12 (+20) driv-ing. Powrie ran out of time be-fore he
+ []
+
+
+Underfull \hbox (badness 3260) in paragraph at lines 102--103
+\T1/mdbch/m/n/12 (+20) was able to solve this is-sue. Powrie also
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 102--103
+\T1/mdbch/m/n/12 (+20) one of the LIMs would flip first, putting all
+ []
+
+
+Underfull \hbox (badness 1817) in paragraph at lines 102--103
+\T1/mdbch/m/n/12 (+20) from flip-ping. The re-sult is that the robot
+ []
+
+
+Underfull \hbox (badness 5446) in paragraph at lines 102--103
+\T1/mdbch/m/n/12 (+20) would fall on its side, as seen in Fig-ure
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+[6 <./figs//Powrie-device.png> <./figs//Powrie-falling.png>]
+<./figs//Powrie-climbing.png, id=77, 476.37975pt x 714.87074pt>
+File: ./figs//Powrie-climbing.png Graphic file (type png)
+<use ./figs//Powrie-climbing.png>
+Package pdftex.def Info: ./figs//Powrie-climbing.png  used on input line 109.
+(pdftex.def)             Requested size: 298.76988pt x 448.34206pt.
+ [7 <./figs//Powrie-climbing.png>]) [8]
+\openout2 = `chaps-main/chap-2d-sim.aux'.
+
+ (chaps-main/chap-2d-sim.tex
+Chapter 2.
 LaTeX Font Info:    Font shape `T1/cmtt/m/n' will be
 (Font)              scaled to size 12.86407pt on input line 24.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-[6
+[9
 
 
 
@@ -1173,22 +1242,12 @@ Package microtype Info: Character `textcelsius ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 7.68005pt on input line 32.
-<figs/waterplants.jpg, id=67, 328.97906pt x 246.9225pt>
+<figs/waterplants.jpg, id=93, 328.97906pt x 246.9225pt>
 File: figs/waterplants.jpg Graphic file (type jpg)
 <use figs/waterplants.jpg>
 Package pdftex.def Info: figs/waterplants.jpg  used on input line 67.
 (pdftex.def)             Requested size: 279.63351pt x 209.88509pt.
-) [7 <./figs/waterplants.jpg>]
-\openout2 = `chaps-main/chap-conclusion.aux'.
-
- (chaps-main/chap-conclusion.tex
-Chapter 4.
-) [8
-
-
-
-
-]
+) [10 <./figs/waterplants.jpg>]
 \openout2 = `chaps-append/chap-ecsa.aux'.
 
  (chaps-append/chap-ecsa.tex
@@ -1272,7 +1331,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 [][] 
  []
 
-) [9
+) [11
 
 
 
@@ -1282,7 +1341,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 
  (chaps-append/chap-maths.tex
 Appendix B.
-) [10
+) [12
 
 
 
@@ -1292,47 +1351,46 @@ Appendix B.
 
  (chaps-append/chap-experiment.tex
 Appendix C.
-) [11
+) [13
 
 
 
 
-] (Report.bbl (stb-bib.eng))
-
-Package natbib Warning: There were undefined citations.
-
-[12
-
+] (Report.bbl (stb-bib.eng)
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 10.51207pt on input line 42.
+) [14
 
 
 
-] (Report.aux (chaps-front/chap-plagiarism.aux)
-(chaps-front/chap-summary.aux) (chaps-main/chap-intro.aux)
-(chaps-main/chap-literature.aux) (chaps-main/chap-content-A.aux)
-(chaps-main/chap-conclusion.aux) (chaps-append/chap-ecsa.aux)
-(chaps-append/chap-maths.aux) (chaps-append/chap-experiment.aux)) ) 
+
+] (Report.aux
+(chaps-front/chap-plagiarism.aux) (chaps-front/chap-summary.aux)
+(chaps-main/chap-literature.aux) (chaps-main/chap-2d-sim.aux)
+(chaps-append/chap-ecsa.aux) (chaps-append/chap-maths.aux)
+(chaps-append/chap-experiment.aux)) ) 
 Here is how much of TeX's memory you used:
- 15456 strings out of 476339
- 313751 string characters out of 5797934
+ 15565 strings out of 476339
+ 314480 string characters out of 5797934
  1863340 words of memory out of 5000000
- 35180 multiletter control sequences out of 15000+600000
- 606030 words of font info for 375 fonts, out of 8000000 for 9000
+ 35239 multiletter control sequences out of 15000+600000
+ 614986 words of font info for 419 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,11n,117p,1028b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\R
-onan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi643\ectt1200.pk>{C:/Pr
-ogram Files/MiKTeX/fonts/enc/dvips/ly1/texnansi.enc}<C:/Program Files/MiKTeX/fo
-nts/type1/bitstrea/charter/bchb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bits
-trea/charter/bchr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/b
-chr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:
-/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chb8t.pfb><C:/Program Fil
-es/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7t.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program Files/MiKTeX/fonts/type1/ma
-thdesign/mdbch/md-chr8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdb
-ch/md-chri7m.pfb>
-Output written on Report.pdf (17 pages, 2375871 bytes).
+ 73i,11n,117p,1010b,622s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Ronan\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi643\ectt1200.pk>{C:/Program Files/MiKTeX/fonts/enc/d
+vips/ly1/texnansi.enc}<C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bch
+b8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Pr
+ogram Files/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Program Files/MiKTeX/fonts/ty
+pe1/mathdesign/mdbch/md-chb8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesi
+gn/mdbch/md-chr7t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-
+chr7y.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr8t.pfb><C
+:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program F
+iles/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri8t.pfb>
+Output written on Report.pdf (19 pages, 12499486 bytes).
 PDF statistics:
- 159 PDF objects out of 1000 (max. 8388607)
+ 187 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 115221 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 127549 words of extra memory for PDF output out of 128383 (max. 10000000)
 
