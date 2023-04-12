@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{9}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -23,6 +23,37 @@
 \bibnamefont{Buchanan}, \bibfnamefont{M.} (2018).
 \newblock Ascender.
 
+\bibitem[{\citenamefont{Delmerico}
+  \emph{\bbletal{}}(2019)\citenamefont{Delmerico}, \citenamefont{Mintchev},
+  \citenamefont{Giusti}, \citenamefont{Gromov}, \citenamefont{Melo},
+  \citenamefont{Horvat}, \citenamefont{Cadena}, \citenamefont{Hutter},
+  \citenamefont{Ijspeert}, \citenamefont{Floreano}, \citenamefont{Gambardella},
+  \citenamefont{Siegwart} \protect\BIBand{}
+  \citenamefont{Scaramuzza}}]{stateof}
+\bibnamefont{Delmerico}, \bibfnamefont{J.}, \bibnamefont{Mintchev},
+  \bibfnamefont{S.}, \bibnamefont{Giusti}, \bibfnamefont{A.},
+  \bibnamefont{Gromov}, \bibfnamefont{B.}, \bibnamefont{Melo},
+  \bibfnamefont{K.}, \bibnamefont{Horvat}, \bibfnamefont{T.},
+  \bibnamefont{Cadena}, \bibfnamefont{C.}, \bibnamefont{Hutter},
+  \bibfnamefont{M.}, \bibnamefont{Ijspeert}, \bibfnamefont{A.},
+  \bibnamefont{Floreano}, \bibfnamefont{D.}, \bibnamefont{Gambardella},
+  \bibfnamefont{L.M.}, \bibnamefont{Siegwart}, \bibfnamefont{R.}
+  \protect\BIBand{} \bibnamefont{Scaramuzza}, \bibfnamefont{D.} (2019).
+\newblock The current state and future outlook of rescue robotics.
+\newblock \emph{Journal of Field Robotics}, \bblvol{}~36, \bblno{}~7, \bblpp{}
+  1171--1191.
+\newblock \eprint{https://onlinelibrary.wiley.com/doi/pdf/10.1002/rob.21887}.
+\newline\bblurlpre\url{https://onlinelibrary.wiley.com/doi/abs/10.1002/rob.21887}
+
+\bibitem[{\citenamefont{Gregorcic} \protect\BIBand{}
+  \citenamefont{Bodin}(2017)}]{Algodoo}
+\bibnamefont{Gregorcic}, \bibfnamefont{B.} \protect\BIBand{}
+  \bibnamefont{Bodin}, \bibfnamefont{M.} (2017).
+\newblock Algodoo: A tool for encouraging creativity in physics teaching and
+  learning.
+\newblock \capitalize\bblin{}: \emph{The Physics Teacher}, \bblvol{}~55,
+  \bblpp{} 25--28.
+
 \bibitem[{\citenamefont{Haskel}(2017)}]{Haskel-2017}
 \bibnamefont{Haskel}, \bibfnamefont{J.} (2017).
 \newblock A cost effective, tele-operated observation search and rescue robot.
@@ -30,6 +61,19 @@
 \bibitem[{\citenamefont{Powrie}(2019)}]{Powrie-2019}
 \bibnamefont{Powrie}, \bibfnamefont{R.} (2019).
 \newblock Di-wheel robot.
+
+\bibitem[{\citenamefont{Robillard}(2019)}]{rob2014}
+\bibnamefont{Robillard}, \bibfnamefont{D.} (2019).
+\newblock Di-wheel robot.
+
+\bibitem[{\citenamefont{Sheh} \emph{\bbletal{}}(2016)\citenamefont{Sheh},
+  \citenamefont{Schwertfeger} \protect\BIBand{}
+  \citenamefont{Visser}}]{Sheh-2016}
+\bibnamefont{Sheh}, \bibfnamefont{R.}, \bibnamefont{Schwertfeger},
+  \bibfnamefont{S.} \protect\BIBand{} \bibnamefont{Visser}, \bibfnamefont{A.}
+  (2016).
+\newblock 16 years of robocup rescue.
+\newline\bblurlpre\url{https://doi.org/10.1007/s13218-016-0444-x}
 
 \bibitem[{\citenamefont{Smith} \emph{\bbletal{}}(2015)\citenamefont{Smith},
   \citenamefont{Quinn}, \citenamefont{Johnson} \protect\BIBand{}

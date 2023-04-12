@@ -10,6 +10,8 @@ A level-1 auxiliary file: chaps-front/chap-summary.aux
 Reallocating 'name_of_file' (item size: 1) to 31 items.
 A level-1 auxiliary file: chaps-main/chap-literature.aux
 Reallocating 'name_of_file' (item size: 1) to 27 items.
+A level-1 auxiliary file: chaps-main/chap-2d-sim.aux
+Reallocating 'name_of_file' (item size: 1) to 27 items.
 A level-1 auxiliary file: chaps-append/chap-ecsa.aux
 Reallocating 'name_of_file' (item size: 1) to 28 items.
 A level-1 auxiliary file: chaps-append/chap-maths.aux
@@ -25,47 +27,52 @@ Warning--entry type for "Buchanan-2018" isn't style-file defined
 --line 20 of file bib/bib-sample.bib
 Warning--entry type for "Powrie-2019" isn't style-file defined
 --line 29 of file bib/bib-sample.bib
+Warning--entry type for "Sheh-2016" isn't style-file defined
+--line 98 of file bib/bib-sample.bib
+Warning--entry type for "rob2014" isn't style-file defined
+--line 110 of file bib/bib-sample.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 5 entries,
+Warning--can't use both volume and number fields in Algodoo
+You've used 9 entries,
             3324 wiz_defined-function locations,
-            685 strings with 5834 characters,
-and the built_in function-call counts, 3224 in all, are:
-= -- 262
-> -- 74
-< -- 5
-+ -- 33
-- -- 24
-* -- 257
-:= -- 442
-add.period$ -- 11
-call.type$ -- 5
-change.case$ -- 33
-chr.to.int$ -- 5
-cite$ -- 5
-duplicate$ -- 305
-empty$ -- 296
-format.name$ -- 47
-if$ -- 645
+            715 strings with 6739 characters,
+and the built_in function-call counts, 7472 in all, are:
+= -- 573
+> -- 234
+< -- 12
++ -- 96
+- -- 81
+* -- 726
+:= -- 959
+add.period$ -- 22
+call.type$ -- 9
+change.case$ -- 72
+chr.to.int$ -- 9
+cite$ -- 10
+duplicate$ -- 708
+empty$ -- 662
+format.name$ -- 154
+if$ -- 1491
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 33
-newline$ -- 43
-num.names$ -- 20
-pop$ -- 94
+missing$ -- 80
+newline$ -- 64
+num.names$ -- 36
+pop$ -- 205
 preamble$ -- 1
-purify$ -- 28
+purify$ -- 63
 quote$ -- 0
-skip$ -- 101
+skip$ -- 194
 stack$ -- 0
-substring$ -- 191
-swap$ -- 112
-text.length$ -- 1
+substring$ -- 407
+swap$ -- 320
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 45
-warning$ -- 0
-while$ -- 30
+type$ -- 81
+warning$ -- 1
+while$ -- 69
 width$ -- 0
-write$ -- 74
-(There were 4 warnings)
+write$ -- 125
+(There were 7 warnings)
