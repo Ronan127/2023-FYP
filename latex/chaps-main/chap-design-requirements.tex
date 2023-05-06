@@ -1,1 +1,76 @@
-design requirements
+\chapter{Design Requirements}
+
+The objective of the design phase is to design a LIMed platform that can be used to validate the mathematical model. The requirements for this design are documented in this section.
+
+\section{Stakeholder requirements}
+
+This project is done at the request of Justin Pead, who supervised previous LIM projects at UCT. For the purposes of this section, this project's supervisor, Mr. Wayne Swart, acts as an intermediary between the stakeholder and the designer. 
+
+
+\begin{table}[h]
+	\caption{Stakeholder Requirements}
+	\footnotesize
+	\begin{tabular}{ | p{3em} | p{6em} | p{23em} | p{5em} |} 
+		\hline
+		Number& Stakeholder & Description & Priority \\ 
+		\hline
+		SR1 & Justin Pead & The device must be able to climb stairs & High\\
+		\hline
+		SR2 & Justin Pead & The device must roll on its wheels when it is not obstructed, and climb over obstacles when it is obstructed. & High\\
+		\hline
+		SR3 & Justin Pead & The device must use LIMs for locomotion & Must-have\\
+		\hline
+		SR4 & Justin Pead & The device should be described by the model & Must have\\
+		\hline
+		SR5 & Justin Pead & The device should be relevant to USAR applications & High\\
+		\hline
+		SR6 & Wayne Swart & The design and construction of the device must demonstrate the relevant graduate attributes & Must have\\
+		\hline
+		SR7 & Wayne Swart & The budget for the project is R5000 & Must have\\
+		\hline
+	\end{tabular}
+\end{table}
+\newpage
+
+\section{Engineering Requirements}
+
+In this section, the stakeholder requirements (SRs) are expressed as functional requirements (FRs) and performance requirements (PRs). FRs describe the actions that the system must perform, while PRs are measures of how well the system performs the functions.
+
+\begin{table}[h]
+	\caption{Functional Requirements}
+	\footnotesize
+	\begin{tabular}{ | p{4em} | p{28em} | p{6em} |} 
+		\hline
+		Number & Description & Relevant Stakeholder Requirement\\
+		\hline
+		FR1 & Climb obstacles & SR1, SR2\\
+		\hline
+		FR2 & Roll & SR2\\
+		\hline
+		FR3 & Accept user control & SR5\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[h]
+	\caption{Performance Requirements}
+	\footnotesize
+	\begin{tabular}{ 	| p{4em} 	| p{13em} 		| p{4em} 	| p{4em} 	| p{2em} 	| p{6em} |} 
+		\hline
+						Number & 	Description & 	Target & 	Range & 	Unit & 		Relevant Stakeholder Requirement\\
+		\hline
+		PR1 & Height of obstacles that can be climbed & Maximise & 200+ \tablefootnote{Maximum step rise specified by the SANS10400 building regulation \citep{SANS}} & mm &  SR1, SR2\\
+		\hline
+		PR2 & Climbing success rate & Maximise & 90 - 100 & \% &  SR1, SR2\\
+		\hline
+		PR3 & Top speed & Maximise & 1+ & $m/s$ &  SR2\\
+		\hline
+		PR4 & Acceleration & Maximise & 1+ & $m/s^2$ &  SR2\\
+		\hline
+		PR5 & Height Clearance & Minimise & 50 - 300 & $mm$ &  SR5\\
+		\hline
+		PR6 & Cost & Minimise & 0 - 5000 & ZAR &  SR6\\
+		\hline
+	\end{tabular}
+\end{table}
+

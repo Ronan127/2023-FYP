@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -18,6 +18,10 @@
 \newcommand{\Capitalize}[1]{\uppercase{#1}}
 \newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
 \providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{SAN(2010)}]{SANS}
+ (2010).
+\newblock Sans 10400-n:2010 (edition 3).
 
 \bibitem[{\citenamefont{Buchanan}(2018)}]{Buchanan-2018}
 \bibnamefont{Buchanan}, \bibfnamefont{M.} (2018).

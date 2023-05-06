@@ -34,47 +34,48 @@ Warning--entry type for "Sheh-2016" isn't style-file defined
 Warning--entry type for "rob2014" isn't style-file defined
 --line 219 of file bib/bib-sample.bib
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Warning--to sort, need author or key in SANS
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--can't use both volume and number fields in Algodoo
-You've used 9 entries,
+You've used 10 entries,
             3324 wiz_defined-function locations,
-            716 strings with 6778 characters,
-and the built_in function-call counts, 7472 in all, are:
-= -- 573
+            720 strings with 6819 characters,
+and the built_in function-call counts, 7817 in all, are:
+= -- 604
 > -- 234
 < -- 12
-+ -- 96
++ -- 97
 - -- 81
-* -- 726
-:= -- 959
-add.period$ -- 22
-call.type$ -- 9
-change.case$ -- 72
-chr.to.int$ -- 9
-cite$ -- 10
-duplicate$ -- 708
-empty$ -- 662
+* -- 747
+:= -- 1001
+add.period$ -- 24
+call.type$ -- 10
+change.case$ -- 77
+chr.to.int$ -- 10
+cite$ -- 14
+duplicate$ -- 741
+empty$ -- 701
 format.name$ -- 154
-if$ -- 1491
+if$ -- 1565
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 80
-newline$ -- 64
+missing$ -- 84
+newline$ -- 68
 num.names$ -- 36
-pop$ -- 205
+pop$ -- 220
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 67
 quote$ -- 0
-skip$ -- 194
+skip$ -- 210
 stack$ -- 0
-substring$ -- 407
-swap$ -- 320
+substring$ -- 428
+swap$ -- 327
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 81
-warning$ -- 1
-while$ -- 69
+type$ -- 90
+warning$ -- 2
+while$ -- 70
 width$ -- 0
-write$ -- 125
-(There were 7 warnings)
+write$ -- 134
+(There were 8 warnings)
