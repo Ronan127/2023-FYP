@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  17 MAR 2023 15:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  23 MAY 2023 12:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1264,12 +1264,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--47
 
 
 Overfull \hbox (6.95427pt too wide) in paragraph at lines 49--49
- []|\T1/mdbch/m/n/10 (-20) 30000|
+ []|\T1/mdbch/m/n/10 (-20) 15000|
  []
 
 
 Overfull \hbox (2.58508pt too wide) in paragraph at lines 49--50
- []|\T1/mdbch/m/n/10 (-20) 265400|
+ []|\T1/mdbch/m/n/10 (-20) 265450|
  []
 
 
@@ -1380,11 +1380,11 @@ Appendix C.
 (chaps-proposal/Planning_details.aux) (chaps-append/chap-ecsa.aux)
 (chaps-proposal/Resources.aux)) ) 
 Here is how much of TeX's memory you used:
- 15385 strings out of 476339
- 313215 string characters out of 5797934
+ 15389 strings out of 476339
+ 313245 string characters out of 5797934
  1878340 words of memory out of 5000000
  35149 multiletter control sequences out of 15000+600000
- 600156 words of font info for 352 fonts, out of 8000000 for 9000
+ 600391 words of font info for 355 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  73i,11n,117p,1030b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {C:/Program Files/MiKTeX/fonts/enc/dvips/ly1/t
@@ -1393,7 +1393,7 @@ exnansi.enc}<C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C
 s/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Program Files/MiKTeX/fonts
 /type1/mathdesign/mdbch/md-chb8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathd
 esign/mdbch/md-chr8t.pfb>
-Output written on Proposal.pdf (17 pages, 2339304 bytes).
+Output written on Proposal.pdf (17 pages, 2339302 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
