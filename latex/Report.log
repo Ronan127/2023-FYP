@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  6 MAY 2023 17:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  6 JUN 2023 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1507,6 +1507,22 @@ Overfull \hbox (1.7499pt too wide) in paragraph at lines 68--68
  []
 
 ) [18]
+\openout2 = `chaps-main/chap-design-1.aux'.
+
+ (chaps-main/chap-design-1.tex
+Chapter 4.
+)
+Overfull \hbox (3.06326pt too wide) in paragraph at lines 3--127
+\T1/mdbch/m/n/12 (-20) Attempted to use math-e-mat-i-cal model to iden-tify po-
+ten-tial im-prove-ments, how-ever
+ []
+
+[19
+
+
+
+
+]
 \openout2 = `chaps-append/chap-ecsa.aux'.
 
  (chaps-append/chap-ecsa.tex
@@ -1566,7 +1582,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 [][] 
  []
 
-) [19
+) [20
 
 
 
@@ -1576,7 +1592,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 
  (chaps-append/chap-maths.tex
 Appendix B.
-) [20
+) [21
 
 
 
@@ -1586,7 +1602,7 @@ Appendix B.
 
  (chaps-append/chap-experiment.tex
 Appendix C.
-) [21
+) [22
 
 
 
@@ -1622,7 +1638,7 @@ Overfull \hbox (16.69037pt too wide) in paragraph at lines 37--51
 y.wiley.com/doi/abs/10.1002/rob.21887 
  []
 
-) [22
+) [23
 
 
 
@@ -1630,30 +1646,31 @@ y.wiley.com/doi/abs/10.1002/rob.21887
 ] (Report.aux (chaps-front/chap-plagiarism.aux)
 (chaps-front/chap-summary.aux) (chaps-main/chap-literature.aux)
 (chaps-main/chap-2d-sim.aux) (chaps-main/chap-design-requirements.aux)
-(chaps-append/chap-ecsa.aux) (chaps-append/chap-maths.aux)
-(chaps-append/chap-experiment.aux)) ) 
+(chaps-main/chap-design-1.aux) (chaps-append/chap-ecsa.aux)
+(chaps-append/chap-maths.aux) (chaps-append/chap-experiment.aux)) ) 
 Here is how much of TeX's memory you used:
- 15888 strings out of 476339
- 323072 string characters out of 5797934
+ 15925 strings out of 476339
+ 324353 string characters out of 5797934
  1865340 words of memory out of 5000000
- 35523 multiletter control sequences out of 15000+600000
- 618237 words of font info for 441 fonts, out of 8000000 for 9000
+ 35543 multiletter control sequences out of 15000+600000
+ 618942 words of font info for 450 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,17n,117p,1183b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Ronan\AppData\Local\MiKTeX\font
-s/pk/ljfour/jknappen/ec/dpi643\ectt1095.pk>{C:/Program Files/MiKTeX/fonts/enc/d
-vips/ly1/texnansi.enc}<C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bch
-b8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Program Files/MiKTeX/fonts/ty
-pe1/mathdesign/mdbch/md-chb8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesi
-gn/mdbch/md-chr7t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-
-chr7y.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr8t.pfb><C
-:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program F
-iles/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri8t.pfb>
-Output written on Report.pdf (28 pages, 15997670 bytes).
+ <C:\Users\R
+onan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi643\ectt1095.pk>{C:/Pr
+ogram Files/MiKTeX/fonts/enc/dvips/ly1/texnansi.enc}<C:/Program Files/MiKTeX/fo
+nts/type1/bitstrea/charter/bchb8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bits
+trea/charter/bchr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/b
+chr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:
+/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chb8t.pfb><C:/Program Fil
+es/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7t.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program Files/MiKTeX/fonts/type1/ma
+thdesign/mdbch/md-chr8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdb
+ch/md-chri7m.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri8
+t.pfb>
+Output written on Report.pdf (29 pages, 15999840 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
+ 239 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  123498 words of extra memory for PDF output out of 128383 (max. 10000000)
 
