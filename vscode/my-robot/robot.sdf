@@ -5,7 +5,7 @@
                 <pose>0 0 0 0 -0 0</pose>
                 <geometry>
                     <mesh>
-                        <uri>body.stl</uri>
+                        <uri>body.obj</uri>
                     </mesh>
                 </geometry>
                 <material>
@@ -19,7 +19,7 @@
                 <pose>0 0 0 0 -0 0</pose>
                 <geometry>
                     <mesh>
-                        <uri>body.stl</uri>
+                        <uri>body.obj</uri>
                     </mesh>
                 </geometry>
             </collision>
@@ -43,7 +43,7 @@
                 <pose>0 0 0 0 -0 0</pose>
                 <geometry>
                     <mesh>
-                        <uri>wheel.stl</uri>
+                        <uri>wheel.obj</uri>
                     </mesh>
                 </geometry>
                 <material>
@@ -57,7 +57,7 @@
                 <pose>0 0 0 0 -0 0</pose>
                 <geometry>
                     <mesh>
-                        <uri>wheel.stl</uri>
+                        <uri>wheel.obj</uri>
                     </mesh>
                 </geometry>
             </collision>
@@ -95,7 +95,7 @@
                 <pose>0.10699999999999999789 0 -3.4694469519536141888e-18 0 -0 0</pose>
                 <geometry>
                     <mesh>
-                        <uri>wheel.stl</uri>
+                        <uri>wheel.obj</uri>
                     </mesh>
                 </geometry>
                 <material>
@@ -109,7 +109,7 @@
                 <pose>0.10699999999999999789 0 -3.4694469519536141888e-18 0 -0 0</pose>
                 <geometry>
                     <mesh>
-                        <uri>wheel.stl</uri>
+                        <uri>wheel.obj</uri>
                     </mesh>
                 </geometry>
             </collision>
