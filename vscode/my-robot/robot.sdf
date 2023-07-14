@@ -1,0 +1,147 @@
+<sdf version="1.6">
+    <model name="onshape">
+        <link name="body">
+            <visual name="body_0_body_visual">
+                <pose>0 0 0 0 -0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>body.stl</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient>
+                    <diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="body_0_body_visual">
+                <pose>0 0 0 0 -0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>body.stl</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+            <inertial>
+                <pose>0.037500001962775565689 0.025384343231719466716
+                    0.02252413516897633014 0 0 0</pose>
+                <mass>2.2387448144601149735</mass>
+                <inertia>
+                    <ixx>0.0020602257937801194895</ixx>
+                    <ixy>4.4849745951774326908e-10</ixy>
+                    <ixz>6.4700580508705949165e-11</ixz>
+                    <iyy>0.0015069060220098923035</iyy>
+                    <iyz>-0.00028761045332653618683</iyz>
+                    <izz>0.0025435366954411004273</izz>
+                </inertia>
+            </inertial>
+        </link>
+
+        <link name="wheel">
+            <visual name="wheel_0_wheel_visual">
+                <pose>0 0 0 0 -0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>wheel.stl</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.26274509803921569651 0.28235294117647058432 0.30196078431372547213 1</ambient>
+                    <diffuse>0.26274509803921569651 0.28235294117647058432 0.30196078431372547213 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="wheel_0_wheel_visual">
+                <pose>0 0 0 0 -0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>wheel.stl</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+            <inertial>
+                <pose>-0.016000000000000000333 0.03250000000000000111
+                    0.024999999999999994449 0 0 0</pose>
+                <mass>0.3354192025986777459</mass>
+                <inertia>
+                    <ixx>0.00034529842223087294558</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.00017436687051762195309</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.00017436687051762189888</izz>
+                </inertia>
+            </inertial>
+        </link>
+
+        <joint name="wheel1_speed" type="revolute">
+            <pose>-0.020000000000000000416 0.03250000000000000111 0.024999999999999997918
+                -1.570796326794896558 -0 1.570796326794896558</pose>
+            <parent>body</parent>
+            <child>wheel</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                    <effort>1</effort>
+                    <velocity>20</velocity>
+                </limit>
+            </axis>
+        </joint>
+
+        <link name="wheel_2">
+            <visual name="wheel_2_0_wheel_visual">
+                <pose>0.10699999999999999789 0 -3.4694469519536141888e-18 0 -0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>wheel.stl</uri>
+                    </mesh>
+                </geometry>
+                <material>
+                    <ambient>0.26274509803921569651 0.28235294117647058432 0.30196078431372547213 1</ambient>
+                    <diffuse>0.26274509803921569651 0.28235294117647058432 0.30196078431372547213 1</diffuse>
+                    <specular>0.1 0.1 0.1 1</specular>
+                    <emissive>0 0 0 0</emissive>
+                </material>
+            </visual>
+            <collision name="wheel_2_0_wheel_visual">
+                <pose>0.10699999999999999789 0 -3.4694469519536141888e-18 0 -0 0</pose>
+                <geometry>
+                    <mesh>
+                        <uri>wheel.stl</uri>
+                    </mesh>
+                </geometry>
+            </collision>
+            <inertial>
+                <pose>0.090999999999999997558 0.03250000000000000111
+                    0.024999999999999990979 0 0 0</pose>
+                <mass>0.3354192025986777459</mass>
+                <inertia>
+                    <ixx>0.00034529842223087294558</ixx>
+                    <ixy>0</ixy>
+                    <ixz>0</ixz>
+                    <iyy>0.00017436687051762195309</iyy>
+                    <iyz>0</iyz>
+                    <izz>0.00017436687051762189888</izz>
+                </inertia>
+            </inertial>
+        </link>
+
+        <joint name="wheel2_speed" type="revolute">
+            <pose>0.09500000000000000111 0.032499999999999994171 0.024999999999999994449
+                -1.570796326794896558 -0 1.570796326794896558</pose>
+            <parent>body</parent>
+            <child>wheel_2</child>
+            <axis>
+                <xyz>0 0 1</xyz>
+                <limit>
+                    <effort>1</effort>
+                    <velocity>20</velocity>
+                </limit>
+            </axis>
+        </joint>
+
+
+    </model>
+</sdf>
