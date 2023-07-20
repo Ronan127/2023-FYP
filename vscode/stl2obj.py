@@ -22,12 +22,12 @@ def convert(root, extension):
                 print(f"Wrote {k}")
 
 parser = argparse.ArgumentParser("Convert meshes to obj")
-# parser.add_argument("root", type=str, help="The root directory to glob for stl files")
-# parser.add_argument("--extension", type=str, default="stl", help="The type of mesh to convert. You may specify dae. Other extensions may work as well.")
+parser.add_argument("root", type=str, help="The root directory to glob for stl files")
+parser.add_argument("--extension", type=str, default="stl", help="The type of mesh to convert. You may specify dae. Other extensions may work as well.")
 
 args = parser.parse_args()
-args.root= "./onshape-to-robot-examples/2wheels"
-args.extension= "stl"
+# args.root= "./onshape-to-robot-examples/2wheels"
+# args.extension= "stl"
 
 
 convert(args.root, extension=args.extension)
