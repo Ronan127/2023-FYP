@@ -4,14 +4,14 @@
 <visual name="motor_housing_0_m5-bolt-long_visual">
 <pose>-0.11078971757162756062 0.34934322847621773755 0.10847485139611934279 1.570796326794896558 1.961195134076520461e-15 -3.141592653589793116</pose>
 <geometry>
-<mesh><uri>file://my-robot/m5-bolt-long.obj</uri></mesh>
+<mesh><uri>file:///my-robot/m5-bolt-long.obj</uri></mesh>
 </geometry>
 <material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
 </visual>
 <collision name="motor_housing_0_m5-bolt-long_visual">
 <pose>-0.11078971757162756062 0.34934322847621773755 0.10847485139611934279 1.570796326794896558 1.961195134076520461e-15 -3.141592653589793116</pose>
 <geometry>
-<mesh><uri>file://my-robot/m5-bolt-long.obj</uri></mesh>
+<mesh><uri>file:///my-robot/m5-bolt-long.obj</uri></mesh>
 </geometry>
 </collision>
 <visual name="motor_housing_1_m3_bolt_visual">
