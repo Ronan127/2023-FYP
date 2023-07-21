@@ -1,13 +1,12 @@
 {
     "configuration": "default",
     "documentId": "62dd4fce2b47370182f54371",
-    "documentMicroversion": "6773ee5384fafb78de8ef444",
-    "documentVersion": "40937d27f68858a49b744b81",
+    "documentMicroversion": "2fa19861fa1a1bcd49dc4656",
     "elementId": "0a42557e555db8de22f439f7",
     "fullConfiguration": "default",
-    "id": "M20dDUao9XO1bm43S",
+    "id": "MRALqLVm/ye/0y8AH",
     "isStandardContent": false,
-    "name": "m3 bolt <7>",
+    "name": "m3 bolt <2>",
     "partId": "JFD",
     "suppressed": false,
     "type": "Part"
