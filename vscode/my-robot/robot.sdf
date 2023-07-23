@@ -1,265 +1,1984 @@
 <sdf version="1.6">
-    <model name="onshape">
-        <link name="jgy-370gearbox">
-            <visual name="jgy-370gearbox_0_m3_bolt_visual">
-                <pose>0.006197444749404817585 0.18564549537618915687 0.049583735422435701312
-                    9.4246221294479742422e-09 -1.6206358094921653335e-09 -4.0516052479552466115e-10</pose>
-                <geometry>
-                    <mesh>
-                        <uri>m3_bolt.obj</uri>
-                    </mesh>
-                </geometry>
-                <material>
-                    <ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient>
-                    <diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse>
-                    <specular>0.1 0.1 0.1 1</specular>
-                    <emissive>0 0 0 0</emissive>
-                </material>
-            </visual>
-            <collision name="jgy-370gearbox_0_m3_bolt_visual">
-                <pose>0.006197444749404817585 0.18564549537618915687 0.049583735422435701312
-                    9.4246221294479742422e-09 -1.6206358094921653335e-09 -4.0516052479552466115e-10</pose>
-                <geometry>
-                    <mesh>
-                        <uri>/m3_bolt.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <visual name="jgy-370gearbox_1_m3_bolt_visual">
-                <pose>0.039197444778576243096 0.18564549553246204039 0.031583735475916682733
-                    9.4246221294479775509e-09 -1.6206358094921653335e-09 -4.0516052479552481625e-10</pose>
-                <geometry>
-                    <mesh>
-                        <uri>m3_bolt.obj</uri>
-                    </mesh>
-                </geometry>
-                <material>
-                    <ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient>
-                    <diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse>
-                    <specular>0.1 0.1 0.1 1</specular>
-                    <emissive>0 0 0 0</emissive>
-                </material>
-            </visual>
-            <collision name="jgy-370gearbox_1_m3_bolt_visual">
-                <pose>0.039197444778576243096 0.18564549553246204039 0.031583735475916682733
-                    9.4246221294479775509e-09 -1.6206358094921653335e-09 -4.0516052479552481625e-10</pose>
-                <geometry>
-                    <mesh>
-                        <uri>/m3_bolt.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <visual name="jgy-370gearbox_2_side_plate_visual">
-                <pose>0.14224655897464266729 0.17964549527394430006 0.054583735586374033943
-                    -3.1415926531846327663 1.5707963172319492351 0</pose>
-                <geometry>
-                    <mesh>
-                        <uri>side_plate.obj</uri>
-                    </mesh>
-                </geometry>
-                <material>
-                    <ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient>
-                    <diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse>
-                    <specular>0.1 0.1 0.1 1</specular>
-                    <emissive>0 0 0 0</emissive>
-                </material>
-            </visual>
-            <collision name="jgy-370gearbox_2_side_plate_visual">
-                <pose>0.14224655897464266729 0.17964549527394430006 0.054583735586374033943
-                    -3.1415926531846327663 1.5707963172319492351 0</pose>
-                <geometry>
-                    <mesh>
-                        <uri>/side_plate.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <visual name="jgy-370gearbox_3_m3_bolt_visual">
-                <pose>0.039197444749404800057 0.185645495362818852 0.049583735475916684843
-                    9.4246221294479659704e-09 -1.6206358094921661607e-09 -4.0516052479552476455e-10</pose>
-                <geometry>
-                    <mesh>
-                        <uri>m3_bolt.obj</uri>
-                    </mesh>
-                </geometry>
-                <material>
-                    <ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient>
-                    <diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse>
-                    <specular>0.1 0.1 0.1 1</specular>
-                    <emissive>0 0 0 0</emissive>
-                </material>
-            </visual>
-            <collision name="jgy-370gearbox_3_m3_bolt_visual">
-                <pose>0.039197444749404800057 0.185645495362818852 0.049583735475916684843
-                    9.4246221294479659704e-09 -1.6206358094921661607e-09 -4.0516052479552476455e-10</pose>
-                <geometry>
-                    <mesh>
-                        <uri>/m3_bolt.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <visual name="jgy-370gearbox_4_jgy-37012v_dc_motor_visual">
-                <pose>0.023404551563615955123 0.16642766767869193734 0.024401735269201349499
-                    1.5707963284155324057 9.424622130595581463e-09 -1.5707963272000571298</pose>
-                <geometry>
-                    <mesh>
-                        <uri>jgy-37012v_dc_motor.obj</uri>
-                    </mesh>
-                </geometry>
-                <material>
-                    <ambient>0.97254901960784312376 0.9686274509803921573 0.92941176470588238168 1</ambient>
-                    <diffuse>0.97254901960784312376 0.9686274509803921573 0.92941176470588238168 1</diffuse>
-                    <specular>0.1 0.1 0.1 1</specular>
-                    <emissive>0 0 0 0</emissive>
-                </material>
-            </visual>
-            <collision name="jgy-370gearbox_4_jgy-37012v_dc_motor_visual">
-                <pose>0.023404551563615955123 0.16642766767869193734 0.024401735269201349499
-                    1.5707963284155324057 9.424622130595581463e-09 -1.5707963272000571298</pose>
-                <geometry>
-                    <mesh>
-                        <uri>/jgy-37012v_dc_motor.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <visual name="jgy-370gearbox_5_jgy-370gearbox_visual">
-                <pose>0.023697444760749267201 0.17764549545392041563 0.040583735375399845879
-                    -3.1415926531846327663 1.5707963172319492351 0</pose>
-                <geometry>
-                    <mesh>
-                        <uri>jgy-370gearbox.obj</uri>
-                    </mesh>
-                </geometry>
-                <material>
-                    <ambient>0.96078431372549022438 0.96078431372549022438 0.96470588235294119084 1</ambient>
-                    <diffuse>0.96078431372549022438 0.96078431372549022438 0.96470588235294119084 1</diffuse>
-                    <specular>0.1 0.1 0.1 1</specular>
-                    <emissive>0 0 0 0</emissive>
-                </material>
-            </visual>
-            <collision name="jgy-370gearbox_5_jgy-370gearbox_visual">
-                <pose>0.023697444760749267201 0.17764549545392041563 0.040583735375399845879
-                    -3.1415926531846327663 1.5707963172319492351 0</pose>
-                <geometry>
-                    <mesh>
-                        <uri>/jgy-370gearbox.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <visual name="jgy-370gearbox_6_m3_bolt_visual">
-                <pose>0.0061974447785762606239 0.18564549554583234525 0.031583735422435699203
-                    9.4246221294479808597e-09 -1.6206358094921663675e-09 -4.0516052479552471285e-10</pose>
-                <geometry>
-                    <mesh>
-                        <uri>m3_bolt.obj</uri>
-                    </mesh>
-                </geometry>
-                <material>
-                    <ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient>
-                    <diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse>
-                    <specular>0.1 0.1 0.1 1</specular>
-                    <emissive>0 0 0 0</emissive>
-                </material>
-            </visual>
-            <collision name="jgy-370gearbox_6_m3_bolt_visual">
-                <pose>0.0061974447785762606239 0.18564549554583234525 0.031583735422435699203
-                    9.4246221294479808597e-09 -1.6206358094921663675e-09 -4.0516052479552471285e-10</pose>
-                <geometry>
-                    <mesh>
-                        <uri>/m3_bolt.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <inertial>
-                <pose>0.036283204924985032469 0.16668640422998537431 0.039879984810162097397 0 0 0</pose>
-                <mass>0.39264358472927013421</mass>
-                <inertia>
-                    <ixx>5.0568446781703058914e-05</ixx>
-                    <ixy>5.4059121020027018765e-07</ixy>
-                    <ixz>6.9989500203376457503e-06</ixz>
-                    <iyy>0.00024549789797103537719</iyy>
-                    <iyz>-7.1363048078469181123e-07</iyz>
-                    <izz>0.00023606768241546201748</izz>
-                </inertia>
-            </inertial>
-        </link>
+<model name="onshape">
+<link name="body">
+<visual name="body_0_m3_bolt_visual">
+<pose>-0.32717104504557964484 0.11870586107737114701 0.26461932979901653384 3.1315712011710048479 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_0_m3_bolt_visual">
+<pose>-0.32717104504557964484 0.11870586107737114701 0.26461932979901653384 3.1315712011710048479 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_1_side_plate_visual">
+<pose>-0.1912510146677121603 0.12694116959264220568 0.24154799433537210707 -1.5617288774461293155 -1.5607744624144965773 1.5798641161966702207</pose>
+<geometry>
+<mesh><uri>side_plate.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_1_side_plate_visual">
+<pose>-0.1912510146677121603 0.12694116959264220568 0.24154799433537210707 -1.5617288774461293155 -1.5607744624144965773 1.5798641161966702207</pose>
+<geometry>
+<mesh><uri>side_plate.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_2_tail_fin_visual">
+<pose>-0.18870301769261302316 0.1492584036301935202 0.25682534670081674788 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>tail_fin.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_2_tail_fin_visual">
+<pose>-0.18870301769261302316 0.1492584036301935202 0.25682534670081674788 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>tail_fin.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_3_m5-nut-4mm_visual">
+<pose>-0.19842472495512569752 0.13368156316712478948 0.22847913873580660837 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_3_m5-nut-4mm_visual">
+<pose>-0.19842472495512569752 0.13368156316712478948 0.22847913873580660837 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_4_m3_bolt_visual">
+<pose>-0.29417483567318958304 0.11912389300350534338 0.24661723502195992408 3.1315712011710048479 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_4_m3_bolt_visual">
+<pose>-0.29417483567318958304 0.11912389300350534338 0.24661723502195992408 3.1315712011710048479 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_5_m3_bolt_visual">
+<pose>-0.29555300366361558773 0.19510757935506509164 0.24585561738957328881 -0.010021452418788408603 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_5_m3_bolt_visual">
+<pose>-0.29555300366361558773 0.19510757935506509164 0.24585561738957328881 -0.010021452418788408603 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_6_m3_bolt_visual">
+<pose>-0.32854921303600559401 0.19468954742893088139 0.2638577121666300096 -0.010021452418788405134 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_6_m3_bolt_visual">
+<pose>-0.32854921303600559401 0.19468954742893088139 0.2638577121666300096 -0.010021452418788405134 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_7_jgy-370gearbox_visual">
+<pose>-0.3098181751089727487 0.12693129360365140723 0.25553802126341368384 -1.5617288774461286494 -1.5607744624144965773 1.5798641161966706647</pose>
+<geometry>
+<mesh><uri>jgy-370gearbox.obj</uri></mesh>
+</geometry>
+<material><ambient>0.96078431372549022438 0.96078431372549022438 0.96470588235294119084 1</ambient><diffuse>0.96078431372549022438 0.96078431372549022438 0.96470588235294119084 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_7_jgy-370gearbox_visual">
+<pose>-0.3098181751089727487 0.12693129360365140723 0.25553802126341368384 -1.5617288774461286494 -1.5607744624144965773 1.5798641161966706647</pose>
+<geometry>
+<mesh><uri>jgy-370gearbox.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_8_bottom_plate_visual">
+<pose>-0.18951930382706064226 0.19439117123334689885 0.28187424116081860603 1.5707054522502985616 -0.01002145237741168364 -1.5526606326930840751</pose>
+<geometry>
+<mesh><uri>bottom_plate.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_8_bottom_plate_visual">
+<pose>-0.18951930382706064226 0.19439117123334689885 0.28187424116081860603 1.5707054522502985616 -0.01002145237741168364 -1.5526606326930840751</pose>
+<geometry>
+<mesh><uri>bottom_plate.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_9_tail_fin_visual">
+<pose>-0.18891026675496855325 0.16072686648079559379 0.26509767452740284899 -0.010021452418788405134 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>tail_fin.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_9_tail_fin_visual">
+<pose>-0.18891026675496855325 0.16072686648079559379 0.26509767452740284899 -0.010021452418788405134 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>tail_fin.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_10_m5-bolt-long_visual">
+<pose>-0.19843008648507878822 0.13427281895886489238 0.28747617584651868894 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-bolt-long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_10_m5-bolt-long_visual">
+<pose>-0.19843008648507878822 0.13427281895886489238 0.28747617584651868894 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-bolt-long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_11_m3_bolt_visual">
+<pose>-0.32716940932457694302 0.11852547795446737033 0.24662023373134173143 3.1315712011710048479 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_11_m3_bolt_visual">
+<pose>-0.32716940932457694302 0.11852547795446737033 0.24662023373134173143 3.1315712011710048479 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_12_m3_bolt_visual">
+<pose>-0.29417647139419217384 0.11930427612640910617 0.26461633108963472649 3.1315712011710048479 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_12_m3_bolt_visual">
+<pose>-0.29417647139419217384 0.11930427612640910617 0.26461633108963472649 3.1315712011710048479 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_13_m5-nut-4mm_visual">
+<pose>-0.19933141442251117725 0.18367083050367721819 0.22797807450397331031 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_13_m5-nut-4mm_visual">
+<pose>-0.19933141442251117725 0.18367083050367721819 0.22797807450397331031 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_14_tail_fin_visual">
+<pose>-0.18906131754433674885 0.16899781521603840506 0.25362733928042707765 -1.5808177792136850481 9.0869981393277841669e-05 0.018134783422132479819</pose>
+<geometry>
+<mesh><uri>tail_fin.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_14_tail_fin_visual">
+<pose>-0.18906131754433674885 0.16899781521603840506 0.25362733928042707765 -1.5808177792136850481 9.0869981393277841669e-05 0.018134783422132479819</pose>
+<geometry>
+<mesh><uri>tail_fin.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_15_tail_fin_visual">
+<pose>-0.18885406848198127427 0.15752935236543633146 0.24535501145384081001 3.1315712011710048479 9.0869981393277841669e-05 0.018134783422132479819</pose>
+<geometry>
+<mesh><uri>tail_fin.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_15_tail_fin_visual">
+<pose>-0.18885406848198127427 0.15752935236543633146 0.24535501145384081001 3.1315712011710048479 9.0869981393277841669e-05 0.018134783422132479819</pose>
+<geometry>
+<mesh><uri>tail_fin.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_16_jgy-37012v_dc_motor_visual">
+<pose>-0.31031591240771017048 0.13830356675162694402 0.27160681819678428317 -1.5707054522502985616 0.01002145237741168711 1.588932020896709485</pose>
+<geometry>
+<mesh><uri>jgy-37012v_dc_motor.obj</uri></mesh>
+</geometry>
+<material><ambient>0.97254901960784312376 0.9686274509803921573 0.92941176470588238168 1</ambient><diffuse>0.97254901960784312376 0.9686274509803921573 0.92941176470588238168 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_16_jgy-37012v_dc_motor_visual">
+<pose>-0.31031591240771017048 0.13830356675162694402 0.27160681819678428317 -1.5707054522502985616 0.01002145237741168711 1.588932020896709485</pose>
+<geometry>
+<mesh><uri>jgy-37012v_dc_motor.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_17_m3_bolt_visual">
+<pose>-0.32854757731500300322 0.19450916430602710472 0.24585861609895515167 -0.010021452418788412073 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_17_m3_bolt_visual">
+<pose>-0.32854757731500300322 0.19450916430602710472 0.24585861609895515167 -0.010021452418788412073 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_18_m5-bolt-long_visual">
+<pose>-0.1993367759524642957 0.18426208629541734885 0.28697511161468541863 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-bolt-long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_18_m5-bolt-long_visual">
+<pose>-0.1993367759524642957 0.18426208629541734885 0.28697511161468541863 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-bolt-long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_19_m5-bolt-long_visual">
+<pose>-0.31186485008564351906 0.15721833442892019228 0.28723591203848536368 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-bolt-long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_19_m5-bolt-long_visual">
+<pose>-0.31186485008564351906 0.15721833442892019228 0.28723591203848536368 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-bolt-long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_20_jgy-370gearbox_visual">
+<pose>-0.31090620246983535768 0.18691841440751433279 0.25493674418521367064 1.5617288774461293155 1.5607744624144965773 -1.5617285373931231174</pose>
+<geometry>
+<mesh><uri>jgy-370gearbox.obj</uri></mesh>
+</geometry>
+<material><ambient>0.96078431372549022438 0.96078431372549022438 0.96470588235294119084 1</ambient><diffuse>0.96078431372549022438 0.96078431372549022438 0.96470588235294119084 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_20_jgy-370gearbox_visual">
+<pose>-0.31090620246983535768 0.18691841440751433279 0.25493674418521367064 1.5617288774461293155 1.5607744624144965773 -1.5617285373931231174</pose>
+<geometry>
+<mesh><uri>jgy-370gearbox.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_21_tail_visual">
+<pose>-0.19188167431405558916 0.15907370805502157873 0.25522661560056564278 3.1325252042410260955 1.5607744624144965773 -1.5617285373931235615</pose>
+<geometry>
+<mesh><uri>tail.obj</uri></mesh>
+</geometry>
+<material><ambient>0.92156862745098033773 0.92156862745098033773 0.92156862745098033773 1</ambient><diffuse>0.92156862745098033773 0.92156862745098033773 0.92156862745098033773 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_21_tail_visual">
+<pose>-0.19188167431405558916 0.15907370805502157873 0.25522661560056564278 3.1325252042410260955 1.5607744624144965773 -1.5617285373931235615</pose>
+<geometry>
+<mesh><uri>tail.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_22_side_plate_visual">
+<pose>-0.1924141216408586097 0.19120802775239073568 0.26890522600167526823 1.5617288774461293155 1.5607744624144965773 -1.5617285373931231174</pose>
+<geometry>
+<mesh><uri>side_plate.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_22_side_plate_visual">
+<pose>-0.1924141216408586097 0.19120802775239073568 0.26890522600167526823 1.5617288774461293155 1.5607744624144965773 -1.5617285373931231174</pose>
+<geometry>
+<mesh><uri>side_plate.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_23_m5-nut-4mm_visual">
+<pose>-0.31185948855569040061 0.15662707863718008938 0.22823887492777328312 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_23_m5-nut-4mm_visual">
+<pose>-0.31185948855569040061 0.15662707863718008938 0.22823887492777328312 1.5607748743761082899 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_24_jgy-37012v_dc_motor_visual">
+<pose>-0.31099415528504498196 0.17553551873166639563 0.23886800048224543502 1.5707054522502985616 -0.010021452377411681905 -1.5526606326930840751</pose>
+<geometry>
+<mesh><uri>jgy-37012v_dc_motor.obj</uri></mesh>
+</geometry>
+<material><ambient>0.97254901960784312376 0.9686274509803921573 0.92941176470588238168 1</ambient><diffuse>0.97254901960784312376 0.9686274509803921573 0.92941176470588238168 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_24_jgy-37012v_dc_motor_visual">
+<pose>-0.31099415528504498196 0.17553551873166639563 0.23886800048224543502 1.5707054522502985616 -0.010021452377411681905 -1.5526606326930840751</pose>
+<geometry>
+<mesh><uri>jgy-37012v_dc_motor.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_25_m3_bolt_visual">
+<pose>-0.29555463938461823403 0.19528796247796884056 0.26385471345724814674 -0.01002145241878839646 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_25_m3_bolt_visual">
+<pose>-0.29555463938461823403 0.19528796247796884056 0.26385471345724814674 -0.01002145241878839646 9.08699813932780043e-05 0.018134783422132497166</pose>
+<geometry>
+<mesh><uri>m3_bolt.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_26_front_plate_visual">
+<pose>-0.33527553348137617562 0.12422880045084888634 0.23156158626030950987 -9.087454459799094162e-05 -0.01002145237741168364 -1.5526606326930840751</pose>
+<geometry>
+<mesh><uri>front_plate.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_26_front_plate_visual">
+<pose>-0.33527553348137617562 0.12422880045084888634 0.23156158626030950987 -9.087454459799094162e-05 -0.01002145237741168364 -1.5526606326930840751</pose>
+<geometry>
+<mesh><uri>front_plate.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_27_back_plate_visual">
+<pose>-0.19245977461184543555 0.19082632831987680899 0.23090713973529256031 9.087454459799094162e-05 0.01002145237741168364 1.5889320208967092629</pose>
+<geometry>
+<mesh><uri>back_plate.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_27_back_plate_visual">
+<pose>-0.19245977461184543555 0.19082632831987680899 0.23090713973529256031 9.087454459799094162e-05 0.01002145237741168364 1.5889320208967092629</pose>
+<geometry>
+<mesh><uri>back_plate.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="body_28_bottom_plate_visual">
+<pose>-0.18951466928421983882 0.19388008571845288808 0.23087680230240648083 1.5707054522502985616 -0.01002145237741168364 -1.5526606326930840751</pose>
+<geometry>
+<mesh><uri>bottom_plate.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="body_28_bottom_plate_visual">
+<pose>-0.18951466928421983882 0.19388008571845288808 0.23087680230240648083 1.5707054522502985616 -0.01002145237741168364 -1.5526606326930840751</pose>
+<geometry>
+<mesh><uri>bottom_plate.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.27876772091850815505 0.15750019565709050262 0.25527061929026106935 0 0 0</pose>
+<mass>0.93999623980613211671</mass>
+<inertia><ixx>0.00048704164977702180811</ixx><ixy>-7.1556237764334998581e-05</ixy><ixz>-1.3210036595590260439e-06</ixz><iyy>0.0044213736568990396475</iyy><iyz>1.1630040023786329965e-05</iyz><izz>0.0046747941085663767199</izz></inertia>
+</inertial>
+</link>
 
-        <link name="jgy-370output_shaft">
-            <visual name="jgy-370output_shaft_0_jgy-370output_shaft_visual">
-                <pose>0.013465008100490805446 0.17764549538566437592 0.048265937296641775456
-                    -3.1415926437752892397 -0.28280944058297446952 -3.1439448582711155302e-09</pose>
-                <geometry>
-                    <mesh>
-                        <uri>jgy-370output_shaft.obj</uri>
-                    </mesh>
-                </geometry>
-                <material>
-                    <ambient>0.79607843137254896693 0.79607843137254896693 0.79607843137254896693 1</ambient>
-                    <diffuse>0.79607843137254896693 0.79607843137254896693 0.79607843137254896693 1</diffuse>
-                    <specular>0.1 0.1 0.1 1</specular>
-                    <emissive>0 0 0 0</emissive>
-                </material>
-            </visual>
-            <collision name="jgy-370output_shaft_0_jgy-370output_shaft_visual">
-                <pose>0.013465008100490805446 0.17764549538566437592 0.048265937296641775456
-                    -3.1415926437752892397 -0.28280944058297446952 -3.1439448582711155302e-09</pose>
-                <geometry>
-                    <mesh>
-                        <uri>/jgy-370output_shaft.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <visual name="jgy-370output_shaft_1_part_1_visual">
-                <pose>0.015668232131301907534 0.18339549545622635396 0.040684261151727581229
-                    -1.8536057673778714161 -9.4246255546102818187e-09 1.5707963263897339878</pose>
-                <geometry>
-                    <mesh>
-                        <uri>part_1.obj</uri>
-                    </mesh>
-                </geometry>
-                <material>
-                    <ambient>0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1</ambient>
-                    <diffuse>0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1</diffuse>
-                    <specular>0.1 0.1 0.1 1</specular>
-                    <emissive>0 0 0 0</emissive>
-                </material>
-            </visual>
-            <collision name="jgy-370output_shaft_1_part_1_visual">
-                <pose>0.015668232131301907534 0.18339549545622635396 0.040684261151727581229
-                    -1.8536057673778714161 -9.4246255546102818187e-09 1.5707963263897339878</pose>
-                <geometry>
-                    <mesh>
-                        <uri>/part_1.obj</uri>
-                    </mesh>
-                </geometry>
-            </collision>
-            <inertial>
-                <pose>0.015738874691341039891 0.18887836590663403813 0.040699002766839784129 0 0 0</pose>
-                <mass>0.005108165220076048979</mass>
-                <inertia>
-                    <ixx>4.3186527174566270426e-07</ixx>
-                    <ixy>-5.1606839547473235659e-09</ixy>
-                    <ixz>2.1850064865392627051e-11</ixz>
-                    <iyy>4.9105154958575637083e-08</iyy>
-                    <iyz>-2.56823361310038552e-09</iyz>
-                    <izz>4.3178883120003172588e-07</izz>
-                </inertia>
-            </inertial>
-        </link>
+<link name="assembly_3">
+<visual name="assembly_3_0_spur_gear23_visual">
+<pose>-0.31741831405572490388 0.099040281594021201128 0.25581684838459106679 -0.010021452418788375643 9.0869981398541155326e-05 0.018134783422132431246</pose>
+<geometry>
+<mesh><uri>spur_gear23.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="assembly_3_0_spur_gear23_visual">
+<pose>-0.31741831405572490388 0.099040281594021201128 0.25581684838459106679 -0.010021452418788375643 9.0869981398541155326e-05 0.018134783422132431246</pose>
+<geometry>
+<mesh><uri>spur_gear23.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="assembly_3_1_jgy-370output_shaft_visual">
+<pose>-0.32581554415206975817 0.12664115297381484115 0.25553947518311398435 -1.5798637761440204041 1.5607744624144965773 -1.5617285373929443715</pose>
+<geometry>
+<mesh><uri>jgy-370output_shaft.obj</uri></mesh>
+</geometry>
+<material><ambient>0.79607843137254896693 0.79607843137254896693 0.79607843137254896693 1</ambient><diffuse>0.79607843137254896693 0.79607843137254896693 0.79607843137254896693 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="assembly_3_1_jgy-370output_shaft_visual">
+<pose>-0.32581554415206975817 0.12664115297381484115 0.25553947518311398435 -1.5798637761440204041 1.5607744624144965773 -1.5617285373929443715</pose>
+<geometry>
+<mesh><uri>jgy-370output_shaft.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="assembly_3_2_part_1_visual">
+<pose>-0.31781725742137467705 0.12103555922210428031 0.25559638012258434348 -9.0874544603255163295e-05 -0.01002145237741165068 -1.5526606326930842972</pose>
+<geometry>
+<mesh><uri>part_1.obj</uri></mesh>
+</geometry>
+<material><ambient>0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1</ambient><diffuse>0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="assembly_3_2_part_1_visual">
+<pose>-0.31781725742137467705 0.12103555922210428031 0.25559638012258434348 -9.0874544603255163295e-05 -0.01002145237741165068 -1.5526606326930842972</pose>
+<geometry>
+<mesh><uri>part_1.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.31740479362408441366 0.098330776964890606595 0.25581739046780321845 0 0 0</pose>
+<mass>0.043528139347743959042</mass>
+<inertia><ixx>1.933453719301301196e-05</ixx><ixy>-2.7073551515081033583e-07</ixy><ixz>2.6981875067929877172e-09</ixz><iyy>3.4172760903475241556e-05</iyy><iyz>-1.4793446787577307264e-07</iyz><izz>1.9331014692693102085e-05</izz></inertia>
+</inertial>
+</link>
 
-        <joint name="motor_a (1)" type="revolute">
-            <pose>0.015697444760242797168 0.1763954954571617384 0.040583735350653932228
-                1.5707963366094006563 -0.28280944058297446952 -3.1439448582711155302e-09</pose>
-            <parent>jgy-370gearbox</parent>
-            <child>jgy-370output_shaft</child>
-            <axis>
-                <xyz>0 0 1</xyz>
-                <limit>
-                    <effort>1</effort>
-                    <velocity>20</velocity>
-                </limit>
-            </axis>
-        </joint>
+<link name="lim_frame">
+<visual name="lim_frame_0_frame_visual">
+<pose>-0.31720977547822676312 0.087542750106614761196 0.25593209315791198843 0.010397252546148353161 0.26967680400245463979 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>frame.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_0_frame_visual">
+<pose>-0.31720977547822676312 0.087542750106614761196 0.25593209315791198843 0.010397252546148353161 0.26967680400245463979 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>frame.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_1_m3_bolt_long_visual">
+<pose>-0.34933326655186452969 0.083577592124549432429 0.21783455960384379146 0.010397252546148344488 0.26967680400245475081 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_1_m3_bolt_long_visual">
+<pose>-0.34933326655186452969 0.083577592124549432429 0.21783455960384379146 0.010397252546148344488 0.26967680400245475081 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_standoff1_visual">
+<pose>-0.18444417337152468894 0.10232070265132046927 0.29257778889194591132 -3.1311954010436444662 0.26967680400245863659 -3.1206868313965285822</pose>
+<geometry>
+<mesh><uri>standoff1.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_standoff1_visual">
+<pose>-0.18444417337152468894 0.10232070265132046927 0.29257778889194591132 -3.1311954010436444662 0.26967680400245863659 -3.1206868313965285822</pose>
+<geometry>
+<mesh><uri>standoff1.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_3_m5-washer_visual">
+<pose>-0.24981799351977576618 0.092452411768546002846 0.274546414172387232 -3.1311954010436449103 0.2696768040024546953 -3.1206868313965245854</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_3_m5-washer_visual">
+<pose>-0.24981799351977576618 0.092452411768546002846 0.274546414172387232 -3.1311954010436449103 0.2696768040024546953 -3.1206868313965245854</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_4_m3-nut_visual">
+<pose>-0.18449857473956782217 0.10532005869151364608 0.29254772503803599948 3.1039957583906727656 1.3009240457985933315 -0.01810159310861591056</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_4_m3-nut_visual">
+<pose>-0.18449857473956782217 0.10532005869151364608 0.29254772503803599948 3.1039957583906727656 1.3009240457985933315 -0.01810159310861591056</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_5_m3_bolt_long_visual">
+<pose>-0.18417216653130963344 0.087323922450356028513 0.29272810816149469337 0.010397252546148351426 0.26967680400245463979 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_5_m3_bolt_long_visual">
+<pose>-0.18417216653130963344 0.087323922450356028513 0.29272810816149469337 0.010397252546148351426 0.26967680400245463979 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_6_m5-washer_visual">
+<pose>-0.24996306383455699218 0.10045069454239340112 0.2744662438952948369 0.010397252546148566532 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_6_m5-washer_visual">
+<pose>-0.24996306383455699218 0.10045069454239340112 0.2744662438952948369 0.010397252546148566532 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_7_m3-nut_visual">
+<pose>-0.36468045442550756086 0.10184565810889549542 0.2719640825056697242 0.01039725254614858041 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_7_m3-nut_visual">
+<pose>-0.36468045442550756086 0.10184565810889549542 0.2719640825056697242 0.01039725254614858041 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_8_standoff2_visual">
+<pose>-0.27022870884333355379 0.10023404646607117496 0.23962952912496537916 -3.1311954010436444662 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_8_standoff2_visual">
+<pose>-0.27022870884333355379 0.10023404646607117496 0.23962952912496537916 -3.1311954010436444662 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_9_m5-washer_visual">
+<pose>-0.21045356013358709757 0.10127679355501140179 0.2853894612658499641 0.03759689519912250838 -1.3009240457985933315 3.1234910604811774171</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_9_m5-washer_visual">
+<pose>-0.21045356013358709757 0.10127679355501140179 0.2853894612658499641 0.03759689519912250838 -1.3009240457985933315 3.1234910604811774171</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_10_m5-washer_visual">
+<pose>-0.21030848981880595483 0.093278510781164225563 0.28546963154294213716 -0.037596895199083969763 1.300924045798595774 -0.018101593108575054353</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_10_m5-washer_visual">
+<pose>-0.21030848981880595483 0.093278510781164225563 0.28546963154294213716 -0.037596895199083969763 1.300924045798595774 -0.018101593108575054353</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_11_m3_bolt_long_visual">
+<pose>-0.26995670200311822073 0.085237266265106526042 0.23977984839451418897 0.010397252546148347957 0.26967680400245458427 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_11_m3_bolt_long_visual">
+<pose>-0.26995670200311822073 0.085237266265106526042 0.23977984839451418897 0.010397252546148347957 0.26967680400245458427 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_12_m3-nut_visual">
+<pose>-0.34965967476012321802 0.10157372836570764674 0.21765417648038462572 0.010397252546148752148 0.2696768040024586921 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_12_m3-nut_visual">
+<pose>-0.34965967476012321802 0.10157372836570764674 0.21765417648038462572 0.010397252546148752148 0.2696768040024586921 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_13_m3-nut_visual">
+<pose>-0.4504649898973164257 0.099759001923646159482 0.21901582273868913653 0.010397252546150283908 0.26967680400245863659 -3.1206868313965259176</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_13_m3-nut_visual">
+<pose>-0.4504649898973164257 0.099759001923646159482 0.21901582273868913653 0.010397252546150283908 0.26967680400245863659 -3.1206868313965259176</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_14_standoff2_visual">
+<pose>-0.36462605305746442763 0.098846302068702346366 0.27199414635957969155 -3.1311954010436444662 0.2696768040024586921 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_14_standoff2_visual">
+<pose>-0.36462605305746442763 0.098846302068702346366 0.27199414635957969155 -3.1311954010436444662 0.2696768040024586921 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_15_standoff2_visual">
+<pose>-0.34960527339208008479 0.098574372325514483806 0.21768424033429462083 -3.1311954010436444662 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_15_standoff2_visual">
+<pose>-0.34960527339208008479 0.098574372325514483806 0.21768424033429462083 -3.1311954010436444662 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_16_m5-washer_visual">
+<pose>-0.31727324374094373338 0.091041998820173455909 0.25589701866168362843 -3.1311954010436453544 0.26967680400245458427 -3.1206868313965250294</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_16_m5-washer_visual">
+<pose>-0.31727324374094373338 0.091041998820173455909 0.25589701866168362843 -3.1311954010436453544 0.26967680400245458427 -3.1206868313965250294</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_17_m3_bolt_long_visual">
+<pose>-0.28497748166850261908 0.085509196008293750224 0.29408975441980012011 0.010397252546148346222 0.26967680400245463979 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_17_m3_bolt_long_visual">
+<pose>-0.28497748166850261908 0.085509196008293750224 0.29408975441980012011 0.010397252546148346222 0.26967680400245463979 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_18_standoff2_visual">
+<pose>-0.28508628440458849695 0.091507908088679507097 0.29402962671198051847 3.1039957583906714333 1.3009240457985933315 -0.01810159310861591056</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_18_standoff2_visual">
+<pose>-0.28508628440458849695 0.091507908088679507097 0.29402962671198051847 3.1039957583906714333 1.3009240457985933315 -0.01810159310861591056</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_19_frame_visual">
+<pose>-0.31748178231844209618 0.10253953030757990972 0.25578177388836254025 -3.1311954010436444662 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>frame.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_19_frame_visual">
+<pose>-0.31748178231844209618 0.10253953030757990972 0.25578177388836254025 -3.1311954010436444662 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>frame.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_20_m3_bolt_long_visual">
+<pose>-0.45013858168905762636 0.081762865682487168018 0.2191962058621492182 3.1039957583906692129 1.300924045798595774 -0.018101593108575054353</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_20_m3_bolt_long_visual">
+<pose>-0.45013858168905762636 0.081762865682487168018 0.2191962058621492182 3.1039957583906692129 1.300924045798595774 -0.018101593108575054353</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_21_standoff1_visual">
+<pose>-0.45041058852927329248 0.096759645883452996551 0.21904588659259915939 -3.1039957583906709893 -1.3009240457985933315 3.123491060481176973</pose>
+<geometry>
+<mesh><uri>standoff1.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_21_standoff1_visual">
+<pose>-0.45041058852927329248 0.096759645883452996551 0.21904588659259915939 -3.1039957583906709893 -1.3009240457985933315 3.123491060481176973</pose>
+<geometry>
+<mesh><uri>standoff1.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_22_m3_bolt_long_visual">
+<pose>-0.36435404621724898355 0.083849521867736684366 0.27214446562912975036 0.010397252546148334079 0.26967680400245458427 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_22_m3_bolt_long_visual">
+<pose>-0.36435404621724898355 0.083849521867736684366 0.27214446562912975036 0.010397252546148334079 0.26967680400245458427 -3.1206868313965201445</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_23_m5-washer_visual">
+<pose>-0.42438306797786312652 0.096803769633031028219 0.22624423550333186417 0.037596895199121342646 -1.3009240457985933315 3.123491060481176973</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_23_m5-washer_visual">
+<pose>-0.42438306797786312652 0.096803769633031028219 0.22624423550333186417 0.037596895199121342646 -1.3009240457985933315 3.123491060481176973</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_24_m3-nut_visual">
+<pose>-0.2702831102113766315 0.10323340250626433789 0.2395994652710553563 0.010397252546148632452 0.26967680400245858108 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_24_m3-nut_visual">
+<pose>-0.2702831102113766315 0.10323340250626433789 0.2395994652710553563 0.010397252546148632452 0.26967680400245858108 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_25_m3-nut_visual">
+<pose>-0.28530388987676102985 0.10350533224945215882 0.29390937129634053804 0.010397252546148722657 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_25_m3-nut_visual">
+<pose>-0.28530388987676102985 0.10350533224945215882 0.29390937129634053804 0.010397252546148722657 0.26967680400245863659 -3.1206868313965254735</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_26_m5-washer_visual">
+<pose>-0.31741831405572512592 0.099040281594021228884 0.25581684838459090026 0.010397252546147185692 0.26967680400245880312 -3.1206868313965250294</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_26_m5-washer_visual">
+<pose>-0.31741831405572512592 0.099040281594021228884 0.25581684838459090026 0.010397252546147185692 0.26967680400245880312 -3.1206868313965250294</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_27_m5-washer_visual">
+<pose>-0.38487356427689323191 0.097629868645649028891 0.23716745287388699137 3.1311954010436449103 -0.2696768040024586921 0.020905822193267725728</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_27_m5-washer_visual">
+<pose>-0.38487356427689323191 0.097629868645649028891 0.23716745287388699137 3.1311954010436449103 -0.2696768040024586921 0.020905822193267725728</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_28_m5-washer_visual">
+<pose>-0.42423799766308156745 0.088805486859182700132 0.22632440578042509194 -0.03759689519908242239 1.300924045798595774 -0.018101593108575054353</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_28_m5-washer_visual">
+<pose>-0.42423799766308156745 0.088805486859182700132 0.22632440578042509194 -0.03759689519908242239 1.300924045798595774 -0.018101593108575054353</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_29_m5-washer_visual">
+<pose>-0.38472849396211172834 0.089631585871800922849 0.23724762315098002485 -0.010397252546149501548 -0.26967680400245458427 0.020905822193272968063</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_29_m5-washer_visual">
+<pose>-0.38472849396211172834 0.089631585871800922849 0.23724762315098002485 -0.010397252546149501548 -0.26967680400245458427 0.020905822193272968063</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.31734449853369478545 0.094970548794522866021 0.25585764109165759495 0 0 0</pose>
+<mass>0.13451687861695468817</mass>
+<inertia><ixx>0.00010417648592994168419</ixx><ixy>-1.4080578343697718215e-05</ixy><ixz>-0.00017524898004305688093</ixz><iyy>0.0007833481433058562312</iyy><iyz>-4.1210449151820837047e-06</iyz><izz>0.00068962174095580871559</izz></inertia>
+</inertial>
+</link>
+
+<link name="idler">
+<visual name="idler_0_shaft2_visual">
+<pose>-0.38461969122602546189 0.083632873791414652498 0.23730775085880004283 0.20334504492875635218 0.010021452377414721141 1.5889320208967132597</pose>
+<geometry>
+<mesh><uri>shaft2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.87843137254901959565 0.87450980392156862919 0.85882352941176465233 1</ambient><diffuse>0.87843137254901959565 0.87450980392156862919 0.85882352941176465233 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="idler_0_shaft2_visual">
+<pose>-0.38461969122602546189 0.083632873791414652498 0.23730775085880004283 0.20334504492875635218 0.010021452377414721141 1.5889320208967132597</pose>
+<geometry>
+<mesh><uri>shaft2.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="idler_1_spur_gear13_visual">
+<pose>-0.38472849396211172834 0.089631585871800922849 0.2372476231509799971 3.1313603955366873244 0.20333469099986378748 0.016069359170225287065</pose>
+<geometry>
+<mesh><uri>spur_gear13.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="idler_1_spur_gear13_visual">
+<pose>-0.38472849396211172834 0.089631585871800922849 0.2372476231509799971 3.1313603955366873244 0.20333469099986378748 0.016069359170225287065</pose>
+<geometry>
+<mesh><uri>spur_gear13.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.38480033914609884649 0.092629776707060934582 0.23713287630830162667 0 0 0</pose>
+<mass>0.020048491397287253324</mass>
+<inertia><ixx>3.4770948602276465796e-06</ixx><ixy>-5.8079146458399527444e-08</ixy><ixz>1.0772313319785799822e-09</ixz><iyy>6.6784413962657609352e-06</iyy><iyz>-3.2067004888871874818e-08</iyz><izz>3.4786641860585580746e-06</izz></inertia>
+</inertial>
+</link>
+
+<joint name="idler_c" type="revolute">
+<pose>-0.38472849396211172834 0.089631585871800922849 0.2372476231509799971 1.5605640687417905443 0.20333469099986378748 0.016069359170225287065</pose>
+<parent>lim_frame</parent>
+<child>idler</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<link name="idler_2">
+<visual name="idler_2_0_spur_gear13_visual">
+<pose>-0.24981799351977507229 0.092452411768545045279 0.27454641417238695444 3.1294182062995701266 0.60384025483765824127 0.011222716530411397731</pose>
+<geometry>
+<mesh><uri>spur_gear13.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="idler_2_0_spur_gear13_visual">
+<pose>-0.24981799351977507229 0.092452411768545045279 0.27454641417238695444 3.1294182062995701266 0.60384025483765824127 0.011222716530411397731</pose>
+<geometry>
+<mesh><uri>spur_gear13.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="idler_2_1_shaft2_visual">
+<pose>-0.24970919078368880584 0.086453699688158788805 0.27460654188020694466 0.60387489430326379836 0.010021452377413283055 1.5889320208967090409</pose>
+<geometry>
+<mesh><uri>shaft2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.87843137254901959565 0.87450980392156862919 0.85882352941176465233 1</ambient><diffuse>0.87843137254901959565 0.87450980392156862919 0.85882352941176465233 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="idler_2_1_shaft2_visual">
+<pose>-0.24970919078368880584 0.086453699688158788805 0.27460654188020694466 0.60387489430326379836 0.010021452377413283055 1.5889320208967090409</pose>
+<geometry>
+<mesh><uri>shaft2.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.24992147400191624951 0.09545016423451459231 0.27444517783704597269 0 0 0</pose>
+<mass>0.020048491397287253324</mass>
+<inertia><ixx>3.4778000727065764848e-06</ixx><ixy>-5.8059584431053979779e-08</ixy><ixz>1.7527588702382770122e-09</ixz><iyy>6.6784418029947462792e-06</iyy><iyz>-3.2061825113862767862e-08</iyz><izz>3.4779585668506889887e-06</izz></inertia>
+</inertial>
+</link>
+
+<joint name="idler_d" type="revolute">
+<pose>-0.24981799351977507229 0.092452411768545045279 0.27454641417238695444 1.5586218795046733465 0.60384025483765824127 0.011222716530411397731</pose>
+<parent>lim_frame</parent>
+<child>idler_2</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<link name="wheel_shaft">
+<visual name="wheel_shaft_0_m5-washer_visual">
+<pose>-0.4241476913921299885 0.083826555832462096296 0.22637431177791569881 3.1293348865416819038 0.6136247006695314532 0.011077010567539831085</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_0_m5-washer_visual">
+<pose>-0.4241476913921299885 0.083826555832462096296 0.22637431177791569881 3.1293348865416819038 0.6136247006695314532 0.011077010567539831085</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_1_m5-nut-4mm_visual">
+<pose>-0.42414751005423650954 0.083816557978994760125 0.22637441199076205334 -3.1310915458086938656 0.30340429367561772001 -3.120319430774855185</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_1_m5-nut-4mm_visual">
+<pose>-0.42414751005423650954 0.083816557978994760125 0.22637441199076205334 -3.1310915458086938656 0.30340429367561772001 -3.120319430774855185</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_2_m5-nut-4mm_visual">
+<pose>-0.42446467002992799289 0.10130280369332082813 0.22619913972246699641 0.010501107781095305599 0.30340429367561788654 -3.1203194307748569614</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_2_m5-nut-4mm_visual">
+<pose>-0.42446467002992799289 0.10130280369332082813 0.22619913972246699641 0.010501107781095305599 0.30340429367561788654 -3.1203194307748569614</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_3_m5-screw-cut_visual">
+<pose>-0.42385718808677963487 0.067809994577830781659 0.22653485275779491892 3.127975384240036405 0.7437313378387692131 0.0089159672923220436441</pose>
+<geometry>
+<mesh><uri>m5-screw-cut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_3_m5-screw-cut_visual">
+<pose>-0.42385718808677963487 0.067809994577830781659 0.22653485275779491892 3.127975384240036405 0.7437313378387692131 0.0089159672923220436441</pose>
+<geometry>
+<mesh><uri>m5-screw-cut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_4_nut-5_visual">
+<pose>-0.42394785703351722805 0.072808921311486085592 0.22648474633461634919 3.1279753842400324082 0.74373133783875711167 0.0089159672923209698503</pose>
+<geometry>
+<mesh><uri>nut-5.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_4_nut-5_visual">
+<pose>-0.42394785703351722805 0.072808921311486085592 0.22648474633461634919 3.1279753842400324082 0.74373133783875711167 0.0089159672923209698503</pose>
+<geometry>
+<mesh><uri>nut-5.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_5_wheel_visual">
+<pose>-0.42394785703351711703 0.072808921311486085592 0.22648474633461646022 3.1279753842400324082 0.74373133783875711167 0.0089159672923209698503</pose>
+<geometry>
+<mesh><uri>wheel.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_5_wheel_visual">
+<pose>-0.42394785703351711703 0.072808921311486085592 0.22648474633461646022 3.1279753842400324082 0.74373133783875711167 0.0089159672923209698503</pose>
+<geometry>
+<mesh><uri>wheel.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_6_spur_gear22_visual">
+<pose>-0.42423799766308156745 0.088805486859182700132 0.22632440578042509194 3.1279753842400359609 0.74373133783877010128 0.0089159672923220210927</pose>
+<geometry>
+<mesh><uri>spur_gear22.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_6_spur_gear22_visual">
+<pose>-0.42423799766308156745 0.088805486859182700132 0.22632440578042509194 3.1279753842400359609 0.74373133783877010128 0.0089159672923220210927</pose>
+<geometry>
+<mesh><uri>spur_gear22.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_7_m5-washer_visual">
+<pose>-0.42444653624058026331 0.10030301834658983395 0.22620916100710355967 3.1276896241296925361 0.76580900565383114298 0.008498898506493940061</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_7_m5-washer_visual">
+<pose>-0.42444653624058026331 0.10030301834658983395 0.22620916100710355967 3.1276896241296925361 0.76580900565383114298 0.008498898506493940061</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.42412107137154086978 0.082477277571151211277 0.22639017015944792877 0 0 0</pose>
+<mass>0.077205002433972699794</mass>
+<inertia><ixx>6.6486548011224669654e-05</ixx><ixy>-9.786615224480279316e-07</ixy><ixz>1.0092380289575424009e-08</ixz><iyy>0.00012014791145335536283</iyy><iyz>-5.4353233895240464798e-07</iyz><izz>6.6474239530601815702e-05</izz></inertia>
+</inertial>
+</link>
+
+<joint name="wheel_c" type="revolute">
+<pose>-0.42423799766308156745 0.088805486859182700132 0.22632440578042509194 1.5571790574451391809 0.74373133783877010128 0.0089159672923220210927</pose>
+<parent>lim_frame</parent>
+<child>wheel_shaft</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<link name="wheel_shaft_2">
+<visual name="wheel_shaft_2_0_m5-screw-cut_visual">
+<pose>-0.20992768024250380021 0.072283018499812307089 0.28568007852031179761 0.033620952482008671647 1.2680708948957077897 -3.0913637605113888362</pose>
+<geometry>
+<mesh><uri>m5-screw-cut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_2_0_m5-screw-cut_visual">
+<pose>-0.20992768024250380021 0.072283018499812307089 0.28568007852031179761 0.033620952482008671647 1.2680708948957077897 -3.0913637605113888362</pose>
+<geometry>
+<mesh><uri>m5-screw-cut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_2_1_m5-washer_visual">
+<pose>-0.21021818354785412608 0.088299579754443593971 0.28551953754043252198 0.058337898981794221454 1.3980611296693368217 -3.0659853008416786402</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_2_1_m5-washer_visual">
+<pose>-0.21021818354785412608 0.088299579754443593971 0.28551953754043252198 0.058337898981794221454 1.3980611296693368217 -3.0659853008416786402</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_2_2_m5-nut-4mm_visual">
+<pose>-0.21021800220996081365 0.0882895819009763827 0.28551963775327920958 -3.1268058324980092522 -0.82610889894395300725 -3.1343300698088167877</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_2_2_m5-nut-4mm_visual">
+<pose>-0.21021800220996081365 0.0882895819009763827 0.28551963775327920958 -3.1268058324980092522 -0.82610889894395300725 -3.1343300698088167877</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_2_3_nut-5_visual">
+<pose>-0.2100183491892379517 0.07728194523346769429 0.28562997209712975843 0.033620952482009490436 1.2680708948957202242 -3.0913637605113843954</pose>
+<geometry>
+<mesh><uri>nut-5.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_2_3_nut-5_visual">
+<pose>-0.2100183491892379517 0.07728194523346769429 0.28562997209712975843 0.033620952482009490436 1.2680708948957202242 -3.0913637605113843954</pose>
+<geometry>
+<mesh><uri>nut-5.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_2_4_m5-washer_visual">
+<pose>-0.21051702839630467845 0.10477604226857140102 0.28535438676962054938 0.031408713230270911276 1.24600279324282881 -3.0936894029077506296</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_2_4_m5-washer_visual">
+<pose>-0.21051702839630467845 0.10477604226857140102 0.28535438676962054938 0.031408713230270911276 1.24600279324282881 -3.0936894029077506296</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_2_5_m5-nut-4mm_visual">
+<pose>-0.21053516218565243578 0.10577582761530229805 0.28534436548498376407 0.014786821091782887186 -0.82610889894395300725 -3.1343300698088198963</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_2_5_m5-nut-4mm_visual">
+<pose>-0.21053516218565243578 0.10577582761530229805 0.28534436548498376407 0.014786821091782887186 -0.82610889894395300725 -3.1343300698088198963</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_2_6_spur_gear22_visual">
+<pose>-0.21030848981880598259 0.093278510781164225563 0.28546963154294213716 0.033620952482007769591 1.2680708948957069016 -3.0913637605113892803</pose>
+<geometry>
+<mesh><uri>spur_gear22.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_2_6_spur_gear22_visual">
+<pose>-0.21030848981880598259 0.093278510781164225563 0.28546963154294213716 0.033620952482007769591 1.2680708948957069016 -3.0913637605113892803</pose>
+<geometry>
+<mesh><uri>spur_gear22.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_2_7_wheel_visual">
+<pose>-0.21001834918923789619 0.07728194523346769429 0.28562997209712975843 0.033620952482009490436 1.2680708948957202242 -3.0913637605113843954</pose>
+<geometry>
+<mesh><uri>wheel.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_2_7_wheel_visual">
+<pose>-0.21001834918923789619 0.07728194523346769429 0.28562997209712975843 0.033620952482009490436 1.2680708948957202242 -3.0913637605113843954</pose>
+<geometry>
+<mesh><uri>wheel.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.21019068316037423094 0.086950284602954078239 0.28553211780522780305 0 0 0</pose>
+<mass>0.077205002433972699794</mass>
+<inertia><ixx>6.6486789741761908755e-05</ixx><ixy>-9.8073135727230597204e-07</ixy><ixz>9.6854408650929618986e-09</ixz><iyy>0.00012014799078553891254</iyy><iyz>-5.3583460447335141849e-07</iyz><izz>6.6473918467880552556e-05</izz></inertia>
+</inertial>
+</link>
+
+<joint name="wheel_d" type="revolute">
+<pose>-0.21030848981880598259 0.093278510781164225563 0.28546963154294213716 -1.5371753743128888647 1.2680708948957069016 -3.0913637605113892803</pose>
+<parent>lim_frame</parent>
+<child>wheel_shaft_2</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<joint name="sun_b" type="revolute">
+<pose>-0.31741831405572512592 0.099040281594021228884 0.25581684838459090026 -1.5603990742487494625 0.26967680400245880312 -3.1206868313965250294</pose>
+<parent>assembly_3</parent>
+<child>lim_frame</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<joint name="motor_b" type="revolute">
+<pose>-0.31783952686720584602 0.12803595497214695365 0.25552622161746796348 3.1325252042406694919 1.5607744624144965773 -1.5617285373929443715</pose>
+<parent>body</parent>
+<child>assembly_3</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<link name="assembly_3_2">
+<visual name="assembly_3_2_0_jgy-370output_shaft_visual">
+<pose>-0.31890416000427157517 0.18669317381574987436 0.24693787289276375452 0.010021452418788224722 -9.08699813967281389e-05 -3.1234578701676607437</pose>
+<geometry>
+<mesh><uri>jgy-370output_shaft.obj</uri></mesh>
+</geometry>
+<material><ambient>0.79607843137254896693 0.79607843137254896693 0.79607843137254896693 1</ambient><diffuse>0.79607843137254896693 0.79607843137254896693 0.79607843137254896693 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="assembly_3_2_0_jgy-370output_shaft_visual">
+<pose>-0.31890416000427157517 0.18669317381574987436 0.24693787289276375452 0.010021452418788224722 -9.08699813967281389e-05 -3.1234578701676607437</pose>
+<geometry>
+<mesh><uri>jgy-370output_shaft.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="assembly_3_2_1_part_1_visual">
+<pose>-0.3190091467671167802 0.19252106076520225653 0.25477516972214303559 1.5708872013394945544 0.010021452377411680171 1.5889320208967092629</pose>
+<geometry>
+<mesh><uri>part_1.obj</uri></mesh>
+</geometry>
+<material><ambient>0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1</ambient><diffuse>0.61568627450980395466 0.81176470588235294379 0.92941176470588238168 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="assembly_3_2_1_part_1_visual">
+<pose>-0.3190091467671167802 0.19252106076520225653 0.25477516972214303559 1.5708872013394945544 0.010021452377411680171 1.5889320208967092629</pose>
+<geometry>
+<mesh><uri>part_1.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="assembly_3_2_2_spur_gear23_visual">
+<pose>-0.31940809013276616479 0.21451633839328532183 0.25455470146013636779 1.5798637761434488613 -1.5607744624144967993 1.5798641161970081725</pose>
+<geometry>
+<mesh><uri>spur_gear23.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="assembly_3_2_2_spur_gear23_visual">
+<pose>-0.31940809013276616479 0.21451633839328532183 0.25455470146013636779 1.5798637761434488613 -1.5607744624144967993 1.5798641161970081725</pose>
+<geometry>
+<mesh><uri>spur_gear23.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.31942752622252673644 0.21522567642409007327 0.25454824304294670911 0 0 0</pose>
+<mass>0.043528139347743959042</mass>
+<inertia><ixx>1.9334454104005285147e-05</ixx><ixy>-2.7006801487650718369e-07</ixy><ixz>2.6793488972373903767e-09</ixz><iyy>3.4172798566012067779e-05</iyy><iyz>-1.472650816362085823e-07</iyz><izz>1.9331060119166235453e-05</izz></inertia>
+</inertial>
+</link>
+
+<link name="lim_frame_2">
+<visual name="lim_frame_2_0_m3_bolt_long_visual">
+<pose>-0.45764833807501864582 0.22651076298854516677 0.25442193289031922454 -0.010021452418787516955 9.0869981391119506852e-05 0.018134783422132413899</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_0_m3_bolt_long_visual">
+<pose>-0.45764833807501864582 0.22651076298854516677 0.25442193289031922454 -0.010021452418787516955 9.0869981391119506852e-05 0.018134783422132413899</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_1_m3-nut_visual">
+<pose>-0.36052593286687628638 0.21055258715856239871 0.28276684254383266381 -0.010021452418787482261 9.0869981392340630206e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_1_m3-nut_visual">
+<pose>-0.36052593286687628638 0.21055258715856239871 0.28276684254383266381 -0.010021452418787482261 9.0869981392340630206e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_2_m5-washer_visual">
+<pose>-0.24941960056921708144 0.21578570364882043719 0.25454834056144759469 -3.1315712011710057361 -9.0869981392312942393e-05 -3.1234578701676607437</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_2_m5-washer_visual">
+<pose>-0.24941960056921708144 0.21578570364882043719 0.25454834056144759469 -3.1315712011710057361 -9.0869981392312942393e-05 -3.1234578701676607437</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_3_m5-washer_visual">
+<pose>-0.20857141271106291458 0.22452747178662504912 0.2544644446151223538 1.5617288774463264911 1.5607744624144932466 -1.5617285373930076542</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_3_m5-washer_visual">
+<pose>-0.20857141271106291458 0.22452747178662504912 0.2544644446151223538 1.5617288774463264911 1.5607744624144932466 -1.5617285373930076542</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_4_m5-washer_visual">
+<pose>-0.38939657969631519263 0.21324697313775031748 0.25456106235882508537 -0.010021452418787471852 9.0869981392326671103e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_4_m5-washer_visual">
+<pose>-0.38939657969631519263 0.21324697313775031748 0.25456106235882508537 -0.010021452418787471852 9.0869981392326671103e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_5_m5-washer_visual">
+<pose>-0.43038983786925111286 0.21250348777379396426 0.25456478802805704298 -1.5617288774461477452 -1.5607744624144970214 1.5798641161968118851</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_5_m5-washer_visual">
+<pose>-0.43038983786925111286 0.21250348777379396426 0.25456478802805704298 -1.5617288774461477452 -1.5607744624144970214 1.5798641161968118851</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_6_m3-nut_visual">
+<pose>-0.27816331087322210269 0.21148159220089096655 0.22641270936889676402 -0.010021452418787461444 9.0869981392333650655e-05 0.018134783422132236957</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_6_m3-nut_visual">
+<pose>-0.27816331087322210269 0.21148159220089096655 0.22641270936889676402 -0.010021452418787461444 9.0869981392333650655e-05 0.018134783422132236957</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_7_m3_bolt_long_visual">
+<pose>-0.36084722040710726088 0.22798402924426225402 0.22623981130084275248 -0.010021452418787522159 9.0869981391119506852e-05 0.018134783422132413899</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_7_m3_bolt_long_visual">
+<pose>-0.36084722040710726088 0.22798402924426225402 0.22623981130084275248 -0.010021452418787522159 9.0869981391119506852e-05 0.018134783422132413899</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_8_m3_bolt_long_visual">
+<pose>-0.36085234107513486368 0.2285487233997214318 0.28258645942037252663 -0.010021452418787520425 9.0869981391119506852e-05 0.018134783422132413899</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_8_m3_bolt_long_visual">
+<pose>-0.36085234107513486368 0.2285487233997214318 0.28258645942037252663 -0.010021452418787520425 9.0869981391119506852e-05 0.018134783422132413899</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_9_frame_visual">
+<pose>-0.31934462187004925005 0.21101708967972671038 0.25458977595636467228 3.1315712011710057361 9.0869981392333691313e-05 0.018134783422132236957</pose>
+<geometry>
+<mesh><uri>frame.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_9_frame_visual">
+<pose>-0.31934462187004925005 0.21101708967972671038 0.25458977595636467228 3.1315712011710057361 9.0869981392333691313e-05 0.018134783422132236957</pose>
+<geometry>
+<mesh><uri>frame.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_10_m3_bolt_long_visual">
+<pose>-0.27848971908148084653 0.2294777284420497776 0.22623232624543654357 -0.010021452418787516955 9.0869981391119506852e-05 0.018134783422132413899</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_10_m3_bolt_long_visual">
+<pose>-0.27848971908148084653 0.2294777284420497776 0.22623232624543654357 -0.010021452418787516955 9.0869981391119506852e-05 0.018134783422132413899</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_11_m5-washer_visual">
+<pose>-0.3895416500110967517 0.22124525591159871496 0.25448089208173146902 3.1315712011710057361 9.0869981391112283355e-05 0.01813478342213241043</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_11_m5-washer_visual">
+<pose>-0.3895416500110967517 0.22124525591159871496 0.25448089208173146902 3.1315712011710057361 9.0869981391112283355e-05 0.01813478342213241043</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_12_standoff2_visual">
+<pose>-0.36074353833904881927 0.22255001131933499492 0.28264658712819268338 -1.5798637761436218341 1.5607744624144970214 -1.5617285373929814529</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_12_standoff2_visual">
+<pose>-0.36074353833904881927 0.22255001131933499492 0.28264658712819268338 -1.5798637761436218341 1.5607744624144970214 -1.5617285373929814529</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_13_m3_bolt_long_visual">
+<pose>-0.27849483974950844933 0.23004242259750895538 0.28257897436496637322 -0.010021452418787510016 9.0869981391119479747e-05 0.01813478342213240696</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_13_m3_bolt_long_visual">
+<pose>-0.27849483974950844933 0.23004242259750895538 0.28257897436496637322 -0.010021452418787510016 9.0869981391119479747e-05 0.01813478342213240696</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_14_standoff2_visual">
+<pose>-0.27821771224126518041 0.21448094824108415724 0.2263826455149867134 3.1315712011710057361 9.0869981392333745523e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_14_standoff2_visual">
+<pose>-0.27821771224126518041 0.21448094824108415724 0.2263826455149867134 3.1315712011710057361 9.0869981392333745523e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_15_standoff2_visual">
+<pose>-0.36057521356689176129 0.21298724904329668917 0.22639013057039306109 3.1315712011710057361 9.0869981392333745523e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_15_standoff2_visual">
+<pose>-0.36057521356689176129 0.21298724904329668917 0.22639013057039306109 3.1315712011710057361 9.0869981392333745523e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_16_m3-nut_visual">
+<pose>-0.2781684315412497055 0.21204628635634992229 0.28275935748842639939 -0.010021452418787461444 9.0869981392326671103e-05 0.018134783422132243896</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_16_m3-nut_visual">
+<pose>-0.2781684315412497055 0.21204628635634992229 0.28275935748842639939 -0.010021452418787461444 9.0869981392326671103e-05 0.018134783422132243896</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_17_m5-washer_visual">
+<pose>-0.2495646708839988348 0.2237839864226690012 0.25446817028435431141 0.010021452418788089414 -9.0869981391091710619e-05 -3.1234578701676634083</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_17_m5-washer_visual">
+<pose>-0.2495646708839988348 0.2237839864226690012 0.25446817028435431141 0.010021452418788089414 -9.0869981391091710619e-05 -3.1234578701676634083</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_18_m5-washer_visual">
+<pose>-0.31940809013276610928 0.21451633839328532183 0.25455470146013636779 -0.010021452418787154398 9.0869981392336903261e-05 0.018134783422132236957</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_18_m5-washer_visual">
+<pose>-0.31940809013276610928 0.21451633839328532183 0.25455470146013636779 -0.010021452418787154398 9.0869981392336903261e-05 0.018134783422132236957</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_19_frame_visual">
+<pose>-0.31961662871026474964 0.22601386988069249728 0.25443945668681455796 -0.010021452418787520425 9.0869981391112527301e-05 0.01813478342213241043</pose>
+<geometry>
+<mesh><uri>frame.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_19_frame_visual">
+<pose>-0.31961662871026474964 0.22601386988069249728 0.25443945668681455796 -0.010021452418787520425 9.0869981391112527301e-05 0.01813478342213241043</pose>
+<geometry>
+<mesh><uri>frame.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_20_m3-nut_visual">
+<pose>-0.18136731387333820953 0.21351955261206717607 0.2545772358989497608 -0.01002145241878745624 9.0869981392319813525e-05 0.018134783422132236957</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_20_m3-nut_visual">
+<pose>-0.18136731387333820953 0.21351955261206717607 0.2545772358989497608 -0.01002145241878745624 9.0869981392319813525e-05 0.018134783422132236957</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_21_standoff1_visual">
+<pose>-0.45737633123480331276 0.21151398278757921334 0.25457225215986956091 3.1315712011710057361 9.0869981392326833734e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>standoff1.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_21_standoff1_visual">
+<pose>-0.45737633123480331276 0.21151398278757921334 0.25457225215986956091 3.1315712011710057361 9.0869981392326833734e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>standoff1.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_22_m5-washer_visual">
+<pose>-0.31955316044754777938 0.22251462116713383033 0.25447453118304291797 3.1315712011710057361 9.0869981391119059619e-05 0.01813478342213241043</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_22_m5-washer_visual">
+<pose>-0.31955316044754777938 0.22251462116713383033 0.25447453118304291797 3.1315712011710057361 9.0869981391119059619e-05 0.01813478342213241043</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_23_m3-nut_visual">
+<pose>-0.45732192986676017954 0.20851462674738613368 0.25460231601377958377 -1.5798637761436689075 1.5607744624144970214 -1.5617285373929805647</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_23_m3-nut_visual">
+<pose>-0.45732192986676017954 0.20851462674738613368 0.25460231601377958377 -1.5798637761436689075 1.5607744624144970214 -1.5617285373929805647</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_24_m3-nut_visual">
+<pose>-0.36052081219884868357 0.20998789300310338746 0.2264201944243030562 -0.010021452418787471852 9.0869981392326630446e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_24_m3-nut_visual">
+<pose>-0.36052081219884868357 0.20998789300310338746 0.2264201944243030562 -0.010021452418787471852 9.0869981392326630446e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>m3-nut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_25_m5-washer_visual">
+<pose>-0.43053490818403256091 0.22050177054764236173 0.25448461775096342663 1.561728877446360686 1.5607744624144932466 -1.5617285373930076542</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_25_m5-washer_visual">
+<pose>-0.43053490818403256091 0.22050177054764236173 0.25448461775096342663 1.561728877446360686 1.5607744624144932466 -1.5617285373930076542</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_26_m3_bolt_long_visual">
+<pose>-0.18169372208159700888 0.23151568885322615365 0.25439685277548984565 -1.5798637761433864668 1.5607744624144925805 -1.5617285373930069881</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_26_m3_bolt_long_visual">
+<pose>-0.18169372208159700888 0.23151568885322615365 0.25439685277548984565 -1.5798637761433864668 1.5607744624144925805 -1.5617285373930069881</pose>
+<geometry>
+<mesh><uri>m3_bolt_long.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_27_m5-washer_visual">
+<pose>-0.20842634239628127224 0.21652918901277673491 0.25454461489221580361 -1.5617288774461182133 -1.5607744624144970214 1.5798641161968118851</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_27_m5-washer_visual">
+<pose>-0.20842634239628127224 0.21652918901277673491 0.25454461489221580361 -1.5617288774461182133 -1.5607744624144970214 1.5798641161968118851</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_28_standoff2_visual">
+<pose>-0.27822283290929283872 0.21504564239654300195 0.28272929363451637652 3.1315712011710057361 9.0869981392333745523e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_28_standoff2_visual">
+<pose>-0.27822283290929283872 0.21504564239654300195 0.28272929363451637652 3.1315712011710057361 9.0869981392333745523e-05 0.018134783422132240427</pose>
+<geometry>
+<mesh><uri>standoff2.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="lim_frame_2_29_standoff1_visual">
+<pose>-0.18142171524138134275 0.21651890865226042227 0.25454717204503984895 1.5798637761434479732 -1.5607744624144970214 1.5798641161968118851</pose>
+<geometry>
+<mesh><uri>standoff1.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="lim_frame_2_29_standoff1_visual">
+<pose>-0.18142171524138134275 0.21651890865226042227 0.25454717204503984895 1.5798637761434479732 -1.5607744624144970214 1.5798641161968118851</pose>
+<geometry>
+<mesh><uri>standoff1.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.31948190565479700487 0.21858607119278417041 0.25451390875306956207 0 0 0</pose>
+<mass>0.13451687861695471593</mass>
+<inertia><ixx>5.567034846578883115e-05</ixx><ixy>-1.3203065622087410279e-05</ixy><ixz>7.0303180731414573294e-08</ixz><iyy>0.00078340080081871100049</iyy><iyz>-4.5548902682213565608e-07</iyz><izz>0.00073807522090709560495</izz></inertia>
+</inertial>
+</link>
+
+<link name="idler_3">
+<visual name="idler_3_0_spur_gear13_visual">
+<pose>-0.2495646708839988348 0.2237839864226690012 0.25446817028435431141 -3.1274479194662911929 0.78341842650116377822 -3.1134746084843127889</pose>
+<geometry>
+<mesh><uri>spur_gear13.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="idler_3_0_spur_gear13_visual">
+<pose>-0.2495646708839988348 0.2237839864226690012 0.25446817028435431141 -3.1274479194662911929 0.78341842650116377822 -3.1134746084843127889</pose>
+<geometry>
+<mesh><uri>spur_gear13.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="idler_3_1_shaft2_visual">
+<pose>-0.24967347362008504574 0.22978269850305527155 0.25440804257653432119 0.78346844616273136896 -0.010021452377412129464 -1.5526606326930865176</pose>
+<geometry>
+<mesh><uri>shaft2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.87843137254901959565 0.87450980392156862919 0.85882352941176465233 1</ambient><diffuse>0.87843137254901959565 0.87450980392156862919 0.85882352941176465233 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="idler_3_1_shaft2_visual">
+<pose>-0.24967347362008504574 0.22978269850305527155 0.25440804257653432119 0.78346844616273136896 -0.010021452377412129464 -1.5526606326930865176</pose>
+<geometry>
+<mesh><uri>shaft2.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.24944924384672137463 0.22078512323634294501 0.2544369766669359878 0 0 0</pose>
+<mass>0.020048491397287253324</mass>
+<inertia><ixx>3.4782408564464358925e-06</ixx><ixy>-5.807587884218287385e-08</ixy><ixz>-6.7048264544608241589e-10</ixz><iyy>6.6784410226951635664e-06</iyy><iyz>-3.2110187445882224135e-08</iyz><izz>3.4775185634103593542e-06</izz></inertia>
+</inertial>
+</link>
+
+<joint name="idler_a" type="revolute">
+<pose>-0.2495646708839988348 0.2237839864226690012 0.25446817028435431141 1.5849410609183987031 0.78341842650116377822 -3.1134746084843127889</pose>
+<parent>lim_frame_2</parent>
+<child>idler_3</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<link name="idler_4">
+<visual name="idler_4_0_spur_gear13_visual">
+<pose>-0.3895416500110967517 0.22124525591159871496 0.25448089208173146902 -3.1298235902782125528 -0.55193128697823179429 -3.1296280710867043773</pose>
+<geometry>
+<mesh><uri>spur_gear13.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="idler_4_0_spur_gear13_visual">
+<pose>-0.3895416500110967517 0.22124525591159871496 0.25448089208173146902 -3.1298235902782125528 -0.55193128697823179429 -3.1296280710867043773</pose>
+<geometry>
+<mesh><uri>spur_gear13.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="idler_4_1_shaft2_visual">
+<pose>-0.38965045274718301815 0.22724396799198498531 0.25442076437391147881 -0.55196220908565363228 -0.010021452377410958526 -1.5526606326930825208</pose>
+<geometry>
+<mesh><uri>shaft2.obj</uri></mesh>
+</geometry>
+<material><ambient>0.87843137254901959565 0.87450980392156862919 0.85882352941176465233 1</ambient><diffuse>0.87843137254901959565 0.87450980392156862919 0.85882352941176465233 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="idler_4_1_shaft2_visual">
+<pose>-0.38965045274718301815 0.22724396799198498531 0.25442076437391147881 -0.55196220908565363228 -0.010021452377410958526 -1.5526606326930825208</pose>
+<geometry>
+<mesh><uri>shaft2.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.38953256850323675353 0.21824433990621810997 0.25443733168837490144 0 0 0</pose>
+<mass>0.020048491397287253324</mass>
+<inertia><ixx>3.4776811552469034377e-06</ixx><ixy>-5.8062266785834670708e-08</ixy><ixz>1.7003349689323783243e-09</ixz><iyy>6.6784417567644960875e-06</iyy><iyz>-3.2061583536977247213e-08</iyz><izz>3.4780775305405622525e-06</izz></inertia>
+</inertial>
+</link>
+
+<joint name="idler_b" type="revolute">
+<pose>-0.3895416500110967517 0.22124525591159871496 0.25448089208173146902 1.5825653901064775653 -0.55193128697823179429 -3.1296280710867043773</pose>
+<parent>lim_frame_2</parent>
+<child>idler_4</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<link name="wheel_shaft_3">
+<visual name="wheel_shaft_3_0_nut-5_visual">
+<pose>-0.20886155334062259104 0.24052403733432206612 0.25430410406093822973 -3.130709463378677615 -0.40061292479157084578 -3.1277013586798605438</pose>
+<geometry>
+<mesh><uri>nut-5.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_3_0_nut-5_visual">
+<pose>-0.20886155334062259104 0.24052403733432206612 0.25430410406093822973 -3.130709463378677615 -0.40061292479157084578 -3.1277013586798605438</pose>
+<geometry>
+<mesh><uri>nut-5.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_3_1_wheel_visual">
+<pose>-0.20886155334062270206 0.24052403733432217714 0.25430410406093867381 -3.130709463378677615 -0.40061292479157084578 -3.1277013586798605438</pose>
+<geometry>
+<mesh><uri>wheel.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_3_1_wheel_visual">
+<pose>-0.20886155334062270206 0.24052403733432217714 0.25430410406093867381 -3.130709463378677615 -0.40061292479157084578 -3.1277013586798605438</pose>
+<geometry>
+<mesh><uri>wheel.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_3_2_m5-washer_visual">
+<pose>-0.20836287413356413545 0.21302994029921848429 0.25457968938844421913 -3.1308076763264569564 -0.37853446278244939904 -3.1274427791847489999</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_3_2_m5-washer_visual">
+<pose>-0.20836287413356413545 0.21302994029921848429 0.25457968938844421913 -3.1308076763264569564 -0.37853446278244939904 -3.1274427791847489999</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_3_3_spur_gear22_visual">
+<pose>-0.20857141271106291458 0.22452747178662504912 0.25446444461512229829 -3.1307094633786753946 -0.40061292479155802271 -3.1277013586798592115</pose>
+<geometry>
+<mesh><uri>spur_gear22.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_3_3_spur_gear22_visual">
+<pose>-0.20857141271106291458 0.22452747178662504912 0.25446444461512229829 -3.1307094633786753946 -0.40061292479155802271 -3.1277013586798592115</pose>
+<geometry>
+<mesh><uri>spur_gear22.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_3_4_m5-nut-4mm_visual">
+<pose>-0.20834474034421690547 0.21203015495248697664 0.25458971067308056035 -0.081526065822884880019 1.4474261054700705564 -0.062773447191580206139</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_3_4_m5-nut-4mm_visual">
+<pose>-0.20834474034421690547 0.21203015495248697664 0.25458971067308056035 -0.081526065822884880019 1.4474261054700705564 -0.062773447191580206139</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_3_5_m5-washer_visual">
+<pose>-0.20866171898201474333 0.22950640281334602766 0.25441453861763191346 -3.1299727266963603967 -0.53072218645875202103 -3.1293386557878810628</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_3_5_m5-washer_visual">
+<pose>-0.20866171898201474333 0.22950640281334602766 0.25441453861763191346 -3.1299727266963603967 -0.53072218645875202103 -3.1293386557878810628</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_3_6_m5-screw-cut_visual">
+<pose>-0.20895222228736484715 0.2455229640679774672 0.25425399763775208273 -3.1307094633786745064 -0.40061292479155924395 -3.1277013586798592115</pose>
+<geometry>
+<mesh><uri>m5-screw-cut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_3_6_m5-screw-cut_visual">
+<pose>-0.20895222228736484715 0.2455229640679774672 0.25425399763775208273 -3.1307094633786745064 -0.40061292479155924395 -3.1277013586798592115</pose>
+<geometry>
+<mesh><uri>m5-screw-cut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_3_7_m5-nut-4mm_visual">
+<pose>-0.20866190031990800025 0.22951640066681336383 0.25441443840478533689 3.0600665877669279702 1.4474261054700705564 -0.062773447191564177294</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_3_7_m5-nut-4mm_visual">
+<pose>-0.20866190031990800025 0.22951640066681336383 0.25441443840478533689 3.0600665877669279702 1.4474261054700705564 -0.062773447191564177294</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.20868495699344405403 0.23085579506913087022 0.25440393319168597142 0 0 0</pose>
+<mass>0.077205002433972699794</mass>
+<inertia><ixx>6.6486146983573492274e-05</ixx><ixy>-9.7071972122463900729e-07</ixy><ixz>9.7375460369794022206e-09</ixz><iyy>0.00012014844728389110693</iyy><iyz>-5.3118805403827187575e-07</iyz><izz>6.6474104727716788201e-05</izz></inertia>
+</inertial>
+</link>
+
+<joint name="wheel_a" type="revolute">
+<pose>-0.20857141271106291458 0.22452747178662504912 0.25446444461512229829 1.5816795170060145015 -0.40061292479155802271 -3.1277013586798592115</pose>
+<parent>lim_frame_2</parent>
+<child>wheel_shaft_3</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<link name="wheel_shaft_4">
+<visual name="wheel_shaft_4_0_nut-5_visual">
+<pose>-0.43082504881359917626 0.23649833609533904566 0.25432427719678007971 -3.1006090431720108036 1.3237017824155887791 -3.0837168073769762877</pose>
+<geometry>
+<mesh><uri>nut-5.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_4_0_nut-5_visual">
+<pose>-0.43082504881359917626 0.23649833609533904566 0.25432427719678007971 -3.1006090431720108036 1.3237017824155887791 -3.0837168073769762877</pose>
+<geometry>
+<mesh><uri>nut-5.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_4_1_m5-washer_visual">
+<pose>-0.43062521445498413986 0.22548070157436295169 0.25443471175347287527 -3.1143769645479544295 1.1936566729038162737 -3.0981530930274514546</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_4_1_m5-washer_visual">
+<pose>-0.43062521445498413986 0.22548070157436295169 0.25443471175347287527 -3.1143769645479544295 1.1936566729038162737 -3.0981530930274514546</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_4_2_m5-nut-4mm_visual">
+<pose>-0.43030823581718624649 0.20800445371350423374 0.2546098838089216887 -0.010417701645867317659 -0.27668912585266242088 0.020981615914990193322</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_4_2_m5-nut-4mm_visual">
+<pose>-0.43030823581718624649 0.20800445371350423374 0.2546098838089216887 -0.010417701645867317659 -0.27668912585266242088 0.020981615914990193322</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_4_3_m5-screw-cut_visual">
+<pose>-0.43091571776033438246 0.24149726282899425245 0.2542741707735933776 -3.1006090431720014777 1.3237017824156007695 -3.0837168073769705146</pose>
+<geometry>
+<mesh><uri>m5-screw-cut.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</ambient><diffuse>0.74901960784313725839 0.74901960784313725839 0.74901960784313725839 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_4_3_m5-screw-cut_visual">
+<pose>-0.43091571776033438246 0.24149726282899425245 0.2542741707735933776 -3.1006090431720014777 1.3237017824156007695 -3.0837168073769705146</pose>
+<geometry>
+<mesh><uri>m5-screw-cut.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_4_4_m5-nut-4mm_visual">
+<pose>-0.43062539579287761882 0.22549069942783028786 0.25443461154062652074 3.1311749519439286971 -0.27668912585266230986 0.020981615914992257643</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_4_4_m5-nut-4mm_visual">
+<pose>-0.43062539579287761882 0.22549069942783028786 0.25443461154062652074 3.1311749519439286971 -0.27668912585266230986 0.020981615914992257643</pose>
+<geometry>
+<mesh><uri>m5-nut-4mm.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_4_5_m5-washer_visual">
+<pose>-0.43032636960653392055 0.2090042390602352973 0.25459986252428512543 -3.0966673596743459207 1.3457612182202454143 -3.0796629331896152593</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+<material><ambient>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</ambient><diffuse>0.74509803921568629193 0.73725490196078435901 0.72941176470588231506 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_4_5_m5-washer_visual">
+<pose>-0.43032636960653392055 0.2090042390602352973 0.25459986252428512543 -3.0966673596743459207 1.3457612182202454143 -3.0796629331896152593</pose>
+<geometry>
+<mesh><uri>m5-washer.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_4_6_wheel_visual">
+<pose>-0.43082504881359923177 0.23649833609533904566 0.25432427719678019074 -3.1006090431720108036 1.3237017824155887791 -3.0837168073769762877</pose>
+<geometry>
+<mesh><uri>wheel.obj</uri></mesh>
+</geometry>
+<material><ambient>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</ambient><diffuse>0.21960784313725489891 0.18039215686274509554 0.12549019607843137081 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_4_6_wheel_visual">
+<pose>-0.43082504881359923177 0.23649833609533904566 0.25432427719678019074 -3.1006090431720108036 1.3237017824155887791 -3.0837168073769762877</pose>
+<geometry>
+<mesh><uri>wheel.obj</uri></mesh>
+</geometry>
+</collision>
+<visual name="wheel_shaft_4_7_spur_gear22_visual">
+<pose>-0.43053490818403256091 0.22050177054764236173 0.25448461775096342663 -3.1006090431720019218 1.3237017824156018797 -3.0837168073769705146</pose>
+<geometry>
+<mesh><uri>spur_gear22.obj</uri></mesh>
+</geometry>
+<material><ambient>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</ambient><diffuse>0.80000000000000004441 0.80000000000000004441 0.80000000000000004441 1</diffuse><specular>0.1 0.1 0.1 1</specular><emissive>0 0 0 0</emissive></material>
+</visual>
+<collision name="wheel_shaft_4_7_spur_gear22_visual">
+<pose>-0.43053490818403256091 0.22050177054764236173 0.25448461775096342663 -3.1006090431720019218 1.3237017824156018797 -3.0837168073769705146</pose>
+<geometry>
+<mesh><uri>spur_gear22.obj</uri></mesh>
+</geometry>
+</collision>
+<inertial>
+<pose>-0.43065276268457630682 0.22682999415544841115 0.254421961620873327 0 0 0</pose>
+<mass>0.077205002433972699794</mass>
+<inertia><ixx>6.6486804503525768649e-05</ixx><ixy>-9.8084332906540337703e-07</ixy><ixz>9.7112689228293260536e-09</ixz><iyy>0.00012014797871115348929</iyy><iyz>-5.3623359891405438306e-07</iyz><izz>6.6473915780501519599e-05</izz></inertia>
+</inertial>
+</link>
+
+<joint name="wheel_b" type="revolute">
+<pose>-0.43053490818403256091 0.22050177054764236173 0.25448461775096342663 1.6117799372126879742 1.3237017824156018797 -3.0837168073769705146</pose>
+<parent>lim_frame_2</parent>
+<child>wheel_shaft_4</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<joint name="sun_a" type="revolute">
+<pose>-0.31940809013276610928 0.21451633839328532183 0.25455470146013636779 -1.5808177792136837159 9.0869981392336903261e-05 0.018134783422132236957</pose>
+<parent>assembly_3_2</parent>
+<child>lim_frame_2</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
+
+<joint name="motor_a" type="revolute">
+<pose>-0.31888221975469926983 0.18552361240918216478 0.25494999775085969151 -1.5607748743761082899 -9.08699813967281389e-05 -3.1234578701676607437</pose>
+<parent>body</parent>
+<child>assembly_3_2</child>
+<axis>
+<xyz>0 0 1</xyz>
+<limit><effort>1</effort><velocity>20</velocity></limit>
+</axis>
+</joint>
 
 
-    </model>
+</model>
 </sdf>
