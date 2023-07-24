@@ -26,7 +26,7 @@ meshcat = StartMeshcat()
 
 # First we'll choose one of Drake's example model files, a KUKA iiwa arm.
 iiwa7_model_url = (
-    "file:///work/my-robot/robot.sdf")
+    "file://work/my-robot/robot.sdf")
 
 # Create a model visualizer and add the robot arm.
 visualizer = ModelVisualizer(meshcat=meshcat)
