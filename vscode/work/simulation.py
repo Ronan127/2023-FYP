@@ -25,12 +25,12 @@ from pydrake.visualization import ModelVisualizer
 meshcat = StartMeshcat()
 
 # First we'll choose one of Drake's example model files, a KUKA iiwa arm.
-iiwa7_model_url = (
-    "file:///work/my-robot/robot.sdf")
+myrobot_url = (
+    "file:///home/ronan/2023-FYP/vscode/my-robot/robot.sdf")
 
 # Create a model visualizer and add the robot arm.
 visualizer = ModelVisualizer(meshcat=meshcat)
-visualizer.parser().AddModels(url=iiwa7_model_url)
+visualizer.parser().AddModels(url=myrobot_url)
 # When this notebook is run in test mode it needs to stop execution without
 # user interaction. For interactive model visualization you won't normally
 # need the 'loop_once' flag.
@@ -148,7 +148,7 @@ def create_scene(sim_time_step):
     # parser.AddModels(
     #     url="package://drake_models/ycb/meshes/004_sugar_box_textured.obj")
 
-    onshape = parser.AddModels(url="file:///work/2023-FYP/vscode/my-robot/robot.sdf")    
+    onshape = parser.AddModels(url=myrobot_url)    
 
     # Weld the table to the world so that it's fixed during the simulation.
     table_frame = plant.GetFrameByName("table_top_center")
