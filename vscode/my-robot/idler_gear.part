@@ -3,12 +3,12 @@
     "documentId": "64e3f820bebee527c1c6a854",
     "documentMicroversion": "b8e1d5a5ea4b8bf67d8218e9",
     "documentVersion": "3ce7c6111a9d1df82aa23c61",
-    "elementId": "2b8622472fbc8631682a21cc",
+    "elementId": "e366a4f7e5dc79ad969881fa",
     "fullConfiguration": "default",
-    "id": "MpBPn5ss62b/rL8Kg",
+    "id": "MtLajyhHoiNc87iLM",
     "isStandardContent": false,
-    "name": "M5-washer <2>",
-    "partId": "JFD",
+    "name": "Idler Gear <2>",
+    "partId": "JHD",
     "suppressed": false,
     "type": "Part"
 }

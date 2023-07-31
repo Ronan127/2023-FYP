@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "e3fc814167e1775f53050018",
-    "documentMicroversion": "0fe61b7a67ad44f933c07b7a",
-    "documentVersion": "b8ef52e651f3fb2df06eb75c",
+    "documentMicroversion": "b759c7f3544a5d4fe6cb9fd5",
+    "documentVersion": "31f44d4b68f6c8f1c2274933",
     "elementId": "c966e78282f72ddefe1497a5",
     "fullConfiguration": "default",
     "id": "MBwhRy4F/0CELIuuf",
     "isStandardContent": false,
-    "name": "Part 1 <1>",
+    "name": "Shaft extension <1>",
     "partId": "JHD",
     "suppressed": false,
     "type": "Part"

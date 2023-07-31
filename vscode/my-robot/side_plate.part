@@ -1,14 +1,14 @@
 {
     "configuration": "default",
-    "documentId": "62dd4fce2b47370182f54371",
-    "documentMicroversion": "991299d795626f3c59014873",
-    "documentVersion": "83e5fbbc3149a081763dcd5f",
-    "elementId": "5b64965b222a20591445f0b9",
+    "documentId": "9f77d0af9f2a6a928876a467",
+    "documentMicroversion": "0decda650e8b12f488619372",
+    "documentVersion": "7d63d9e56abb19bc74b16020",
+    "elementId": "cf34a1e2d4adbf751fab3cb2",
     "fullConfiguration": "default",
     "id": "MgNTD3XU1UcjTgCPY",
     "isStandardContent": false,
-    "name": "side plate <1>",
-    "partId": "JFD",
+    "name": "Side plate <2>",
+    "partId": "JHD",
     "suppressed": false,
     "type": "Part"
 }
