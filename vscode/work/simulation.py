@@ -17,9 +17,9 @@ from pydrake.math import RigidTransform, RollPitchYaw
 from pydrake.multibody.parsing import Parser
 from pydrake.multibody.plant import AddMultibodyPlantSceneGraph
 from pydrake.systems.analysis import Simulator
-from pydrake.systems.framework import DiagramBuilder
+from pydrake.systems.framework import DiagramBuilder, BasicVector, LeafSystem
 from pydrake.visualization import ModelVisualizer
-
+from pydrake.all import JointIndex
 # Start the visualizer. The cell will output an HTTP link after the execution.
 # Click the link and a MeshCat tab should appear in your browser.
 meshcat = StartMeshcat()
@@ -29,16 +29,16 @@ myrobot_url = (
     "file:///home/ronan/2023-FYP/vscode/my-robot/robot.sdf")
 
 # Create a model visualizer and add the robot arm.
-visualizer = ModelVisualizer(meshcat=meshcat)
-visualizer.parser().AddModels(url=myrobot_url)
-# When this notebook is run in test mode it needs to stop execution without
-# user interaction. For interactive model visualization you won't normally
-# need the 'loop_once' flag.
-test_mode = True if "TEST_SRCDIR" in os.environ else False
+# visualizer = ModelVisualizer(meshcat=meshcat)
+# visualizer.parser().AddModels(url=myrobot_url)
+# # When this notebook is run in test mode it needs to stop execution without
+# # user interaction. For interactive model visualization you won't normally
+# # need the 'loop_once' flag.
+# test_mode = True if "TEST_SRCDIR" in os.environ else False
 
-# Start the interactive visualizer.
-# Click the "Stop Running" button in MeshCat when you're finished.
-visualizer.Run(loop_once=test_mode)
+# # Start the interactive visualizer.
+# # Click the "Stop Running" button in MeshCat when you're finished.
+# visualizer.Run(loop_once=test_mode)
 
 # Define a simple cylinder model.
 cylinder_sdf = """<?xml version="1.0"?>
@@ -124,6 +124,21 @@ with open(table_top_sdf_file, "w") as f:
     f.write(table_top_sdf)
 
 
+class DC_motor(LeafSystem):
+    def __init__(self):
+        super().__init__()  # Don't forget to initialize the base class.
+        self._a_port = self.DeclareVectorInputPort(name="Voltage", size=2)
+        self._b_port = self.DeclareVectorInputPort(name="ModelState", size=37)
+        self.DeclareVectorOutputPort(name="torque", size=12, calc=self.CalcTorque)
+    
+    def CalcTorque(self, context, output):
+        Voltage = self._a_port.Eval(context)
+        ModelState = self._b_port.Eval(context)
+        torquevector = [0.0, 0.0, 0.0, 0.0, 0.0, Voltage[0], 0.0, 0.0, 0.0, 0.0, 0.0, -Voltage[1]]
+        output.SetFromVector(torquevector)
+
+    
+
 def create_scene(sim_time_step):
     # Clean up the Meshcat instance.
     meshcat.Delete()
@@ -148,7 +163,9 @@ def create_scene(sim_time_step):
     # parser.AddModels(
     #     url="package://drake_models/ycb/meshes/004_sugar_box_textured.obj")
 
-    onshape = parser.AddModels(url=myrobot_url)    
+    # onshape = parser.AddModels(url=myrobot_url)
+    onshape = Parser(plant, scene_graph).AddModelsFromUrl(
+    myrobot_url)[0]
 
     # Weld the table to the world so that it's fixed during the simulation.
     table_frame = plant.GetFrameByName("table_top_center")
@@ -184,23 +201,34 @@ def create_scene(sim_time_step):
     X_Worldbody = X_WorldTable.multiply(X_Tablebody)
     plant.SetDefaultFreeBodyPose(wheelbody, X_Worldbody)
 
-    meshcat.AddSlider('a', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('b', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('c', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('d', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('e', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('F', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('g', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('h', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('i', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('j', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('k', min=-5, max=5, step=.1, value=0.0)
-    meshcat.AddSlider('L', min=-5, max=5, step=.1, value=0.0)
+    meshcat.AddSlider('L', min=-2, max=2, step=.01, value=0.0)
+    meshcat.AddSlider('R', min=-2, max=2, step=.01, value=0.0)
+
+
+    S = np.zeros((40, 50))
+    num_q = plant.num_positions()
+    j=0
+    for i in range(plant.num_joints()):
+      joint = plant.get_joint(JointIndex(i))
+      if joint.num_positions() != 1:
+          continue
+      S[j, joint.position_start()] = 1
+      S[12 + j, num_q + joint.velocity_start()] = 1
+      # use lower gain for the knee joints
+      a = joint.name()
+      j = j + 1
+
+
+    motor_system = builder.AddSystem(DC_motor())
+    motor_context = motor_system.CreateDefaultContext()
 
     
-    torque_system = builder.AddSystem(MeshcatSliders(meshcat,['abcdeFghijkL']))
-    builder.Connect(torque_system.get_output_port(), plant.get_input_port(7))
-    
+
+    torque_system = builder.AddSystem(MeshcatSliders(meshcat,['LR']))
+    builder.Connect(torque_system.get_output_port(), motor_system.GetInputPort("Voltage"))
+    builder.Connect(plant.get_state_output_port(onshape), motor_system.GetInputPort("ModelState"))
+    builder.Connect(motor_system.GetOutputPort("torque"), plant.get_actuation_input_port(onshape))                
+
     # Add visualizer to visualize the geometries.
     visualizer = MeshcatVisualizer.AddToBuilder(
         builder, scene_graph, meshcat,
@@ -226,4 +254,4 @@ def run_simulation(sim_time_step):
         simulator.AdvanceTo(simulator.get_context().get_time() + 1.0)
 
 # Run the simulation with a small time step. Try gradually increasing it!
-run_simulation(sim_time_step=0.0001)
+run_simulation(sim_time_step=0.001)
