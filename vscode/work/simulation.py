@@ -1,4 +1,5 @@
 import sys
+import re
 print("\n".join(sys.path))
 
 # Import some basic libraries and functions for this tutorial.
@@ -125,17 +126,25 @@ with open(table_top_sdf_file, "w") as f:
 
 
 class DC_motor(LeafSystem):
-    def __init__(self):
+    def __init__(self, InputVector, OutputVector):
         super().__init__()  # Don't forget to initialize the base class.
-        self._a_port = self.DeclareVectorInputPort(name="Voltage", size=2)
-        self._b_port = self.DeclareVectorInputPort(name="ModelState", size=37)
-        self.DeclareVectorOutputPort(name="torque", size=12, calc=self.CalcTorque)
+        self._a_port = self.DeclareVectorInputPort(name="Voltage", size=max(InputVector))
+        self._b_port = self.DeclareVectorInputPort(name="ModelState", size=len(InputVector))
+        self.DeclareVectorOutputPort(name="torque", size=len(OutputVector), calc=self.CalcTorque)
+        self.torquevector = [0]*len(OutputVector)
+        self.InputVector = InputVector
+        self.OutputVector = OutputVector
     
     def CalcTorque(self, context, output):
         Voltage = self._a_port.Eval(context)
         ModelState = self._b_port.Eval(context)
-        torquevector = [0.0, 0.0, 0.0, 0.0, 0.0, Voltage[0], 0.0, 0.0, 0.0, 0.0, 0.0, -Voltage[1]]
-        output.SetFromVector(torquevector)
+        for i, val in enumerate(self.OutputVector):
+            if val == 0:
+                self.torquevector[i] = 0.0
+            else: 
+                self.torquevector[i] = Voltage[val-1]
+        #torquevector = [0.0, 0.0, 0.0, 0.0, 0.0, Voltage[0], 0.0, 0.0, 0.0, 0.0, 0.0, -Voltage[1]]
+        output.SetFromVector(self.torquevector)
 
     
 
@@ -201,8 +210,8 @@ def create_scene(sim_time_step):
     X_Worldbody = X_WorldTable.multiply(X_Tablebody)
     plant.SetDefaultFreeBodyPose(wheelbody, X_Worldbody)
 
-    meshcat.AddSlider('L', min=-2, max=2, step=.01, value=0.0)
-    meshcat.AddSlider('R', min=-2, max=2, step=.01, value=0.0)
+    meshcat.AddSlider('L', min=-0.8, max=0.8, step=.001, value=0.0)
+    meshcat.AddSlider('R', min=-0.8, max=0.8, step=.001, value=0.0)
 
 
     S = np.zeros((40, 50))
@@ -219,10 +228,12 @@ def create_scene(sim_time_step):
       j = j + 1
 
 
-    motor_system = builder.AddSystem(DC_motor())
+    motor_system = builder.AddSystem(DC_motor(Get_motor_input_positions(plant, onshape), Get_motor_output_positions(plant, onshape)))
     motor_context = motor_system.CreateDefaultContext()
 
-    
+    inputvector = Get_motor_input_positions(plant, onshape)
+    outputvector = Get_motor_output_positions(plant, onshape)
+            
 
     torque_system = builder.AddSystem(MeshcatSliders(meshcat,['LR']))
     builder.Connect(torque_system.get_output_port(), motor_system.GetInputPort("Voltage"))
@@ -239,6 +250,28 @@ def create_scene(sim_time_step):
     # plant.GetInputPort("wheel2_speed").FixValue(plant_context, [0])
 
     return diagram, visualizer
+
+def Get_motor_input_positions(plant, object):
+    names=plant.GetStateNames(object)
+    input_projection = [0 for i in range(len(names))]
+    index=1
+    for i, name in enumerate(names):
+        if re.search(r"motor_._w", name):
+            input_projection[i] = index
+            index += 1
+        else: input_projection[i] = 0
+    return input_projection
+
+def Get_motor_output_positions(plant, object):
+    names=plant.GetActuatorNames(object)
+    output_projection = [0 for i in range(len(names))]
+    index=1
+    for i, name in enumerate(names):
+        if re.search(r"motor_.", name):
+            output_projection[i] = index
+            index += 1
+        else: output_projection[i] = 0
+    return output_projection
 
 def initialize_simulation(diagram):
     simulator = Simulator(diagram)
