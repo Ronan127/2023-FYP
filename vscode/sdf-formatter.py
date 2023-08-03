@@ -16,6 +16,6 @@ for file in pathlib.Path(args.root).glob('*.sdf'):
     data = re.sub("((<frame\sname=).*(<\/frame>\n))|(( frame=)[^>]*)", "", data)
     #fix file referencing
     data = re.sub("((file://)(?!{})|(file://{}/))".format(args.root, args.root), "", data)
-
+                
     sdfile = open(file, "w")
     sdfile.write(data)

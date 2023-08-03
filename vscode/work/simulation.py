@@ -41,46 +41,7 @@ myrobot_url = (
 # # Click the "Stop Running" button in MeshCat when you're finished.
 # visualizer.Run(loop_once=test_mode)
 
-# Define a simple cylinder model.
-cylinder_sdf = """<?xml version="1.0"?>
-<sdf version="1.7">
-  <model name="cylinder">
-    <pose>0 0 0 0 0 0</pose>
-    <link name="cylinder_link">
-      <inertial>
-        <mass>1.0</mass>
-        <inertia>
-          <ixx>0.005833</ixx>
-          <ixy>0.0</ixy>
-          <ixz>0.0</ixz>
-          <iyy>0.005833</iyy>
-          <iyz>0.0</iyz>
-          <izz>0.005</izz>
-        </inertia>
-      </inertial>
-      <collision name="collision">
-        <geometry>
-          <cylinder>
-            <radius>0.1</radius>
-            <length>0.2</length>
-          </cylinder>
-        </geometry>
-      </collision>
-      <visual name="visual">
-        <geometry>
-          <cylinder>
-            <radius>0.1</radius>
-            <length>0.2</length>
-          </cylinder>
-        </geometry>
-        <material>
-          <diffuse>1.0 1.0 1.0 1.0</diffuse>
-        </material>
-      </visual>
-    </link>
-  </model>
-</sdf>
-"""
+FRICTION_COEFFICIENT = 1.5
 
 # Create a Drake temporary directory to store files.
 # Note: this tutorial will create a temporary file (table_top.sdf)
@@ -111,6 +72,14 @@ table_top_sdf = """<?xml version="1.0"?>
             <size>25 25 0.05</size>
           </box>
         </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>{}</mu>
+              <mu2>{}</mu2>
+            </ode>
+          </friction>
+        </surface>
       </collision>
     </link>
     <frame name="table_top_center">
@@ -119,34 +88,129 @@ table_top_sdf = """<?xml version="1.0"?>
   </model>
 </sdf>
 
-"""
+""".format(FRICTION_COEFFICIENT, FRICTION_COEFFICIENT)
 
 with open(table_top_sdf_file, "w") as f:
     f.write(table_top_sdf)
+
+#Create box to climb
+box_sdf = """<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="box">
+    <link name="box_link">
+      <visual name="visual">
+        <pose>0 0 0.445 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 0.25</size>
+          </box>
+        </geometry>
+        <material>
+         <diffuse>0.9 0.8 0.7 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="collision">
+        <pose>0 0 0.445  0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 0.25</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>{}</mu>
+              <mu2>{}</mu2>
+            </ode>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+    <frame name="box_center">
+      <pose relative_to="box_link">0 0 0.47 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>
+
+""".format(FRICTION_COEFFICIENT,FRICTION_COEFFICIENT)
 
 
 class DC_motor(LeafSystem):
     def __init__(self, InputVector, OutputVector):
         super().__init__()  # Don't forget to initialize the base class.
-        self._a_port = self.DeclareVectorInputPort(name="Voltage", size=max(InputVector))
-        self._b_port = self.DeclareVectorInputPort(name="ModelState", size=len(InputVector))
-        self.DeclareVectorOutputPort(name="torque", size=len(OutputVector), calc=self.CalcTorque)
-        self.torquevector = [0]*len(OutputVector)
+        num_motors = max(InputVector)
+        num_input_states = len(InputVector)
+        num_output_states = len(OutputVector)
+        self._a_port = self.DeclareVectorInputPort(name="Voltage", size=num_motors)
+        self._b_port = self.DeclareVectorInputPort(name="ModelState", size=num_input_states)
+        self.DeclareVectorOutputPort(name="torque", size=num_output_states, calc=self.CalcTorque)
+        self.TorqueVector = [0]*num_output_states
+        self.Speed = [0]*num_motors
         self.InputVector = InputVector
         self.OutputVector = OutputVector
+        self.StallTorque = 0.8 #8 Ncm
+        self.NLSpeed = 4.1888 #40 rad/s
+        self.Torque = [0]*num_motors
+
     
     def CalcTorque(self, context, output):
         Voltage = self._a_port.Eval(context)
         ModelState = self._b_port.Eval(context)
+        index = 0
+        for i, val in enumerate(self.InputVector):
+            if val != 0:
+                self.Speed[index] = ModelState[i]
+                index += 1
+
+        for i, speed in enumerate(self.Speed):
+            self.Torque[i] = self.StallTorque*(Voltage[i]/12.0-speed/self.NLSpeed)
+
         for i, val in enumerate(self.OutputVector):
             if val == 0:
-                self.torquevector[i] = 0.0
+                self.TorqueVector[i] = 0.0
             else: 
-                self.torquevector[i] = Voltage[val-1]
+                self.TorqueVector[i] = self.Torque[val-1]
         #torquevector = [0.0, 0.0, 0.0, 0.0, 0.0, Voltage[0], 0.0, 0.0, 0.0, 0.0, 0.0, -Voltage[1]]
-        output.SetFromVector(self.torquevector)
+        output.SetFromVector(self.TorqueVector)
+
+class ControlSystem(LeafSystem):
+    def __init__(self, names):
+        super().__init__()  # Don't forget to initialize the base class.
+        self._a_port = self.DeclareVectorInputPort(name="Input", size=1)
+        self._b_port = self.DeclareVectorInputPort(name="ModelState", size=37)
+        self.DeclareVectorOutputPort(name="Voltage", size=2, calc=self.CalcVoltage)
+        self.names = names
+        JointNames={"motor_a_q","motor_b_q","motor_a_w","motor_b_w","sun_a_q","sun_b_q","sun_a_w","sun_b_w"}
+        self.NameVector={}
+        for i, name in enumerate(names):
+            for j, JointName in enumerate(JointNames):
+                if name == JointName:
+                    self.NameVector[JointName]=i
+        pass
+      
+    def clamp(self, n, minn, maxn):
+      return max(min(maxn, n), minn)
 
     
+    def CalcVoltage(self, context, output):
+        Voltage = self._a_port.Eval(context)
+        ModelState = self._b_port.Eval(context)
+        States={}
+        for name in self.NameVector:
+            States[name] = ModelState[self.NameVector[name]]
+        lim_a_q=States["motor_a_q"]-States["sun_a_q"]
+        lim_b_q=States["motor_b_q"]+States["sun_b_q"]
+        lim_a_w=States["motor_a_w"]-States["sun_a_w"]
+        lim_b_w=States["motor_b_w"]+States["sun_b_w"]
+        kp = 80
+        kd = 20
+        control_a = Voltage+kp*(-lim_a_q+lim_b_q)/2 + kd*(-lim_a_w+lim_b_w)
+        control_b = Voltage+kp*(+lim_a_q-lim_b_q)/2 + kd*(+lim_a_w-lim_b_w)
+        control_a = self.clamp(control_a[0],-48,48)
+        control_b = self.clamp(control_b[0],-48,48)
+
+        output.SetFromVector([control_b, control_a])
+        # print("LIM A: %0.4f, LIM B: %0.4f, DIFF: %0.4f, CONTR A: %0.4f, CONTR B: %0.4f" %(lim_a_q, lim_b_q, lim_a_q-lim_b_q, control_a, control_b))
 
 def create_scene(sim_time_step):
     # Clean up the Meshcat instance.
@@ -160,7 +224,8 @@ def create_scene(sim_time_step):
 
     # Loading models.
     # Load the table top and the cylinder we created.
-    parser.AddModelsFromString(cylinder_sdf, "sdf")
+    # parser.AddModelsFromString(cylinder_sdf, "sdf")
+    parser.AddModelsFromString(box_sdf, "sdf")
     parser.AddModels(table_top_sdf_file)
     # Load a cracker box from Drake. 
     # parser.AddModels(
@@ -179,6 +244,9 @@ def create_scene(sim_time_step):
     # Weld the table to the world so that it's fixed during the simulation.
     table_frame = plant.GetFrameByName("table_top_center")
     plant.WeldFrames(plant.world_frame(), table_frame)
+    box_frame = plant.GetFrameByName("box_center")
+    plant.WeldFrames(plant.world_frame(), box_frame)
+
     # Finalize the plant after loading the scene.
     plant.Finalize()
     # We use the default context to calculate the transformation of the table
@@ -187,12 +255,12 @@ def create_scene(sim_time_step):
 
     # Set the initial pose for the free bodies, i.e., the custom cylinder,
     # the cracker box, and the sugar box.
-    cylinder = plant.GetBodyByName("cylinder_link")
+    # cylinder = plant.GetBodyByName("cylinder_link")
     X_WorldTable = table_frame.CalcPoseInWorld(plant_context)
-    X_TableCylinder = RigidTransform(
-        RollPitchYaw(np.asarray([90, 0, 0]) * np.pi / 180), p=[0,0,0.5])
-    X_WorldCylinder = X_WorldTable.multiply(X_TableCylinder)
-    plant.SetDefaultFreeBodyPose(cylinder, X_WorldCylinder)
+    # X_TableCylinder = RigidTransform(
+    #     RollPitchYaw(np.asarray([90, 0, 0]) * np.pi / 180), p=[0,0,0.5])
+    # X_WorldCylinder = X_WorldTable.multiply(X_TableCylinder)
+    # plant.SetDefaultFreeBodyPose(cylinder, X_WorldCylinder)
 
     # cracker_box = plant.GetBodyByName("base_link_cracker")
     # X_TableCracker = RigidTransform(
@@ -206,39 +274,27 @@ def create_scene(sim_time_step):
     # plant.SetDefaultFreeBodyPose(sugar_box, X_WorldSugar)
 
     wheelbody = plant.GetBodyByName("body")
-    X_Tablebody = RigidTransform(p=[0,-0.25,0.8])
+    X_Tablebody = RigidTransform(p=[-1,-0.15,0.2])
     X_Worldbody = X_WorldTable.multiply(X_Tablebody)
     plant.SetDefaultFreeBodyPose(wheelbody, X_Worldbody)
+    plant.SetDefaultFreeBodyPose(box_frame, X_Worldbody)
 
-    meshcat.AddSlider('L', min=-0.8, max=0.8, step=.001, value=0.0)
-    meshcat.AddSlider('R', min=-0.8, max=0.8, step=.001, value=0.0)
-
-
-    S = np.zeros((40, 50))
-    num_q = plant.num_positions()
-    j=0
-    for i in range(plant.num_joints()):
-      joint = plant.get_joint(JointIndex(i))
-      if joint.num_positions() != 1:
-          continue
-      S[j, joint.position_start()] = 1
-      S[12 + j, num_q + joint.velocity_start()] = 1
-      # use lower gain for the knee joints
-      a = joint.name()
-      j = j + 1
+    meshcat.AddSlider('V', min=-48, max=48, step=.01, value=0.0)
 
 
     motor_system = builder.AddSystem(DC_motor(Get_motor_input_positions(plant, onshape), Get_motor_output_positions(plant, onshape)))
     motor_context = motor_system.CreateDefaultContext()
+    
+    control_system = builder.AddSystem(ControlSystem(plant.GetStateNames(onshape)))   
 
-    inputvector = Get_motor_input_positions(plant, onshape)
-    outputvector = Get_motor_output_positions(plant, onshape)
-            
-
-    torque_system = builder.AddSystem(MeshcatSliders(meshcat,['LR']))
-    builder.Connect(torque_system.get_output_port(), motor_system.GetInputPort("Voltage"))
+    torque_system = builder.AddSystem(MeshcatSliders(meshcat,['V']))
+    builder.Connect(control_system.GetOutputPort("Voltage"), motor_system.GetInputPort("Voltage"))
     builder.Connect(plant.get_state_output_port(onshape), motor_system.GetInputPort("ModelState"))
-    builder.Connect(motor_system.GetOutputPort("torque"), plant.get_actuation_input_port(onshape))                
+    builder.Connect(motor_system.GetOutputPort("torque"), plant.get_actuation_input_port(onshape))   
+    
+    builder.Connect(plant.get_state_output_port(onshape), control_system.GetInputPort("ModelState"))
+    builder.Connect(torque_system.get_output_port(), control_system.GetInputPort("Input"))
+
 
     # Add visualizer to visualize the geometries.
     visualizer = MeshcatVisualizer.AddToBuilder(
@@ -283,8 +339,10 @@ def run_simulation(sim_time_step):
     diagram, visualizer = create_scene(sim_time_step)
     simulator = initialize_simulation(diagram)
     meshcat.AddButton('Stop Simulation')
+    visualizer.StartRecording()
     while meshcat.GetButtonClicks('Stop Simulation') < 1:
         simulator.AdvanceTo(simulator.get_context().get_time() + 1.0)
+    visualizer.PublishRecording()
 
 # Run the simulation with a small time step. Try gradually increasing it!
 run_simulation(sim_time_step=0.001)
