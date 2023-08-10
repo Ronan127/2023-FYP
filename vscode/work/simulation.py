@@ -41,7 +41,7 @@ myrobot_url = (
 # # Click the "Stop Running" button in MeshCat when you're finished.
 # visualizer.Run(loop_once=test_mode)
 
-FRICTION_COEFFICIENT = 1.5
+FRICTION_COEFFICIENT = 0.5
 
 # Create a Drake temporary directory to store files.
 # Note: this tutorial will create a temporary file (table_top.sdf)
@@ -277,7 +277,7 @@ def create_scene(sim_time_step):
     X_Tablebody = RigidTransform(p=[-1,-0.15,0.2])
     X_Worldbody = X_WorldTable.multiply(X_Tablebody)
     plant.SetDefaultFreeBodyPose(wheelbody, X_Worldbody)
-    plant.SetDefaultFreeBodyPose(box_frame, X_Worldbody)
+    # plant.SetDefaultFreeBodyPose(box_frame, X_Worldbody)
 
     meshcat.AddSlider('V', min=-48, max=48, step=.01, value=0.0)
 
