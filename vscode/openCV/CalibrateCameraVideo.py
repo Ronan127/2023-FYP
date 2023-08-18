@@ -39,7 +39,7 @@ counter =0
 # I'm using a set of images taken with the camera with the naming convention:
 # 'camera-pic-of-charucoboard-<NUMBER>.jpg'
 # All images used should be the same size, which if taken with the same camera shouldn't be a problem
-cam = cv2.VideoCapture(1)
+cam = cv2.VideoCapture("./openCV/VID_20230817_125015.mp4")
 while(cam.isOpened()):
     # Capturing each frame of our video stream
     ret, img = cam.read()
@@ -80,21 +80,21 @@ while(cam.isOpened()):
                     break
         
             
-            # Draw the Charuco board we've detected to show our calibrator the board was properly detected
-            img = aruco.drawDetectedCornersCharuco(
-                    image=img,
-                    charucoCorners=charuco_corners,
-                    charucoIds=charuco_ids)
+        #     # Draw the Charuco board we've detected to show our calibrator the board was properly detected
+        #     img = aruco.drawDetectedCornersCharuco(
+        #             image=img,
+        #             charucoCorners=charuco_corners,
+        #             charucoIds=charuco_ids)
         
-            # If our image size is unknown, set it now
+        #     # If our image size is unknown, set it now
 
-            # Reproportion the image, maxing width or height at 1000
+        #     # Reproportion the image, maxing width or height at 1000
 
-        # Pause to display each image, waiting for key press
-        proportion = max(img.shape) / 1000.0
-        img = cv2.resize(img, (int(img.shape[1]/proportion), int(img.shape[0]/proportion)))
-        cv2.imshow('Charuco board', img)
-        cv2.waitKey(1)
+        # # Pause to display each image, waiting for key press
+        # proportion = max(img.shape) / 1000.0
+        # img = cv2.resize(img, (int(img.shape[1]/proportion), int(img.shape[0]/proportion)))
+        # cv2.imshow('Charuco board', img)
+        # cv2.waitKey(1)
     # Exit at the end of the video on the 'q' keypress
     if ret == False:
         break

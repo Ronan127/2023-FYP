@@ -21,7 +21,7 @@ class MarkSearch :
         ret, frame = self.cap.read()
         self.gray = cv2.cvtColor(frame, cv2.COLOR_RGB2GRAY)
 
-        corners, ids, rejectedImgPoints = self.detector.detectMarkers(self.gray)
+        corners, ids, rejectedImgPoints = self.detector.detectMarkers(gray)
 
         list_ids = np.ravel(ids)
 
