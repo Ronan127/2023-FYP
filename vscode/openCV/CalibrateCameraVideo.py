@@ -32,64 +32,79 @@ parameters = cv2.aruco.DetectorParameters()
 detector = cv2.aruco.ArucoDetector(ARUCO_DICT, parameters)
 char_parameters = cv2.aruco.CharucoParameters()
 char_detector = cv2.aruco.CharucoDetector(CHARUCO_BOARD)
+counter =0
 
 
 # This requires a set of images or a video taken with the camera you want to calibrate
 # I'm using a set of images taken with the camera with the naming convention:
 # 'camera-pic-of-charucoboard-<NUMBER>.jpg'
 # All images used should be the same size, which if taken with the same camera shouldn't be a problem
-images = glob.glob('./openCV/Calibration4/*.jpg')
+cam = cv2.VideoCapture(1)
+while(cam.isOpened()):
+    # Capturing each frame of our video stream
+    ret, img = cam.read()
+    if ret == True:
+        if counter>0:
+            counter -= 1
+        else:
+            # Grayscale the image
+            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-# Loop through images glob'ed
-for iname in images:
-    # Open the image
-    img = cv2.imread(iname)
-    # Grayscale the image
-    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            # # Find aruco markers in the query image
+            # corners, ids, _ = detector.detectMarkers(
+            #         image=gray)
 
-    # Find aruco markers in the query image
-    corners, ids, _ = detector.detectMarkers(
-            image=gray)
+            # # Outline the aruco markers found in our query image
+            # img = aruco.drawDetectedMarkers(
+            #         image=img, 
+            #         corners=corners)
 
-    # Outline the aruco markers found in our query image
-    img = aruco.drawDetectedMarkers(
-            image=img, 
-            corners=corners)
+            # Get charuco corners and ids from detected aruco markers
+            charuco_corners, charuco_ids, marker_corners, marker_ids = char_detector.detectBoard(gray)
 
-    # Get charuco corners and ids from detected aruco markers
-    charuco_corners, charuco_ids, marker_corners, marker_ids = char_detector.detectBoard(gray)
-
-    # If a Charuco board was found, let's collect image/corner points
-    # Requiring at least 5 square
-    if charuco_ids is not None and len(charuco_ids) > 5:
-        # Add these corners and ids to our calibration arrays
-        corners_all.append(charuco_corners)
-        ids_all.append(charuco_ids)
+            # If a Charuco board was found, let's collect image/corner points
+            # Requiring at least 5 square
+            if charuco_ids is not None and len(charuco_ids) > 5:
+                # Add these corners and ids to our calibration arrays
+                corners_all.append(charuco_corners)
+                ids_all.append(charuco_ids)
+                print(len(ids_all))
+                if not image_size:
+                    image_size = gray.shape[::-1]
+                
+                #Wait x many frames before processing images again again
+                counter = 10
+                
+                #Limit calibration to x many frames
+                if len(ids_all)> 200:
+                    break
         
-        # Draw the Charuco board we've detected to show our calibrator the board was properly detected
-        img = aruco.drawDetectedCornersCharuco(
-                image=img,
-                charucoCorners=charuco_corners,
-                charucoIds=charuco_ids)
-       
-        # If our image size is unknown, set it now
-        if not image_size:
-            image_size = gray.shape[::-1]
-    
-        # Reproportion the image, maxing width or height at 1000
+            
+            # Draw the Charuco board we've detected to show our calibrator the board was properly detected
+            img = aruco.drawDetectedCornersCharuco(
+                    image=img,
+                    charucoCorners=charuco_corners,
+                    charucoIds=charuco_ids)
+        
+            # If our image size is unknown, set it now
+
+            # Reproportion the image, maxing width or height at 1000
+
+        # Pause to display each image, waiting for key press
         proportion = max(img.shape) / 1000.0
         img = cv2.resize(img, (int(img.shape[1]/proportion), int(img.shape[0]/proportion)))
-        # Pause to display each image, waiting for key press
         cv2.imshow('Charuco board', img)
-        cv2.waitKey(0)
-    else:
-        print("Not able to detect a charuco board in image: {}".format(iname))
+        cv2.waitKey(1)
+    # Exit at the end of the video on the 'q' keypress
+    if ret == False:
+        break
+    
 
 # Destroy any open CV windows
 cv2.destroyAllWindows()
-
+print("Finished looking through images")
 # Make sure at least one image was found
-if len(images) < 1:
+if len(ids_all) < 1:
     # Calibration failed because there were no images, warn the user
     print("Calibration was unsuccessful. No images of charucoboards were found. Add images of charucoboards and use or alter the naming conventions used in this file.")
     # Exit for failure
@@ -119,7 +134,7 @@ print(distCoeffs)
     
 # Save values to be used where matrix+dist is required, for instance for posture estimation
 # I save files in a pickle file, but you can use yaml or whatever works for you
-f = open('calibration.pckl', 'wb')
+f = open('calibration2.pckl', 'wb')
 pickle.dump((cameraMatrix, distCoeffs, rvecs, tvecs), f)
 f.close()
     
