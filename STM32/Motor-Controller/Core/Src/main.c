@@ -1,20 +1,20 @@
 /* USER CODE BEGIN Header */
 /**
-  ******************************************************************************
-  * @file           : main.c
-  * @brief          : Main program body
-  ******************************************************************************
-  * @attention
-  *
-  * Copyright (c) 2023 STMicroelectronics.
-  * All rights reserved.
-  *
-  * This software is licensed under terms that can be found in the LICENSE file
-  * in the root directory of this software component.
-  * If no LICENSE file comes with this software, it is provided AS-IS.
-  *
-  ******************************************************************************
-  */
+ ******************************************************************************
+ * @file           : main.c
+ * @brief          : Main program body
+ ******************************************************************************
+ * @attention
+ *
+ * Copyright (c) 2023 STMicroelectronics.
+ * All rights reserved.
+ *
+ * This software is licensed under terms that can be found in the LICENSE file
+ * in the root directory of this software component.
+ * If no LICENSE file comes with this software, it is provided AS-IS.
+ *
+ ******************************************************************************
+ */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
@@ -32,7 +32,9 @@
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
 #define THRESHOLD_OFF 0.2
-#define THRESHOLD_FULL 0.8
+#define THRESHOLD_FULL 0.90
+#define SLIDERS 0
+#define UART 1
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -46,9 +48,18 @@ DMA_HandleTypeDef hdma_adc1;
 
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
+TIM_HandleTypeDef htim3;
+
+UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-
+uint8_t UART_RX_Pos = 0;
+uint8_t UART_RX_Message[100];
+uint8_t UART_RX_Byte[1];
+uint8_t UART_RX_Flag = 0;
+int UART_RX_Motor_a;
+int UART_RX_Motor_b;
+volatile uint8_t TIM3_flag = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -58,8 +69,14 @@ static void MX_DMA_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM2_Init(void);
+static void MX_USART2_UART_Init(void);
+static void MX_TIM3_Init(void);
 /* USER CODE BEGIN PFP */
 double clamp(double d, double min, double max);
+void num2str(int num, uint8_t *string, int numdigits);
+int str2num(uint8_t *string, int numdigits);
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart);
+void UART_RX_Handler(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -99,55 +116,108 @@ int main(void)
   MX_ADC1_Init();
   MX_TIM1_Init();
   MX_TIM2_Init();
+  MX_USART2_UART_Init();
+  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  uint32_t ADC_Value[2];
-  HAL_TIM_Base_Start_IT(&htim1);
-  HAL_ADC_Start_DMA(&hadc1, ADC_Value, 2); // start adc in DMA mode
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+	uint32_t ADC_Value[2];
+	uint8_t txbuffer[100];
 
+	uint8_t input = SLIDERS;
+	HAL_UART_Receive_IT(&huart2, UART_RX_Byte, 1);
+	HAL_TIM_Base_Start_IT(&htim1);
+	HAL_TIM_Base_Start_IT(&htim3);
+	HAL_ADC_Start_DMA(&hadc1, ADC_Value, 2); // start adc in DMA mode
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
+	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+
+	for (int i = 0; i < 100; i++) {
+		txbuffer[i] = (uint8_t) *" ";
+	}
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-	  double slider1 = (ADC_Value[0]/2047.0) - 1.0;
-	  double slider2 = (ADC_Value[1]/2047.0) - 1.0;
+	while (1) {
+		double slider1 = (ADC_Value[0] / 2047.0) - 1.0;
+		double slider2 = (ADC_Value[1] / 2047.0) - 1.0;
 
+		if (input == SLIDERS) {
+			if (slider1 > THRESHOLD_OFF) {
+				HAL_GPIO_WritePin(Motor_a_fwd_GPIO_Port, Motor_a_fwd_Pin, 1);
+				HAL_GPIO_WritePin(Motor_a_rev_GPIO_Port, Motor_a_rev_Pin, 0);
+				TIM2->CCR1 = ((slider1 - THRESHOLD_OFF)
+						/ (THRESHOLD_FULL - THRESHOLD_OFF)) * 999.0;
+			} else if (slider1 < -THRESHOLD_OFF) {
+				HAL_GPIO_WritePin(Motor_a_fwd_GPIO_Port, Motor_a_fwd_Pin, 0);
+				HAL_GPIO_WritePin(Motor_a_rev_GPIO_Port, Motor_a_rev_Pin, 1);
+				TIM2->CCR1 = ((-slider1 - THRESHOLD_OFF)
+						/ (THRESHOLD_FULL - THRESHOLD_OFF)) * 999.0;
+			} else {
+				HAL_GPIO_WritePin(Motor_a_fwd_GPIO_Port, Motor_a_fwd_Pin, 0);
+				HAL_GPIO_WritePin(Motor_a_rev_GPIO_Port, Motor_a_rev_Pin, 0);
+				TIM2->CCR1 = 0;
+			}
 
-	  if (slider1 > THRESHOLD_OFF) {
-	  		HAL_GPIO_WritePin(Motor_a_fwd_GPIO_Port, Motor_a_fwd_Pin, 1);
-	  		HAL_GPIO_WritePin(Motor_a_rev_GPIO_Port, Motor_a_rev_Pin, 0);
-	  		TIM2->CCR1 = ((slider1-THRESHOLD_OFF)/(THRESHOLD_FULL-THRESHOLD_OFF))*999.0;
-	  } else if (slider1 < -THRESHOLD_OFF) {
-	  		HAL_GPIO_WritePin(Motor_a_fwd_GPIO_Port, Motor_a_fwd_Pin, 0);
-	  		HAL_GPIO_WritePin(Motor_a_rev_GPIO_Port, Motor_a_rev_Pin, 1);
-	  		TIM2->CCR1 = ((-slider1-THRESHOLD_OFF)/(THRESHOLD_FULL-THRESHOLD_OFF))*999.0;
-	  } else {
-	  		HAL_GPIO_WritePin(Motor_a_fwd_GPIO_Port, Motor_a_fwd_Pin, 0);
-	  		HAL_GPIO_WritePin(Motor_a_rev_GPIO_Port, Motor_a_rev_Pin, 0);
-	  		TIM2->CCR1 = 0;
-	  }
+			if (slider2 > THRESHOLD_OFF) {
+				HAL_GPIO_WritePin(Motor_b_fwd_GPIO_Port, Motor_b_fwd_Pin, 1);
+				HAL_GPIO_WritePin(Motor_b_rev_GPIO_Port, Motor_b_rev_Pin, 0);
+				TIM2->CCR2 = ((slider2 - THRESHOLD_OFF)
+						/ (THRESHOLD_FULL - THRESHOLD_OFF)) * 999.0;
+			} else if (slider2 < -THRESHOLD_OFF) {
+				HAL_GPIO_WritePin(Motor_b_fwd_GPIO_Port, Motor_b_fwd_Pin, 0);
+				HAL_GPIO_WritePin(Motor_b_rev_GPIO_Port, Motor_b_rev_Pin, 1);
+				TIM2->CCR2 = ((-slider2 - THRESHOLD_OFF)
+						/ (THRESHOLD_FULL - THRESHOLD_OFF)) * 999.0;
+			} else {
+				HAL_GPIO_WritePin(Motor_b_fwd_GPIO_Port, Motor_b_fwd_Pin, 0);
+				HAL_GPIO_WritePin(Motor_b_rev_GPIO_Port, Motor_b_rev_Pin, 0);
+				TIM2->CCR2 = 0;
+			}
+		}else if (input==UART){
 
-	  if (slider2 > THRESHOLD_OFF) {
-	  		HAL_GPIO_WritePin(Motor_b_fwd_GPIO_Port, Motor_b_fwd_Pin, 1);
-	  		HAL_GPIO_WritePin(Motor_b_rev_GPIO_Port, Motor_b_rev_Pin, 0);
-	  		TIM2->CCR2 = ((slider2-THRESHOLD_OFF)/(THRESHOLD_FULL-THRESHOLD_OFF))*999.0;
-	  } else if (slider2 < -THRESHOLD_OFF) {
-	  		HAL_GPIO_WritePin(Motor_b_fwd_GPIO_Port, Motor_b_fwd_Pin, 0);
-	  		HAL_GPIO_WritePin(Motor_b_rev_GPIO_Port, Motor_b_rev_Pin, 1);
-	  		TIM2->CCR2 = ((-slider2-THRESHOLD_OFF)/(THRESHOLD_FULL-THRESHOLD_OFF))*999.0;
-	  } else {
-	  		HAL_GPIO_WritePin(Motor_b_fwd_GPIO_Port, Motor_b_fwd_Pin, 0);
-	  		HAL_GPIO_WritePin(Motor_b_rev_GPIO_Port, Motor_b_rev_Pin, 0);
-	  		TIM2->CCR2 = 0;
-	  }
+			if (UART_RX_Motor_a > 0) {
+				HAL_GPIO_WritePin(Motor_a_fwd_GPIO_Port, Motor_a_fwd_Pin, 1);
+				HAL_GPIO_WritePin(Motor_a_rev_GPIO_Port, Motor_a_rev_Pin, 0);
+				TIM2->CCR1 = UART_RX_Motor_a;
+			} else if (UART_RX_Motor_a < 0) {
+				HAL_GPIO_WritePin(Motor_a_fwd_GPIO_Port, Motor_a_fwd_Pin, 0);
+				HAL_GPIO_WritePin(Motor_a_rev_GPIO_Port, Motor_a_rev_Pin, 1);
+				TIM2->CCR1 = -UART_RX_Motor_a;
+			} else {
+				HAL_GPIO_WritePin(Motor_a_fwd_GPIO_Port, Motor_a_fwd_Pin, 0);
+				HAL_GPIO_WritePin(Motor_a_rev_GPIO_Port, Motor_a_rev_Pin, 0);
+				TIM2->CCR1 = 0;
+			}
 
+			if (UART_RX_Motor_b > 0) {
+				HAL_GPIO_WritePin(Motor_b_fwd_GPIO_Port, Motor_b_fwd_Pin, 1);
+				HAL_GPIO_WritePin(Motor_b_rev_GPIO_Port, Motor_b_rev_Pin, 0);
+				TIM2->CCR2 = UART_RX_Motor_b;
+			} else if (UART_RX_Motor_b < 0) {
+				HAL_GPIO_WritePin(Motor_b_fwd_GPIO_Port, Motor_b_fwd_Pin, 0);
+				HAL_GPIO_WritePin(Motor_b_rev_GPIO_Port, Motor_b_rev_Pin, 1);
+				TIM2->CCR2 = -UART_RX_Motor_b;
+			} else {
+				HAL_GPIO_WritePin(Motor_b_fwd_GPIO_Port, Motor_b_fwd_Pin, 0);
+				HAL_GPIO_WritePin(Motor_b_rev_GPIO_Port, Motor_b_rev_Pin, 0);
+				TIM2->CCR2 = 0;
+			}
+		}
+
+		if (TIM3_flag == 1){
+			TIM3_flag = 0;
+			num2str(TIM2->CCR1, &txbuffer[0], 4);
+			num2str(TIM2->CCR2, &txbuffer[5], 4);
+			txbuffer[9] = (uint8_t) *"\n";
+			HAL_UART_Transmit(&huart2, txbuffer, 10, 50);
+		}
+		if (UART_RX_Flag == 1) {
+			UART_RX_Handler();
+		}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+	}
   /* USER CODE END 3 */
 }
 
@@ -189,11 +259,14 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_TIM1|RCC_PERIPHCLK_ADC12
-                              |RCC_PERIPHCLK_TIM2;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART2|RCC_PERIPHCLK_TIM1
+                              |RCC_PERIPHCLK_ADC12|RCC_PERIPHCLK_TIM2
+                              |RCC_PERIPHCLK_TIM34;
+  PeriphClkInit.Usart2ClockSelection = RCC_USART2CLKSOURCE_PCLK1;
   PeriphClkInit.Adc12ClockSelection = RCC_ADC12PLLCLK_DIV1;
   PeriphClkInit.Tim1ClockSelection = RCC_TIM1CLK_HCLK;
   PeriphClkInit.Tim2ClockSelection = RCC_TIM2CLK_HCLK;
+  PeriphClkInit.Tim34ClockSelection = RCC_TIM34CLK_HCLK;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
@@ -386,6 +459,86 @@ static void MX_TIM2_Init(void)
 }
 
 /**
+  * @brief TIM3 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM3_Init(void)
+{
+
+  /* USER CODE BEGIN TIM3_Init 0 */
+
+  /* USER CODE END TIM3_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM3_Init 1 */
+
+  /* USER CODE END TIM3_Init 1 */
+  htim3.Instance = TIM3;
+  htim3.Init.Prescaler = 720-1;
+  htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim3.Init.Period = 10000;
+  htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim3, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim3, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM3_Init 2 */
+
+  /* USER CODE END TIM3_Init 2 */
+
+}
+
+/**
+  * @brief USART2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART2_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART2_Init 0 */
+
+  /* USER CODE END USART2_Init 0 */
+
+  /* USER CODE BEGIN USART2_Init 1 */
+
+  /* USER CODE END USART2_Init 1 */
+  huart2.Instance = USART2;
+  huart2.Init.BaudRate = 57600;
+  huart2.Init.WordLength = UART_WORDLENGTH_9B;
+  huart2.Init.StopBits = UART_STOPBITS_1;
+  huart2.Init.Parity = UART_PARITY_EVEN;
+  huart2.Init.Mode = UART_MODE_TX_RX;
+  huart2.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart2.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart2.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart2.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART2_Init 2 */
+
+  /* USER CODE END USART2_Init 2 */
+
+}
+
+/**
   * Enable DMA controller clock
   */
 static void MX_DMA_Init(void)
@@ -439,8 +592,50 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 double clamp(double d, double min, double max) {
-  const double t = d < min ? min : d;
-  return t > max ? max : t;
+	const double t = d < min ? min : d;
+	return t > max ? max : t;
+}
+
+void num2str(int num, uint8_t *string, int numdigits) {
+	int unit = 1;
+	for (int i = 0; i < numdigits; i++) {
+		string[numdigits - i - 1] = (num / unit) % 10 + 48;
+		unit = unit * 10;
+	}
+}
+int str2num(uint8_t *string, int numdigits) {
+	int unit = 1;
+	int num = 0;
+	for (int i = 0; i < numdigits; i++) {
+		num = num + (string[numdigits - i - 1] - 48) * unit;
+		unit = unit * 10;
+	}
+	return num;
+}
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart) {
+	UART_RX_Flag = 1;
+	HAL_UART_Receive_IT(&huart2, UART_RX_Byte, 1);
+}
+void UART_RX_Handler(void) {
+	UART_RX_Flag = 0;
+	UART_RX_Message[UART_RX_Pos] = UART_RX_Byte[0];
+	UART_RX_Pos += 1;
+	if (UART_RX_Byte[0] == (uint8_t)* "\n"){
+		if (UART_RX_Message[0] == (uint8_t)* "+"){
+			UART_RX_Motor_a = str2num(&UART_RX_Message[1],3);
+		}else if (UART_RX_Message[0] == (uint8_t)* "-"){
+			UART_RX_Motor_a = -str2num(&UART_RX_Message[1],3);
+		}
+		if (UART_RX_Message[5] == (uint8_t)* "+"){
+			UART_RX_Motor_b = str2num(&UART_RX_Message[6],3);
+		}else if (UART_RX_Message[5] == (uint8_t)* "-"){
+			UART_RX_Motor_b = -str2num(&UART_RX_Message[6],3);
+		}
+		if (UART_RX_Message[10] == (uint8_t)* "P"){
+			TIM2->PSC = str2num(&UART_RX_Message[11],3) - 1;
+		}
+		UART_RX_Pos = 0;
+	}
 }
 /* USER CODE END 4 */
 
@@ -451,11 +646,10 @@ double clamp(double d, double min, double max) {
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
-  /* User can add his own implementation to report the HAL error return state */
-  __disable_irq();
-  while (1)
-  {
-  }
+	/* User can add his own implementation to report the HAL error return state */
+	__disable_irq();
+	while (1) {
+	}
   /* USER CODE END Error_Handler_Debug */
 }
 
