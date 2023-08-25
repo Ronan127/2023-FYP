@@ -41,7 +41,9 @@ myrobot_url = (
 # # Click the "Stop Running" button in MeshCat when you're finished.
 # visualizer.Run(loop_once=test_mode)
 
-FRICTION_COEFFICIENT = 0.5
+FRICTION_COEFFICIENT = 1
+STEP_HEIGHT = 0.10
+STEP_PITCH = 0.20
 
 # Create a Drake temporary directory to store files.
 # Note: this tutorial will create a temporary file (table_top.sdf)
@@ -55,7 +57,7 @@ table_top_sdf = """<?xml version="1.0"?>
   <model name="table_top">
     <link name="table_top_link">
       <visual name="visual">
-        <pose>0 0 0.445 0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
             <size>25 25 0.05</size>
@@ -66,7 +68,7 @@ table_top_sdf = """<?xml version="1.0"?>
         </material>
       </visual>
       <collision name="collision">
-        <pose>0 0 0.445  0 0 0</pose>
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <box>
             <size>25 25 0.05</size>
@@ -83,7 +85,7 @@ table_top_sdf = """<?xml version="1.0"?>
       </collision>
     </link>
     <frame name="table_top_center">
-      <pose relative_to="table_top_link">0 0 0.47 0 0 0</pose>
+      <pose relative_to="table_top_link">0 0 0.025 0 0 0</pose>
     </frame>
   </model>
 </sdf>
@@ -134,6 +136,95 @@ box_sdf = """<?xml version="1.0"?>
 
 """.format(FRICTION_COEFFICIENT,FRICTION_COEFFICIENT)
 
+#Create stairs to climb
+stair_sdf = """<?xml version="1.0"?>
+<sdf version="1.7">
+  <model name="box">
+    <link name="box_link">
+      <visual name="step_1_visual">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 {h}</size>
+          </box>
+        </geometry>
+        <material>
+         <diffuse>0.9 0.8 0.7 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="step_1_collision">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+           <size>1 1 {h}</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name="step_2_visual">
+        <pose>0 -{l} {h} 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 {h}</size>
+          </box>
+        </geometry>
+        <material>
+         <diffuse>0.9 0.8 0.7 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="step_2_collision">
+        <pose>0 -{l} {h} 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 {h}</size>
+          </box>
+        </geometry>
+      </collision>
+            <visual name="step_3_visual">
+        <pose>0 -{l2} {h2} 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 {h}</size>
+          </box>
+        </geometry>
+        <material>
+         <diffuse>0.9 0.8 0.7 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="step_3_collision">
+        <pose>0 -{l2} {h2} 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 {h}</size>
+          </box>
+        </geometry>
+      </collision>
+            <visual name="step_4_visual">
+        <pose>0 -{l3} {h3} 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 {h}</size>
+          </box>
+        </geometry>
+        <material>
+         <diffuse>0.9 0.8 0.7 1.0</diffuse>
+        </material>
+      </visual>
+      <collision name="step_4_collision">
+        <pose>0 -{l3} {h3} 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>1 1 {h}</size>
+          </box>
+        </geometry>
+      </collision>
+    </link>
+    <frame name="box_center">
+      <pose relative_to="box_link">0 0 -{halfh}/2 0 0 0</pose>
+    </frame>
+  </model>
+</sdf>
+
+""".format(h=STEP_HEIGHT, h2=STEP_HEIGHT*2, h3=STEP_HEIGHT*3, halfh = STEP_HEIGHT/2, l=STEP_PITCH , l2=STEP_PITCH*2, l3=STEP_PITCH*3)
 
 class DC_motor(LeafSystem):
     def __init__(self, InputVector, OutputVector):
@@ -146,10 +237,11 @@ class DC_motor(LeafSystem):
         self.DeclareVectorOutputPort(name="torque", size=num_output_states, calc=self.CalcTorque)
         self.TorqueVector = [0]*num_output_states
         self.Speed = [0]*num_motors
+        self.SpeedFiltered = [0]*num_motors
         self.InputVector = InputVector
         self.OutputVector = OutputVector
-        self.StallTorque = 0.8 #8 Ncm
-        self.NLSpeed = 4.1888 #40 rad/s
+        self.StallTorque = 6 #Nm
+        self.NLSpeed = 0.61 #6 rpm
         self.Torque = [0]*num_motors
 
     
@@ -160,10 +252,12 @@ class DC_motor(LeafSystem):
         for i, val in enumerate(self.InputVector):
             if val != 0:
                 self.Speed[index] = ModelState[i]
+                self.SpeedFiltered[index] = 0.99*self.SpeedFiltered[index]+0.01*self.Speed[index]
                 index += 1
 
-        for i, speed in enumerate(self.Speed):
+        for i, speed in enumerate(self.SpeedFiltered):
             self.Torque[i] = self.StallTorque*(Voltage[i]/12.0-speed/self.NLSpeed)
+            # self.Torque[i] =Voltage[i]
 
         for i, val in enumerate(self.OutputVector):
             if val == 0:
@@ -202,12 +296,12 @@ class ControlSystem(LeafSystem):
         lim_b_q=States["motor_b_q"]+States["sun_b_q"]
         lim_a_w=States["motor_a_w"]-States["sun_a_w"]
         lim_b_w=States["motor_b_w"]+States["sun_b_w"]
-        kp = 80
-        kd = 20
+        kp = 0
+        kd = 0
         control_a = Voltage+kp*(-lim_a_q+lim_b_q)/2 + kd*(-lim_a_w+lim_b_w)
         control_b = Voltage+kp*(+lim_a_q-lim_b_q)/2 + kd*(+lim_a_w-lim_b_w)
-        control_a = self.clamp(control_a[0],-48,48)
-        control_b = self.clamp(control_b[0],-48,48)
+        control_a = self.clamp(control_a[0],-12,12)
+        control_b = self.clamp(control_b[0],-12,12)
 
         output.SetFromVector([control_b, control_a])
         # print("LIM A: %0.4f, LIM B: %0.4f, DIFF: %0.4f, CONTR A: %0.4f, CONTR B: %0.4f" %(lim_a_q, lim_b_q, lim_a_q-lim_b_q, control_a, control_b))
@@ -225,7 +319,7 @@ def create_scene(sim_time_step):
     # Loading models.
     # Load the table top and the cylinder we created.
     # parser.AddModelsFromString(cylinder_sdf, "sdf")
-    parser.AddModelsFromString(box_sdf, "sdf")
+    parser.AddModelsFromString(stair_sdf, "sdf")
     parser.AddModels(table_top_sdf_file)
     # Load a cracker box from Drake. 
     # parser.AddModels(
@@ -274,13 +368,12 @@ def create_scene(sim_time_step):
     # plant.SetDefaultFreeBodyPose(sugar_box, X_WorldSugar)
 
     wheelbody = plant.GetBodyByName("body")
-    X_Tablebody = RigidTransform(p=[-1,-0.15,0.2])
+    X_Tablebody = RigidTransform(p=[0,0.75,0.2])
     X_Worldbody = X_WorldTable.multiply(X_Tablebody)
     plant.SetDefaultFreeBodyPose(wheelbody, X_Worldbody)
     # plant.SetDefaultFreeBodyPose(box_frame, X_Worldbody)
 
-    meshcat.AddSlider('V', min=-48, max=48, step=.01, value=0.0)
-
+    meshcat.AddSlider('V', min=-12, max=12, step=.01, value=0.0)
 
     motor_system = builder.AddSystem(DC_motor(Get_motor_input_positions(plant, onshape), Get_motor_output_positions(plant, onshape)))
     motor_context = motor_system.CreateDefaultContext()
@@ -345,4 +438,4 @@ def run_simulation(sim_time_step):
     visualizer.PublishRecording()
 
 # Run the simulation with a small time step. Try gradually increasing it!
-run_simulation(sim_time_step=0.001)
+run_simulation(sim_time_step=0.0001)

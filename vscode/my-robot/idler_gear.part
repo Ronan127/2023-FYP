@@ -1,13 +1,13 @@
 {
     "configuration": "default",
     "documentId": "64e3f820bebee527c1c6a854",
-    "documentMicroversion": "afe5df2b719883cde02941b7",
-    "documentVersion": "5963a426e3d85ed346f9202b",
+    "documentMicroversion": "af489c945890368d734f583b",
+    "documentVersion": "36ce3bebcb2b4f38dbda90c9",
     "elementId": "e366a4f7e5dc79ad969881fa",
     "fullConfiguration": "default",
-    "id": "MtLajyhHoiNc87iLM",
+    "id": "MLvxrG0WGWep9qpUR",
     "isStandardContent": false,
-    "name": "Idler Gear <2>",
+    "name": "Idler Gear <1>",
     "partId": "JHD",
     "suppressed": false,
     "type": "Part"
