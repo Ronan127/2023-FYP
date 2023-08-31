@@ -1,134 +1,83 @@
-15:25:45 **** Incremental Build of configuration Debug for project Motor-Controller ****
+17:23:58 **** Incremental Build of configuration Debug for project Motor-Controller ****
 make -j12 all 
-arm-none-eabi-gcc "../Core/Src/stm32f3xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xE -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f3xx_it.d" -MT"Core/Src/stm32f3xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_it.o"
-../Core/Src/stm32f3xx_it.c: In function 'TIM3_IRQHandler':
-../Core/Src/stm32f3xx_it.c:238:2: error: 'TIM3_flag' undeclared (first use in this function)
-  238 |  TIM3_flag = 1;
-      |  ^~~~~~~~~
-../Core/Src/stm32f3xx_it.c:238:2: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [Core/Src/subdir.mk:34: Core/Src/stm32f3xx_it.o] Error 1
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
-15:26:23 **** Incremental Build of configuration Debug for project Motor-Controller ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/stm32f3xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xE -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32f3xx_it.d" -MT"Core/Src/stm32f3xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f3xx_it.o"
-arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xE -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Motor-Controller.elf
  
 arm-none-eabi-size   Motor-Controller.elf 
 arm-none-eabi-objdump -h -S  Motor-Controller.elf  > "Motor-Controller.list"
    text	   data	    bss	    dec	    hex	filename
-  31320	     20	   2204	  33544	   8308	Motor-Controller.elf
+  49528	    484	   2332	  52344	   cc78	Motor-Controller.elf
 Finished building: default.size.stdout
  
 Finished building: Motor-Controller.list
  
-15:28:13 **** Incremental Build of configuration Debug for project Motor-Controller ****
+17:24:01 **** Incremental Build of configuration Debug for project Motor-Controller ****
+make -j12 all 
+arm-none-eabi-size   Motor-Controller.elf 
+   text	   data	    bss	    dec	    hex	filename
+  49528	    484	   2332	  52344	   cc78	Motor-Controller.elf
+Finished building: default.size.stdout
+ 
+17:25:58 **** Incremental Build of configuration Debug for project Motor-Controller ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xE -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:241:32: warning: format '%d' expects argument of type 'int', but argument 3 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  241 |    sprintf((char*) txbuffer, "%d,%d\n", UART_Counter, current);
+      |                               ~^        ~~~~~~~~~~~~
+      |                                |        |
+      |                                int      uint32_t {aka long unsigned int}
+      |                               %ld
+arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Motor-Controller.elf
  
 arm-none-eabi-size   Motor-Controller.elf 
 arm-none-eabi-objdump -h -S  Motor-Controller.elf  > "Motor-Controller.list"
    text	   data	    bss	    dec	    hex	filename
-  31320	     20	   2204	  33544	   8308	Motor-Controller.elf
+  49528	    484	   2332	  52344	   cc78	Motor-Controller.elf
 Finished building: default.size.stdout
  
 Finished building: Motor-Controller.list
  
-15:28:59 **** Incremental Build of configuration Debug for project Motor-Controller ****
-make -j12 all 
-arm-none-eabi-size   Motor-Controller.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31320	     20	   2204	  33544	   8308	Motor-Controller.elf
-Finished building: default.size.stdout
- 
-15:32:07 **** Incremental Build of configuration Debug for project Motor-Controller ****
+17:31:33 **** Incremental Build of configuration Debug for project Motor-Controller ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xE -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'UART_RX_Handler':
-../Core/Src/main.c:653:1: error: expected declaration or statement at end of input
-  653 | }
-      | ^
-At top level:
-../Core/Src/main.c:645:6: warning: 'Error_Handler' defined but not used [-Wunused-function]
-  645 | void Error_Handler(void)
-      |      ^~~~~~~~~~~~~
-make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
-"make -j12 all" terminated with exit code 2. Build might be incomplete.
-15:32:22 **** Incremental Build of configuration Debug for project Motor-Controller ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xE -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Motor-Controller.elf
  
 arm-none-eabi-size   Motor-Controller.elf 
 arm-none-eabi-objdump -h -S  Motor-Controller.elf  > "Motor-Controller.list"
    text	   data	    bss	    dec	    hex	filename
-  31352	     20	   2204	  33576	   8328	Motor-Controller.elf
+  49528	    484	   2332	  52344	   cc78	Motor-Controller.elf
 Finished building: default.size.stdout
  
 Finished building: Motor-Controller.list
  
-15:46:57 **** Incremental Build of configuration Debug for project Motor-Controller ****
-make -j12 all 
-arm-none-eabi-size   Motor-Controller.elf 
-   text	   data	    bss	    dec	    hex	filename
-  31352	     20	   2204	  33576	   8328	Motor-Controller.elf
-Finished building: default.size.stdout
- 
-15:47:30 **** Incremental Build of configuration Debug for project Motor-Controller ****
+17:35:47 **** Incremental Build of configuration Debug for project Motor-Controller ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xE -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Motor-Controller.elf
  
 arm-none-eabi-size   Motor-Controller.elf 
 arm-none-eabi-objdump -h -S  Motor-Controller.elf  > "Motor-Controller.list"
    text	   data	    bss	    dec	    hex	filename
-  31356	     20	   2204	  33580	   832c	Motor-Controller.elf
+  49528	    484	   2332	  52344	   cc78	Motor-Controller.elf
 Finished building: default.size.stdout
  
 Finished building: Motor-Controller.list
  
-19:29:49 **** Incremental Build of configuration Debug for project Motor-Controller ****
+17:40:50 **** Incremental Build of configuration Debug for project Motor-Controller ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xE -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Motor-Controller.elf
  
 arm-none-eabi-size   Motor-Controller.elf 
 arm-none-eabi-objdump -h -S  Motor-Controller.elf  > "Motor-Controller.list"
    text	   data	    bss	    dec	    hex	filename
-  31356	     20	   2204	  33580	   832c	Motor-Controller.elf
-Finished building: default.size.stdout
- 
-Finished building: Motor-Controller.list
- 
-09:02:45 **** Incremental Build of configuration Debug for project Motor-Controller ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xE -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Motor-Controller.elf
- 
-arm-none-eabi-size   Motor-Controller.elf 
-arm-none-eabi-objdump -h -S  Motor-Controller.elf  > "Motor-Controller.list"
-   text	   data	    bss	    dec	    hex	filename
-  31356	     20	   2204	  33580	   832c	Motor-Controller.elf
-Finished building: default.size.stdout
- 
-Finished building: Motor-Controller.list
- 
-12:53:43 **** Incremental Build of configuration Debug for project Motor-Controller ****
-make -j12 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F303xE -c -I../Core/Inc -I../Drivers/STM32F3xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F3xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F3xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Motor-Controller.elf
- 
-arm-none-eabi-size   Motor-Controller.elf 
-arm-none-eabi-objdump -h -S  Motor-Controller.elf  > "Motor-Controller.list"
-   text	   data	    bss	    dec	    hex	filename
-  31360	     20	   2204	  33584	   8330	Motor-Controller.elf
+  49528	    484	   2332	  52344	   cc78	Motor-Controller.elf
 Finished building: default.size.stdout
  
 Finished building: Motor-Controller.list

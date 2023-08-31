@@ -61,7 +61,7 @@ main-build: Motor-Controller.elf secondary-outputs
 
 # Tool invocations
 Motor-Controller.elf Motor-Controller.map: $(OBJS) $(USER_OBJS) D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+	arm-none-eabi-gcc -o "Motor-Controller.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"D:\Libraries\Documents\2023-FYP\STM32\Motor-Controller\STM32F303RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Motor-Controller.map" -Wl,--gc-sections -static -u_printf_float --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

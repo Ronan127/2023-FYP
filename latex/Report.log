@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  6 JUN 2023 20:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  30 AUG 2023 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,8 +685,10 @@ h' as default language. on input line 102.
  (Report.aux
 (chaps-front/chap-plagiarism.aux) (chaps-front/chap-summary.aux)
 (chaps-main/chap-literature.aux) (chaps-main/chap-2d-sim.aux)
-(chaps-main/chap-design-requirements.aux) (chaps-append/chap-ecsa.aux)
-(chaps-append/chap-maths.aux) (chaps-append/chap-experiment.aux))
+(chaps-main/chap-design-requirements.aux) (chaps-main/chap-design-1.aux)
+(chaps-main/chap-motion.aux) (chaps-main/chap-experiment.aux)
+(chaps-append/chap-ecsa.aux) (chaps-append/chap-maths.aux)
+(chaps-append/chap-experiment.aux))
 \openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 102.
@@ -1523,6 +1525,41 @@ ten-tial im-prove-ments, how-ever
 
 
 ]
+\openout2 = `chaps-main/chap-motion.aux'.
+
+ (chaps-main/chap-motion.tex
+Chapter 5.
+) [20
+
+
+
+
+]
+\openout2 = `chaps-main/chap-experiment.aux'.
+
+ (chaps-main/chap-experiment.tex
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--6
+
+ []
+
+) [21
+
+
+
+
+]
 \openout2 = `chaps-append/chap-ecsa.aux'.
 
  (chaps-append/chap-ecsa.tex
@@ -1582,7 +1619,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 [][] 
  []
 
-) [20
+) [22
 
 
 
@@ -1592,7 +1629,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 
  (chaps-append/chap-maths.tex
 Appendix B.
-) [21
+) [23
 
 
 
@@ -1602,7 +1639,7 @@ Appendix B.
 
  (chaps-append/chap-experiment.tex
 Appendix C.
-) [22
+) [24
 
 
 
@@ -1638,7 +1675,7 @@ Overfull \hbox (16.69037pt too wide) in paragraph at lines 37--51
 y.wiley.com/doi/abs/10.1002/rob.21887 
  []
 
-) [23
+) [25
 
 
 
@@ -1646,14 +1683,15 @@ y.wiley.com/doi/abs/10.1002/rob.21887
 ] (Report.aux (chaps-front/chap-plagiarism.aux)
 (chaps-front/chap-summary.aux) (chaps-main/chap-literature.aux)
 (chaps-main/chap-2d-sim.aux) (chaps-main/chap-design-requirements.aux)
-(chaps-main/chap-design-1.aux) (chaps-append/chap-ecsa.aux)
+(chaps-main/chap-design-1.aux) (chaps-main/chap-motion.aux)
+(chaps-main/chap-experiment.aux) (chaps-append/chap-ecsa.aux)
 (chaps-append/chap-maths.aux) (chaps-append/chap-experiment.aux)) ) 
 Here is how much of TeX's memory you used:
- 15925 strings out of 476339
- 324353 string characters out of 5797934
+ 15987 strings out of 476339
+ 327059 string characters out of 5797934
  1865340 words of memory out of 5000000
- 35543 multiletter control sequences out of 15000+600000
- 618942 words of font info for 450 fonts, out of 8000000 for 9000
+ 35586 multiletter control sequences out of 15000+600000
+ 619177 words of font info for 453 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,17n,117p,1183b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\R
@@ -1668,9 +1706,9 @@ nts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program Files/MiKTeX/fonts/type1/ma
 thdesign/mdbch/md-chr8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdb
 ch/md-chri7m.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri8
 t.pfb>
-Output written on Report.pdf (29 pages, 15999840 bytes).
+Output written on Report.pdf (31 pages, 16003936 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
+ 246 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  123498 words of extra memory for PDF output out of 128383 (max. 10000000)
 
