@@ -44,6 +44,14 @@ myrobot_url = (
 FRICTION_COEFFICIENT = 1
 STEP_HEIGHT = 0.10
 STEP_PITCH = 0.20
+SLIDER_RANGE = 6
+SLIDER_SETTING = "Stall Torque"
+SLIDER_DEFAULT = 0.8
+STALL_TORQUE = 6
+NO_LOAD_SPEED = 6
+KP = 10
+KD = 0
+TIME_STEP = 0.0002
 
 # Create a Drake temporary directory to store files.
 # Note: this tutorial will create a temporary file (table_top.sdf)
@@ -240,9 +248,12 @@ class DC_motor(LeafSystem):
         self.SpeedFiltered = [0]*num_motors
         self.InputVector = InputVector
         self.OutputVector = OutputVector
-        self.StallTorque = 6 #Nm
-        self.NLSpeed = 0.61 #6 rpm
+        self.StallTorque = STALL_TORQUE #Nm
+        self.NLSpeed = NO_LOAD_SPEED #rad/s
         self.Torque = [0]*num_motors
+    
+    def clamp(self, n, minn, maxn):
+      return max(min(maxn, n), minn)
 
     
     def CalcTorque(self, context, output):
@@ -252,18 +263,26 @@ class DC_motor(LeafSystem):
         for i, val in enumerate(self.InputVector):
             if val != 0:
                 self.Speed[index] = ModelState[i]
-                self.SpeedFiltered[index] = 0.99*self.SpeedFiltered[index]+0.01*self.Speed[index]
+                self.SpeedFiltered[index] = 0.9*self.SpeedFiltered[index]+0.1*self.Speed[index]
                 index += 1
 
         for i, speed in enumerate(self.SpeedFiltered):
-            self.Torque[i] = self.StallTorque*(Voltage[i]/12.0-speed/self.NLSpeed)
+            if SLIDER_SETTING == "Voltage":
+                self.Torque[i] = self.StallTorque*(Voltage[i]/12.0-speed/self.NLSpeed)
             # self.Torque[i] =Voltage[i]
+            if SLIDER_SETTING == "Stall Torque":
+                voltage2=12*Voltage[i]/self.StallTorque
+                self.Torque[i] = self.StallTorque*(voltage2/12.0-speed/self.NLSpeed)
+            # self.Torque[i] = self.clamp(self.Torque[i],-12,12)
 
         for i, val in enumerate(self.OutputVector):
             if val == 0:
                 self.TorqueVector[i] = 0.0
             else: 
                 self.TorqueVector[i] = self.Torque[val-1]
+        # print(self.Torque)
+        # print(self.Speed)
+
         #torquevector = [0.0, 0.0, 0.0, 0.0, 0.0, Voltage[0], 0.0, 0.0, 0.0, 0.0, 0.0, -Voltage[1]]
         output.SetFromVector(self.TorqueVector)
 
@@ -296,12 +315,12 @@ class ControlSystem(LeafSystem):
         lim_b_q=States["motor_b_q"]+States["sun_b_q"]
         lim_a_w=States["motor_a_w"]-States["sun_a_w"]
         lim_b_w=States["motor_b_w"]+States["sun_b_w"]
-        kp = 0
-        kd = 0
+        kp = KP
+        kd = KD
         control_a = Voltage+kp*(-lim_a_q+lim_b_q)/2 + kd*(-lim_a_w+lim_b_w)
         control_b = Voltage+kp*(+lim_a_q-lim_b_q)/2 + kd*(+lim_a_w-lim_b_w)
-        control_a = self.clamp(control_a[0],-12,12)
-        control_b = self.clamp(control_b[0],-12,12)
+        control_a = self.clamp(control_a[0],-SLIDER_RANGE,SLIDER_RANGE)
+        control_b = self.clamp(control_b[0],-SLIDER_RANGE,SLIDER_RANGE)
 
         output.SetFromVector([control_b, control_a])
         # print("LIM A: %0.4f, LIM B: %0.4f, DIFF: %0.4f, CONTR A: %0.4f, CONTR B: %0.4f" %(lim_a_q, lim_b_q, lim_a_q-lim_b_q, control_a, control_b))
@@ -368,12 +387,12 @@ def create_scene(sim_time_step):
     # plant.SetDefaultFreeBodyPose(sugar_box, X_WorldSugar)
 
     wheelbody = plant.GetBodyByName("body")
-    X_Tablebody = RigidTransform(p=[0,0.75,0.2])
+    X_Tablebody = RigidTransform(p=[0,0.5-STEP_PITCH*2,STEP_HEIGHT*2])
     X_Worldbody = X_WorldTable.multiply(X_Tablebody)
     plant.SetDefaultFreeBodyPose(wheelbody, X_Worldbody)
     # plant.SetDefaultFreeBodyPose(box_frame, X_Worldbody)
 
-    meshcat.AddSlider('V', min=-12, max=12, step=.01, value=0.0)
+    meshcat.AddSlider('V', min=-SLIDER_RANGE, max=SLIDER_RANGE, step=.01, value=SLIDER_DEFAULT)
 
     motor_system = builder.AddSystem(DC_motor(Get_motor_input_positions(plant, onshape), Get_motor_output_positions(plant, onshape)))
     motor_context = motor_system.CreateDefaultContext()
@@ -434,8 +453,11 @@ def run_simulation(sim_time_step):
     meshcat.AddButton('Stop Simulation')
     visualizer.StartRecording()
     while meshcat.GetButtonClicks('Stop Simulation') < 1:
-        simulator.AdvanceTo(simulator.get_context().get_time() + 1.0)
+        time = simulator.get_context().get_time()
+        simulator.AdvanceTo(time + 0.01)
+        if time>10:
+            break
     visualizer.PublishRecording()
 
 # Run the simulation with a small time step. Try gradually increasing it!
-run_simulation(sim_time_step=0.0001)
+run_simulation(sim_time_step=TIME_STEP)

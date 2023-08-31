@@ -4,8 +4,8 @@ import pathlib
 
 parser = argparse.ArgumentParser("format sdformat for drake")
 parser.add_argument("root", type=str, help="The root directory that contains sdf file")
-parser.add_argument("wheel", type=str, help="The coefficient of friction on the wheels")
-parser.add_argument("tail", type=str, help="The coeficient of friction on the tail")
+parser.add_argument("--wheel", type=str, help="The coefficient of friction on the wheels")
+parser.add_argument("--tail", type=str, help="The coeficient of friction on the tail")
 args = parser.parse_args()
 
 
