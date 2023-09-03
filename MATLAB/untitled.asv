@@ -1,0 +1,18 @@
+function [solution] = mysolver(equations)
+%UNTITLED Solves a set of equations through a series of substitutions
+%   Detailed explanation goes here
+symbols = symvar(equations);
+symnames = string(symbols);
+solution = struct;
+for i = 1:length(symnames)
+    tempstruct = struct(symnames(i),[]);
+    if i == 1
+        solution = tempstruct;
+    else
+        solution = [solution, tempstruct];
+    end
+end
+
+for i = 1:length(equations)
+    vars = symvar
+end
