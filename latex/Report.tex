@@ -82,6 +82,10 @@
 %
 \xpatchcmd{\@makechapterhead}{\vspace*{50\p@}}{\vspace*{5pt}}{\typeout{Success}}{\typeout{Failure!!!}}
 %
+\newcommand{\customlabel}[2]{%
+	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{}}}}
+
+
 \makeatother
 
 %==== Title Page =====================================================
@@ -123,10 +127,16 @@
 %\include{chaps-main/chap-intro}
 \include{chaps-main/chap-literature}
 \include{chaps-main/chap-2d-sim}
+\include{chaps-main/chap-math-model}
 \include{chaps-main/chap-design-requirements}
+\include{chaps-main/chap-design}
+\include{chaps-main/chap-drake-simulation}
+\include{chaps-main/chap-experiment}
+\include{chaps-main/chap-analysis}
+\include{chaps-main/chap-recommendations}
 \include{chaps-main/chap-design-1}
 \include{chaps-main/chap-motion}
-\include{chaps-main/chap-experiment}
+
 %\include{chaps-main/chap-conclusion}
 
 \appendix%------------------------------------------------------------

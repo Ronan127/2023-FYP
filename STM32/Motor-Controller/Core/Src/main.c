@@ -230,15 +230,15 @@ int main(void)
 
 		if (TIM3_flag == 1) {
 			TIM3_flag = 0;
-//			vbus = INA219_ReadBusVoltage(&ina219);
-//			vshunt = INA219_ReadShuntVolage(&ina219);
+			vbus = INA219_ReadBusVoltage(&ina219);
+			vshunt = INA219_ReadShuntVolage(&ina219);
 			current = INA219_ReadCurrent(&ina219);
 			UART_Counter +=1;
-//			sprintf((char*) txbuffer, "Duty Cycles: %04d, %04d\n"
-//					                  "Current:     %05.1f mA, %05.1f mA\n"
-//									  "Vbus:        %04d, %04d\n"
-//									  "Vshunt:      %04d, %04d\n", (int) TIM2->CCR1, (int) TIM2->CCR2, currentmA, currentmA, vbus, vbus, vshunt, vshunt);
-			sprintf((char*) txbuffer, "%d,%d\n", (int) UART_Counter, current);
+			sprintf((char*) txbuffer, "Duty Cycles: %04d, %04d\n"
+					                  "Current:     %05.1f mA, %05.1f mA\n"
+									  "Vbus:        %04d, %04d\n"
+									  "Vshunt:      %04d, %04d\n", (int) TIM2->CCR1, (int) TIM2->CCR2, currentmA, currentmA, vbus, vbus, vshunt, vshunt);
+//			sprintf((char*) txbuffer, "%d,%d\n", (int) UART_Counter, current);
 			HAL_UART_Transmit(&huart2, txbuffer, strlen((char*) txbuffer), 50);
 		}
 		if (UART_RX_Flag == 1) {
@@ -556,7 +556,7 @@ static void MX_TIM3_Init(void)
 
   /* USER CODE END TIM3_Init 1 */
   htim3.Instance = TIM3;
-  htim3.Init.Prescaler = 72-1;
+  htim3.Init.Prescaler = 720-1;
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 5000-1;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
