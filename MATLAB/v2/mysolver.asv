@@ -1,8 +1,8 @@
-function [solution, remainingEquations] = mysolver(equations, useSolver, solution)
+function [solution, remainingEquations] = mysolver(equations, useSolve, solution)
 arguments 
     equations = cell;
+    useSolve = 1;
     solution = struct;
-    useSolver == 1;
 end
 
 %UNTITLED Solves a set of equations through a series of substitutions
@@ -57,8 +57,22 @@ while isempty(equations) == 0
                 end
             end
             if length(matches{i}) == length(varlist{i})
-                %Solve equations through substitution
                 tempeqs = equations(matches{i});
+                %Check if equations are identical
+                eqsEqual=0;
+                for j = 1:(length(tempeqs))
+                    for k = ((1:(length(tempeqs)))~=j)
+                        if tempeqs(j) == tempeqs(k)
+                            eqsEqual = j;
+                        end
+                    end
+                end
+                if eqsEqual ~= 0
+                    equations(matches{i}(eqsEqual)) = [];
+                    timeout = 0;
+                    break
+                end
+                %Solve equations through substitution
                 for j = 1:(length(tempeqs)-1)
                     tempeqs(j) = isolate(tempeqs(j), varlist{i}(j));
                     tempeqs((j+1):end) = subs(tempeqs((j+1):end), lhs(tempeqs(j)), rhs(tempeqs(j)));
@@ -78,7 +92,7 @@ while isempty(equations) == 0
         end
     end
     if timeout == 2
-        if (length(symvar(equations)) <= length(equations))&&(useSolver == 1)
+        if (length(symvar(equations)) <= length(equations))&&(useSolve == 1)
             sol2 = solve(equations);
             f=fieldnames(sol2);
             if size(sol2.(f{1})) == 1

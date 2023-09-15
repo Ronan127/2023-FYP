@@ -57,8 +57,46 @@ while isempty(equations) == 0
                 end
             end
             if length(matches{i}) == length(varlist{i})
-                %Solve equations through substitution
                 tempeqs = equations(matches{i});
+                %Check if equations are identical
+                eqsEqual=0;
+                for j = 1:(length(tempeqs))
+                    for k = ((1:(length(tempeqs)))~=j)
+                        if tempeqs(j) == tempeqs(k)
+                            eqsEqual = j;
+                        end
+                        if lhs(tempeqs(j)) == 0
+                            if lhs(tempeqs(k)) == 0
+                                if rhs(tempeqs(j)) == -rhs(tempeqs(k))
+                                    eqsEqual = j;
+                                end
+                            end
+                            if rhs(tempeqs(k)) == 0
+                                if rhs(tempeqs(j)) == -lhs(tempeqs(k))
+                                    eqsEqual = j;
+                                end
+                            end
+                        end
+                        if rhs(tempeqs(j)) == 0
+                            if lhs(tempeqs(k)) == 0
+                                if lhs(tempeqs(j)) == -rhs(tempeqs(k))
+                                    eqsEqual = j;
+                                end
+                            end
+                            if rhs(tempeqs(k)) == 0
+                                if lhs(tempeqs(j)) == -lhs(tempeqs(k))
+                                    eqsEqual = j;
+                                end
+                            end
+                        end
+                    end
+                end
+                if eqsEqual ~= 0
+                    equations(matches{i}(eqsEqual)) = [];
+                    timeout = 0;
+                    break
+                end
+                %Solve equations through substitution
                 for j = 1:(length(tempeqs)-1)
                     tempeqs(j) = isolate(tempeqs(j), varlist{i}(j));
                     tempeqs((j+1):end) = subs(tempeqs((j+1):end), lhs(tempeqs(j)), rhs(tempeqs(j)));
