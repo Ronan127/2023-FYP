@@ -116,7 +116,7 @@ The end of the tail pushes against the ground, which leads to the following cond
 	\label{tailonground}
 	\begin{align}
 		s_{7end2} &= 0\\
-		F_{react71} &=  -\mu_{tail}*F_{react72}]\\
+		F_{react71} &=  -\mu_{tail}F_{react72}\\
 		\ddot{\theta_7} &= \frac{(|\vec{l_7}|^2 - l_{72}^2)a_{12} + l_{72}v_{12}^2}{|\vec{l_7}|^3 (1 - \frac{l_{72}^2}{|\vec{l_7}|^2})^{3/2}} \label{tailongroundkinematics}
 	\end{align}
 \end{subequations}
@@ -164,20 +164,21 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 
 \begin{subequations}
 	\label{tailonstep}
-		\vec{a_5} &= \begin{bmatrix}
-			\ddot{\theta}_5 r_w \\
-			0\\
-			0
-		\end{bmatrix}\\
-		\vec{v_5} &= \begin{bmatrix}
-			\dot{\theta}_5 r_w \\
-			0\\
-			0
-		\end{bmatrix}\\
-		s_{51} &= \theta_{5} r_w;\\
-		M_{react5} &= - F_{react51} r_w;
+	\begin{align}
+		u_1 &= \mathrm{StepWidth}\cdot (N_2-1)- s_{11}\\
+		u_2 &= \mathrm{StepHeight}\cdot N_2 - s_{12}\\
+		\theta_7 &= \arctan{\frac{u_2}{u_1}}\\
+		\ddot{\theta_7} &= \frac{u_2^2 (-2  v_{11}  v_{12} - u_2  a_{11}) + u_1^2 (2  v_{11}  v_{12} + -u_2 a_{11}) + u_1^3  a_{12} - u_1  u_2  (2 v_{12}^2 - 2  v_{11}^2 - u_2  a_{12})}{(u_1^2 + u_2^2)^2}\\
+		r_7 &= \frac{u_2}{l_{72}}\\
+		F_{react71}' &= -\mu_{tail} F_{react72}'\\
+		\vec{F}_{react7} &= \begin{bmatrix}
+			-\cos{(\theta_7)} & -\sin{(\theta_7)} & 0\\
+			\sin{(\theta_7)} & -\cos{(\theta_7)} & 0\\
+			0 & 0 & 1
+		\end{bmatrix} \vec{F}_{react71}'
 	\end{align}
 \end{subequations}
+where $N_2$ is the number of the step that the tail makes contact with, $u_1$ and $u_2$ are the displacement from the 
 
 
 

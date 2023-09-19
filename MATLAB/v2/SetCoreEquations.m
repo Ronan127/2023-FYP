@@ -89,7 +89,7 @@ eqns_angularAcelleration = [ta3-ta1 == -r2/r3*(ta2-ta1);
 
 Rvector = [cos(t13); -sin(t13); 0];
 Rvector2 = [sin(t13); cos(t13); 0];
-Rvector7 = [cos(t73); -sin(ot73); 0];
+Rvector7 = [cos(t73); -sin(t73); 0];
 eqns_lengths = [l1==0;
     l2==0;
     l3==l3_ab*Rvector;
@@ -102,7 +102,7 @@ eqns_lengths = [l1==0;
     separation35==l5_ab-l3_ab;
     ];
 
-eqns_lengths(20) = isolate(eqns_lengths(20), ot73);
+%eqns_lengths(20) = isolate(eqns_lengths(20), ot73);
 
 eqns_radius = [r2==separation23*N_sun/(N_sun+N_idler)
     r3==separation35*N_idler/(N_planet+N_idler)
@@ -123,8 +123,10 @@ eqns_displacement = [s1 == s2;
     s7 == s2 + l7/2;
     s7End == s2 + l7;
     ];
-condition_tailOnGround = [s7End2 == 0; ratio7Contact == 1; eqns_tailGroundFriction;
-    ta73 == ((l7_ab^2 - l72^2)*a22 + l72*v22^2)/(l7_ab^3 * (1 - l72^2/l7_ab^2)^(3/2)); %d^2/dt^2 (arcsin(l72(t)/l7_ab))
+condition_tailOnGround = [s7End2 == 0; 
+    ratio7Contact == 1; 
+    eqns_tailGroundFriction;
+    -ta73 == ((l7_ab^2 - l72^2)*a22 + l72*v22^2)/(l7_ab^3 * (1 - l72^2/l7_ab^2)^(3/2)); %d^2/dt^2 (arcsin(l72(t)/l7_ab))
     ];
 
 
@@ -155,16 +157,18 @@ assignment_inertias = [I2 == 2*3.437592086857546033e-05;
 %rolling on step, back wheel lifting, tail on step
 
 Rmatrix7 = [
-    cos(ot73), -sin(ot73), 0;
-    sin(ot73), cos(ot73), 0;
+    -cos(t73), -sin(t73), 0;
+    sin(t73), -cos(t73), 0;
     0, 0, 1
     ];
 
 
 condition_tailOnStep = [
-    ot73 == atan((s12-step_height)/(s11-step_start1));
-    ratio7Contact == (step_height-s12)/l72;
-    ta73 == (((v12)/(step_start(1) + s11) - ((step_height + s12) * v11)/(step_start(1) + s11)^2) * ((2 * (step_height + s12) * v12)/(step_start(1) + s11)^2 - (2 * (step_height + s12)^2 * v11)/(step_start(1) + s11)^3))/((step_height + s12)^2/(step_start(1) + s11)^2 + 1)^2 - (-((step_height + s12) * v11)/(step_start(1) + s11)^2 + (2 * (step_height + s12) * v11^2)/(step_start(1) + s11)^3 - (2 * v11 * v12)/(step_start(1) + s11)^2 + (a12)/(step_start(1) + s11))/((step_height + s12)^2/(step_start(1) + s11)^2 + 1) %d^2/dt^2(180 - tan^(-1)((s12(t) + step_height)/(s11(t) + step_start)))
+    tan(-t73) == u2/u1;
+    ratio7Contact == u2/l72;
+    -ta73 == (u2^2 * (-2 * -v11 * -v12 + u2 * -a11) + u1^2 * (2 * -v11 * -v12 + u2 * -a11) - u1^3 * -a12 - u1 * u2 * (2 * -v11^2 - 2 * -v12^2 + u2 * -a12))/(u1^2 + u2^2)^2; %d^2/dt^2(tan^(-1)(u2/u1))
+    u1 == step_width*(N2-1) - s11;
+    u2 == step_height*N2 - s12;
     F_reactPrime71 == - F_reactPrime72 * C_friction7
     F_react7 == Rmatrix7 * F_reactPrime7 
     ];
@@ -203,9 +207,12 @@ eqns_angle = [t3-t1 == -r2/r3*(t2-t1);
 condition_wheel2NoContact = [F_react73 == 0; F_react6 == 0; M_react6==0;];
 assignment_gears = [separation35 == 0.041; separation23 == 0.07; rw == 0.075; l7_ab == 0.425;
     N_idler == 33; N_sun == 50; N_planet == 16; C_friction7 == 0.0;];
-assignment_steps = [step_start == [rw; 0; 0]; step_height == 0.15; step_pitch == 0.2;];
+assignment_steps = [step_start == [rw; 0; 0]; step_height == 0.15; step_width == 0.2;];
 
 condition_wheel1locked = [a5 == 0; ta5 == 0; v5 == 0; tv5 == 0];
+condition_angle_quadrants = [
+    -pi/2 <= t13; t13 <= pi/2;
+    pi/2 <= t73; t73 <= pi;];
 %%
 Core_equations=[eqns_weight; eqns_force;  eqns_gearForce; eqns_moments;  eqns_lengths; eqns_radius;
     eqns_accelleration; eqns_velocity; eqns_displacement; 
@@ -213,4 +220,4 @@ Core_equations=[eqns_weight; eqns_force;  eqns_gearForce; eqns_moments;  eqns_le
     ]; 
 
 
-save CoreEquations.mat Core_equations condition_2d condition_tailOnStep condition_rolling condition_wheel2NoContact condition_wheel1locked condition_tailOnGround
+save CoreEquations.mat Core_equations condition_2d condition_tailOnStep condition_rolling condition_wheel2NoContact condition_wheel1locked condition_tailOnGround condition_angle_quadrants
