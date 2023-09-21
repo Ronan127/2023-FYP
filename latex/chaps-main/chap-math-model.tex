@@ -117,7 +117,7 @@ The end of the tail pushes against the ground, which leads to the following cond
 	\begin{align}
 		s_{7end2} &= 0\\
 		F_{react71} &=  -\mu_{tail}F_{react72}\\
-		\ddot{\theta_7} &= \frac{(|\vec{l_7}|^2 - l_{72}^2)a_{12} + l_{72}v_{12}^2}{|\vec{l_7}|^3 (1 - \frac{l_{72}^2}{|\vec{l_7}|^2})^{3/2}} \label{tailongroundkinematics}
+		-\ddot{\theta_7} &= \frac{(|\vec{l_7}|^2 - l_{72}^2)a_{12} + l_{72}v_{12}^2}{|\vec{l_7}|^3 (1 - \frac{l_{72}^2}{|\vec{l_7}|^2})^{3/2}} \label{tailongroundkinematics}
 	\end{align}
 \end{subequations}
 where $s_{7end2}$ is the y position of the endpoint of the tail, $F_{react71}$ and $F_{react72}$ are the reaction forces exerted onto the tail by the ground in the x and y dimensions respectively, $\mu_{tail}$ is the coefficient of friction between the tail and the ground, $\vec{l_7}$ is the position of the end of the tail relative to the motor axle, and $l_{72}$ is the component of $\vec{l_7}$ in the y dimension. \\
@@ -125,11 +125,11 @@ Equation \ref{tailongroundkinematics} is derived from,
 
 \begin{subequations}
 	\begin{align}
-		\theta_7(t) &= \arcsin{\frac{l_{72}(t)}{|\vec{l_7}|}}\\
-		\frac{d^2}{dt^2}\theta_7(t) &= \frac{d^2}{dt^2}\arcsin{\frac{l_{72}(t)}{|\vec{l_7}|}}
+		-\theta_7(t) &= \arcsin{\frac{l_{72}(t)}{|\vec{l_7}|}}\\
+		\frac{d^2}{dt^2}-\theta_7(t) &= \frac{d^2}{dt^2}\arcsin{\frac{l_{72}(t)}{|\vec{l_7}|}}
 	\end{align}
 \end{subequations}
-where $\theta_7$ and $l_{72}$ are treated as functions of time, $t$. This relation can be seen in figure ???. $v_{12}$ and $a_{12}$ refer to the velocity and acceleration of the motor axle in the y dimension, and are equivalent to $\dot{l_{72}}$ and $\ddot{l_{72}}$ respectively.\\
+where $\theta_7$ and $l_{72}$ are treated as functions of time, $t$. This relation can be seen in figure ???. $v_{12}$ and $a_{12}$ refer to the velocity and acceleration of the motor axle in the y dimension, and are equivalent to $\dot{l}_{72}$ and $\ddot{l}_{72}$ respectively.\\ ??????? verify
 
 \subsection*{Stage 2: Flipping}
 
@@ -167,9 +167,10 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 	\begin{align}
 		u_1 &= \mathrm{StepWidth}\cdot (N_2-1)- s_{11}\\
 		u_2 &= \mathrm{StepHeight}\cdot N_2 - s_{12}\\
-		\theta_7 &= \arctan{\frac{u_2}{u_1}}\\
-		\ddot{\theta_7} &= \frac{u_2^2 (-2  v_{11}  v_{12} - u_2  a_{11}) + u_1^2 (2  v_{11}  v_{12} + -u_2 a_{11}) + u_1^3  a_{12} - u_1  u_2  (2 v_{12}^2 - 2  v_{11}^2 - u_2  a_{12})}{(u_1^2 + u_2^2)^2}\\
-		r_7 &= \frac{u_2}{l_{72}}\\
+		\tan{-\theta_7} &= \frac{u_2}{u_1}\\
+		\label{tailonstepposition}
+		-\ddot{\theta_7} &= \frac{u_2^2 (-2  v_{11}  v_{12} - u_2  a_{11}) + u_1^2 (2  v_{11}  v_{12} + -u_2 a_{11}) + u_1^3  a_{12} - u_1  u_2  (2 v_{12}^2 - 2  v_{11}^2 - u_2  a_{12})}{(u_1^2 + u_2^2)^2}\\
+		\label{tailonstepaccelleration}
 		F_{react71}' &= -\mu_{tail} F_{react72}'\\
 		\vec{F}_{react7} &= \begin{bmatrix}
 			-\cos{(\theta_7)} & -\sin{(\theta_7)} & 0\\
@@ -178,25 +179,135 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 		\end{bmatrix} \vec{F}_{react71}'
 	\end{align}
 \end{subequations}
-where $N_2$ is the number of the step that the tail makes contact with, $u_1$ and $u_2$ are the displacement from the 
+where $N_2$ is the number of the step that the tail makes contact with, $u_1$ and $u_2$ are the displacement from the motor axis to the point of contact with the step. Equation \ref{tailonstepaccelleration} is the second derivative of \ref{tailonstepposition}. $\vec{F}_{react71}'$ is the vector of reaction forces in a rotated coordinate system such that $F_{react72}'$ is the normal force between the tail and the step.
+
+\subsection*{Stage 5: Flipping from step}
+Stage 5 is similar to stage 2, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
+
+\subsection*{Stage 6: Climbing from step}
+Stage 6 is similar to stage 3, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
+
+\section{Solving technique}
+The MATLAB symbolic toolbox comes with the solve() function, which can be used to solve sets of non-linear simultaneous equations. However, it struggles with this large set of equations that contain trigonometric functions, often stalling. This project develops a function that breaks down the set of equations into smaller, easier to solve sets, then substituting these solutions into the remaining equations. Figure ??? shows the flowchart for this function. \\
+\\
+The function loops through the equations until they have all been solved, or it cannot find any more solutions. First, it identifies any trivial equations that contain only one variable, such as $a = 1$, and solves them. This will also pick up equations with more than one solution, such as $\sin{a} = 1$; to resolve this, the solver will look for inequalities that contain the relevant variable, in this case $a$, and apply them to the solution. For example, if you were to provide the function with the set of equations:\\
+
+\begin{subequations}
+	\label{exampleinput}
+	\begin{align}
+		a &= 0.5 \label{example1a}\\
+		\sin{(b)} &= a\\
+		b &>= \frac{\pi}{2}\\
+		b &<= \pi
+	\end{align}
+\end{subequations}
+The first loop would identify Equation \ref{example1a} as it only has one variable. It wouldn't find any inequalities that describe the variable $a$ so it would simply send the equation $a = 0.5$ to MATLAB's solve() function. It then records the solution and substitutes it into the remaining equations, 
+\begin{subequations}
+	\label{example2}
+	\begin{align}
+		\sin{(b)} &= 0.5 \label{example2a}\\
+		b &>= \frac{\pi}{2}\label{example2b}\\
+		b &<= \pi\label{example2c}
+	\end{align}
+\end{subequations}
+The second loop identifies Equation \ref{example2a} as it only has one variable. It looks for inequalities that describe $b$ and finds Inequalities \ref{example2b} and \ref{example2c}. It then sends all three to MATLAB's solve() function, which returns the solution for $b$.
+The function then outputs a structure with the fields,
+\begin{subequations}
+	\begin{align}
+		\mathrm{solution.a} &= 0.5\\
+		\mathrm{solution.b} &= \frac{5\pi}{6}
+	\end{align}
+\end{subequations}
+
+Once the function can no longer find trivial solutions, it looks for sets of equations that contain the exact same variables, such as equations of the form,
+\begin{subequations}
+	\begin{align}
+		a -2b &= 0\\
+		b -a +2 &= 0 
+	\end{align}
+\end{subequations}
+and sends them to be solved. For this to work, there must be at least as many equations as there are variables in the set. This function will also identify and delete duplicate equations.\\
+Once the function can no longer find sets of equations that use the exact same variables, it will attempt to find sets of equations that fully describe a set of variables, such as,
+\begin{subequations}
+	\begin{align}
+		a -3b &= 0\\
+		b -c +2&= 0\\
+		a -2c &= 0
+	\end{align}
+\end{subequations}
+Finally, if it can't find any fully defined sets up to a certain size, it will attempt to solve the complete set of remaining equation using the solve() function. If the function is unable to solve all the equations, it will return a structure containing the solutions it has found, and a vector containing the remaining equations.
+
+
+\section{Required torque}
+When designing a LIM robot, it is essential to size the motor and gearbox to be able to provide enough torque to lift the LIMs. To do this, one must first determine which stage of motion requires the most torque. To find the minimum torque required to cause forward movement, we solve for the torque that results in an overall acceleration of 0 when the velocity is also 0, essentially adding the conditions:
+\begin{subequations}
+	\label{condition-static}
+	\begin{align}
+		\vec{a} &= \vec{0}\\
+		\vec{v} &= \vec{0}\\
+		\ddot{\theta_1} &= 0\\
+		\dot{\theta_1} &= 0\\
+	\end{align}
+\end{subequations}
+which simplifies the dynamic equations into static equations.\\
+The set of equations is then solved for a range of positions in each stage.
+\subsection*{Stage 1: Lifting}
+During the lifting motion, the angle of the LIMs, $\theta_1$, increases from 0° when the LIM is horizontal to 90° when the LIM is vertical. Figure \ref{torque-angle-relation-stage1} shows that the required torque is highest when the LIM is horizontal, which in this particular device is 1.014 Nm, or 0.507 Nm per motor.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{plots/torque-angle-relation-stage1}
+	\caption{Relationship between LIM angle and required torque for Stage 1 motion}
+	\label{torque-angle-relation-stage1}
+\end{figure}
+\subsection*{Stage 2: Flipping}
+During the flipping motion, the device does not need any torque to move. Even without a torque input, it will simply fall onto the next step.
+
+\subsection*{Stage 3: Climbing}
+During the climbing motion, the LIMs lift from the starting position, in this case -42.5° to the horizontal 0°. In addition, the front wheel can roll forward, instead of solving for the torque that results in an overall forward acceleration, we solve for the torque that causes a positive vertical acceleration in the back wheel. Instead of Equations \ref{condition-static}, we have:
+\begin{subequations}
+	\label{condition-climbing}
+	\begin{align}
+		a_{62} &= 0\\
+		\vec{v} &= \vec{0}\\
+		\dot{\theta_1} &= 0\\
+	\end{align}
+\end{subequations}
+Figure \ref{torque-angle-relation-stage3} shows that the required torque increases as the LIM lifts, until the maximum of 0.970 Nm, or 0.485 Nm per motor when the LIM is horizontal.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{plots/torque-angle-relation-stage3}
+	\caption{Relationship between LIM angle and required torque for Stage 3 motion}
+	\label{torque-angle-relation-stage3}
+\end{figure}
+
+\subsection*{Stage 4: Lifting from step}
+Similar to Stage 1, $\theta_1$ increases from 0° when the LIM is horizontal to 90° when the LIM is vertical. Figure \ref{torque-angle-relation-stage4} shows that for this device, the required torque is highest when the LIM is at 26.4°, which gives a required torque of 1.295 Nm, or 0.647 Nm per motor.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{plots/torque-angle-relation-stage4}
+	\caption{Relationship between LIM angle and required torque for Stage 4 motion}
+	\label{torque-angle-relation-stage4}
+\end{figure}
+
+
+\subsection*{Stage 5: Flipping from step}
+During the flipping motion, the device does not need any torque to move. Even without a torque input, it will simply fall onto the next step.
+
+\subsection*{Stage 6: Climbing from step}
+Similar to Stage 3, $\theta_1$ increases from -42.5° to 0°, and Equations \ref{condition-climbing} are used instead of Equations \ref{condition-static}. Figure \ref{torque-angle-relation-stage6} shows that for this device, the required torque is highest when the LIM is horizontal, which gives a required torque of 1.228 Nm, or 0.614 Nm per motor.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{plots/torque-angle-relation-stage6}
+	\caption{Relationship between LIM angle and required torque for Stage 6 motion}
+	\label{torque-angle-relation-stage6}
+\end{figure}
+These plots show that the highest required torques will be in Stages 4 and 6, and that the particular device modelled requires an output torque of at least 0.647 Nm on each motor.
+
+\subsection{Sizing components to reduce torque requirement}
+So far this section has only modelled a device with fixed parameters, such as gear ratio, wheel size, mass, and tail length, however a designer may be interested in varying these parameters. The model can be used to inform the design process by showing the effect that changing certain parameters has on the required torque. For example, Figure ??? shows how changing the gear ratio affects the torque required.
 
 
 
-
-Solving technique\\
-Required torque\\
-Required coefficient of friction\\
+\section{Required coefficient of friction}
 
 
-
-
-The device can climb up steps. In doing so, the wheels and tail make contact with different parts of the steps. In order to model the device, the overall movement is broken down into individual sequential motions.\\
-The first motion is simple, the device rolls forward on a flat surface.\\
-The second motion is referred to as climbing. The front wheel is blocked by a step and fixed in place. The tail pushes against the ground and the LIM starts rotating up the step. This motion ends when the LIM is vertical.\\
-In the third motion, the top wheel falls forward onto the step and the bottom wheel rolls backwards until the top wheel lands. The distance that it rolls depends on the speed of the LIM and the height of the step. If the frame of the LIM hits the edge of the step, the device may slip backwards until the top wheel makes contact with the step. This motion ends when the top wheel is on the step.\\
-In the fourth motion, the device pulls itself up the steps. The front wheel rests on the step while the back wheel is on the ground. The tail pushes against the ground and the bottom wheel lifts while the front wheel simultaneously rolls forward on the step. This motion ends when the top wheel reaches the next step.\\
-The fifth motion is similar to the second motion, with the exception that the tail is angled further down to reach the ground.\\
-The sixth motion is similar to the third motion, with the exception that the tail is angled further down to reach the ground.\\
-The seventh motion deviates significantly from the previous motions. The front wheel starts on the next step while the bottom wheel starts on the previous step. The tail now contacts the edge of the previous step rather than the ground, which causes a significant force to pull the LIMs backwards. Because of this, unlike in the fourth motion, the front wheel will not initially roll forward on the next step. The back wheel will lift from below until it is at a certain angle above the front wheel, at which point the front wheel will start to roll forward, bringing it to the base of the next step.\\
-The eighth motion is similar to the second motion, except the tail pushes against the edge of the previous step and the back wheel is already partially lifted. The back wheel then lifts up further until the LIM is vertical.\\
-The ninth motion is similar to the sixth motion, except the tail pushes against the surface of the previous step instead of the ground.

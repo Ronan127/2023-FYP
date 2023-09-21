@@ -119,7 +119,7 @@ while isempty(equations) == 0
     timeout = timeout +1;
 end
 solution=orderfields(solution);
-remainingEquations = equations;
+remainingEquations = [equations; inequalities;
 end
 
 function [solution, equations, inequalities, timeout] = solveEasy(solution, equations, inequalities, timeout)
@@ -136,8 +136,7 @@ function [solution, equations, inequalities, timeout] = solveEasy(solution, equa
     deletionIndex = [];
     %Check for single variable equations to solve and substitute
     for i = 1:length(equations)
-        try
-            vars = symvar(equations(i));
+        vars = symvar(equations(i));
         if isempty(vars) %if equation has no variables, remove it
             deletionIndex = [deletionIndex, i];
             % equations(i) = [];

@@ -220,4 +220,4 @@ Core_equations=[eqns_weight; eqns_force;  eqns_gearForce; eqns_moments;  eqns_le
     ]; 
 
 
-save CoreEquations.mat Core_equations condition_2d condition_tailOnStep condition_rolling condition_wheel2NoContact condition_wheel1locked condition_tailOnGround condition_angle_quadrants
+save CoreEquations.mat Core_equations condition_2d condition_tailOnStep condition_rolling condition_wheel2NoContact condition_wheel1locked condition_tailOnGround condition_angle_quadrants eqns_radius

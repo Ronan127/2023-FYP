@@ -22,7 +22,7 @@ assignment_inertias = [I2 == 2*3.437592086857546033e-05;
 
 
 assignment_gears = [separation35 == 0.041; separation23 == 0.07; rw == 0.075; l7_ab == 0.425;
-    N_idler == 33; N_sun == 50; N_planet == 16; C_friction7 == 0.0;];
+    N_idler == 33; N_sun == 50; N_planet == 16; C_friction7 == 0.2;];
 assignment_steps = [step_start == [0; 0; 0]; step_height == 0.15; step_width == 0.2;];
 
 DesignParameters = [assignmnent_g; assignmnent_masses; assignment_inertias; assignment_gears; assignment_steps];

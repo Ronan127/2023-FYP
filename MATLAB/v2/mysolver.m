@@ -119,7 +119,7 @@ while isempty(equations) == 0
     timeout = timeout +1;
 end
 solution=orderfields(solution);
-remainingEquations = equations;
+remainingEquations = [equations; inequalities];
 end
 
 function [solution, equations, inequalities, timeout] = solveEasy(solution, equations, inequalities, timeout)
