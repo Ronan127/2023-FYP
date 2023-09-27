@@ -26,10 +26,13 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Algodoo LIM system approaching obstacle horizontally\relax }}{15}{}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Algodoo LIM system approaching obstacle vertically\relax }}{16}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Relationship between LIM angle and required torque for Stage 1 motion\relax }}{25}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Relationship between LIM angle and required torque for Stage 3 motion\relax }}{26}{}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Relationship between LIM angle and required torque for Stage 4 motion\relax }}{27}{}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Relationship between LIM angle and required torque for Stage 6 motion\relax }}{27}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Free body diagram of the LIM frame (component 1)\relax }}{19}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Free body diagram of the LIM frame (component 1)\relax }}{20}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Free body diagram of the gears (components 2-5)\relax }}{20}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Relationship between LIM angle and required torque for Stage 1 motion\relax }}{26}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Relationship between LIM angle and required torque for Stage 3 motion\relax }}{27}{}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Relationship between LIM angle and required torque for Stage 4 motion\relax }}{28}{}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Relationship between LIM angle and required torque for Stage 6 motion\relax }}{29}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -23,23 +23,29 @@
 \contentsline {section}{\numberline {3.1}Overview and objectives}{17}{}%
 \contentsline {section}{\numberline {3.2}Definition of motions}{17}{}%
 \contentsline {section}{\numberline {3.3}Core equations and assumptions}{19}{}%
-\contentsline {section}{\numberline {3.4}Boundary conditions}{20}{}%
-\contentsline {section}{\numberline {3.5}Solving technique}{23}{}%
-\contentsline {section}{\numberline {3.6}Required torque}{24}{}%
-\contentsline {section}{\numberline {3.7}Required coefficient of friction}{26}{}%
-\contentsline {chapter}{\numberline {4}Design Requirements}{28}{}%
-\contentsline {section}{\numberline {4.1}Stakeholder requirements}{28}{}%
-\contentsline {section}{\numberline {4.2}Engineering Requirements}{29}{}%
-\contentsline {chapter}{\numberline {5}Design}{30}{}%
-\contentsline {chapter}{\numberline {6}Drake Simulation}{31}{}%
-\contentsline {chapter}{\numberline {7}Experiment}{32}{}%
-\contentsline {chapter}{\numberline {8}Analysis}{33}{}%
-\contentsline {chapter}{\numberline {9}Recommendations}{34}{}%
-\contentsline {chapter}{\numberline {10}Design- 1st iteration}{35}{}%
-\contentsline {chapter}{\numberline {11}Description of motion}{36}{}%
-\contentsline {chapter}{\numberline {A}ECSA Outcome Self Assessment}{37}{}%
-\contentsline {chapter}{\numberline {B}Mathematical proofs}{38}{}%
-\contentsline {section}{\numberline {B.1}Euler's equation}{38}{}%
-\contentsline {section}{\numberline {B.2}Navier Stokes equation}{38}{}%
-\contentsline {chapter}{\numberline {C}Experimental results}{39}{}%
-\contentsline {chapter}{List of references}{40}{}%
+\contentsline {section}{\numberline {3.4}Boundary conditions}{21}{}%
+\contentsline {section}{\numberline {3.5}Solving technique}{24}{}%
+\contentsline {section}{\numberline {3.6}Required torque}{25}{}%
+\contentsline {subsection}{\numberline {3.6.1}Sizing components to reduce torque requirement}{27}{}%
+\contentsline {section}{\numberline {3.7}Required coefficient of friction}{28}{}%
+\contentsline {chapter}{\numberline {4}Design Requirements}{30}{}%
+\contentsline {section}{\numberline {4.1}Stakeholder requirements}{30}{}%
+\contentsline {section}{\numberline {4.2}Engineering Requirements}{31}{}%
+\contentsline {chapter}{\numberline {5}Design}{32}{}%
+\contentsline {chapter}{\numberline {6}Drake Simulation}{33}{}%
+\contentsline {section}{\numberline {6.1}Overview and objectives}{33}{}%
+\contentsline {section}{\numberline {6.2}Selection of simulator}{33}{}%
+\contentsline {section}{\numberline {6.3}CAD to simulation pipeline}{33}{}%
+\contentsline {section}{\numberline {6.4}Using the simulator}{34}{}%
+\contentsline {section}{\numberline {6.5}Validation of simulation}{34}{}%
+\contentsline {chapter}{\numberline {7}Experiment}{35}{}%
+\contentsline {chapter}{\numberline {8}Analysis}{36}{}%
+\contentsline {chapter}{\numberline {9}Recommendations}{37}{}%
+\contentsline {chapter}{\numberline {10}Design- 1st iteration}{38}{}%
+\contentsline {chapter}{\numberline {11}Description of motion}{39}{}%
+\contentsline {chapter}{\numberline {A}ECSA Outcome Self Assessment}{40}{}%
+\contentsline {chapter}{\numberline {B}Mathematical proofs}{41}{}%
+\contentsline {section}{\numberline {B.1}Euler's equation}{41}{}%
+\contentsline {section}{\numberline {B.2}Navier Stokes equation}{41}{}%
+\contentsline {chapter}{\numberline {C}Experimental results}{42}{}%
+\contentsline {chapter}{List of references}{43}{}%

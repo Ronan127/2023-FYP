@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  21 SEP 2023 12:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  27 SEP 2023 13:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1459,59 +1459,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
  []
 
 [18]
-Overfull \hbox (0.68283pt too wide) in paragraph at lines 42--47
+Overfull \hbox (0.68283pt too wide) in paragraph at lines 42--43
 \T1/mdbch/m/n/12 (-20) The maths model is con-sists of a sys-tem of equa-tions 
 that are solved si-mul-ta-ne-ously.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--47
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
+<./figs//FBDs/Naming components.png, id=147, 1919.67188pt x 807.7678pt>
+File: ./figs//FBDs/Naming components.png Graphic file (type png)
+<use ./figs//FBDs/Naming components.png>
+Package pdftex.def Info: ./figs//FBDs/Naming components.png  used on input line
+ 47.
+(pdftex.def)             Requested size: 318.68909pt x 134.08942pt.
+<./figs//FBDs/FBD-1.png, id=148, 789.70032pt x 373.395pt>
+File: ./figs//FBDs/FBD-1.png Graphic file (type png)
+<use ./figs//FBDs/FBD-1.png>
+Package pdftex.def Info: ./figs//FBDs/FBD-1.png  used on input line 54.
+(pdftex.def)             Requested size: 398.35985pt x 188.35503pt.
+<./figs//FBDs/FBD-2.png, id=149, 1087.06125pt x 542.025pt>
+File: ./figs//FBDs/FBD-2.png Graphic file (type png)
+<use ./figs//FBDs/FBD-2.png>
+Package pdftex.def Info: ./figs//FBDs/FBD-2.png  used on input line 60.
+(pdftex.def)             Requested size: 398.35985pt x 198.62732pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--47
+Overfull \hbox (2.33348pt too wide) in paragraph at lines 44--64
+[]\T1/mdbch/m/n/12 (-20) Consider the de-vice climb-ing a step as vi-su-alised 
+in Fig-ure 3.1[]. Each com-po-nent
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+[19 <./figs//FBDs/Naming components.png>] [20 <./figs//FBDs/FBD-1.png> <./figs/
+/FBDs/FBD-2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
  []
 
-[20] [21]
-Overfull \hbox (52.52112pt too wide) detected at line 180
+[21] [22]
+Overfull \hbox (52.52112pt too wide) detected at line 200
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-
- []
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 191--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 191--194
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
 
  []
 
 [23]
+Underfull \hbox (badness 10000) in paragraph at lines 211--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--214
+
+ []
+
+[24]
 LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
- 255.
+ 275.
  (C:\Program Files\MiKTeX\tex/latex/mathdesign/mdbch\ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 255.
+(Font)              scaled to size 11.52008pt on input line 275.
 Package microtype Info: Character `texttwelveudash ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1533,53 +1562,53 @@ Package microtype Info: Character `texttildelow ' is missing
 Package microtype Info: Character `textcelsius ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
-<./figs//plots/torque-angle-relation-stage1.png, id=163, 332.9238pt x 266.9172p
+<./figs//plots/torque-angle-relation-stage1.png, id=173, 332.9238pt x 266.9172p
 t>
 File: ./figs//plots/torque-angle-relation-stage1.png Graphic file (type png)
 <use ./figs//plots/torque-angle-relation-stage1.png>
 Package pdftex.def Info: ./figs//plots/torque-angle-relation-stage1.png  used o
-n input line 258.
+n input line 278.
 (pdftex.def)             Requested size: 318.68909pt x 255.51671pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24]
-<./figs//plots/torque-angle-relation-stage3.png, id=168, 421.575pt x 316.0608pt
+[25]
+<./figs//plots/torque-angle-relation-stage3.png, id=177, 421.575pt x 316.0608pt
 >
 File: ./figs//plots/torque-angle-relation-stage3.png Graphic file (type png)
 <use ./figs//plots/torque-angle-relation-stage3.png>
 Package pdftex.def Info: ./figs//plots/torque-angle-relation-stage3.png  used o
-n input line 278.
+n input line 298.
 (pdftex.def)             Requested size: 318.68909pt x 238.93068pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs//plots/torque-angle-relation-stage4.png, id=169, 323.2878pt x 258.2448p
+<./figs//plots/torque-angle-relation-stage4.png, id=178, 323.2878pt x 258.2448p
 t>
 File: ./figs//plots/torque-angle-relation-stage4.png Graphic file (type png)
 <use ./figs//plots/torque-angle-relation-stage4.png>
 Package pdftex.def Info: ./figs//plots/torque-angle-relation-stage4.png  used o
-n input line 287.
+n input line 307.
 (pdftex.def)             Requested size: 318.68909pt x 254.57555pt.
-[25 <./figs//plots/torque-angle-relation-stage1.png (PNG copy)>]
+[26 <./figs//plots/torque-angle-relation-stage1.png (PNG copy)>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs//plots/torque-angle-relation-stage6.png, id=173, 320.397pt x 258.2448pt
+<./figs//plots/torque-angle-relation-stage6.png, id=182, 320.397pt x 258.2448pt
 >
 File: ./figs//plots/torque-angle-relation-stage6.png Graphic file (type png)
 <use ./figs//plots/torque-angle-relation-stage6.png>
 Package pdftex.def Info: ./figs//plots/torque-angle-relation-stage6.png  used o
-n input line 300.
+n input line 320.
 (pdftex.def)             Requested size: 318.68909pt x 256.88467pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [26 <./figs//plots/torque-angle-relation-stage3.png (PNG copy)>] [27 <./figs/
-/plots/torque-angle-relation-stage4.png (PNG copy)> <./figs//plots/torque-angle
--relation-stage6.png (PNG copy)>]
+[27 <./figs//plots/torque-angle-relation-stage3.png (PNG copy)>]) [28 <./figs//
+plots/torque-angle-relation-stage4.png (PNG copy)>] [29 <./figs//plots/torque-a
+ngle-relation-stage6.png (PNG copy)>]
 \openout2 = `chaps-main/chap-design-requirements.aux'.
 
  (chaps-main/chap-design-requirements.tex
@@ -1623,7 +1652,7 @@ Overfull \hbox (7.904pt too wide) in paragraph at lines 13--32
 [][] 
  []
 
-[28
+[30
 
 
 
@@ -1680,7 +1709,7 @@ Overfull \hbox (1.7499pt too wide) in paragraph at lines 68--68
 []|$\OML/mdbch/m/it/10 m=s[]$| 
  []
 
-) [29]
+) [31]
 \openout2 = `chaps-main/chap-design.aux'.
 
  (chaps-main/chap-design.tex
@@ -1690,7 +1719,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--132
 
  []
 
-[30
+[32
 
 
 
@@ -1700,17 +1729,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--132
 
  (chaps-main/chap-drake-simulation.tex
 Chapter 6.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 3--133
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
 
  []
 
-[31
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--7
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+[33
 
 
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--22
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 26--133
+
+ []
+
+[34]
 \openout2 = `chaps-main/chap-experiment.aux'.
 
  (chaps-main/chap-experiment.tex
@@ -1740,7 +1814,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--27
 
  []
 
-) [32
+) [35
 
 
 
@@ -1755,7 +1829,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--135
 
  []
 
-[33
+[36
 
 
 
@@ -1770,7 +1844,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--136
 
  []
 
-[34
+[37
 
 
 
@@ -1786,7 +1860,7 @@ Overfull \hbox (3.06326pt too wide) in paragraph at lines 3--137
 ten-tial im-prove-ments, how-ever
  []
 
-[35
+[38
 
 
 
@@ -1796,7 +1870,7 @@ ten-tial im-prove-ments, how-ever
 
  (chaps-main/chap-motion.tex
 Chapter 11.
-) [36
+) [39
 
 
 
@@ -1861,7 +1935,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 [][] 
  []
 
-) [37
+) [40
 
 
 
@@ -1871,7 +1945,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 
  (chaps-append/chap-maths.tex
 Appendix B.
-) [38
+) [41
 
 
 
@@ -1881,7 +1955,7 @@ Appendix B.
 
  (chaps-append/chap-experiment.tex
 Appendix C.
-) [39
+) [42
 
 
 
@@ -1917,7 +1991,7 @@ Overfull \hbox (16.69037pt too wide) in paragraph at lines 37--51
 y.wiley.com/doi/abs/10.1002/rob.21887 
  []
 
-) [40
+) [43
 
 
 
@@ -1932,10 +2006,10 @@ y.wiley.com/doi/abs/10.1002/rob.21887
 (chaps-append/chap-ecsa.aux) (chaps-append/chap-maths.aux)
 (chaps-append/chap-experiment.aux)) ) 
 Here is how much of TeX's memory you used:
- 16283 strings out of 476339
- 337612 string characters out of 5797934
+ 16314 strings out of 476339
+ 338402 string characters out of 5797934
  1865340 words of memory out of 5000000
- 35778 multiletter control sequences out of 15000+600000
+ 35805 multiletter control sequences out of 15000+600000
  622742 words of font info for 494 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,17n,117p,1183b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1951,9 +2025,9 @@ chr7v.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C
 :/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr8t.pfb><C:/Program Fi
 les/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files/MiKTeX/
 fonts/type1/mathdesign/mdbch/md-chri8t.pfb>
-Output written on Report.pdf (47 pages, 16117460 bytes).
+Output written on Report.pdf (50 pages, 16326103 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
+ 323 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 135806 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 135821 words of extra memory for PDF output out of 154059 (max. 10000000)
 

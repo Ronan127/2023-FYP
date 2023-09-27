@@ -11,14 +11,24 @@ Reallocating 'name_of_file' (item size: 1) to 31 items.
 A level-1 auxiliary file: chaps-main/chap-literature.aux
 Reallocating 'name_of_file' (item size: 1) to 27 items.
 A level-1 auxiliary file: chaps-main/chap-2d-sim.aux
+Reallocating 'name_of_file' (item size: 1) to 31 items.
+A level-1 auxiliary file: chaps-main/chap-math-model.aux
 Reallocating 'name_of_file' (item size: 1) to 40 items.
 A level-1 auxiliary file: chaps-main/chap-design-requirements.aux
+Reallocating 'name_of_file' (item size: 1) to 27 items.
+A level-1 auxiliary file: chaps-main/chap-design.aux
+Reallocating 'name_of_file' (item size: 1) to 37 items.
+A level-1 auxiliary file: chaps-main/chap-drake-simulation.aux
+Reallocating 'name_of_file' (item size: 1) to 31 items.
+A level-1 auxiliary file: chaps-main/chap-experiment.aux
+Reallocating 'name_of_file' (item size: 1) to 29 items.
+A level-1 auxiliary file: chaps-main/chap-analysis.aux
+Reallocating 'name_of_file' (item size: 1) to 36 items.
+A level-1 auxiliary file: chaps-main/chap-recommendations.aux
 Reallocating 'name_of_file' (item size: 1) to 29 items.
 A level-1 auxiliary file: chaps-main/chap-design-1.aux
 Reallocating 'name_of_file' (item size: 1) to 27 items.
 A level-1 auxiliary file: chaps-main/chap-motion.aux
-Reallocating 'name_of_file' (item size: 1) to 31 items.
-A level-1 auxiliary file: chaps-main/chap-experiment.aux
 Reallocating 'name_of_file' (item size: 1) to 27 items.
 A level-1 auxiliary file: chaps-append/chap-ecsa.aux
 Reallocating 'name_of_file' (item size: 1) to 28 items.
@@ -45,7 +55,7 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Warning--can't use both volume and number fields in Algodoo
 You've used 10 entries,
             3324 wiz_defined-function locations,
-            723 strings with 6903 characters,
+            728 strings with 7058 characters,
 and the built_in function-call counts, 7817 in all, are:
 = -- 604
 > -- 234

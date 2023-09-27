@@ -40,9 +40,29 @@ Similar to Stage 3, but the tail pushes against the edge of a the previous step,
 \section{Core equations and assumptions}
 
 The maths model is consists of a system of equations that are solved simultaneously. These equations are derived from the free body diagrams of each component, and only consider movement in two dimensions. The components in question are the LIM frame, the sun gear, the idler gears, and the planet gears including the shaft and the wheels, and the body of the device. These components make contact with the surroundings and the other components, which exert equal and opposite forces on each other. As the maths model only considers movement in two dimensions, the LIMs are assumed to move synchronously. To simplify the equations, only one LIM is modelled, and its mass and moment of inertia is doubled.\\
-The free body diagrams for each component are shown in figure ???.\\
-\\
-Each component is assigned a number, where the LIM frame is 1, the sun gear is 2, the idler gears are 3 and 4, the planet gears are 5 and 6, and the body of the device, including the tail, is 7.
+
+Consider the device climbing a step as visualised in Figure \ref{Component-names}. Each component is assigned a number, where the LIM frame is 1, the sun gear is 2, the idler gears are 3 and 4, the planet gears, including the wheels, are 5 and 6, and the body of the device, including the tail, is 7.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{FBDs/Naming components.png}
+	\caption{Free body diagram of the LIM frame (component 1)}
+	\label{Component-names}
+\end{figure}
+Powering the motor causes a torque between the body of the device and the SUN gear. The device will also  be subject to external reaction forces where it contacts the environment, which are dependent on the stage of motion. These forces and torques will propagate internally through the gears, causing a forward motion. The free body diagrams for each component are shown in Figures \ref{FBD-1} and \ref{FBD-2}.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{FBDs/FBD-1.png}
+	\caption{Free body diagram of the LIM frame (component 1)}
+	\label{FBD-1}
+\end{figure}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=1\textwidth]{FBDs/FBD-2.png}
+	\caption{Free body diagram of the gears (components 2-5)}
+	\label{FBD-2}
+\end{figure}
+
+Each component exerts a force on connected components, which exert an equal and opposite force back.
 For example, the the sum of forces equations for the sun gear are,\\
 \begin{equation}
 	m_2\vec{a_2} == \vec{w_2}-\vec{f_2}+\vec{\mathrm{gf}_3}+\vec{\mathrm{gf}_4}
@@ -307,7 +327,7 @@ These plots show that the highest required torques will be in Stages 4 and 6, an
 So far this section has only modelled a device with fixed parameters, such as gear ratio, wheel size, mass, and tail length, however a designer may be interested in varying these parameters. The model can be used to inform the design process by showing the effect that changing certain parameters has on the required torque. For example, Figure ??? shows how changing the gear ratio affects the torque required.
 
 
-
 \section{Required coefficient of friction}
 
-
+When the device climbs steps, it is possible that the front wheel, component 5, will slip. Applying the coulomb approximation of friction to the model, Slipping will occur when $|F_{51}| > \mu_5 F_{52}$, where $\mu_5$ is the coefficient of friction between the wheel and the step. This coefficient can be increased by using certain materials, such as rubber, for the contact surface of the wheels. However, the coefficient of friction is also dependent on the material of the step itself, which a designer would not have control over. For this reason, designers may want to modify the design to reduce the required coefficient of friction.\\
+Similar to the required torque, the coefficient of friction required to prevent slipping can also be calculated across the motion, and the highest value is in Stage 4. The parameters can be 
