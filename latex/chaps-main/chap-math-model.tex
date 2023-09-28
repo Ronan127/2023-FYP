@@ -48,7 +48,7 @@ Consider the device climbing a step as visualised in Figure \ref{Component-names
 	\caption{Free body diagram of the LIM frame (component 1)}
 	\label{Component-names}
 \end{figure}
-Powering the motor causes a torque between the body of the device and the SUN gear. The device will also  be subject to external reaction forces where it contacts the environment, which are dependent on the stage of motion. These forces and torques will propagate internally through the gears, causing a forward motion. The free body diagrams for each component are shown in Figures \ref{FBD-1} and \ref{FBD-2}.\\
+Powering the motor causes a torque between the body of the device and the SUN gear. The components of the device that make contact with the environment, namely the front wheel and the tail, will be subject to external reaction forces, which are dependent on the stage of motion. These forces and torques will propagate internally through the gears, causing a forward motion. The free body diagrams for each component are shown in Figures \ref{FBD-1} and \ref{FBD-2}.\\
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{FBDs/FBD-1.png}
@@ -119,8 +119,8 @@ The front wheel, referred to as component 5, is locked in place by the reaction 
 		\ddot{\theta}_5 &= 0
 	\end{align}
 \end{subequations}
-where $\vec{v_x}$ refers to the velocity of component $x$.\\
-The front wheel must be placed into a two dimensional coordinate system. In stage 1, the front wheel can be on the ground or on one of the steps, so long as the tail can reach the ground, and the front wheel will always be pressed against the edge of the next step. Placing the origin at the start of the steps as seen in Figure ???, the position of the wheel can be defined as,
+where $\vec{v_x}$ refers to the velocity of component $x$. \\
+The front wheel must be placed into a two dimensional coordinate system. In stage 1, the front wheel can be on the ground or on one of the steps, so long as the tail can reach the ground, and the front wheel will always be pressed against the edge of the next step. Placing the origin at the start of the steps, the position of the wheel can be defined as,
 \begin{equation}
 	\vec{s_5}
 	=
@@ -187,7 +187,7 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 	\begin{align}
 		u_1 &= \mathrm{StepWidth}\cdot (N_2-1)- s_{11}\\
 		u_2 &= \mathrm{StepHeight}\cdot N_2 - s_{12}\\
-		\tan{-\theta_7} &= \frac{u_2}{u_1}\\
+		\tan{(-\theta_7)} &= \frac{u_2}{u_1}\\
 		\label{tailonstepposition}
 		-\ddot{\theta_7} &= \frac{u_2^2 (-2  v_{11}  v_{12} - u_2  a_{11}) + u_1^2 (2  v_{11}  v_{12} + -u_2 a_{11}) + u_1^3  a_{12} - u_1  u_2  (2 v_{12}^2 - 2  v_{11}^2 - u_2  a_{12})}{(u_1^2 + u_2^2)^2}\\
 		\label{tailonstepaccelleration}
@@ -196,10 +196,10 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 			-\cos{(\theta_7)} & -\sin{(\theta_7)} & 0\\
 			\sin{(\theta_7)} & -\cos{(\theta_7)} & 0\\
 			0 & 0 & 1
-		\end{bmatrix} \vec{F}_{react71}'
+		\end{bmatrix} \vec{F}_{react7}'
 	\end{align}
 \end{subequations}
-where $N_2$ is the number of the step that the tail makes contact with, $u_1$ and $u_2$ are the displacement from the motor axis to the point of contact with the step. Equation \ref{tailonstepaccelleration} is the second derivative of \ref{tailonstepposition}. $\vec{F}_{react71}'$ is the vector of reaction forces in a rotated coordinate system such that $F_{react72}'$ is the normal force between the tail and the step.
+where $N_2$ is the number of the step that the tail makes contact with, $u_1$ and $u_2$ are the displacement from the motor axis to the point of contact with the step. Equation \ref{tailonstepaccelleration} is the second derivative of \ref{tailonstepposition}. $\vec{F}_{react7}'$ is the vector of reaction forces in a rotated coordinate system such that $F_{react72}'$ is the normal force between the tail and the step.
 
 \subsection*{Stage 5: Flipping from step}
 Stage 5 is similar to stage 2, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
