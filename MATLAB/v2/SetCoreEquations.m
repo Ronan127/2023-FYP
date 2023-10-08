@@ -123,10 +123,22 @@ eqns_displacement = [s1 == s2;
     s7 == s2 + l7/2;
     s7End == s2 + l7;
     ];
+
+%ta73 = - d^2/dt^2 (arcsin(l72(t)/l7_ab))
+%From wolfram alpha, giving y = -ta73, x(t) = l72(t), c = l7_ab, x1 = l72' = -v22, x2 = l72'' = -a22
+syms y x x1 x2 c;
+tailKinematics = y == ((c^2-x^2)*x2+x*x1^2)/(c^3*(1-x^2/c^2)^(3/2));
+tailKinematics = subs(tailKinematics, y, -ta73);
+tailKinematics = subs(tailKinematics, x, l72);
+tailKinematics = subs(tailKinematics, x1, -v22);
+tailKinematics = subs(tailKinematics, x2, -a22);
+
+
+
 condition_tailOnGround = [s7End2 == 0; 
     ratio7Contact == 1; 
     eqns_tailGroundFriction;
-    -ta73 == ((l7_ab^2 - l72^2)*a22 + l72*v22^2)/(l7_ab^3 * (1 - l72^2/l7_ab^2)^(3/2)); %d^2/dt^2 (arcsin(l72(t)/l7_ab))
+    tailKinematics;
     ];
 
 
@@ -162,11 +174,22 @@ Rmatrix7 = [
     0, 0, 1
     ];
 
+%ta73 = - d^2/dt^2(tan^(-1)(u2/u1))
+%From wolfram alpha, giving z = -ta73, y(t) = u2(t),  y1 = u2' = -v22, y2 = u2'' = -a22, x(t) = u1(t), x1 = u1' = -v21, x2 = u1'' = -a21
+syms z y y1 y2 x x1 x2;
+tailKinematics = z == 1/(x^2+y^2)^2*(x*y*(2*x1^2+y*y2-2*y1^2)-x^2*(y*x2+2*x1*y1)+y^2*(2*x1*y1-y*x2)+x^3*y2);
+tailKinematics = subs(tailKinematics, z, -ta73);
+tailKinematics = subs(tailKinematics, y, u2);
+tailKinematics = subs(tailKinematics, y1, -v22);
+tailKinematics = subs(tailKinematics, y2, -a22);
+tailKinematics = subs(tailKinematics, x, u1);
+tailKinematics = subs(tailKinematics, x1, -v21);
+tailKinematics = subs(tailKinematics, x2, -a21);
 
 condition_tailOnStep = [
     tan(-t73) == u2/u1;
     ratio7Contact == u2/l72;
-    -ta73 == (u2^2 * (-2 * -v11 * -v12 + u2 * -a11) + u1^2 * (2 * -v11 * -v12 + u2 * -a11) - u1^3 * -a12 - u1 * u2 * (2 * -v11^2 - 2 * -v12^2 + u2 * -a12))/(u1^2 + u2^2)^2; %d^2/dt^2(tan^(-1)(u2/u1))
+    tailKinematics;
     u1 == step_width*(N2-1) - s11;
     u2 == step_height*N2 - s12;
     F_reactPrime71 == - F_reactPrime72 * C_friction7

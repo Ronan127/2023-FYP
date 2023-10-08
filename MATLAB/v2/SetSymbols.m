@@ -15,7 +15,7 @@ syms r [1 7]; %radius of each element
 syms gfa [1 7]; %absolute gear force on each eement
 
 
-syms T_z l3_ab l5_ab Rz Rvector g2 rw l7_ab C_friction7 C_friction5 separation23 separation35 N_sun N_idler N_planet cost13 sint13 cost73 sint73;
+syms T_z l3_ab l5_ab Rz Rvector g2 rw l7_ab C_friction7 C_friction5 separation23 separation35 N_sun N_idler N_planet cost13 sint13 cost73 sint73 L_body_centre;
 syms step_start [3,1];
 syms step_height step_width ratio7Weight ratio7Contact;
 syms T [3,1];

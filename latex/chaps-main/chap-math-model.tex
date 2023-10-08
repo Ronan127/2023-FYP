@@ -149,7 +149,7 @@ Equation \ref{tailongroundkinematics} is derived from,
 		\frac{d^2}{dt^2}-\theta_7(t) &= \frac{d^2}{dt^2}\arcsin{\frac{l_{72}(t)}{|\vec{l_7}|}}
 	\end{align}
 \end{subequations}
-where $\theta_7$ and $l_{72}$ are treated as functions of time, $t$. This relation can be seen in figure ???. $v_{12}$ and $a_{12}$ refer to the velocity and acceleration of the motor axle in the y dimension, and are equivalent to $\dot{l}_{72}$ and $\ddot{l}_{72}$ respectively.\\ ??????? verify
+where $\theta_7$ and $l_{72}$ are treated as functions of time, $t$. This relation can be seen in figure ???. $v_{12}$ and $a_{12}$ refer to the velocity and acceleration of the motor axle in the y dimension, and are equivalent to $-\dot{l}_{72}$ and $-\ddot{l}_{72}$ respectively.\\ ??????? verify
 
 \subsection*{Stage 2: Flipping}
 
@@ -189,7 +189,11 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 		u_2 &= \mathrm{StepHeight}\cdot N_2 - s_{12}\\
 		\tan{(-\theta_7)} &= \frac{u_2}{u_1}\\
 		\label{tailonstepposition}
-		-\ddot{\theta_7} &= \frac{u_2^2 (-2  v_{11}  v_{12} - u_2  a_{11}) + u_1^2 (2  v_{11}  v_{12} + -u_2 a_{11}) + u_1^3  a_{12} - u_1  u_2  (2 v_{12}^2 - 2  v_{11}^2 - u_2  a_{12})}{(u_1^2 + u_2^2)^2}\\
+		-\ddot{\theta_7} &= \frac{ u_1^2 (a_{11} u_2  - 2 v_{11} v_{12}) 
+			+ u_2^2 (a_{11} u_2 + 2  v_{11}  v_{12}  )  
+			-  a_{12} u_1^3 
+			- u_1  u_2  (- 2  v_{11}^2 + 2 v_{12}^2 + a_{12} u_2  )}
+		{(u_1^2 + u_2^2)^2}\\
 		\label{tailonstepaccelleration}
 		F_{react71}' &= -\mu_{tail} F_{react72}'\\
 		\vec{F}_{react7} &= \begin{bmatrix}

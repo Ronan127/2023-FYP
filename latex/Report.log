@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  28 SEP 2023 21:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  8 OCT 2023 12:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1064,9 +1064,9 @@ le climb-ing (Delmerico
 \tf@lof=\write4
 \openout4 = `Report.lof'.
 
- (Report.lot [6
+ [6
 
-])
+] (Report.lot)
 \tf@lot=\write5
 \openout5 = `Report.lot'.
 
@@ -1509,38 +1509,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
  []
 
 [21] [22]
-Overfull \hbox (61.57587pt too wide) detected at line 200
+Overfull \hbox (53.1547pt too wide) detected at line 204
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 211--214
+Underfull \hbox (badness 10000) in paragraph at lines 215--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--214
+Underfull \hbox (badness 10000) in paragraph at lines 215--218
 
  []
 
 [24]
 LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
- 275.
+ 279.
  (C:\Program Files\MiKTeX\tex/latex/mathdesign/mdbch\ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 275.
+(Font)              scaled to size 11.52008pt on input line 279.
 Package microtype Info: Character `texttwelveudash ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1567,7 +1567,7 @@ t>
 File: ./figs//plots/torque-angle-relation-stage1.png Graphic file (type png)
 <use ./figs//plots/torque-angle-relation-stage1.png>
 Package pdftex.def Info: ./figs//plots/torque-angle-relation-stage1.png  used o
-n input line 278.
+n input line 282.
 (pdftex.def)             Requested size: 318.68909pt x 255.51671pt.
 
 
@@ -1579,7 +1579,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ./figs//plots/torque-angle-relation-stage3.png Graphic file (type png)
 <use ./figs//plots/torque-angle-relation-stage3.png>
 Package pdftex.def Info: ./figs//plots/torque-angle-relation-stage3.png  used o
-n input line 298.
+n input line 302.
 (pdftex.def)             Requested size: 318.68909pt x 238.93068pt.
 
 
@@ -1590,7 +1590,7 @@ t>
 File: ./figs//plots/torque-angle-relation-stage4.png Graphic file (type png)
 <use ./figs//plots/torque-angle-relation-stage4.png>
 Package pdftex.def Info: ./figs//plots/torque-angle-relation-stage4.png  used o
-n input line 307.
+n input line 311.
 (pdftex.def)             Requested size: 318.68909pt x 254.57555pt.
 [26 <./figs//plots/torque-angle-relation-stage1.png (PNG copy)>]
 
@@ -1601,7 +1601,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: ./figs//plots/torque-angle-relation-stage6.png Graphic file (type png)
 <use ./figs//plots/torque-angle-relation-stage6.png>
 Package pdftex.def Info: ./figs//plots/torque-angle-relation-stage6.png  used o
-n input line 320.
+n input line 324.
 (pdftex.def)             Requested size: 318.68909pt x 256.88467pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -1714,8 +1714,8 @@ Overfull \hbox (1.7499pt too wide) in paragraph at lines 68--68
 
  (chaps-main/chap-design.tex
 Chapter 5.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 3--132
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
@@ -1725,6 +1725,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--132
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 17--19
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+[33]
+Underfull \hbox (badness 10000) in paragraph at lines 25--27
+
+ []
+
+) [34]
 \openout2 = `chaps-main/chap-drake-simulation.aux'.
 
  (chaps-main/chap-drake-simulation.tex
@@ -1754,7 +1769,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-[33
+[35
 
 
 
@@ -1784,52 +1799,85 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--133
 
  []
 
-[34]
+[36]
 \openout2 = `chaps-main/chap-experiment.aux'.
 
  (chaps-main/chap-experiment.tex
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--7
+Overfull \hbox (3.26294pt too wide) in paragraph at lines 6--8
+\T1/mdbch/m/n/12 (-20) volt-age and cal-cu-late the stalling torque. To char-ac
+-terise the mo-tors, an ex-per-i-ment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--16
+Underfull \hbox (badness 10000) in paragraph at lines 16--26
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--27
-
- []
-
-) [35
+[37
 
 
 
 
 ]
+
+Package caption Warning: \label without proper reference on input line 50.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `voltage-torque-table' on page 38 undefined on input l
+ine 47.
+
+<./figs//plots/torque-voltage-relation.png, id=218, 530.199pt x 529.761pt>
+File: ./figs//plots/torque-voltage-relation.png Graphic file (type png)
+<use ./figs//plots/torque-voltage-relation.png>
+Package pdftex.def Info: ./figs//plots/torque-voltage-relation.png  used on inp
+ut line 75.
+(pdftex.def)             Requested size: 318.68909pt x 318.4249pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--103
+
+ []
+
+[39] [40 <./figs//plots/torque-voltage-relation.png>]
+<./figs//plots/assessment-torque-relation-stage1.png, id=229, 362.007pt x 217.2
+48pt>
+File: ./figs//plots/assessment-torque-relation-stage1.png Graphic file (type pn
+g)
+<use ./figs//plots/assessment-torque-relation-stage1.png>
+Package pdftex.def Info: ./figs//plots/assessment-torque-relation-stage1.png  u
+sed on input line 152.
+(pdftex.def)             Requested size: 318.68909pt x 191.25507pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [41] [42 <./figs//plots/assessment-torque-relation-stage1.png>]
 \openout2 = `chaps-main/chap-analysis.aux'.
 
- (chaps-main/chap-analysis.tex
+
+(chaps-main/chap-analysis.tex
 Chapter 8.
 )
 Underfull \hbox (badness 10000) in paragraph at lines 3--135
 
  []
 
-[36
+[43
 
 
 
@@ -1844,7 +1892,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 3--136
 
  []
 
-[37
+[44
 
 
 
@@ -1860,7 +1908,7 @@ Overfull \hbox (3.06326pt too wide) in paragraph at lines 3--137
 ten-tial im-prove-ments, how-ever
  []
 
-[38
+[45
 
 
 
@@ -1870,7 +1918,7 @@ ten-tial im-prove-ments, how-ever
 
  (chaps-main/chap-motion.tex
 Chapter 11.
-) [39
+) [46
 
 
 
@@ -1935,7 +1983,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 [][] 
  []
 
-) [40
+) [47
 
 
 
@@ -1945,7 +1993,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 
  (chaps-append/chap-maths.tex
 Appendix B.
-) [41
+) [48
 
 
 
@@ -1955,7 +2003,7 @@ Appendix B.
 
  (chaps-append/chap-experiment.tex
 Appendix C.
-) [42
+) [49
 
 
 
@@ -1991,7 +2039,7 @@ Overfull \hbox (16.69037pt too wide) in paragraph at lines 37--51
 y.wiley.com/doi/abs/10.1002/rob.21887 
  []
 
-) [43
+) [50
 
 
 
@@ -2004,30 +2052,34 @@ y.wiley.com/doi/abs/10.1002/rob.21887
 (chaps-main/chap-analysis.aux) (chaps-main/chap-recommendations.aux)
 (chaps-main/chap-design-1.aux) (chaps-main/chap-motion.aux)
 (chaps-append/chap-ecsa.aux) (chaps-append/chap-maths.aux)
-(chaps-append/chap-experiment.aux)) ) 
+(chaps-append/chap-experiment.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 16314 strings out of 476339
- 338402 string characters out of 5797934
+ 16349 strings out of 476339
+ 339628 string characters out of 5797934
  1865340 words of memory out of 5000000
- 35805 multiletter control sequences out of 15000+600000
- 622742 words of font info for 494 fonts, out of 8000000 for 9000
+ 35836 multiletter control sequences out of 15000+600000
+ 622850 words of font info for 496 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,17n,117p,1183b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Ronan\AppData\Local\MiKTeX\font
-s/pk/ljfour/jknappen/ec/dpi643\ectt1095.pk>{C:/Program Files/MiKTeX/fonts/enc/d
-vips/ly1/texnansi.enc}<C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bch
-b8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Pr
-ogram Files/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Program Files/Mi
-KTeX/fonts/type1/bitstrea/charter/bchri8a.pfb><C:/Program Files/MiKTeX/fonts/ty
-pe1/mathdesign/mdbch/md-chb8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesi
-gn/mdbch/md-chr7t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-
-chr7v.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C
-:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr8t.pfb><C:/Program Fi
-les/MiKTeX/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files/MiKTeX/
-fonts/type1/mathdesign/mdbch/md-chri8t.pfb>
-Output written on Report.pdf (50 pages, 16326066 bytes).
+ <C:\Users\Ronan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi643\ectt
+1095.pk>{C:/Program Files/MiKTeX/fonts/enc/dvips/ly1/texnansi.enc}<C:/Program F
+iles/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Program Files/MiKTeX/fo
+nts/type1/bitstrea/charter/bchr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bits
+trea/charter/bchr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/b
+chri8a.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chb8t.pfb><
+C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7t.pfb><C:/Program F
+iles/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7v.pfb><C:/Program Files/MiKTeX/
+fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program Files/MiKTeX/fonts/type1/
+mathdesign/mdbch/md-chr8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/m
+dbch/md-chri7m.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr
+i8t.pfb>
+Output written on Report.pdf (57 pages, 16477944 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
+ 349 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 135821 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 135831 words of extra memory for PDF output out of 154059 (max. 10000000)
 

@@ -1,7 +1,49 @@
 \chapter{Design}
 
-Overview and objectives\\
-Selection of design parameters - Powrie's device\\
-Motor selection\\
-Housing design\\
-Control circuits and code\\
+In order to validate the model, a device must be designed, built and tested. 
+
+\section{Selection of design parameters}
+There are many parameters to consider when designing LIMs, such as gear ratios, lengths, and wheel size. Optimising the design is beyond the scope of this project, but the device does need to work to the extent that it can be used to validate the model. Initially, this project intended to use the early versions of the model to inform the design process. However, as the model was not yet validated, significantly changing key parameters could easily result in a device that is unable to climb stairs at all. Previous projects were able to show inconsistent success, albeit inconsistently. Of the previous projects, Powrie's design was the latest and most informed, and is used as a starting point for this project. Powrie's report specifies the dimensions and gear ratios for the LIMs used in this project.\\
+
+\section{Body design}
+The body of the device is the central part that contains the motors and any peripheral devices.
+Powrie's design for the body includes a camera, batteries, and extra gearing to increase the torque of his motor. These components are superfluous for the objectives of this project, and are not included in the design. Additionally, the body in Powrie's design protrudes forward significantly beyond the axle of the LIMs. This is done to allow for gearing of the axial motors used in the design, but previous students have found that this protrusion causes the body to collide with the step when climbing, which can result in failure to climb the step. This project uses DC motors with worm gearbox outputs, allowing the motor to be placed at a right angle to the axis. This eliminates the need to for significant forward protrusion or additional gearing, and simplifies the construction process. Figure ??? shows the body of Powrie's design, while Figure ??? shows the body of this project's design.
+
+\section{Motor selection}
+Brushed DC motors often include a gearbox to increase the torque of the output at the cost of speed. For this design, the output shaft must be at a right angle to the motor, which is typically done with a worm gearbox. The most readily available motors that meet these requirements are the JGY-370 12V DC worm gear motors, which come with a range of gear ratios. Initially, the 40 RPM model was selected as it provides similar torque to the EGB-380S with added gearing that Powrie used, however initial tests indicated that additional torque was needed for consistent climbing, so the 6 RPM model was used instead.\\
+Additionally, these motors have a self locking gearbox, which improves the controllability of the device, as shutting off the motors will cause the gearbox to lock and the device to stop moving, rather than allowing the device to fall backwards down the steps.
+
+\section{Control circuits and code}
+In order to validate the model, the torque of the motors must be variable and reversible. This project uses a ??? H-hridge controlled by an STM32-F303RE Nucleo board to drive the motors. Two potentiometer sliders are used to control the torque of the two motors independently, the sliders are set up as voltage dividers and connected to the ADC channels of the STM32 microcontroller. The microcontroller sends a direction and PWM signal for each motor to the ??? H-bridge, which controls the motor using PWM. The circuit diagram for this setup is shown in Figure ???.\\
+The microcontroller is programmed to power off the motors when the sliders are centred, move the motors forward when the sliders are pushed forward, and move the motors in reverse when the sliders are pulled back. The flow diagram for this code is shown in Figure ???.\\
+
+Initial tests showed that PWM duty cycle is not proportional to torque output on the motors. Instead, even at low duty cycles, the motors can lift a large load, they just do so slowly. This is likely because the self locking gearbox prevents the axle from ever falling backwards. Consider a DC motor lifting a lever as seen in figure ???. Typically, when the PWM signal is on the motor outputs full torque and moves forward, then when the PWM signal is off the motor outputs no torque and falls backwards. The PWM frequency is typically high enough that the human eye sees this as a smooth motion. However, because of the self locking gearbox, the axle will lock when the the PWM signal is off rather than moving backwards, resulting in an overall forward motion even at low duty cycles. This is quite useful for controlling the motors as the speed of the motors is proportional to the PWM duty cycle regardless of the load it must lift.\\
+
+However, for the validation of the model, the motor torque should be variable and measurable. Brushed DC motor torque is proportional to the current running through it, and the current reduces as the speed of the motor increases. The speed of the motor is also proportional to the terminal voltage. The approximate characteristics of a DC motor are given in Figure ???. The equation describing the torque of a DC motor in relation to motor voltage and speed is then,
+\begin{equation}
+	T = T_{Rated-stall}(\frac{V_{Terminal}}{V_{Rated}}-\frac{\omega}{\omega_{Rated-No-load}})
+\end{equation}
+where $T$ is the output torque, $T_{Rated-stall}$ is the stalling torque at the rated voltage, $V_{Terminal}$ is the supply voltage across the motor terminals, $V_{Rated}$ is the motor's rated supply voltage, $\omega$ is the rotational speed of the output shaft, and $\omega_{Rated-no-load}$ is the speed of the output shaft when no load is placed on it at the rated voltage.\\
+
+To solve for the stalling torque, $\omega$ is set to $0$. This gives the relation,
+\begin{equation}
+	T_{Stall} = T_{Rated-stall}\frac{V_{Terminal}}{V_{Rated}}
+\end{equation}
+%??? Move to literature review?
+In order to vary the torque of the device, the terminal voltage must be varied. For this purpose, an LM2596S buck converter is used to vary the supply voltage.
+
+
+
+%When the motor is turning it also acts as a generator, and produces a voltage known as back emf which is proportional to the speed of the motor. 
+%\begin{equation}
+%	E_b \propto \omega
+%\end{equation}
+%Where $E_b$ is the back emf and $\omega$ is the speed of the motor.
+%
+%The approximate circuit diagram of a DC motor is shown in figure ???. The current running through the motor is proportional to the difference between the supply voltage and the back emf.
+%\begin{subequations}
+%	\begin{align}
+%	I &= \frac{V-E_b}{R_a
+%	I &\propto V-E_b
+%	\end{align}
+%\end{subequations}
