@@ -4,7 +4,7 @@ In order to create an accurate model of the LIM system, it is important to under
 
 \section{Limitations}
 
-Algodoo is a two dimensional physics sandbox \citep{Algodoo}. Initial testing with the software showed that limitations on the physics engine prevent accurate simulation of gears with teeth at a centimetre scale. This means it is impossible to accurately simulate a LIM device at the scale that they would be used in reality. The simulation can be scaled up to avoid this issue. However, this prevents an accurate simulation of the kinematics of the system.\\
+Algodoo is a two-dimensional physics sandbox \citep{Algodoo}. Initial testing with the software showed that limitations on the physics engine prevent accurate simulation of gears with teeth at a centimetre scale. This means it is impossible to accurately simulate a LIM device at the scale that they would be used in reality. The simulation can be scaled up to avoid this issue. However, this prevents an accurate simulation of the kinematics of the system.\\
 
 Additionally, it was found that Algodoo does not allow for the accurate simulation of an electric motor. In a typical electric motor, the available torque will decrease as the speed increases. This nuance is not present in Algodoo, so it cannot be used to provide an accurate simulation of the motor requirements. Despite these limitations. Algodoo is still useful as a tool to roughly test the motion of LIMs, and to determine how it would interact with steps. The advantage of Algodoo over other simulation methods is its ease of use, it only takes a few minutes to build a LIMed robot in Algodoo.
 
@@ -27,7 +27,7 @@ Simulations suggest that rear wheels are not necessary for successful consecutiv
 
 \subsection{Mounting obstacles}
 
-There are three ways in which a LIM can mount an obstacle after flipping up to it. The first is that the wheel collides directly with the obstacle, shown in Figure \ref{algo-case-wheel}. This happens when the obstacle is taller than a certain threshold based on the geometry of the LIM, and can result in the wheel bouncing off of the obstacle and failing to pull itself up. In this case a controller may be used to limit the speed of the flipping motion to ensure that the wheel is not going fast enough to bounce off the obstacle when it collides. \\
+There are three ways in which a LIM can mount an obstacle after flipping up to it. The first is that the wheel collides directly with the obstacle, shown in Figure \ref{algo-case-wheel}. This happens when the obstacle is taller than a certain threshold based on the geometry of the LIM, and can result in the wheel bouncing off the obstacle and failing to pull itself up. In this case a controller may be used to limit the speed of the flipping motion to ensure that the wheel is not going fast enough to bounce off the obstacle when it collides. \\
 
 \begin{figure}[h]
 	\centering
@@ -65,7 +65,7 @@ Each of these climbing methods has its flaws, however the case where the LIM fra
 
 \subsection{Rolling and flipping}
 
-It was observed in simulation that the LIM would either roll or flip depending on the torque applied to it. There appeared to be a very small range of "medium torque" at which the LIM was truly load intuitive, if the motor torque was too weak it would never be able to flip over the obstacle and if it was too strong it would always flip and never roll, which hinders movement on flat terrain. However, this may simply be a result of inaccuracies of the simulation, as scaling and poor motor physics could significantly affect this motion. \\
+It was observed in simulation that the LIM would either roll or flip depending on the torque applied to it. There appeared to be a very small range of "medium torque" at which the LIM was truly load intuitive. If the motor torque was too weak it would never be able to flip over the obstacle and if it was too strong it would always flip and never roll, which hinders movement on flat terrain. However, this may simply be a result of inaccuracies of the simulation, as scaling and poor motor physics could significantly affect this motion. \\
 
 In reality, as an electric motor increases in speed, the torque available will decrease proportionally. This means that once the LIM is rolling at speed, it will no longer have enough torque to flip itself unless it is stopped by an obstacle. This suggests that too much torque will only cause unintended flipping when the LIM is at rest on a flat plane.\\
 

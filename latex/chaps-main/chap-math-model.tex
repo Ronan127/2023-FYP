@@ -2,50 +2,82 @@
 
 \section{Overview and objectives}
 
-This project develops a system of equations to analytically model the climbing motion of the device, which will be referred to as the, "Maths Model" henceforth. The intention behind this model is to allow designers to input parameters such as gear ratio, mass, wheel size, tail length, and motor torque, then determine whether the specified device will be able to climb steps. The equations can also reversed to solve for specific parameters, such as the motor torque required to lift a device with certain properties. The maths model is developed using the MATLAB symbolic toolbox.\\
+This project develops a system of equations to analytically model the climbing motion of the device, which will be referred to as the "maths model" henceforth. The intention behind this model is to allow designers to input parameters such as gear ratio, mass, wheel size, tail length, and motor torque, and then determine whether the specified device will be able to climb steps. The equations can also be reversed to solve for specific parameters, such as the motor torque required to lift a device with certain properties. The maths model is developed using the MATLAB symbolic toolbox.\\
 
 \section{Definition of motions}
 
 As a LIMed device climbs, the tail and wheels come into contact with different surfaces on the stairs and ground, which changes how the device moves. The overall climbing motion is broken down into sequential stages which are modelled individually. These stages are defined as follows:\\
 \subsection*{Stage 0: Rolling}
 
-When the LIMed device does is on a flat plane with no obstacle, it simply rolls forward. If the motor torque is high enough, the LIMs will flip even without an obstacle. However, DC motors lose torque as they gain speed, so the rolling motion prevents the motors from producing enough torque to flip the LIMs.\\
+When the LIMed device is on a flat plane with no obstacle, it simply rolls forward. If the motor torque is high enough, the LIMs will flip even without an obstacle. However, DC motors lose torque as they gain speed, so the rolling motion prevents the motors from producing enough torque to flip the LIMs.\\
+
 
 \subsection*{Stage 1: Lifting}
-When the front wheel of the LIM comes into contact with the first step, it is blocked by a step and fixed in place. The tail pushes against the ground and the LIM starts rotating up the step. This motion ends when the LIM is vertical.
+\begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the left
+	\centering
+	\includegraphics[width=0.35\textwidth]{FBDs/Stage-1}
+	\caption{Stage 1 motion}
+	\label{fig:stage1}
+\end{wrapfigure}
+When the front wheels of the LIMs come into contact with the first step, they are blocked by a step and fixed in place. The tail pushes against the ground and the LIMs start rotating up the step. This motion ends when the LIMs are vertical.
 \\
 \subsection*{Stage 2: Flipping}
-
-Once the LIM is vertical, the bottom wheel starts to roll backwards as the top wheel falls forward onto the step. The distance that the bottom wheel rolls depends on the speed of the LIM and the height of the step. If the frame of the LIM hits the edge of the step, the device may slip backwards until the top wheel makes contact with the step. This motion ends when the top wheel is on the step.\\
+\begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the left
+	\centering
+	\includegraphics[width=0.35\textwidth]{FBDs/Stage-2}
+	\caption{Stage 2 motion}
+	\label{fig:stage2}
+\end{wrapfigure}
+Once the LIMs are vertical, the bottom wheels start to roll backwards as the top wheels fall forward onto the step. The distance that the bottom wheels roll depends on the speed of the LIMs and the height of the step. If the frames of the LIMs hits the edge of the step, the device may slip backwards until the top wheel makes contact with the step. This motion ends when the top wheel is on the step.\\
 
 \subsection*{Stage 3: Climbing}
-
+\begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the left
+	\centering
+	\includegraphics[width=0.35\textwidth]{FBDs/Stage-3}
+	\caption{Stage 3 motion}
+	\label{fig:stage3}
+\end{wrapfigure}
 The front wheel rests on the step while the back wheel is on the ground. The tail pushes against the ground and the back wheel lifts while the front wheel simultaneously rolls forward on the step. This motion ends when the front wheel reaches the next step.\\
 
 Stages 1 to 3 will repeat until the tail leaves the ground. After this point the tail will push against the edge of the previous steps. 
 
 \subsection*{Stage 4: Lifting from step}
-
-Similar to Stage 1, but the tail pushes against the edge of a the previous step, which now applies a force pulling the device backwards. Assuming friction on the wheel is sufficient, the LIM starts rotating up the step. This motion ends when the LIM is vertical.
+\begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the left
+	\centering
+	\includegraphics[width=0.35\textwidth]{FBDs/Stage-4}
+	\caption{Stage 4 motion}
+	\label{fig:stage4}
+\end{wrapfigure}
+Similar to Stage 1, but the tail pushes against the edge of a previous step, which now applies a force pulling the device backwards. Assuming friction on the wheel is sufficient, the LIMs start rotating up the step. This motion ends when the LIMs are vertical.
 
 \subsection*{Stage 5: Flipping from step}
-
-Similar to Stage 2, but the tail pushes against the edge of a the previous step, which now applies a force pulling the device backwards. This motion ends when the top wheel is on the step.\\
+\begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the left
+	\centering
+	\includegraphics[width=0.35\textwidth]{FBDs/Stage-5}
+	\caption{Stage 5 motion}
+	\label{fig:stage5}
+\end{wrapfigure}
+Similar to Stage 2, but the tail pushes against the edge of a previous step, which now applies a force pulling the device backwards. This motion ends when the top wheel is on the step.\\
 
 \subsection*{Stage 6: Climbing from step}
 
-Similar to Stage 3, but the tail pushes against the edge of a the previous step, which now applies a force pulling the device backwards. The back wheel lifts while the front wheel rolls forward on the step. This motion ends when the front wheel reaches the next step; however, due to the tail force pulling the device backwards, the back wheel will continue to lift past the horizontal while front wheel rolls forward.\\
-
+Similar to Stage 3, but the tail pushes against the edge of a previous step, which now applies a force pulling the device backwards. The back wheel lifts while the front wheel rolls forward on the step. This motion ends when the front wheel reaches the next step.\\
+\begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the left
+	\centering
+	\includegraphics[width=0.35\textwidth]{FBDs/Stage-6}
+	\caption{Stage 6 motion}
+	\label{fig:stage6}
+\end{wrapfigure}
 
 \section{Core equations and assumptions}
 
-The maths model is consists of a system of equations that are solved simultaneously. These equations are derived from the free body diagrams of each component, and only consider movement in two dimensions. The components in question are the LIM frame, the sun gear, the idler gears, and the planet gears including the shaft and the wheels, and the body of the device. These components make contact with the surroundings and the other components, which exert equal and opposite forces on each other. As the maths model only considers movement in two dimensions, the LIMs are assumed to move synchronously. To simplify the equations, only one LIM is modelled, and its mass and moment of inertia is doubled.\\
+The maths model is a system of equations that are solved simultaneously. These equations are derived from the free body diagrams of each component, and only consider movement in two dimensions. The components in question are the LIM frame, the sun gear, the idler gears, and the planet gears including the shaft and the wheels, and the body of the device. These components make contact with the surroundings and the other components, which exert equal and opposite forces on each other. As the maths model only considers movement in two dimensions, the LIMs are assumed to move synchronously. To simplify the equations, only one LIM is modelled, and its mass and moment of inertia is doubled.\\
 
 Consider the device climbing a step as visualised in Figure \ref{Component-names}. Each component is assigned a number, where the LIM frame is 1, the sun gear is 2, the idler gears are 3 and 4, the planet gears, including the wheels, are 5 and 6, and the body of the device, including the tail, is 7.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{FBDs/Naming components.png}
-	\caption{Free body diagram of the LIM frame (component 1)}
+	\caption{Labelled components}
 	\label{Component-names}
 \end{figure}
 Powering the motor causes a torque between the body of the device and the SUN gear. The components of the device that make contact with the environment, namely the front wheel and the tail, will be subject to external reaction forces, which are dependent on the stage of motion. These forces and torques will propagate internally through the gears, causing a forward motion. The free body diagrams for each component are shown in Figures \ref{FBD-1} and \ref{FBD-2}.\\
@@ -63,37 +95,37 @@ Powering the motor causes a torque between the body of the device and the SUN ge
 \end{figure}
 
 Each component exerts a force on connected components, which exert an equal and opposite force back.
-For example, the the sum of forces equations for the sun gear are,\\
+For example, the sum of forces equations for the sun gear are,\\
 \begin{equation}
 	m_2\vec{a_2} == \vec{w_2}-\vec{f_2}+\vec{\mathrm{gf}_3}+\vec{\mathrm{gf}_4}
 \end{equation}
-Where $m_x$ refers to the mass of component $x$, $\vec{a_x}$ is the acceleration vector of component $x$, $\vec{w_x}$ is the weight vector of component $x$, $\vec{f_x}$ is the force vector that component $x$ applies to component 1,  and $\vec{\mathrm{gf}_3}$ and $\vec{\mathrm{gf}_4}$ are the force vectors that components 3 and 4 respectively apply to component 2 through the gears.
+Where $m_n$ refers to the mass of component $n$, $\vec{a_n}$ is the acceleration vector of component $n$, $\vec{w_n}$ is the weight vector of component $n$, $\vec{f_n}$ is the force vector that component $n$ applies to component 1,  and $\vec{\mathrm{gf}_3}$ and $\vec{\mathrm{gf}_4}$ are the force vectors that components 3 and 4 respectively apply to component 2 through the gears.
 This can be expanded to,
 \begin{equation}
 	m_2
 	\begin{bmatrix}
-		a_{21}\\
-		a_{22}\\
-		a_{23}\\
+		a_{2x}\\
+		a_{2y}\\
+		a_{2z}\\
 	\end{bmatrix}
 	=
 	\begin{bmatrix}
-		w_{21}-f_{21}+\mathrm{gf}_{31}+\mathrm{gf}_{41}\\
-		w_{22}-f_{22}+\mathrm{gf}_{32}+\mathrm{gf}_{42}\\
-		w_{23}-f_{23}+\mathrm{gf}_{33}+\mathrm{gf}_{43}\\
+		w_{2x}-f_{2x}+\mathrm{gf}_{3x}+\mathrm{gf}_{4x}\\
+		w_{2y}-f_{2y}+\mathrm{gf}_{3y}+\mathrm{gf}_{4y}\\
+		w_{2z}-f_{2z}+\mathrm{gf}_{3z}+\mathrm{gf}_{4z}\\
 	\end{bmatrix}
 \end{equation}
-where vector positions 1, 2, and 3 denote the x, y, and z dimensions respectively. This equation can be further simplified by restraining movement to the x and y dimensions, and substituting $\vec{w_2} = \begin{bmatrix} 0 & m_2g & 0 \end{bmatrix}'$,
+where vector positions 1, 2, and 3 denote the x, y, and z dimensions respectively. This equation can be further simplified by restraining movement to the x and y dimensions, and substituting $\vec{w_2} = \begin{bmatrix} 0 \\ m_2g & \\ \end{bmatrix}$,
 \begin{equation}
 	m_2
 	\begin{bmatrix}
-		a_{21}\\
-		a_{22}\\
+		a_{2x}\\
+		a_{2y}\\
 	\end{bmatrix}
 	=
 	\begin{bmatrix}
-		-f_{21}+\mathrm{gf}_{31}+\mathrm{gf}_{41}\\
-		m_2g-f_{22}+\mathrm{gf}_{32}+\mathrm{gf}_{42}\\
+		-f_{2x}+\mathrm{gf}_{3x}+\mathrm{gf}_{4x}\\
+		m_2g-f_{2y}+\mathrm{gf}_{3y}+\mathrm{gf}_{4y}\\
 	\end{bmatrix}
 \end{equation}
 Similarly, the sum of moments equation for the sun gear is derived
@@ -102,7 +134,7 @@ Similarly, the sum of moments equation for the sun gear is derived
 \end{equation}
 where $I_2$ is the moment of inertia of component 2, $\theta_2$ is the angle of component 2, $T$ is the moment exerted by the motor on component 2, and $r_2$ is the radius of component 2. Note that in this project, all angles and moments are given in the clockwise direction.
 \\
-The full list of equations can be found in appendix ??? and in the matlab code.
+The full list of equations can be found in appendix ??? and in the MATLAB code.
 
 
 
@@ -119,8 +151,8 @@ The front wheel, referred to as component 5, is locked in place by the reaction 
 		\ddot{\theta}_5 &= 0
 	\end{align}
 \end{subequations}
-where $\vec{v_x}$ refers to the velocity of component $x$. \\
-The front wheel must be placed into a two dimensional coordinate system. In stage 1, the front wheel can be on the ground or on one of the steps, so long as the tail can reach the ground, and the front wheel will always be pressed against the edge of the next step. Placing the origin at the start of the steps, the position of the wheel can be defined as,
+where $\vec{v_n}$ refers to the velocity of component $n$. \\
+The front wheel must be placed into a two-dimensional coordinate system. In Stage 1, the front wheel can be on the ground or on one of the steps, so long as the tail can reach the ground, and the front wheel will always be pressed against the edge of the next step. Placing the origin at the start of the steps, the position of the front wheel can be defined as,
 \begin{equation}
 	\vec{s_5}
 	=
@@ -135,21 +167,28 @@ The end of the tail pushes against the ground, which leads to the following cond
 \begin{subequations}
 	\label{tailonground}
 	\begin{align}
-		s_{7end2} &= 0\\
-		F_{react71} &=  -\mu_{tail}F_{react72}\\
-		-\ddot{\theta_7} &= \frac{(|\vec{l_7}|^2 - l_{72}^2)a_{12} + l_{72}v_{12}^2}{|\vec{l_7}|^3 (1 - \frac{l_{72}^2}{|\vec{l_7}|^2})^{3/2}} \label{tailongroundkinematics}
+		s_{7endy} &= 0\\
+		F_{react7x} &=  -\mu_{tail}F_{react7y}\\
+		-\ddot{\theta_7} &= \frac{(|\vec{l_7}|^2 - l_{7y}^2)a_{1y} + l_{7y}v_{1y}^2}{|\vec{l_7}|^3 (1 - \frac{l_{7y}^2}{|\vec{l_7}|^2})^{3/2}} \label{tailongroundkinematics}
 	\end{align}
 \end{subequations}
-where $s_{7end2}$ is the y position of the endpoint of the tail, $F_{react71}$ and $F_{react72}$ are the reaction forces exerted onto the tail by the ground in the x and y dimensions respectively, $\mu_{tail}$ is the coefficient of friction between the tail and the ground, $\vec{l_7}$ is the position of the end of the tail relative to the motor axle, and $l_{72}$ is the component of $\vec{l_7}$ in the y dimension. \\
+where $s_{7endy}$ is the y position of the endpoint of the tail, $F_{react7x}$ and $F_{react7y}$ are the reaction forces exerted onto the tail by the ground in the x and y dimensions respectively, $\mu_{tail}$ is the coefficient of friction between the tail and the ground, $\vec{l_7}$ is the position of the end of the tail relative to the motor axle, and $l_{7y}$ is the component of $\vec{l_7}$ in the y dimension. \\
 Equation \ref{tailongroundkinematics} is derived from,
 
 \begin{subequations}
 	\begin{align}
-		-\theta_7(t) &= \arcsin{\frac{l_{72}(t)}{|\vec{l_7}|}}\\
-		\frac{d^2}{dt^2}-\theta_7(t) &= \frac{d^2}{dt^2}\arcsin{\frac{l_{72}(t)}{|\vec{l_7}|}}
+		-\theta_7(t) &= \arcsin{\frac{l_{7y}(t)}{|\vec{l_7}|}}\\
+		\frac{d^2}{dt^2}-\theta_7(t) &= \frac{d^2}{dt^2}\arcsin{\frac{l_{7y}(t)}{|\vec{l_7}|}}
 	\end{align}
 \end{subequations}
-where $\theta_7$ and $l_{72}$ are treated as functions of time, $t$. This relation can be seen in figure ???. $v_{12}$ and $a_{12}$ refer to the velocity and acceleration of the motor axle in the y dimension, and are equivalent to $-\dot{l}_{72}$ and $-\ddot{l}_{72}$ respectively.\\ ??????? verify
+where $\theta_7$ and $l_{7y}$ are treated as functions of time, $t$. This relation can be seen in Figure \ref{fig:tailGround}. $v_{1y}$ and $a_{1y}$ refer to the velocity and acceleration of the motor axle in the y dimension, and are equivalent to $-\dot{l}_{7y}$ and $-\ddot{l}_{7y}$ respectively. These equations assume that the width of the tail is negligible.\\
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{FBDs/Tail-ground}
+	\caption{Definition of $\vec{l}_7$ and $\theta_7$}
+	\label{fig:tailGround}
+\end{figure}
 
 \subsection*{Stage 2: Flipping}
 
@@ -167,7 +206,7 @@ Once the LIM is vertical, there is no longer a force pushing the bottom wheel fo
 			0\\
 			0
 		\end{bmatrix}\\
-		s_{51} &= \theta_{5} r_w;\\
+		s_{5x} &= \theta_{5} r_w;\\
 		M_{react5} &= - F_{react51} r_w;
 	\end{align}
 \end{subequations}
@@ -185,17 +224,17 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 \begin{subequations}
 	\label{tailonstep}
 	\begin{align}
-		u_1 &= \mathrm{StepWidth}\cdot (N_2-1)- s_{11}\\
-		u_2 &= \mathrm{StepHeight}\cdot N_2 - s_{12}\\
-		\tan{(-\theta_7)} &= \frac{u_2}{u_1}\\
+		u_x &= \mathrm{StepWidth}\cdot (N_2-1)- s_{1x}\\
+		u_y &= \mathrm{StepHeight}\cdot N_2 - s_{1y}\\
+		\tan{(-\theta_7)} &= \frac{u_y}{u_x}\\
 		\label{tailonstepposition}
-		-\ddot{\theta_7} &= \frac{ u_1^2 (a_{11} u_2  - 2 v_{11} v_{12}) 
-			+ u_2^2 (a_{11} u_2 + 2  v_{11}  v_{12}  )  
-			-  a_{12} u_1^3 
-			- u_1  u_2  (- 2  v_{11}^2 + 2 v_{12}^2 + a_{12} u_2  )}
-		{(u_1^2 + u_2^2)^2}\\
+		-\ddot{\theta_7} &= \frac{ u_x^2 (a_{1x} u_y  - 2 v_{1x} v_{1y}) 
+			+ u_y^2 (a_{1x} u_y + 2  v_{1x}  v_{1y}  )  
+			-  a_{1y} u_x^3 
+			- u_x  u_y  (- 2  v_{1x}^2 + 2 v_{1y}^2 + a_{1y} u_x  )}
+		{(u_x^2 + u_y^2)^2}\\
 		\label{tailonstepaccelleration}
-		F_{react71}' &= -\mu_{tail} F_{react72}'\\
+		F_{react7x}' &= -\mu_{tail} F_{react7y}'\\
 		\vec{F}_{react7} &= \begin{bmatrix}
 			-\cos{(\theta_7)} & -\sin{(\theta_7)} & 0\\
 			\sin{(\theta_7)} & -\cos{(\theta_7)} & 0\\
@@ -203,10 +242,10 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 		\end{bmatrix} \vec{F}_{react7}'
 	\end{align}
 \end{subequations}
-where $N_2$ is the number of the step that the tail makes contact with, $u_1$ and $u_2$ are the displacement from the motor axis to the point of contact with the step. Equation \ref{tailonstepaccelleration} is the second derivative of \ref{tailonstepposition}. $\vec{F}_{react7}'$ is the vector of reaction forces in a rotated coordinate system such that $F_{react72}'$ is the normal force between the tail and the step.
+where $N_2$ is the number of the step that the tail makes contact with, $\mathrm{StepWidth}$ and $\mathrm{StepHeight}$ are the width and height of each step in the stairs, $u_x$ and $u_y$ are the displacement from the motor axis to the point of contact between the tail and the step. Equation \ref{tailonstepaccelleration} is the second derivative of \ref{tailonstepposition}. $\vec{F}_{react7}'$ is the vector of reaction forces in a rotated coordinate system such that $F_{react7y}'$ is the normal force between the tail and the step.
 
 \subsection*{Stage 5: Flipping from step}
-Stage 5 is similar to stage 2, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
+Stage 5 is similar to Stage 2, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
 
 \subsection*{Stage 6: Climbing from step}
 Stage 6 is similar to stage 3, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
@@ -274,7 +313,15 @@ When designing a LIM robot, it is essential to size the motor and gearbox to be 
 	\end{align}
 \end{subequations}
 which simplifies the dynamic equations into static equations.\\
-The set of equations is then solved for a range of positions in each stage.
+The set of equations is then solved for a range of positions in each stage. The required torque across the full range of motion is shown in Figure \ref{fig:bigplot}, long with illustrations of the device as it transitions between stages of motion. Figure \ref{fig:bigplot} shows that the highest torque is needed for the Stage 4 motion.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{plots/bigplot}
+	\caption{Relationship between LIM angle and required torque across all stages of motion}
+	\label{fig:bigplot}
+\end{figure}
+
 \subsection*{Stage 1: Lifting}
 During the lifting motion, the angle of the LIMs, $\theta_1$, increases from 0° when the LIM is horizontal to 90° when the LIM is vertical. Figure \ref{torque-angle-relation-stage1} shows that the required torque is highest when the LIM is horizontal, which in this particular device is 1.014 Nm, or 0.507 Nm per motor.
 \begin{figure}[h]
@@ -287,11 +334,11 @@ During the lifting motion, the angle of the LIMs, $\theta_1$, increases from 0°
 During the flipping motion, the device does not need any torque to move. Even without a torque input, it will simply fall onto the next step.
 
 \subsection*{Stage 3: Climbing}
-During the climbing motion, the LIMs lift from the starting position, in this case -42.5° to the horizontal 0°. In addition, the front wheel can roll forward, instead of solving for the torque that results in an overall forward acceleration, we solve for the torque that causes a positive vertical acceleration in the back wheel. Instead of Equations \ref{condition-static}, we have:
+During the climbing motion, the LIMs lift from the starting position, in this case -42.5° to the horizontal 0°. In addition, the front wheel can roll forward. instead of solving for the torque that results in an overall forward acceleration, we solve for the torque that causes a positive vertical acceleration in the back wheel. Instead of Equations \ref{condition-static}, we have:
 \begin{subequations}
 	\label{condition-climbing}
 	\begin{align}
-		a_{62} &= 0\\
+		a_{6y} &= 0\\
 		\vec{v} &= \vec{0}\\
 		\dot{\theta_1} &= 0\\
 	\end{align}
@@ -333,5 +380,5 @@ So far this section has only modelled a device with fixed parameters, such as ge
 
 \section{Required coefficient of friction}
 
-When the device climbs steps, it is possible that the front wheel, component 5, will slip. Applying the coulomb approximation of friction to the model, Slipping will occur when $|F_{51}| > \mu_5 F_{52}$, where $\mu_5$ is the coefficient of friction between the wheel and the step. This coefficient can be increased by using certain materials, such as rubber, for the contact surface of the wheels. However, the coefficient of friction is also dependent on the material of the step itself, which a designer would not have control over. For this reason, designers may want to modify the design to reduce the required coefficient of friction.\\
-Similar to the required torque, the coefficient of friction required to prevent slipping can also be calculated across the motion, and the highest value is in Stage 4. The parameters can be 
+When the device climbs steps, it is possible that the front wheel, component 5, will slip. Applying the coulomb approximation of friction to the model, slipping will occur when $|F_{5x}| > \mu_5 F_{5y}$, where $\mu_5$ is the coefficient of friction between the wheel and the step. This coefficient can be increased by using certain materials, such as rubber, for the contact surface of the wheels. However, the coefficient of friction is also dependent on the material of the step itself, which a designer would not have control over. For this reason, designers may want to modify the design to reduce the required coefficient of friction.\\
+Similar to the required torque, the coefficient of friction required to prevent slipping can also be calculated across the motion, and the highest value is in Stage 4.

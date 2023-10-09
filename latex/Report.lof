@@ -29,22 +29,30 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Algodoo LIM system approaching obstacle horizontally\relax }}{18}{}%
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Algodoo LIM system approaching obstacle vertically\relax }}{19}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Free body diagram of the LIM frame (component 1)\relax }}{22}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Free body diagram of the LIM frame (component 1)\relax }}{23}{}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Free body diagram of the gears (components 2-5)\relax }}{23}{}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Relationship between LIM angle and required torque for Stage 1 motion\relax }}{29}{}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Relationship between LIM angle and required torque for Stage 3 motion\relax }}{30}{}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Relationship between LIM angle and required torque for Stage 4 motion\relax }}{31}{}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Relationship between LIM angle and required torque for Stage 6 motion\relax }}{32}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Stage 1 motion\relax }}{20}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Stage 2 motion\relax }}{21}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Stage 3 motion\relax }}{21}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Stage 4 motion\relax }}{21}{}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Stage 5 motion\relax }}{22}{}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Stage 6 motion\relax }}{22}{}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Labelled components\relax }}{23}{}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Free body diagram of the LIM frame (component 1)\relax }}{23}{}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Free body diagram of the gears (components 2-5)\relax }}{23}{}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Definition of $\vec {l}_7$ and $\theta _7$\relax }}{26}{}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Relationship between LIM angle and required torque across all stages of motion\relax }}{30}{}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Relationship between LIM angle and required torque for Stage 1 motion\relax }}{31}{}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Relationship between LIM angle and required torque for Stage 3 motion\relax }}{32}{}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Relationship between LIM angle and required torque for Stage 4 motion\relax }}{33}{}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Relationship between LIM angle and required torque for Stage 6 motion\relax }}{34}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{43}{}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{45}{}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{45}{}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{47}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Required torques for each stage determined experimentally\relax }}{46}{}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage from different sources.\relax }}{47}{}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Required torques for each stage determined experimentally\relax }}{48}{}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage from different sources.\relax }}{49}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

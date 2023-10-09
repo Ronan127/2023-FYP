@@ -2,17 +2,17 @@
 
 \section{Overview and objectives}
 
-Instead of building a set to equations to simulate a robot from scratch, designers can use existing tools to simplify and streamline the modelling of a robot's movement. One such tool is rigid body simulation, which involves placing objects in a simulated environment and modelling the weights, joints, and contact forces of each object. This project uses rigid body simulation to model the motion of the device, with the objective to inform designers on how the device will move. By using established simulation software, it is easier to model the device using fewer assumptions than in the maths model, leading to a more accurate system.\\
+Instead of building a set of equations to simulate a robot from scratch, designers can use existing tools to simplify and streamline the modelling of a robot's movement. One such tool is rigid body simulation, which involves placing objects in a simulated environment and modelling the weights, joints, and contact forces of each object. This project uses rigid body simulation to model the motion of the device, with the objective to inform designers on how the device will move. By using established simulation software, it is easier to model the device using fewer assumptions than in the maths model, leading to a more accurate system.\\
 \\
 \section{Selection of simulator}
 The simulation programs considered in this project are PyBullet, Gazebo, and Drake. Each of these have their own advantages but Drake was selected due to its focus on accurate multibody and friction simulation.
 \\
 Drake is a multibody physics engine developed and used by MIT. This project uses Drake's python bindings which are available in the package "pydrake".\\
 \section{CAD to simulation pipeline}
-To model a robot, drake requires a simulation description format file (SDFormat). Currently, not many CAD programs provide a method to easily generate these files. This project used Onshape, a cloud based CAD program, for this reason. The python library, onshape-to-robot, is then used to build an SDFormat file. The generated SDFormat file is then modified in order to meet Drake's specific requirements, and to apply realistic coefficients of friction to the wheels and tail.\\
+To model a robot, Drake requires a simulation description format file (SDFormat). Currently, not many CAD programs provide a method to easily generate these files. This project used Onshape, a cloud-based CAD program, for this reason. The python library, onshape-to-robot, is then used to build an SDFormat file. The generated SDFormat file is then modified in order to meet Drake's specific requirements, and to apply realistic coefficients of friction to the wheels and tail.\\
 
 \section{Using the simulator}
-Once the robot has been loaded into the multibody simulation, it can be driven by setting a torque on the motor joints. Simply setting the torque on the joint to a constant value would cause the device to accelerate continuously. To accurately model The toque output of a geared DC motor, I calculate the torque using the following equation\\
+Once the robot has been loaded into the multibody simulation, it can be driven by setting a torque on the motor joints. Simply setting the torque on the joint to a constant value would cause the device to accelerate continuously. To accurately model the toque output of a geared DC motor, I calculate the torque using the following equation\\
 
 $Torque = StallTorque*(Voltage/12.0-speed/NLSpeed)$\\
 
@@ -20,7 +20,5 @@ This essentially acts as a high-gain proportional speed controller. The motor vo
 The device can now be tested in simulation to determine whether it can climb stairs, and to gain insight into which components make contact with the stairs and when.\\
 \\
 \section{Validation of simulation}
-To validate the simulation, the torque needed for he device to climb at each stage is recorded to be compared with the real world data. In this simulated experiment, the device is placed in front of the step and a motor voltage is applied to it that corresponds to a specific stalling torque. If the device is unable to climb then the experiment is repeated with a higher voltage until the device is able to climb, at which point the torque is read from the simulation to be compared with the measured values from the real device.\\
+To validate the simulation, the torque needed for the device to climb at each stage is recorded to be compared with the real world data. In this simulated experiment, the device is placed in front of the step and a motor voltage is applied to it that corresponds to a specific stalling torque. If the device is unable to climb then the experiment is repeated with a higher voltage until the device is able to climb, at which point the torque is read from the simulation to be compared with the measured values from the real device.\\
 
-
-Notes on friction\\
