@@ -4,46 +4,47 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces A tracked USAR robot, with paddles for obstacle climbing \citep {stateof}\relax }}{1}{}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces ANYmal, a legged USAR robot \citep {stateof}\relax }}{1}{}%
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Systems layout of Wilson's LIM device \citep {Wilson-2013}\relax }}{2}{}%
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Wilson's Robot \citep {Wilson-2013}\relax }}{3}{}%
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Wilson's Algodoo simulation of stair climbing \citep {Wilson-2013}\relax }}{3}{}%
-\contentsline {figure}{\numberline {1.6}{\ignorespaces Wilson's half assembly climbing a stair \citep {Wilson-2013}\relax }}{4}{}%
-\contentsline {figure}{\numberline {1.7}{\ignorespaces Haskel's Theseus \citep {Haskel-2017}\relax }}{4}{}%
-\contentsline {figure}{\numberline {1.8}{\ignorespaces Buchanan's Ascender \citep {Buchanan-2018}\relax }}{5}{}%
-\contentsline {figure}{\numberline {1.9}{\ignorespaces Buchanan's Ascender climbing a step \citep {Buchanan-2018}\relax }}{6}{}%
-\contentsline {figure}{\numberline {1.10}{\ignorespaces Powrie's Di-Wheel Robot \citep {Powrie-2019}\relax }}{7}{}%
-\contentsline {figure}{\numberline {1.11}{\ignorespaces The Di-Wheel robot falling due to unsynchronised LIMs \citep {Powrie-2019}\relax }}{7}{}%
-\contentsline {figure}{\numberline {1.12}{\ignorespaces Powrie's Di-Wheel robot climbing a step \citep {Powrie-2019}\relax }}{8}{}%
-\contentsline {figure}{\numberline {1.13}{\ignorespaces Two different climbing motions using different gear ratios \citep {Powrie-2019}\relax }}{9}{}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Systems layout of Wilson's LIM device \citep {Wilson-2013}\relax }}{1}{}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Powrie's "Di-Wheel" robot \citep {Powrie-2019}\relax }}{2}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Initial Algodoo LIM system\relax }}{12}{}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces LIM climbing with wheel contact\relax }}{13}{}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces LIM climbing with LIM frame contact, note how the contact point slips between 1 and 2\relax }}{13}{}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces LIM climbing with robot body contact\relax }}{14}{}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Algodoo LIM system with grousers on frame\relax }}{14}{}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Algodoo LIM system approaching obstacle horizontally\relax }}{15}{}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Algodoo LIM system approaching obstacle vertically\relax }}{16}{}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A tracked USAR robot, with paddles for obstacle climbing \citep {stateof}\relax }}{4}{}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces ANYmal, a legged USAR robot \citep {stateof}\relax }}{4}{}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Systems layout of Wilson's LIM device \citep {Wilson-2013}\relax }}{5}{}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Wilson's Robot \citep {Wilson-2013}\relax }}{6}{}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Wilson's Algodoo simulation of stair climbing \citep {Wilson-2013}\relax }}{6}{}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Wilson's half assembly climbing a stair \citep {Wilson-2013}\relax }}{7}{}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Haskel's Theseus \citep {Haskel-2017}\relax }}{7}{}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Buchanan's Ascender \citep {Buchanan-2018}\relax }}{8}{}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Buchanan's Ascender climbing a step \citep {Buchanan-2018}\relax }}{9}{}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Powrie's Di-Wheel Robot \citep {Powrie-2019}\relax }}{10}{}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces The Di-Wheel robot falling due to unsynchronised LIMs \citep {Powrie-2019}\relax }}{10}{}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Powrie's Di-Wheel robot climbing a step \citep {Powrie-2019}\relax }}{11}{}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Two different climbing motions using different gear ratios \citep {Powrie-2019}\relax }}{12}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Free body diagram of the LIM frame (component 1)\relax }}{19}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Free body diagram of the LIM frame (component 1)\relax }}{20}{}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Free body diagram of the gears (components 2-5)\relax }}{20}{}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Relationship between LIM angle and required torque for Stage 1 motion\relax }}{26}{}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Relationship between LIM angle and required torque for Stage 3 motion\relax }}{27}{}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Relationship between LIM angle and required torque for Stage 4 motion\relax }}{28}{}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Relationship between LIM angle and required torque for Stage 6 motion\relax }}{29}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Initial Algodoo LIM system\relax }}{15}{}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces LIM climbing with wheel contact\relax }}{16}{}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces LIM climbing with LIM frame contact, note how the contact point slips between 1 and 2\relax }}{16}{}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces LIM climbing with robot body contact\relax }}{17}{}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Algodoo LIM system with grousers on frame\relax }}{17}{}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Algodoo LIM system approaching obstacle horizontally\relax }}{18}{}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Algodoo LIM system approaching obstacle vertically\relax }}{19}{}%
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{40}{}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{42}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Free body diagram of the LIM frame (component 1)\relax }}{22}{}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Free body diagram of the LIM frame (component 1)\relax }}{23}{}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Free body diagram of the gears (components 2-5)\relax }}{23}{}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Relationship between LIM angle and required torque for Stage 1 motion\relax }}{29}{}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Relationship between LIM angle and required torque for Stage 3 motion\relax }}{30}{}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Relationship between LIM angle and required torque for Stage 4 motion\relax }}{31}{}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Relationship between LIM angle and required torque for Stage 6 motion\relax }}{32}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{43}{}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{45}{}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Required torques for each stage determined experimentally\relax }}{46}{}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage from different sources.\relax }}{47}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
