@@ -189,7 +189,7 @@ tailKinematics = subs(tailKinematics, x2, -a21);
 condition_tailOnStep = [
     tan(-t73) == u2/u1;
     ratio7Contact == u2/l72;
-    tailKinematics; %d^2/dt^2(tan^(-1)(u2/u1))
+    tailKinematics;
     u1 == step_width*(N2-1) - s11;
     u2 == step_height*N2 - s12;
     F_reactPrime71 == - F_reactPrime72 * C_friction7
@@ -232,7 +232,7 @@ assignment_gears = [separation35 == 0.041; separation23 == 0.07; rw == 0.075; l7
     N_idler == 33; N_sun == 50; N_planet == 16; C_friction7 == 0.0;];
 assignment_steps = [step_start == [rw; 0; 0]; step_height == 0.15; step_width == 0.2;];
 
-condition_wheel1locked = [a5 == 0; ta5 == 0; v5 == 0; tv5 == 0];
+condition_wheel1locked = [a5 == 0; ta5 == 0; v5 == 0; tv5 == 0; C_friction5 == F_react51/F_react52;];
 condition_angle_quadrants = [
     -pi/2 <= t13; t13 <= pi/2;
     pi/2 <= t73; t73 <= pi;];

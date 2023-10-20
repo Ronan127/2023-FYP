@@ -34,92 +34,28 @@ while isempty(equations) == 0
     end
     if timeout == 3
         if (length(symvar(equations)) <= length(equations))&&(useSolve == 1)
-            sol2 = solveWithInequalities(equations, inequalities);
-            f=fieldnames(sol2);
-            if size(sol2.(f{1})) == 1
-                for i = 1:length(f)
-                    solution.(f{i}) = sol2.(f{i});
-                end
-                equations = [];
-                timeout = 0;
-            end
+            [solution, equations, inequalities, timeout] = solveAll(solution, equations, inequalities, timeout)
         end
     end
-
-                            % tempequation = sym(zeros(length(tempeqs),1));
-                            % tempvareqs = getEquationsContainingVariables(tempeqs, combinationvars); %list equations that contain each variable
-                            % for k = 1:length(tempeqs)
-                            %     % tempvareqs = getEquationsContainingVariables(tempeqs, combinationvars);
-                            %     [~, idx] = min(cellfun('size',tempvareqs,2)); %choose variable with least equations describing it
-                            %     for l = 1:length(tempvareqs{idx(1)}(1)) %cycle through each equation describing the chosen variable
-                            %         try
-                            %             tempequation(k) = isolate(tempeqs(tempvareqs{idx(1)}(l)),combinationvars(idx(1))); %isolate the chosen variable 
-                            %             break
-                            %         catch % if isolation fails, try the next equation
-                            %             test = 1;
-                            %         end
-                            %     end
-                            %     equationIndex = tempvareqs{idx(1)}(l); %index of the removed equation
-                            %     tempeqs(equationIndex) = []; %remove eliminated equation
-                            %     combinationvars(idx(1)) = []; %remove eliminated variable
-                            % 
-                            % 
-                            %     %update tempvareqs
-                            %     newvareqs =  tempvareqs{idx(1)}(1:end ~= l);
-                            %     for m = 1:length(tempvareqs)
-                            %         for n = 1:length(tempvareqs{m})
-                            %             if tempvareqs{m}(n) == equationIndex
-                            %                 %remove references to removed equations
-                            %                 tempvareqs{m}(n) = [];
-                            %                 %add refrences to substituted equations
-                            %                 tempvareqs{m} = unique([tempvareqs{m}, newvareqs]);
-                            %                 break
-                            %             end
-                            %         end
-                            %         for n = 1:length(tempvareqs{m})
-                            %             %offset indexes of equations
-                            %             if tempvareqs{m}(n) > equationIndex
-                            %                 tempvareqs{m}(n) = tempvareqs{m}(n)-1;
-                            %             end
-                            %         end
-                            %     end
-                            %     %remove eleminated variable from list
-                            %     tempvareqs(idx(1)) = [];
-                            % end
-        %                     equations(combination) = tempequation;
-        %                     timeout = 0;
-        %                     break
-        %                 elseif length(combination) >= length(varlist)
-        %                     break
-        %                 end
-        %             end
-        %         end
-        %     end
-        % end
- %       for i = 1:length(varlist)
-  %          sizes(i) = length(varlist{i});
-  %      end
-  %      minimum = min(sizes);
-  %      for i = 1:length(varlist)
-  %          if sizes(i) == minimum
-  %              sets
-  %          end
-  %      end
-  %      for i in 
-  %      while (1)
-  %          for i = 1:length(varlist)
-  %              newvar = sets
-   %             sets{i,1} 
-    %        end
-%
-%        end
-    if timeout == 5
+    if timeout >= 5
         break
     end
     timeout = timeout +1;
 end
 solution=orderfields(solution);
-remainingEquations = [equations; inequalities;
+remainingEquations = [equations; inequalities];
+end
+
+function [solution, equations, inequalities, timeout] = solveAll(solution, equations, inequalities, timeout)
+    sol2 = solveWithInequalities(equations, inequalities);
+    f=fieldnames(sol2);
+    if size(sol2.(f{1})) == 1
+        for i = 1:length(f)
+            solution.(f{i}) = sol2.(f{i});
+        end
+    end
+    equations = [];
+    timeout = 5;
 end
 
 function [solution, equations, inequalities, timeout] = solveEasy(solution, equations, inequalities, timeout)

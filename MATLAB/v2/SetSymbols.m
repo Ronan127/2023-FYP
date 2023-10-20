@@ -14,7 +14,7 @@ syms l1 l2 l3 l4 l5 l6 l7 lcontact [3,1]; %distance from centre to element
 syms r [1 7]; %radius of each element
 syms gfa [1 7]; %absolute gear force on each eement
 
-
+syms F_react5g F_react5w [3,1]
 syms T_z l3_ab l5_ab Rz Rvector g2 rw l7_ab C_friction7 C_friction5 separation23 separation35 N_sun N_idler N_planet cost13 sint13 cost73 sint73 L_body_centre;
 syms step_start [3,1];
 syms step_height step_width ratio7Weight ratio7Contact;
