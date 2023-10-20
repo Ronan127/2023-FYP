@@ -47,16 +47,16 @@ STEP_HEIGHT = 0.10
 STEP_PITCH = 0.20
 SLIDER_RANGE = 12
 SLIDER_SETTING = "Stall Torque"
-SLIDER_DEFAULT = 1
+SLIDER_DEFAULT = 0.5
 STALL_TORQUE = 6
 NO_LOAD_SPEED = 6
 SPEED_BETA_FILTER = 0
 KP = 10
 KD = 0
-TIME_STEP = 0.0002
-START_STEP = 3
-START_OFFSET = 0
-SDF_ADDRESS = "/my-robot/robot.sdf"
+TIME_STEP = 0.0001
+START_STEP = 3   
+START_OFFSET = 0.08
+SDF_ADDRESS = "/my-robot-addedWeight/robot.sdf"
 SIM_DURATION = 15
 RECORDING = 0
 
@@ -266,10 +266,11 @@ class DC_motor(LeafSystem):
         self.StallTorque = STALL_TORQUE #Nm
         self.NLSpeed = NO_LOAD_SPEED #rad/s
         self.Torque = [0]*num_motors
-        with open('torque_log.csv', 'w', newline='') as file:
-            # Step 4: Using csv.writer to write the list to the CSV file
-            writer = csv.writer(file)
-            writer.writerow(["Time", "Torque"]) # Use writerow for single list
+        if (RECORDING):
+          with open('torque_log.csv', 'w', newline='') as file:
+              # Step 4: Using csv.writer to write the list to the CSV file
+              writer = csv.writer(file)
+              writer.writerow(["Time", "Torque"]) # Use writerow for single list
     
     def clamp(self, n, minn, maxn):
       return max(min(maxn, n), minn)
@@ -332,6 +333,7 @@ class ControlSystem(LeafSystem):
 
     
     def CalcVoltage(self, context, output):
+        global lim_a_q, lim_b_q
         Voltage = self._a_port.Eval(context)
         ModelState = self._b_port.Eval(context)
         States={}
@@ -474,6 +476,7 @@ def initialize_simulation(diagram):
     return simulator
 
 def run_simulation(sim_time_step):
+    # global lim_a_q, lim_b_q
     diagram, visualizer = create_scene(sim_time_step)
     simulator = initialize_simulation(diagram)
     meshcat.AddButton('Stop Simulation')
@@ -485,5 +488,209 @@ def run_simulation(sim_time_step):
             break
     visualizer.PublishRecording()
 
+def simulate_for_position(torque):
+    global SLIDER_DEFAULT
+    SLIDER_DEFAULT = torque
+    run_simulation(sim_time_step=TIME_STEP)
+    average_angle = (lim_a_q + lim_b_q)/2
+    return(average_angle)
+
+class recording():
+    def __init__(self) -> None:
+        self.torque = []
+        self.angle = []
+        self.assessment = []
+
+def assessAngle(angle, partial_angle, full_angle):
+   if angle > full_angle:
+      return 1
+   elif angle > partial_angle:
+      return 0.5
+   else: 
+      return 0
+
+def recordValues(torque, angle, assessment, record):
+  record.torque.append(torque)
+  record.angle.append(angle)
+  record.assessment.append(assessment)
+
+def find_threshold_torques(start_torque, partial_angle, full_angle):
+    partial_torque = None
+    full_torque = None
+    torque = start_torque
+    record = recording()
+    partialbracket = None
+    fullbracket = None
+    #find bracket containing partial torque
+    while (partialbracket == None) or ((0.5 not in record.assessment) and (1 not in record.assessment)):
+        angle = simulate_for_position(torque)
+        assessment = assessAngle(angle, partial_angle, full_angle)
+        recordValues(torque, angle, assessment, record)
+        if assessment == 1:
+            torque -= 0.1
+            fullbracket = torque
+        elif assessment == 0.5:
+            torque -= 0.1
+        else:
+            partialbracket = torque
+            torque += 0.1
+
+    #find partial torque
+    torque = partialbracket +0.05
+    while (partial_torque == None):
+        angle = simulate_for_position(torque)
+        assessment = assessAngle(angle, partial_angle, full_angle)
+        recordValues(torque, angle, assessment, record)
+        if assessment < 0.5:
+            torque = partialbracket + 0.07
+            angle = simulate_for_position(torque)
+            assessment = assessAngle(angle, partial_angle, full_angle)
+            recordValues(torque, angle, assessment, record)
+            if assessment < 0.5:
+              torque = partialbracket +0.09
+              angle = simulate_for_position(torque)
+              assessment = assessAngle(angle, partial_angle, full_angle)
+              recordValues(torque, angle, assessment, record)
+              if assessment < 0.5:
+                partial_torque = partialbracket + 0.1
+              else:
+                torque = partialbracket + 0.08
+                angle = simulate_for_position(torque)
+                assessment = assessAngle(angle, partial_angle, full_angle)
+                recordValues(torque, angle, assessment, record)
+                if assessment < 0.5:
+                  partial_torque = partialbracket + 0.09
+                else:
+                  partial_torque = torque
+            else:
+              torque = partialbracket +0.06
+              angle = simulate_for_position(torque)
+              assessment = assessAngle(angle, partial_angle, full_angle)
+              recordValues(torque, angle, assessment, record)
+              if assessment < 0.5:
+                partial_torque = partialbracket + 0.07
+              else: 
+                record.assessment.append(0.5)
+                partial_torque = torque
+        else:
+            torque = partialbracket +0.02
+            angle = simulate_for_position(torque)
+            assessment = assessAngle(angle, partial_angle, full_angle)
+            recordValues(torque, angle, assessment, record)
+            if assessment < 0.5:
+              torque = partialbracket +0.04
+              angle = simulate_for_position(torque)
+              assessment = assessAngle(angle, partial_angle, full_angle)
+              recordValues(torque, angle, assessment, record)
+              if assessment < 0.5:
+                partial_torque = partialbracket + 0.05
+              else:
+                torque = partialbracket + 0.03
+                angle = simulate_for_position(torque)
+                assessment = assessAngle(angle, partial_angle, full_angle)
+                recordValues(torque, angle, assessment, record)
+                if assessment < 0.5:
+                  partial_torque = partialbracket + 0.04
+                else:
+                  partial_torque = torque
+            else:
+              torque = partialbracket + 0.01
+              angle = simulate_for_position(torque)
+              assessment = assessAngle(angle, partial_angle, full_angle)
+              recordValues(torque, angle, assessment, record)
+              if assessment < 0.5:
+                partial_torque = partialbracket + 0.02
+              else: 
+                partial_torque = torque
+    #find bracket containing full torque
+    torque = max(record.torque)+0.1
+    while (fullbracket == None):
+        angle = simulate_for_position(torque)
+        assessment = assessAngle(angle, partial_angle, full_angle)
+        recordValues(torque, angle, assessment, record)
+        if angle > full_angle:
+            fullbracket = torque
+        else:
+            torque += 0.1
+
+    #find full torque
+    torque = fullbracket+0.05
+    while (full_torque == None):
+        angle = simulate_for_position(torque)
+        assessment = assessAngle(angle, partial_angle, full_angle)
+        recordValues(torque, angle, assessment, record)
+        if assessment < 1:
+            torque = fullbracket + 0.07
+            angle = simulate_for_position(torque)
+            assessment = assessAngle(angle, partial_angle, full_angle)
+            recordValues(torque, angle, assessment, record)
+            if assessment < 1:
+              torque = fullbracket +0.09
+              angle = simulate_for_position(torque)
+              assessment = assessAngle(angle, partial_angle, full_angle)
+              recordValues(torque, angle, assessment, record)
+              if assessment < 1:
+                full_torque = fullbracket + 0.1
+              else:
+                torque = fullbracket + 0.08
+                angle = simulate_for_position(torque)
+                assessment = assessAngle(angle, partial_angle, full_angle)
+                recordValues(torque, angle, assessment, record)
+                if assessment < 1:
+                  full_torque = fullbracket + 0.09
+                else:
+                  full_torque = torque
+            else:
+              torque = fullbracket +0.06
+              angle = simulate_for_position(torque)
+              assessment = assessAngle(angle, partial_angle, full_angle)
+              recordValues(torque, angle, assessment, record)
+              if assessment < 1:
+                full_torque = fullbracket + 0.07
+              else: 
+                record.assessment.append(0.5)
+                full_torque = torque
+        else:
+            torque = fullbracket +0.02
+            angle = simulate_for_position(torque)
+            assessment = assessAngle(angle, partial_angle, full_angle)
+            recordValues(torque, angle, assessment, record)
+            if assessment < 1:
+              torque = fullbracket +0.04
+              angle = simulate_for_position(torque)
+              assessment = assessAngle(angle, partial_angle, full_angle)
+              recordValues(torque, angle, assessment, record)
+              if assessment < 1:
+                full_torque = fullbracket + 0.05
+              else:
+                torque = fullbracket + 0.03
+                angle = simulate_for_position(torque)
+                assessment = assessAngle(angle, partial_angle, full_angle)
+                recordValues(torque, angle, assessment, record)
+                if assessment < 1:
+                  full_torque = fullbracket + 0.04
+                else:
+                  full_torque = torque
+            else:
+              torque = fullbracket + 0.01
+              angle = simulate_for_position(torque)
+              assessment = assessAngle(angle, partial_angle, full_angle)
+              recordValues(torque, angle, assessment, record)
+              if assessment < 1:
+                full_torque = fullbracket + 0.02
+              else: 
+                full_torque = torque
+    print("Partial torque: " + str(partial_torque) + "Full torque: " + str(full_torque))
+
+
+    
+
+
+
+
+
+
 # Run the simulation with a small time step. Try gradually increasing it!
-run_simulation(sim_time_step=TIME_STEP)
+# run_simulation(sim_time_step=TIME_STEP)
+find_threshold_torques(0.5, 0.04, 0.5)
+
