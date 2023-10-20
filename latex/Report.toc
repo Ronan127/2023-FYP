@@ -40,6 +40,7 @@
 \contentsline {section}{\numberline {6.2}Body design}{37}{}%
 \contentsline {section}{\numberline {6.3}Motor selection}{38}{}%
 \contentsline {section}{\numberline {6.4}Control circuits and code}{38}{}%
+\contentsline {section}{\numberline {6.5}Construction and testing}{39}{}%
 \contentsline {chapter}{\numberline {7}Drake Simulation}{40}{}%
 \contentsline {section}{\numberline {7.1}Overview and objectives}{40}{}%
 \contentsline {section}{\numberline {7.2}Selection of simulator}{40}{}%

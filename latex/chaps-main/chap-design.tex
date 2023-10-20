@@ -32,7 +32,13 @@ To solve for the stalling torque, $\omega$ is set to $0$. This gives the relatio
 %??? Move to literature review?
 In order to vary the torque of the device, the terminal voltage must be varied. For this purpose, an LM2596S buck converter is used to vary the supply voltage.
 
+\section{Construction and testing}
 
+To build the device, the parts were laser cut from Medium Density Fibreboard (MDF) and Acrylic. The outer surface of wheels is coated with Patex, a rubbery adhesive which is left to dry, increasing the grip of the wheels. The assembly is relatively straightforward, however it was found that the laser cut gears did not mesh well, causing them to get stuck. To address this, the teeth of the gears were filed down to allow until they could mesh easily. This has the disadvantage of increasing kickback on the gears. However, this had little impact on performance as for all stages of motion, the gears will be engaged in one direction only.\\
+The device is shown in Figure ???.
+\\
+Initial tests show that the device is capable of climbing up two steps sequentially, which is more than any previous project achieved. This relative success can be attributed to the shorter forward protrusion of the body and possibly a higher grip on the surface of the wheels. However, the device struggled to climb a third step sequentially, this is because climbing the third step involves Stage 4 motion, which requires significantly higher torque than the previous stages. To address this, the body of the device was rebuilt using a JGY-370 gearbox motor which is geared for a higher torque. \\
+After this change, the device was able to consistently climb many sequential steps, and the lower speed due to the higher gear ratio made the device easier to control during the climbing motion. Figure ??? shows the device climbing a flight of stairs.
 
 %When the motor is turning it also acts as a generator, and produces a voltage known as back emf which is proportional to the speed of the motor. 
 %\begin{equation}
