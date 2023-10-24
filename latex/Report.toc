@@ -3,6 +3,7 @@
 \contentsline {chapter}{Table of contents}{iv}{}%
 \contentsline {chapter}{List of figures}{vi}{}%
 \contentsline {chapter}{List of tables}{vii}{}%
+\contentsline {chapter}{List of symbols}{viii}{}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{}%
 \contentsline {section}{\numberline {1.1}Background}{1}{}%
 \contentsline {section}{\numberline {1.2}Objectives}{2}{}%

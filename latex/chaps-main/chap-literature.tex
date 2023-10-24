@@ -99,13 +99,13 @@ Buchanan's testing showed that the Ascender was able to climb a single step of 1
 \newpage
 \subsection{Powrie's Di-Wheel robot}
 
-Powrie developed a robot using LIMs, however in his report he referred to LIMs as Di-Wheels. His reason for renaming them is that the behaviour of the LIMs does not only respond to external loads on the wheels, it also depends on the torque applied by the motors. He chose the name "Di-Wheel" in reference to a similar design by the name of "Tri-Wheel", which used three minor wheels instead of two, developed by \cite{Smith-2015}. Powrie's Di-Wheel robot is larger and more robust than Buchanan's Ascender, while being lighter than Wilson's LIMed robot. It is shown in Figure \ref{Powrie robot}.\\
+Powrie developed a robot using LIMs, however in his report he referred to LIMs as Di-Wheels. His reason for renaming them is that the behaviour of the LIMs does not only respond to external loads on the wheels, it also depends on the torque applied by the motors. He chose the name "Di-Wheel" in reference to a similar design by the name of "Tri-Wheel", which used three minor wheels instead of two, developed by \cite{Smith-2015}. Powrie's Di-Wheel robot is larger and more robust than Buchanan's Ascender, while being lighter than Wilson's LIMed robot. It is shown in Figure \ref{fig:Powrie robot}.\\
 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{Powrie-device}
 	\caption{Powrie's Di-Wheel Robot \citep{Powrie-2019}}
-	\label{Powrie robot}
+	\label{fig:Powrie robot}
 \end{figure}
 
 \begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the right
@@ -135,20 +135,20 @@ The Di-Wheel robot was successful in climbing a single step of 220 mm, shown in 
 %Add drawing!!
 The gear ratios of the LIMs will affect its motion significantly. The rotational speed of the central gear will be translated into both the speed of the LIM frame and the speed of the wheels:
 \begin{align*}
-	\dot{\theta}_{central} &= \dot{\theta}_{frame} + \frac{N_A}{N_C}\dot{\theta}_{wheel} \tag{1}\\
+	\dot{\theta}_{\mathrm{Sun}} &= \dot{\theta}_{\mathrm{Frame}} + \frac{N_\mathrm{Planet}}{N_\mathrm{Sun}}\dot{\theta}_{\mathrm{Planet}} \tag{1}\\
 \end{align*}
-where $\dot{\theta}_{central}$ is the angular speed of the central gear, $\dot{\theta}_{frame}$ is the angular speed of the LIM frame, $\dot{\theta}_{wheel}$ is the angular speed of the outer wheels relative to the frame, $N_A$ is the number of teeth on the outer gears, and $N_C$ is the number of teeth on the central gear.\\
+where $\dot{\theta}_{\mathrm{Sun}}$ is the angular speed of the central gear, $\dot{\theta}_{\mathrm{Frame}}$ is the angular speed of the LIM frame, $\dot{\theta}_{\mathrm{Planet}}$ is the angular speed of the outer gears and wheels relative to the frame, $N_{\mathrm{Planet}}$ is the number of teeth on the outer gears, and $N_\mathrm{Sun}$ is the number of teeth on the central gear.\\
 
-When both the wheels and the LIM frame aren't constrained, the system is under-actuated and its motion is non-trivial. However, when the LIM frame isn't flipping (i.e. normal driving on a flat plane), $\dot{\theta}_{frame} = 0$, therefore:\\
+When both the wheels and the LIM frame aren't constrained, the system is under-actuated and its motion is non-trivial. In the case that the LIM frame isn't flipping (i.e. normal driving on a flat plane), $\dot{\theta}_{\mathrm{Frame}} = 0$, therefore:\\
  \begin{align*}
- 	\dot{\theta}_{wheel} &= \frac{N_C}{N_A}\dot{\theta}_{central} \tag{2}\\
+ 	\dot{\theta}_{\mathrm{Planet}} &= \frac{N_\mathrm{Sun}}{N_\mathrm{Planet}}\dot{\theta}_{\mathrm{Sun}} \tag{2}\\
  \end{align*}
-When the wheels have encountered an obstacle, such as a step, friction will prevent them from turning, $\dot{\theta}_{wheel} + \dot{\theta}_{frame} = 0$. In this case:
+When the wheels have encountered an obstacle, such as a step, friction will prevent them from turning, $\dot{\theta}_{\mathrm{Planet}} + \dot{\theta}_{\mathrm{Frame}} = 0$. In this case:
 \begin{align*}
-	\dot{\theta}_{frame} &= \frac{\dot{\theta}_{central}}{(1-\frac{N_A}{N_C})} \tag{3}\\
+	\dot{\theta}_{\mathrm{Frame}} &= \frac{\dot{\theta}_{\mathrm{Sun}}}{(1-\frac{N_\mathrm{Planet}}{N_\mathrm{Sun}})} \tag{3}\\
 \end{align*}
 
-This means that during flipping motion, if $\frac{NA}{NC} > 1$, then the LIM frame will flip in the opposite direction to the rotation of the central gear, so the front wheel will roll up the side of the obstacle \citep{Wilson-2013}. This is ineffective for climbing steps as the LIM will never mount the step, but rather continue rotating backwards until it returns to the starting position \citep{Haskel-2017}.\\
+This means that during flipping motion, if $\frac{N_\mathrm{Planet}}{N_\mathrm{Sun}} > 1$, then the LIM frame will flip in the opposite direction to the rotation of the central gear, so the front wheel will roll up the side of the obstacle \citep{Wilson-2013}. This is ineffective for climbing steps as the LIM will never mount the step, but rather continue rotating backwards until it returns to the starting position \citep{Haskel-2017}.\\
 
 \begin{figure}[h]
 	\centering
@@ -157,13 +157,13 @@ This means that during flipping motion, if $\frac{NA}{NC} > 1$, then the LIM fra
 	\label{Powrie gears}
 \end{figure}
 
-If $\frac{NA}{NC} < 1$, then the LIM frame will rotate forward, the rear wheel will flip over and mount the obstacle. This allows the LIM to climb stairs as intended.\\
-The two cases are shown in Figure \ref{Powrie gears}, with the left showing the case when $\frac{NA}{NC} < 1$, and the right showing the case when $\frac{NA}{NC} > 1$.
+If $\frac{N_\mathrm{Planet}}{N_\mathrm{Sun}} < 1$, then the LIM frame will rotate forward, the rear wheel will flip over and mount the obstacle. This allows the LIM to climb stairs as intended.\\
+The two cases are shown in Figure \ref{Powrie gears}, with the left showing the case when $\frac{N_\mathrm{Planet}}{N_\mathrm{Sun}} < 1$, and the right showing the case when $\frac{N_\mathrm{Planet}}{N_\mathrm{Sun}} > 1$.
 
 
 
 \subsection{Control requirements} %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-LIMs are considered "Load intuitive" because of their ability to adapt to terrain mechanically. Open-loop control is ideal in this case, as an operator need only turn the motor on and the LIM will drive forward if it can, or attempt to climb an obstacle if it is obstructed \citep{Wilson-2013}. However, Powrie found that his robot was not suited to open loop control. When full voltage is provided to the motor, the LIMS would flip even if when is on a flat plane. Powrie's calculations suggest that whether the LIM flips or not is largely dependent on the torque applied to it, a low torque results rolling, and a high torque results in flipping. His report suggests that LIMs only responds to terrain intuitively for a "medium torque" \citep{Powrie-2019}. In this case a medium torque would be defined as a torque that results in rolling when the LIM is unobstructed, and flipping only when it is obstructed. This indicates that it may be necessary to have a control system that manages the torque provided to the LIMs to ensure that they do not flip on flat terrain if the motors are sufficiently powerful.\\
+LIMs are considered "Load intuitive" because of their ability to adapt to terrain mechanically. Open-loop control is ideal in this case, as an operator need only turn the motor on and the LIM will drive forward if it can, or attempt to climb an obstacle if it is obstructed \citep{Wilson-2013}. However, Powrie found that his robot was not suited to open loop control. When full voltage is provided to the motor, the LIMS would flip even if when is on a flat plane. Powrie's calculations suggest that whether the LIM flips or not is largely dependent on the torque applied to it. A low torque results rolling, and a high torque results in flipping. His report suggests that LIMs only responds to terrain intuitively for a "medium torque" \citep{Powrie-2019}. In this case a medium torque would be defined as a torque that results in rolling when the LIM is unobstructed, and flipping only when it is obstructed. This indicates that it may be necessary to have a control system that manages the torque provided to the LIMs to ensure that they do not flip on flat terrain if the motors are sufficiently powerful.\\
 
 Powrie also found that when climbing a step, one LIM could flip first, putting weight on the other and preventing it from flipping, as seen previously in Figure \ref{Powrie falling} \citep{Powrie-2019}. This suggest that a control system is needed to roughly synchronise the LIMs, if one is ahead of the other, more torque should be provided to the trailing LIM to correct its motion.

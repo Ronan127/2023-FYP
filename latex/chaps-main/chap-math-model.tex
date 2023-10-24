@@ -39,7 +39,7 @@ Once the LIMs are vertical, the bottom wheels start to roll backwards as the top
 \end{wrapfigure}
 The front wheel rests on the step while the back wheel is on the ground. The tail pushes against the ground and the back wheel lifts while the front wheel simultaneously rolls forward on the step. This motion ends when the front wheel reaches the next step.\\
 
-Stages 1 to 3 will repeat until the tail leaves the ground. After this point the tail will push against the edge of the previous steps. 
+Stages 1 to 3 will repeat until the tail leaves the ground. After this point the tail will push against the edge of the previous steps. The number of steps the device must climb before the tail leaves the ground will depend on the length of the tail, the size of the other components, and the size of the steps. 
 
 \subsection*{Stage 4: Lifting from step}
 \begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the left
@@ -80,7 +80,7 @@ Consider the device climbing a step as visualised in Figure \ref{Component-names
 	\caption{Labelled components}
 	\label{Component-names}
 \end{figure}
-Powering the motor causes a torque between the body of the device and the SUN gear. The components of the device that make contact with the environment, namely the front wheel and the tail, will be subject to external reaction forces, which are dependent on the stage of motion. These forces and torques will propagate internally through the gears, causing a forward motion. The free body diagrams for each component are shown in Figures \ref{FBD-1} and \ref{FBD-2}.\\
+Powering the motor causes a torque between the body of the device and the sun gear. The components of the device that make contact with the environment, namely the front wheel and the tail, will be subject to external reaction forces, which are dependent on the stage of motion. These forces and torques will propagate internally through the gears, causing a forward motion. The free body diagrams for each component are shown in Figures \ref{FBD-1} and \ref{FBD-2}.\\
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=1\textwidth]{FBDs/FBD-1.png}
@@ -97,7 +97,7 @@ Powering the motor causes a torque between the body of the device and the SUN ge
 Each component exerts a force on connected components, which exert an equal and opposite force back.
 For example, the sum of forces equations for the sun gear are,\\
 \begin{equation}
-	m_2\vec{a_2} == \vec{w_2}-\vec{f_2}+\vec{\mathrm{gf}_3}+\vec{\mathrm{gf}_4}
+	m_2\vec{a_2} = \vec{w_2}-\vec{f_2}+\vec{\mathrm{gf}_3}+\vec{\mathrm{gf}_4}
 \end{equation}
 Where $m_n$ refers to the mass of component $n$, $\vec{a_n}$ is the acceleration vector of component $n$, $\vec{w_n}$ is the weight vector of component $n$, $\vec{f_n}$ is the force vector that component $n$ applies to component 1,  and $\vec{\mathrm{gf}_3}$ and $\vec{\mathrm{gf}_4}$ are the force vectors that components 3 and 4 respectively apply to component 2 through the gears.
 This can be expanded to,
@@ -130,7 +130,7 @@ where vector positions 1, 2, and 3 denote the x, y, and z dimensions respectivel
 \end{equation}
 Similarly, the sum of moments equation for the sun gear is derived
 \begin{equation}
-	I_2\ddot{\theta_2} == T - r_2|\vec{\mathrm{gf}_3}| + r_2|\vec{\mathrm{gf}_3}|
+	I_2\ddot{\theta_2} = T - r_2|\vec{\mathrm{gf}_3}| + r_2|\vec{\mathrm{gf}_3}|
 \end{equation}
 where $I_2$ is the moment of inertia of component 2, $\theta_2$ is the angle of component 2, $T$ is the moment exerted by the motor on component 2, and $r_2$ is the radius of component 2. Note that in this project, all angles and moments are given in the clockwise direction.
 \\
@@ -167,12 +167,12 @@ The end of the tail pushes against the ground, which leads to the following cond
 \begin{subequations}
 	\label{tailonground}
 	\begin{align}
-		s_{7endy} &= 0\\
-		F_{react7x} &=  -\mu_{tail}F_{react7y}\\
+		s_{7\mathrm{end}y} &= 0\\
+		F_{\mathrm{React}7x} &=  -\mu_{\mathrm{tail}}F_{\mathrm{React}7y}\\
 		-\ddot{\theta_7} &= \frac{(|\vec{l_7}|^2 - l_{7y}^2)a_{1y} + l_{7y}v_{1y}^2}{|\vec{l_7}|^3 (1 - \frac{l_{7y}^2}{|\vec{l_7}|^2})^{3/2}} \label{tailongroundkinematics}
 	\end{align}
 \end{subequations}
-where $s_{7endy}$ is the y position of the endpoint of the tail, $F_{react7x}$ and $F_{react7y}$ are the reaction forces exerted onto the tail by the ground in the x and y dimensions respectively, $\mu_{tail}$ is the coefficient of friction between the tail and the ground, $\vec{l_7}$ is the position of the end of the tail relative to the motor axle, and $l_{7y}$ is the component of $\vec{l_7}$ in the y dimension. \\
+where $s_{7\mathrm{end}y}$ is the y position of the endpoint of the tail, $F_{\mathrm{React}7x}$ and $F_{\mathrm{React}7y}$ are the reaction forces exerted onto the tail by the ground in the x and y dimensions respectively, $\mu_{\mathrm{tail}}$ is the coefficient of friction between the tail and the ground, $\vec{l_7}$ is the position of the end of the tail relative to the motor axle, and $l_{7y}$ is the component of $\vec{l_7}$ in the y dimension. \\
 Equation \ref{tailongroundkinematics} is derived from,
 
 \begin{subequations}
@@ -207,10 +207,10 @@ Once the LIM is vertical, there is no longer a force pushing the bottom wheel fo
 			0
 		\end{bmatrix}\\
 		s_{5x} &= \theta_{5} r_w;\\
-		M_{react5} &= - F_{react51} r_w;
+		M_{\mathrm{React}5} &= - F_{\mathrm{React}51} r_w;
 	\end{align}
 \end{subequations}
-where $M_{react5}$ is the reaction moment on wheel 5 as a result of the reaction forces.
+where $M_{\mathrm{React}5}$ is the reaction moment on wheel 5 as a result of the reaction forces.
 The tail is still on the ground, so will still be subject to Equations \ref{tailonground}.
 
 \subsection*{Stage 3: Climbing}
@@ -234,15 +234,15 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 			- u_x  u_y  (- 2  v_{1x}^2 + 2 v_{1y}^2 + a_{1y} u_x  )}
 		{(u_x^2 + u_y^2)^2}\\
 		\label{tailonstepaccelleration}
-		F_{react7x}' &= -\mu_{tail} F_{react7y}'\\
-		\vec{F}_{react7} &= \begin{bmatrix}
+		F_{\mathrm{React}7x}' &= -\mu_{\mathrm{tail}} F_{\mathrm{React}7y}'\\
+		\vec{F}_{\mathrm{React}7} &= \begin{bmatrix}
 			-\cos{(\theta_7)} & -\sin{(\theta_7)} & 0\\
 			\sin{(\theta_7)} & -\cos{(\theta_7)} & 0\\
 			0 & 0 & 1
-		\end{bmatrix} \vec{F}_{react7}'
+		\end{bmatrix} \vec{F}_{\mathrm{React}7}'
 	\end{align}
 \end{subequations}
-where $N_2$ is the number of the step that the tail makes contact with, $\mathrm{StepWidth}$ and $\mathrm{StepHeight}$ are the width and height of each step in the stairs, $u_x$ and $u_y$ are the displacement from the motor axis to the point of contact between the tail and the step. Equation \ref{tailonstepaccelleration} is the second derivative of \ref{tailonstepposition}. $\vec{F}_{react7}'$ is the vector of reaction forces in a rotated coordinate system such that $F_{react7y}'$ is the normal force between the tail and the step.
+where $N_2$ is the number of the step that the tail makes contact with, $\mathrm{StepWidth}$ and $\mathrm{StepHeight}$ are the width and height of each step in the stairs, $u_x$ and $u_y$ are the displacement from the motor axis to the point of contact between the tail and the step. Equation \ref{tailonstepaccelleration} is the second derivative of \ref{tailonstepposition}. $\vec{F}_{\mathrm{React}7}'$ is the vector of reaction forces in a rotated coordinate system such that $F_{\mathrm{React}7y}'$ is the normal force between the tail and the step.
 
 \subsection*{Stage 5: Flipping from step}
 Stage 5 is similar to Stage 2, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
@@ -298,7 +298,7 @@ Once the function can no longer find sets of equations that use the exact same v
 		a -2c &= 0
 	\end{align}
 \end{subequations}
-Finally, if it can't find any fully defined sets up to a certain size, it will attempt to solve the complete set of remaining equation using the solve() function. If the function is unable to solve all the equations, it will return a structure containing the solutions it has found, and a vector containing the remaining equations.
+Finally, if it can't find any fully defined sets up to a certain size, it will attempt to solve the complete set of remaining equation using the solve() function. If the function is unable to solve all the equations, it will return a structure containing the solutions it has found, and a vector containing the remaining equations. This is useful for debugging as it provides feedback on which variables it did and did not have enough information to solve for, something the MATLAB solve() function does not do.\\
 
 
 \section{Required torque}

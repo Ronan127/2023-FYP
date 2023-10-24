@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  24 OCT 2023 15:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  24 OCT 2023 22:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -684,15 +684,12 @@ Package translations Info: No language package found. I am going to use `englis
 h' as default language. on input line 106.
  (Report.aux
 (chaps-front/chap-plagiarism.aux) (chaps-front/chap-summary.aux)
-(chaps-main/chap-intro.aux) (chaps-main/chap-literature.aux
-
-LaTeX Warning: Label `Powrie robot' multiply defined.
-
-) (chaps-main/chap-2d-sim.aux) (chaps-main/chap-math-model.aux)
-(chaps-main/chap-design-requirements.aux) (chaps-main/chap-design.aux)
-(chaps-main/chap-drake-simulation.aux) (chaps-main/chap-experiment.aux)
-(chaps-main/chap-analysis.aux) (chaps-main/chap-conclusion.aux)
-(chaps-append/chap-ecsa.aux))
+(chaps-front/chap-symbols.aux) (chaps-main/chap-intro.aux)
+(chaps-main/chap-literature.aux) (chaps-main/chap-2d-sim.aux)
+(chaps-main/chap-math-model.aux) (chaps-main/chap-design-requirements.aux)
+(chaps-main/chap-design.aux) (chaps-main/chap-drake-simulation.aux)
+(chaps-main/chap-experiment.aux) (chaps-main/chap-analysis.aux)
+(chaps-main/chap-conclusion.aux) (chaps-append/chap-ecsa.aux))
 \openout1 = `Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
@@ -1055,9 +1052,9 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/sl' will be
 (Font)              scaled to size 11.52008pt on input line 115.
  [5] (Report.lof
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 11.52008pt on input line 10.
+(Font)              scaled to size 11.52008pt on input line 11.
 
-Overfull \hbox (7.22003pt too wide) in paragraph at lines 10--10
+Overfull \hbox (7.22003pt too wide) in paragraph at lines 11--11
  [][] []\T1/mdbch/m/n/12 (-20) A tracked USAR robot, with pad-dles for ob-sta-c
 le climb-ing (Delmerico 
  []
@@ -1073,6 +1070,68 @@ le climb-ing (Delmerico
 \openout5 = `Report.lot'.
 
  [7]
+\openout2 = `chaps-front/chap-symbols.aux'.
+
+ (chaps-front/chap-symbols.tex
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 7.68005pt on input line 6.
+LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
+(Font)              scaled to size 5.76004pt on input line 19.
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--28
+
+ []
+
+
+Overfull \hbox (32.20366pt too wide) in paragraph at lines 44--45
+[]\T1/mdbch/m/n/12 (-20) 3x1 Force vec-tor that gear n ex-erts on the in-ner ge
+ar that it con-tacts [] 
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
+ 47.
+(C:\Program Files\MiKTeX\tex/latex/mathdesign/mdbch\ts1mdbch.fd
+File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
+)
+LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
+(Font)              scaled to size 11.52008pt on input line 47.
+Package microtype Info: Character `texttwelveudash ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textthreequartersemdash ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textasteriskcentered ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textlbrackdbl ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textrbrackdbl ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `texttildelow ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `textcelsius ' is missing
+(microtype)             in font `TS1/mdbch/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Overfull \hbox (4.38464pt too wide) in paragraph at lines 63--64
+[]\T1/mdbch/m/n/12 (-20) Torque ex-erted by the mo-tor of com-po-nent 7 on com-
+po-nent 2 [] 
+ []
+
+[8
+
+
+]
+Overfull \hbox (3.85594pt too wide) in paragraph at lines 80--81
+[]\T1/mdbch/m/n/12 (-20) 3x1 Dis-place-ment vec-tor from the mo-tor axis to com
+-po-nent n [] 
+ []
+
+) [9]
 \openout2 = `chaps-main/chap-intro.aux'.
 
  (chaps-main/chap-intro.tex
@@ -1084,7 +1143,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<./figs//Wilson-sketch.png, id=46, 302.93175pt x 234.8775pt>
+<./figs//Wilson-sketch.png, id=53, 302.93175pt x 234.8775pt>
 File: ./figs//Wilson-sketch.png Graphic file (type png)
 <use ./figs//Wilson-sketch.png>
 Package pdftex.def Info: ./figs//Wilson-sketch.png  used on input line 9.
@@ -1111,8 +1170,10 @@ co-mo-tion) were built in-di-vid-u-ally
 
 
 
+
+
  <./figs//Wilson-sketch.png>]
-<./figs//Powrie-device.png, id=52, 666.69075pt x 499.8675pt>
+<./figs//Powrie-device.png, id=59, 666.69075pt x 499.8675pt>
 File: ./figs//Powrie-device.png Graphic file (type png)
 <use ./figs//Powrie-device.png>
 Package pdftex.def Info: ./figs//Powrie-device.png  used on input line 23.
@@ -1124,7 +1185,7 @@ ed. <./figs//Powrie-device.png>] [3]
 
  (chaps-main/chap-literature.tex
 Chapter 2.
-<./figs//stateof-tracked.png, id=61, 338.4645pt x 251.7405pt>
+<./figs//stateof-tracked.png, id=68, 338.4645pt x 251.7405pt>
 File: ./figs//stateof-tracked.png Graphic file (type png)
 <use ./figs//stateof-tracked.png>
 Package pdftex.def Info: ./figs//stateof-tracked.png  used on input line 7.
@@ -1174,7 +1235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-<./figs//stateof-wheelleg.png, id=62, 320.397pt x 324.0105pt>
+<./figs//stateof-wheelleg.png, id=69, 320.397pt x 324.0105pt>
 File: ./figs//stateof-wheelleg.png Graphic file (type png)
 <use ./figs//stateof-wheelleg.png>
 Package pdftex.def Info: ./figs//stateof-wheelleg.png  used on input line 16.
@@ -1211,17 +1272,17 @@ co-mo-tion) were built in-di-vid-u-ally
  []
 
 [5]
-<./figs//Wilson-robot.png, id=71, 838.93425pt x 631.76025pt>
+<./figs//Wilson-robot.png, id=79, 838.93425pt x 631.76025pt>
 File: ./figs//Wilson-robot.png Graphic file (type png)
 <use ./figs//Wilson-robot.png>
 Package pdftex.def Info: ./figs//Wilson-robot.png  used on input line 45.
 (pdftex.def)             Requested size: 318.68909pt x 239.99426pt.
-<./figs//Wilson-algodoo.png, id=72, 896.148pt x 511.9125pt>
+<./figs//Wilson-algodoo.png, id=80, 896.148pt x 511.9125pt>
 File: ./figs//Wilson-algodoo.png Graphic file (type png)
 <use ./figs//Wilson-algodoo.png>
 Package pdftex.def Info: ./figs//Wilson-algodoo.png  used on input line 52.
 (pdftex.def)             Requested size: 278.85068pt x 159.2927pt.
-<./figs//Wilson-climbing.png, id=73, 408.3255pt x 306.54526pt>
+<./figs//Wilson-climbing.png, id=81, 408.3255pt x 306.54526pt>
 File: ./figs//Wilson-climbing.png Graphic file (type png)
 <use ./figs//Wilson-climbing.png>
 Package pdftex.def Info: ./figs//Wilson-climbing.png  used on input line 59.
@@ -1241,7 +1302,7 @@ Underfull \hbox (badness 2970) in paragraph at lines 64--65
 [][]\T1/mdbch/m/n/12 (+20) Wilson's robot had some lim-i-ta-tions that
  []
 
-<./figs//Haskel-robot.png, id=80, 514.92375pt x 275.8305pt>
+<./figs//Haskel-robot.png, id=87, 514.92375pt x 275.8305pt>
 File: ./figs//Haskel-robot.png Graphic file (type png)
 <use ./figs//Haskel-robot.png>
 Package pdftex.def Info: ./figs//Haskel-robot.png  used on input line 72.
@@ -1252,13 +1313,13 @@ Overfull \hbox (10.73128pt too wide) in paragraph at lines 81--82
 form us-ing LIMs for lo-co-mo-tion,
  []
 
-<./figs//Buch-robot.png, id=86, 780.516pt x 446.8695pt>
+<./figs//Buch-robot.png, id=93, 780.516pt x 446.8695pt>
 File: ./figs//Buch-robot.png Graphic file (type png)
 <use ./figs//Buch-robot.png>
 Package pdftex.def Info: ./figs//Buch-robot.png  used on input line 85.
 (pdftex.def)             Requested size: 338.60829pt x 193.86162pt.
 [8 <./figs//Buch-robot.png>]
-<./figs//Buch-climbing.png, id=91, 413.1435pt x 599.841pt>
+<./figs//Buch-climbing.png, id=98, 413.1435pt x 599.841pt>
 File: ./figs//Buch-climbing.png Graphic file (type png)
 <use ./figs//Buch-climbing.png>
 Package pdftex.def Info: ./figs//Buch-climbing.png  used on input line 94.
@@ -1272,7 +1333,7 @@ File: ./figs//Powrie-device.png Graphic file (type png)
 <use ./figs//Powrie-device.png>
 Package pdftex.def Info: ./figs//Powrie-device.png  used on input line 106.
 (pdftex.def)             Requested size: 318.68909pt x 238.94211pt.
-<./figs//Powrie-falling.png, id=96, 614.295pt x 593.8185pt>
+<./figs//Powrie-falling.png, id=103, 614.295pt x 593.8185pt>
 File: ./figs//Powrie-falling.png Graphic file (type png)
 <use ./figs//Powrie-falling.png>
 Package pdftex.def Info: ./figs//Powrie-falling.png  used on input line 113.
@@ -1313,7 +1374,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--121
  []
 
 [10 <./figs//Powrie-falling.png>]
-<./figs//Powrie-climbing.png, id=101, 476.37975pt x 714.87074pt>
+<./figs//Powrie-climbing.png, id=109, 476.37975pt x 714.87074pt>
 File: ./figs//Powrie-climbing.png Graphic file (type png)
 <use ./figs//Powrie-climbing.png>
 Package pdftex.def Info: ./figs//Powrie-climbing.png  used on input line 127.
@@ -1333,7 +1394,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-<./figs//Powrie-gear-differences.png, id=106, 1187.637pt x 246.9225pt>
+<./figs//Powrie-gear-differences.png, id=114, 1187.637pt x 246.9225pt>
 File: ./figs//Powrie-gear-differences.png Graphic file (type png)
 <use ./figs//Powrie-gear-differences.png>
 Package pdftex.def Info: ./figs//Powrie-gear-differences.png  used on input lin
@@ -1354,7 +1415,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<./figs//algo-model.png, id=117, 576.9555pt x 152.9715pt>
+<./figs//algo-model.png, id=123, 576.9555pt x 152.9715pt>
 File: ./figs//algo-model.png Graphic file (type png)
 <use ./figs//algo-model.png>
 Package pdftex.def Info: ./figs//algo-model.png  used on input line 18.
@@ -1369,7 +1430,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
-<./figs//algo-case-wheel.png, id=121, 3216.015pt x 1723.1878pt>
+<./figs//algo-case-wheel.png, id=127, 3216.015pt x 1723.1878pt>
 File: ./figs//algo-case-wheel.png Graphic file (type png)
 <use ./figs//algo-case-wheel.png>
 Package pdftex.def Info: ./figs//algo-case-wheel.png  used on input line 34.
@@ -1382,7 +1443,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-<./figs//algo-case-frame.png, id=122, 3216.015pt x 1723.1878pt>
+<./figs//algo-case-frame.png, id=128, 3216.015pt x 1723.1878pt>
 File: ./figs//algo-case-frame.png Graphic file (type png)
 <use ./figs//algo-case-frame.png>
 Package pdftex.def Info: ./figs//algo-case-frame.png  used on input line 43.
@@ -1396,7 +1457,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--49
  []
 
 [15 <./figs//algo-model.png>]
-<./figs//algo-case-body.png, id=127, 3216.015pt x 1723.1878pt>
+<./figs//algo-case-body.png, id=133, 3216.015pt x 1723.1878pt>
 File: ./figs//algo-case-body.png Graphic file (type png)
 <use ./figs//algo-case-body.png>
 Package pdftex.def Info: ./figs//algo-case-body.png  used on input line 52.
@@ -1410,7 +1471,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-<./figs//algo-model2.png, id=128, 479.391pt x 162.00525pt>
+<./figs//algo-model2.png, id=134, 479.391pt x 162.00525pt>
 File: ./figs//algo-model2.png Graphic file (type png)
 <use ./figs//algo-model2.png>
 Package pdftex.def Info: ./figs//algo-model2.png  used on input line 61.
@@ -1428,7 +1489,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--71
 
  []
 
-<./figs//algo-hori.png, id=134, 2605.48407pt x 1233.85968pt>
+<./figs//algo-hori.png, id=141, 2605.48407pt x 1233.85968pt>
 File: ./figs//algo-hori.png Graphic file (type png)
 <use ./figs//algo-hori.png>
 Package pdftex.def Info: ./figs//algo-hori.png  used on input line 74.
@@ -1436,7 +1497,7 @@ Package pdftex.def Info: ./figs//algo-hori.png  used on input line 74.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs//algo-vert.png, id=135, 2558.05687pt x 1871.49188pt>
+<./figs//algo-vert.png, id=142, 2558.05687pt x 1871.49188pt>
 File: ./figs//algo-vert.png Graphic file (type png)
 <use ./figs//algo-vert.png>
 Package pdftex.def Info: ./figs//algo-vert.png  used on input line 81.
@@ -1465,11 +1526,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--13
 
  []
 
-<./figs//FBDs/Stage-1.png, id=150, 2494.82062pt x 1063.72406pt>
+<./figs//FBDs/Stage-1.png, id=156, 2494.82062pt x 1064.47687pt>
 File: ./figs//FBDs/Stage-1.png Graphic file (type png)
 <use ./figs//FBDs/Stage-1.png>
 Package pdftex.def Info: ./figs//FBDs/Stage-1.png  used on input line 18.
-(pdftex.def)             Requested size: 139.42838pt x 59.4383pt.
+(pdftex.def)             Requested size: 139.42838pt x 59.48035pt.
 
 Underfull \hbox (badness 1270) in paragraph at lines 22--24
 \T1/mdbch/m/n/12 (+20) step. This mo-tion ends when the LIMs are
@@ -1486,11 +1547,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
 
  <./figs//FBDs/Stage-1.png>]
-<./figs//FBDs/Stage-2.png, id=155, 1308.38812pt x 1065.9825pt>
+<./figs//FBDs/Stage-2.png, id=161, 1308.38812pt x 1067.48813pt>
 File: ./figs//FBDs/Stage-2.png Graphic file (type png)
 <use ./figs//FBDs/Stage-2.png>
 Package pdftex.def Info: ./figs//FBDs/Stage-2.png  used on input line 27.
-(pdftex.def)             Requested size: 139.42838pt x 113.58241pt.
+(pdftex.def)             Requested size: 139.42838pt x 113.74284pt.
 
 Underfull \hbox (badness 3514) in paragraph at lines 31--32
 \T1/mdbch/m/n/12 (+20) for-ward onto the step. The dis-tance that
@@ -1516,7 +1577,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--32
 
  []
 
-<./figs//FBDs/Stage-3.png, id=156, 1872.9975pt x 708.39656pt>
+<./figs//FBDs/Stage-3.png, id=162, 1872.9975pt x 708.39656pt>
 File: ./figs//FBDs/Stage-3.png Graphic file (type png)
 <use ./figs//FBDs/Stage-3.png>
 Package pdftex.def Info: ./figs//FBDs/Stage-3.png  used on input line 36.
@@ -1526,20 +1587,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-<./figs//FBDs/Stage-4.png, id=157, 2199.71812pt x 1616.28844pt>
+<./figs//FBDs/Stage-4.png, id=163, 2199.71812pt x 1617.79407pt>
 File: ./figs//FBDs/Stage-4.png Graphic file (type png)
 <use ./figs//FBDs/Stage-4.png>
 Package pdftex.def Info: ./figs//FBDs/Stage-4.png  used on input line 47.
-(pdftex.def)             Requested size: 139.42838pt x 102.4482pt.
+(pdftex.def)             Requested size: 139.42838pt x 102.54364pt.
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
 54.
 
-<./figs//FBDs/Stage-5.png, id=158, 2199.71812pt x 1623.06375pt>
+<./figs//FBDs/Stage-5.png, id=164, 2199.71812pt x 1624.56938pt>
 File: ./figs//FBDs/Stage-5.png Graphic file (type png)
 <use ./figs//FBDs/Stage-5.png>
 Package pdftex.def Info: ./figs//FBDs/Stage-5.png  used on input line 56.
-(pdftex.def)             Requested size: 139.42838pt x 102.87766pt.
+(pdftex.def)             Requested size: 139.42838pt x 102.97308pt.
 
 Package wrapfig Warning: Stationary wrapfigure forced to float on input line 60
 .
@@ -1555,11 +1616,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
 Package wrapfig Warning: wrapfigure used inside a conflicting environment on in
 put line 65.
 
-<./figs//FBDs/Stage-6.png, id=165, 2764.3275pt x 1268.48906pt>
+<./figs//FBDs/Stage-6.png, id=171, 2764.3275pt x 1269.99469pt>
 File: ./figs//FBDs/Stage-6.png Graphic file (type png)
 <use ./figs//FBDs/Stage-6.png>
 Package pdftex.def Info: ./figs//FBDs/Stage-6.png  used on input line 67.
-(pdftex.def)             Requested size: 139.42838pt x 63.97012pt.
+(pdftex.def)             Requested size: 139.42838pt x 64.04605pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 64--70
 
@@ -1583,18 +1644,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--75
 
  []
 
-<./figs//FBDs/Naming components.png, id=166, 1919.67188pt x 807.7678pt>
+<./figs//FBDs/Naming components.png, id=172, 1919.67188pt x 807.7678pt>
 File: ./figs//FBDs/Naming components.png Graphic file (type png)
 <use ./figs//FBDs/Naming components.png>
 Package pdftex.def Info: ./figs//FBDs/Naming components.png  used on input line
  79.
 (pdftex.def)             Requested size: 318.68909pt x 134.08942pt.
-<./figs//FBDs/FBD-1.png, id=167, 789.70032pt x 374.90062pt>
+<./figs//FBDs/FBD-1.png, id=173, 789.70032pt x 374.90062pt>
 File: ./figs//FBDs/FBD-1.png Graphic file (type png)
 <use ./figs//FBDs/FBD-1.png>
 Package pdftex.def Info: ./figs//FBDs/FBD-1.png  used on input line 86.
 (pdftex.def)             Requested size: 398.35985pt x 189.11452pt.
-<./figs//FBDs/FBD-2.png, id=168, 1087.06125pt x 542.025pt>
+<./figs//FBDs/FBD-2.png, id=174, 1087.06125pt x 542.025pt>
 File: ./figs//FBDs/FBD-2.png Graphic file (type png)
 <use ./figs//FBDs/FBD-2.png>
 Package pdftex.def Info: ./figs//FBDs/FBD-2.png  used on input line 92.
@@ -1608,9 +1669,7 @@ in Fig-ure 4.7[]. Each com-po-nent
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+[22 <./figs//FBDs/Stage-5.png> <./figs//FBDs/Stage-6.png>]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1619,23 +1678,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
-[22 <./figs//FBDs/Stage-5.png> <./figs//FBDs/Stage-6.png>]
-
-LaTeX Warning: Text page 23 contains only floats.
-
-[23 <./figs//FBDs/Naming components.png> <./figs//FBDs/FBD-1.png> <./figs//FBDs
-/FBD-2.png>]
+[23 <./figs//FBDs/Naming components.png> <./figs//FBDs/FBD-1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-[24]
+[24 <./figs//FBDs/FBD-2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 182--185
 
  []
 
 [25]
-<./figs//FBDs/Tail-ground.png, id=188, 1377.64688pt x 524.71031pt>
+<./figs//FBDs/Tail-ground.png, id=194, 1377.64688pt x 524.71031pt>
 File: ./figs//FBDs/Tail-ground.png Graphic file (type png)
 <use ./figs//FBDs/Tail-ground.png>
 Package pdftex.def Info: ./figs//FBDs/Tail-ground.png  used on input line 188.
@@ -1692,7 +1746,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 313--317
 
  []
 
-<./figs//plots/bigplot.png, id=199, 1800.0048pt x 1421.7918pt>
+<./figs//plots/bigplot.png, id=206, 1800.0048pt x 1421.7918pt>
 File: ./figs//plots/bigplot.png Graphic file (type png)
 <use ./figs//plots/bigplot.png>
 Package pdftex.def Info: ./figs//plots/bigplot.png  used on input line 321.
@@ -1701,7 +1755,7 @@ Package pdftex.def Info: ./figs//plots/bigplot.png  used on input line 321.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [29]
-<./figs//plots/bigplot-grip.png, id=203, 1800.0048pt x 1421.7918pt>
+<./figs//plots/bigplot-grip.png, id=210, 1800.0048pt x 1421.7918pt>
 File: ./figs//plots/bigplot-grip.png Graphic file (type png)
 <use ./figs//plots/bigplot-grip.png>
 Package pdftex.def Info: ./figs//plots/bigplot-grip.png  used on input line 335
@@ -1712,7 +1766,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 341--342
 
  []
 
-<./figs//plots/GR-torque.png, id=209, 323.2878pt x 258.7266pt>
+<./figs//plots/GR-torque.png, id=215, 323.2878pt x 258.7266pt>
 File: ./figs//plots/GR-torque.png Graphic file (type png)
 <use ./figs//plots/GR-torque.png>
 Package pdftex.def Info: ./figs//plots/GR-torque.png  used on input line 345.
@@ -1720,7 +1774,7 @@ Package pdftex.def Info: ./figs//plots/GR-torque.png  used on input line 345.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs//plots/GR-friction.png, id=210, 323.2878pt x 258.7266pt>
+<./figs//plots/GR-friction.png, id=216, 323.2878pt x 258.7266pt>
 File: ./figs//plots/GR-friction.png Graphic file (type png)
 <use ./figs//plots/GR-friction.png>
 Package pdftex.def Info: ./figs//plots/GR-friction.png  used on input line 351.
@@ -1952,7 +2006,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `voltage-torque-table' on page 41 undefined on input l
 ine 47.
 
-<./figs//plots/torque-voltage-relation.png, id=243, 530.199pt x 529.761pt>
+<./figs//plots/torque-voltage-relation.png, id=250, 530.199pt x 529.761pt>
 File: ./figs//plots/torque-voltage-relation.png Graphic file (type png)
 <use ./figs//plots/torque-voltage-relation.png>
 Package pdftex.def Info: ./figs//plots/torque-voltage-relation.png  used on inp
@@ -1962,16 +2016,11 @@ ut line 75.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [41]
-
-LaTeX Warning: Reference `fig:experiment-setup' on page 42 undefined on input l
-ine 90.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-<./figs//experiment-setup.jpg, id=247, 4015.0pt x 1806.75pt>
+<./figs//experiment-setup.jpg, id=254, 4015.0pt x 1806.75pt>
 File: ./figs//experiment-setup.jpg Graphic file (type jpg)
 <use ./figs//experiment-setup.jpg>
 Package pdftex.def Info: ./figs//experiment-setup.jpg  used on input line 94.
@@ -1986,7 +2035,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--108
 
 [42] [43 <./figs//plots/torque-voltage-relation.png> <./figs//experiment-setup.
 jpg>] [44]
-<./figs//plots/assessment-torque-relation-stage1.png, id=259, 362.007pt x 217.2
+<./figs//plots/assessment-torque-relation-stage1.png, id=265, 362.007pt x 217.2
 48pt>
 File: ./figs//plots/assessment-torque-relation-stage1.png Graphic file (type pn
 g)
@@ -2005,12 +2054,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<./figs//plots/torque-experiment-forecasted.png, id=264, 443.913pt x 268.713pt>
-
-File: ./figs//plots/torque-experiment-forecasted.png Graphic file (type png)
-<use ./figs//plots/torque-experiment-forecasted.png>
-Package pdftex.def Info: ./figs//plots/torque-experiment-forecasted.png  used o
-n input line 11.
+<./figs//plots/torque-experiment.png, id=270, 443.913pt x 268.713pt>
+File: ./figs//plots/torque-experiment.png Graphic file (type png)
+<use ./figs//plots/torque-experiment.png>
+Package pdftex.def Info: ./figs//plots/torque-experiment.png  used on input lin
+e 11.
 (pdftex.def)             Requested size: 318.68909pt x 192.91147pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--17
@@ -2022,17 +2070,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
 
 
- <./figs//plots/torque-experiment-forecasted.png>]
+ <./figs//plots/torque-experiment.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-<./figs//plots/torque-comparison-forecasted.png, id=269, 444.132pt x 268.494pt>
-
-File: ./figs//plots/torque-comparison-forecasted.png Graphic file (type png)
-<use ./figs//plots/torque-comparison-forecasted.png>
-Package pdftex.def Info: ./figs//plots/torque-comparison-forecasted.png  used o
-n input line 22.
+<./figs//plots/torque-comparison.png, id=276, 444.132pt x 268.494pt>
+File: ./figs//plots/torque-comparison.png Graphic file (type png)
+<use ./figs//plots/torque-comparison.png>
+Package pdftex.def Info: ./figs//plots/torque-comparison.png  used on input lin
+e 22.
 (pdftex.def)             Requested size: 318.68909pt x 192.66002pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 27--30
@@ -2044,7 +2091,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[47 <./figs//plots/torque-comparison-forecasted.png>]
+[47 <./figs//plots/torque-comparison.png>]
 Overfull \hbox (56.43417pt too wide) in paragraph at lines 40--47
  [][] 
  []
@@ -2176,27 +2223,25 @@ y.wiley.com/doi/abs/10.1002/rob.21887
 
 
 ] (Report.aux (chaps-front/chap-plagiarism.aux)
-(chaps-front/chap-summary.aux) (chaps-main/chap-intro.aux)
-(chaps-main/chap-literature.aux) (chaps-main/chap-2d-sim.aux)
-(chaps-main/chap-math-model.aux) (chaps-main/chap-design-requirements.aux)
-(chaps-main/chap-design.aux) (chaps-main/chap-drake-simulation.aux)
-(chaps-main/chap-experiment.aux) (chaps-main/chap-analysis.aux)
-(chaps-main/chap-conclusion.aux) (chaps-append/chap-ecsa.aux))
+(chaps-front/chap-summary.aux) (chaps-front/chap-symbols.aux)
+(chaps-main/chap-intro.aux) (chaps-main/chap-literature.aux)
+(chaps-main/chap-2d-sim.aux) (chaps-main/chap-math-model.aux)
+(chaps-main/chap-design-requirements.aux) (chaps-main/chap-design.aux)
+(chaps-main/chap-drake-simulation.aux) (chaps-main/chap-experiment.aux)
+(chaps-main/chap-analysis.aux) (chaps-main/chap-conclusion.aux)
+(chaps-append/chap-ecsa.aux))
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 16379 strings out of 476339
- 338257 string characters out of 5797934
+ 16472 strings out of 476339
+ 340239 string characters out of 5797934
  1865340 words of memory out of 5000000
- 35896 multiletter control sequences out of 15000+600000
- 627317 words of font info for 492 fonts, out of 8000000 for 9000
+ 35945 multiletter control sequences out of 15000+600000
+ 633845 words of font info for 515 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,17n,117p,1834b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,17n,117p,1834b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Ronan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi643\ectt
 1095.pk>{C:/Program Files/MiKTeX/fonts/enc/dvips/ly1/texnansi.enc}<C:/Program F
 iles/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Program Files/MiKTeX/fo
@@ -2209,9 +2254,9 @@ fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program Files/MiKTeX/fonts/type1/
 mathdesign/mdbch/md-chr8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/m
 dbch/md-chri7m.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr
 i8t.pfb>
-Output written on Report.pdf (59 pages, 20751415 bytes).
+Output written on Report.pdf (61 pages, 20754897 bytes).
 PDF statistics:
- 376 PDF objects out of 1000 (max. 8388607)
+ 383 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 135881 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 148169 words of extra memory for PDF output out of 154059 (max. 10000000)
 

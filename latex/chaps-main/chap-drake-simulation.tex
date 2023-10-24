@@ -12,13 +12,10 @@ Drake is a multibody physics engine developed and used by MIT. This project uses
 To model a robot, Drake requires a simulation description format file (SDFormat). Currently, not many CAD programs provide a method to easily generate these files. This project used Onshape, a cloud-based CAD program, for this reason. The python library, onshape-to-robot, is then used to build an SDFormat file. The generated SDFormat file is then modified in order to meet Drake's specific requirements, and to apply realistic coefficients of friction to the wheels and tail.\\
 
 \section{Using the simulator}
-Once the robot has been loaded into the multibody simulation, it can be driven by setting a torque on the motor joints. Simply setting the torque on the joint to a constant value would cause the device to accelerate continuously. To accurately model the toque output of a geared DC motor, I calculate the torque using the following equation\\
+Once the robot has been loaded into the multibody simulation, it can be driven by setting a torque on the motor joints. Simply setting the torque on the joint to a constant value would cause the device to accelerate continuously, whereas in reality the torque should decrease as the speed increases. The following equation models the toque output of a geared DC motor.\\
 
 $Torque = StallTorque*(Voltage/12.0-speed/NLSpeed)$\\
 
 This essentially acts as a high-gain proportional speed controller. The motor voltage is set through sliders in the simulator options. \\
 The device can now be tested in simulation to determine whether it can climb stairs, and to gain insight into which components make contact with the stairs and when.\\
-\\
-\section{Validation of simulation}
-To validate the simulation, the torque needed for the device to climb at each stage is recorded to be compared with the real world data. In this simulated experiment, the device is placed in front of the step and a motor voltage is applied to it that corresponds to a specific stalling torque. If the device is unable to climb then the experiment is repeated with a higher voltage until the device is able to climb, at which point the torque is read from the simulation to be compared with the measured values from the real device.\\
 
