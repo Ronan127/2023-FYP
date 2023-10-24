@@ -313,7 +313,8 @@ When designing a LIM robot, it is essential to size the motor and gearbox to be 
 	\end{align}
 \end{subequations}
 which simplifies the dynamic equations into static equations.\\
-The set of equations is then solved for a range of positions in each stage. The required torque across the full range of motion is shown in Figure \ref{fig:bigplot}, long with illustrations of the device as it transitions between stages of motion. Figure \ref{fig:bigplot} shows that the highest torque is needed for the Stage 4 motion.
+The set of equations is then solved for a range of positions in each stage. The required torque across the full range of motion is shown in Figure \ref{fig:bigplot}, along with illustrations of the device as it transitions between stages of motion. Figure \ref{fig:bigplot} shows that the highest torque is needed for the Stage 4 motion.\\
+
 
 \begin{figure}[h]
 	\centering
@@ -322,63 +323,33 @@ The set of equations is then solved for a range of positions in each stage. The 
 	\label{fig:bigplot}
 \end{figure}
 
-\subsection*{Stage 1: Lifting}
-During the lifting motion, the angle of the LIMs, $\theta_1$, increases from 0° when the LIM is horizontal to 90° when the LIM is vertical. Figure \ref{torque-angle-relation-stage1} shows that the required torque is highest when the LIM is horizontal, which in this particular device is 1.014 Nm, or 0.507 Nm per motor.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{plots/torque-angle-relation-stage1}
-	\caption{Relationship between LIM angle and required torque for Stage 1 motion}
-	\label{torque-angle-relation-stage1}
-\end{figure}
-\subsection*{Stage 2: Flipping}
-During the flipping motion, the device does not need any torque to move. Even without a torque input, it will simply fall onto the next step.
-
-\subsection*{Stage 3: Climbing}
-During the climbing motion, the LIMs lift from the starting position, in this case -42.5° to the horizontal 0°. In addition, the front wheel can roll forward. instead of solving for the torque that results in an overall forward acceleration, we solve for the torque that causes a positive vertical acceleration in the back wheel. Instead of Equations \ref{condition-static}, we have:
-\begin{subequations}
-	\label{condition-climbing}
-	\begin{align}
-		a_{6y} &= 0\\
-		\vec{v} &= \vec{0}\\
-		\dot{\theta_1} &= 0\\
-	\end{align}
-\end{subequations}
-Figure \ref{torque-angle-relation-stage3} shows that the required torque increases as the LIM lifts, until the maximum of 0.970 Nm, or 0.485 Nm per motor when the LIM is horizontal.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{plots/torque-angle-relation-stage3}
-	\caption{Relationship between LIM angle and required torque for Stage 3 motion}
-	\label{torque-angle-relation-stage3}
-\end{figure}
-
-\subsection*{Stage 4: Lifting from step}
-Similar to Stage 1, $\theta_1$ increases from 0° when the LIM is horizontal to 90° when the LIM is vertical. Figure \ref{torque-angle-relation-stage4} shows that for this device, the required torque is highest when the LIM is at 26.4°, which gives a required torque of 1.295 Nm, or 0.647 Nm per motor.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{plots/torque-angle-relation-stage4}
-	\caption{Relationship between LIM angle and required torque for Stage 4 motion}
-	\label{torque-angle-relation-stage4}
-\end{figure}
-
-
-\subsection*{Stage 5: Flipping from step}
-During the flipping motion, the device does not need any torque to move. Even without a torque input, it will simply fall onto the next step.
-
-\subsection*{Stage 6: Climbing from step}
-Similar to Stage 3, $\theta_1$ increases from -42.5° to 0°, and Equations \ref{condition-climbing} are used instead of Equations \ref{condition-static}. Figure \ref{torque-angle-relation-stage6} shows that for this device, the required torque is highest when the LIM is horizontal, which gives a required torque of 1.228 Nm, or 0.614 Nm per motor.
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{plots/torque-angle-relation-stage6}
-	\caption{Relationship between LIM angle and required torque for Stage 6 motion}
-	\label{torque-angle-relation-stage6}
-\end{figure}
-These plots show that the highest required torques will be in Stages 4 and 6, and that the particular device modelled requires an output torque of at least 0.647 Nm on each motor.
-
-\subsection{Sizing components to reduce torque requirement}
-So far this section has only modelled a device with fixed parameters, such as gear ratio, wheel size, mass, and tail length, however a designer may be interested in varying these parameters. The model can be used to inform the design process by showing the effect that changing certain parameters has on the required torque. For example, Figure ??? shows how changing the gear ratio affects the torque required.
-
+During Stages 1 and 4, the required torque increases slightly as the LIM lifts up from horizontal, then rapidly decreases as the LIM approaches vertical. During Stages 2 and 5, the LIM simply falls down onto the next step, so no motor torque is required. During Stages 3 and 6, the required motor torque gradually increases as the back wheel of the LIM lifts and the front wheel rolls to the next step. 
 
 \section{Required coefficient of friction}
 
-When the device climbs steps, it is possible that the front wheel, component 5, will slip. Applying the coulomb approximation of friction to the model, slipping will occur when $|F_{5x}| > \mu_5 F_{5y}$, where $\mu_5$ is the coefficient of friction between the wheel and the step. This coefficient can be increased by using certain materials, such as rubber, for the contact surface of the wheels. However, the coefficient of friction is also dependent on the material of the step itself, which a designer would not have control over. For this reason, designers may want to modify the design to reduce the required coefficient of friction.\\
-Similar to the required torque, the coefficient of friction required to prevent slipping can also be calculated across the motion, and the highest value is in Stage 4.
+When the device climbs steps, it is possible that the front wheel, component 5, will slip. Slipping can cause the device to be unable to climb stairs, and the maths model works under the assumption that there is no slipping. Applying the Coulomb approximation of friction to the model, slipping will occur when $|F_{5x}| > \mu_5 F_{5y}$, where $\mu_5$ is the coefficient of friction between the wheel and the step. This coefficient can be increased by using certain materials, such as rubber, for the contact surface of the wheels. However, the coefficient of friction is also dependent on the material of the step itself, which a designer would not have control over. For this reason, designers may want to modify the design to reduce the required coefficient of friction.\\
+Similar to the required torque, the coefficient of friction required to prevent slipping can also be calculated across the motion, and the highest value is in Stage 4, as seen in Figure \ref{bigplot-grip}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1\textwidth]{plots/bigplot-grip}
+	\caption{Relationship between LIM angle and required coefficient of friction.}
+	\label{bigplot-grip}
+\end{figure}
+
+\section{Using the model to size components}
+So far this section has only modelled a device with fixed parameters, such as gear ratio, wheel size, mass, and tail length, however a designer may be interested in varying these parameters. The model can be used to inform the design process by showing the effect that changing certain parameters has on the required torque and the required coefficient of friction. Both of these requirements are highest in Stage 4. For example, Figures \ref{fig:GR-torque} and \ref{fig:GR-friction} show how changing the gear ratio affects the required torque and required coefficient of friction respectively.\\
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{plots/GR-torque}
+	\caption{Relationship between LIM gear ratio and required torque}
+	\label{fig:GR-torque}
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{plots/GR-friction}
+	\caption{Relationship between LIM gear ratio and required coefficient of friction}
+	\label{fig:GR-friction}
+\end{figure}
+These plots show that maximising the ratio between the sun and planet gears will reduce the amount of torque required from the motor to allow forward movement, and allow the the device to climb without slipping on a larger range of surfaces. Interestingly, increasing the gear ratio will also allow the device to move faster when rolling without obstructions. This provides a useful insight for design, the device will be faster, need a less powerful motor, and slip less often with a higher gear ratio.
