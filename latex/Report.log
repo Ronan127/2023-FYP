@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  24 OCT 2023 13:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  24 OCT 2023 15:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1962,29 +1962,39 @@ ut line 75.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [41]
+
+LaTeX Warning: Reference `fig:experiment-setup' on page 42 undefined on input l
+ine 90.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
+<./figs//experiment-setup.jpg, id=247, 4015.0pt x 1806.75pt>
+File: ./figs//experiment-setup.jpg Graphic file (type jpg)
+<use ./figs//experiment-setup.jpg>
+Package pdftex.def Info: ./figs//experiment-setup.jpg  used on input line 94.
+(pdftex.def)             Requested size: 318.68909pt x 143.38506pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--103
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--108
 
  []
 
-[42] [43 <./figs//plots/torque-voltage-relation.png>]
-<./figs//plots/assessment-torque-relation-stage1.png, id=255, 362.007pt x 217.2
+[42] [43 <./figs//plots/torque-voltage-relation.png> <./figs//experiment-setup.
+jpg>] [44]
+<./figs//plots/assessment-torque-relation-stage1.png, id=259, 362.007pt x 217.2
 48pt>
 File: ./figs//plots/assessment-torque-relation-stage1.png Graphic file (type pn
 g)
 <use ./figs//plots/assessment-torque-relation-stage1.png>
 Package pdftex.def Info: ./figs//plots/assessment-torque-relation-stage1.png  u
-sed on input line 152.
+sed on input line 157.
 (pdftex.def)             Requested size: 318.68909pt x 191.25507pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [44] [45 <./figs//plots/assessment-torque-relation-stage1.png>]
+) [45 <./figs//plots/assessment-torque-relation-stage1.png>]
 \openout2 = `chaps-main/chap-analysis.aux'.
 
 
@@ -1995,7 +2005,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<./figs//plots/torque-experiment-forecasted.png, id=263, 443.913pt x 268.713pt>
+<./figs//plots/torque-experiment-forecasted.png, id=264, 443.913pt x 268.713pt>
 
 File: ./figs//plots/torque-experiment-forecasted.png Graphic file (type png)
 <use ./figs//plots/torque-experiment-forecasted.png>
@@ -2017,7 +2027,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-<./figs//plots/torque-comparison-forecasted.png, id=268, 444.132pt x 268.494pt>
+<./figs//plots/torque-comparison-forecasted.png, id=269, 444.132pt x 268.494pt>
 
 File: ./figs//plots/torque-comparison-forecasted.png Graphic file (type png)
 <use ./figs//plots/torque-comparison-forecasted.png>
@@ -2180,10 +2190,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16369 strings out of 476339
- 337988 string characters out of 5797934
+ 16379 strings out of 476339
+ 338257 string characters out of 5797934
  1865340 words of memory out of 5000000
- 35887 multiletter control sequences out of 15000+600000
+ 35896 multiletter control sequences out of 15000+600000
  627317 words of font info for 492 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,17n,117p,1834b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2199,9 +2209,9 @@ fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program Files/MiKTeX/fonts/type1/
 mathdesign/mdbch/md-chr8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/m
 dbch/md-chri7m.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr
 i8t.pfb>
-Output written on Report.pdf (59 pages, 19555006 bytes).
+Output written on Report.pdf (59 pages, 20751415 bytes).
 PDF statistics:
- 375 PDF objects out of 1000 (max. 8388607)
+ 376 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 135876 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 135881 words of extra memory for PDF output out of 154059 (max. 10000000)
 

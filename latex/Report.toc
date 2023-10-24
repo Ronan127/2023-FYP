@@ -54,7 +54,7 @@
 \contentsline {subsection}{\numberline {8.1.3}Results}{41}{}%
 \contentsline {section}{\numberline {8.2}Torque measurement}{42}{}%
 \contentsline {subsection}{\numberline {8.2.1}Variables}{42}{}%
-\contentsline {subsection}{\numberline {8.2.2}Method}{43}{}%
+\contentsline {subsection}{\numberline {8.2.2}Method}{44}{}%
 \contentsline {subsection}{\numberline {8.2.3}Results}{44}{}%
 \contentsline {chapter}{\numberline {9}Analysis}{46}{}%
 \contentsline {section}{\numberline {9.1}Quantitative comparison}{46}{}%
