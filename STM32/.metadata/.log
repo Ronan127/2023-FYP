@@ -2291,3 +2291,26 @@ org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.OutOfMemoryE
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
 Caused by: java.lang.OutOfMemoryError: Java heap space
+!SESSION 2023-10-25 14:55:10.629 -----------------------------------------------
+eclipse.buildId=Version 1.11.2
+java.version=11.0.16
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_ZA
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-10-25 14:55:16.286
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-10-25 14:55:25.224
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-10-25 14:55:25.307
+!MESSAGE Log4j initialized with config file D:\Libraries\Documents\2023-FYP\STM32\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-10-25 14:55:35.970
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2023-10-25 14:57:11.381
+!MESSAGE Java heap space
+!STACK 0
+java.lang.OutOfMemoryError: Java heap space
