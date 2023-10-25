@@ -251,8 +251,14 @@ Stage 5 is similar to Stage 2, except the tail is on the step. As such, this mot
 Stage 6 is similar to stage 3, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
 
 \section{Solving technique}
-The MATLAB symbolic toolbox comes with the solve() function, which can be used to solve sets of non-linear simultaneous equations. However, it struggles with this large set of equations that contain trigonometric functions, often stalling. This project develops a function that breaks down the set of equations into smaller, easier to solve sets, then substituting these solutions into the remaining equations. Figure ??? shows the flowchart for this function. \\
-\\
+The MATLAB symbolic toolbox comes with the solve() function, which can be used to solve sets of non-linear simultaneous equations. However, it struggles with this large set of equations that contain trigonometric functions, often stalling. This project develops a function that breaks down the set of equations into smaller, easier to solve sets, then substitutes these solutions into the remaining equations. Figure \ref{fig:solver-flowchart} shows the flowchart for this function. \\
+
+\begin{figure}[!!h]
+	\centering
+	\includegraphics[height=0.9\textheight]{solver-flowchart}
+	\caption{Flowchart for this project's solver}
+	\label{fig:solver-flowchart}
+\end{figure}
 The function loops through the equations until they have all been solved, or it cannot find any more solutions. First, it identifies any trivial equations that contain only one variable, such as $a = 1$, and solves them. This will also pick up equations with more than one solution, such as $\sin{a} = 1$; to resolve this, the solver will look for inequalities that contain the relevant variable, in this case $a$, and apply them to the solution. For example, if you were to provide the function with the set of equations:\\
 
 \begin{subequations}

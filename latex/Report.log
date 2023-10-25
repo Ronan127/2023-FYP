@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  24 OCT 2023 22:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  25 OCT 2023 10:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1732,59 +1732,78 @@ Underfull \hbox (badness 10000) in paragraph at lines 251--252
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--257
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
+
+ []
+
+[27]
+<./figs//solver-flowchart.png, id=202, 912.7701pt x 1443.4728pt>
+File: ./figs//solver-flowchart.png Graphic file (type png)
+<use ./figs//solver-flowchart.png>
+Package pdftex.def Info: ./figs//solver-flowchart.png  used on input line 258.
+(pdftex.def)             Requested size: 366.81468pt x 580.07722pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
+
+ []
+
+[28]
+
+LaTeX Warning: Text page 29 contains only floats.
+
+[29 <./figs//solver-flowchart.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 305--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 254--257
+Underfull \hbox (badness 10000) in paragraph at lines 319--323
 
  []
 
-[27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 313--317
-
- []
-
-<./figs//plots/bigplot.png, id=206, 1800.0048pt x 1421.7918pt>
+<./figs//plots/bigplot.png, id=211, 1800.0048pt x 1421.7918pt>
 File: ./figs//plots/bigplot.png Graphic file (type png)
 <use ./figs//plots/bigplot.png>
-Package pdftex.def Info: ./figs//plots/bigplot.png  used on input line 321.
+Package pdftex.def Info: ./figs//plots/bigplot.png  used on input line 327.
 (pdftex.def)             Requested size: 398.35985pt x 314.63922pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[29]
-<./figs//plots/bigplot-grip.png, id=210, 1800.0048pt x 1421.7918pt>
+[30] [31 <./figs//plots/bigplot.png>]
+<./figs//plots/bigplot-grip.png, id=219, 1800.0048pt x 1421.7918pt>
 File: ./figs//plots/bigplot-grip.png Graphic file (type png)
 <use ./figs//plots/bigplot-grip.png>
-Package pdftex.def Info: ./figs//plots/bigplot-grip.png  used on input line 335
+Package pdftex.def Info: ./figs//plots/bigplot-grip.png  used on input line 341
 .
 (pdftex.def)             Requested size: 398.35985pt x 314.63922pt.
- [30 <./figs//plots/bigplot.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
  []
 
-<./figs//plots/GR-torque.png, id=215, 323.2878pt x 258.7266pt>
+<./figs//plots/GR-torque.png, id=220, 323.2878pt x 258.7266pt>
 File: ./figs//plots/GR-torque.png Graphic file (type png)
 <use ./figs//plots/GR-torque.png>
-Package pdftex.def Info: ./figs//plots/GR-torque.png  used on input line 345.
+Package pdftex.def Info: ./figs//plots/GR-torque.png  used on input line 351.
 (pdftex.def)             Requested size: 318.68909pt x 255.05049pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./figs//plots/GR-friction.png, id=216, 323.2878pt x 258.7266pt>
+<./figs//plots/GR-friction.png, id=221, 323.2878pt x 258.7266pt>
 File: ./figs//plots/GR-friction.png Graphic file (type png)
 <use ./figs//plots/GR-friction.png>
-Package pdftex.def Info: ./figs//plots/GR-friction.png  used on input line 351.
+Package pdftex.def Info: ./figs//plots/GR-friction.png  used on input line 357.
 
 (pdftex.def)             Requested size: 318.68909pt x 255.05049pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [31 <./figs//plots/bigplot-grip.png>] [32 <./figs//plots/GR-torque.png (PNG c
-opy)> <./figs//plots/GR-friction.png (PNG copy)>]
+) [32 <./figs//plots/bigplot-grip.png>] [33 <./figs//plots/GR-torque.png (PNG c
+opy)>] [34 <./figs//plots/GR-friction.png (PNG copy)>]
 \openout2 = `chaps-main/chap-design-requirements.aux'.
 
 
@@ -1829,7 +1848,7 @@ Overfull \hbox (7.904pt too wide) in paragraph at lines 13--32
 [][] 
  []
 
-[33
+[35
 
 
 
@@ -1886,7 +1905,7 @@ Overfull \hbox (1.7499pt too wide) in paragraph at lines 68--68
 []|$\OML/mdbch/m/it/10 m=s[]$| 
  []
 
-) [34]
+) [36]
 \openout2 = `chaps-main/chap-design.aux'.
 
  (chaps-main/chap-design.tex
@@ -1896,7 +1915,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[35
+[37
 
 
 
@@ -1911,12 +1930,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-[36]
+[38]
 Underfull \hbox (badness 10000) in paragraph at lines 25--27
 
  []
 
-) [37]
+) [39]
 \openout2 = `chaps-main/chap-drake-simulation.aux'.
 
  (chaps-main/chap-drake-simulation.tex
@@ -1946,7 +1965,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-[38
+[40
 
 
 
@@ -1957,21 +1976,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--22
+Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-) [39]
+<./figs//simulation-screenshot.png, id=252, 859.71187pt x 519.44063pt>
+File: ./figs//simulation-screenshot.png Graphic file (type png)
+<use ./figs//simulation-screenshot.png>
+Package pdftex.def Info: ./figs//simulation-screenshot.png  used on input line 
+24.
+(pdftex.def)             Requested size: 318.68909pt x 192.55461pt.
+) [41 <./figs//simulation-screenshot.png>]
 \openout2 = `chaps-main/chap-experiment.aux'.
 
  (chaps-main/chap-experiment.tex
@@ -1992,7 +2007,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--26
 
  []
 
-[40
+[42
 
 
 
@@ -2003,10 +2018,10 @@ Package caption Warning: \label without proper reference on input line 50.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `voltage-torque-table' on page 41 undefined on input l
+LaTeX Warning: Reference `voltage-torque-table' on page 43 undefined on input l
 ine 47.
 
-<./figs//plots/torque-voltage-relation.png, id=250, 530.199pt x 529.761pt>
+<./figs//plots/torque-voltage-relation.png, id=260, 530.199pt x 529.761pt>
 File: ./figs//plots/torque-voltage-relation.png Graphic file (type png)
 <use ./figs//plots/torque-voltage-relation.png>
 Package pdftex.def Info: ./figs//plots/torque-voltage-relation.png  used on inp
@@ -2015,12 +2030,12 @@ ut line 75.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[41]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-<./figs//experiment-setup.jpg, id=254, 4015.0pt x 1806.75pt>
+<./figs//experiment-setup.jpg, id=264, 4015.0pt x 1806.75pt>
 File: ./figs//experiment-setup.jpg Graphic file (type jpg)
 <use ./figs//experiment-setup.jpg>
 Package pdftex.def Info: ./figs//experiment-setup.jpg  used on input line 94.
@@ -2033,9 +2048,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--108
 
  []
 
-[42] [43 <./figs//plots/torque-voltage-relation.png> <./figs//experiment-setup.
-jpg>] [44]
-<./figs//plots/assessment-torque-relation-stage1.png, id=265, 362.007pt x 217.2
+[44] [45 <./figs//plots/torque-voltage-relation.png> <./figs//experiment-setup.
+jpg>] [46]
+<./figs//plots/assessment-torque-relation-stage1.png, id=276, 362.007pt x 217.2
 48pt>
 File: ./figs//plots/assessment-torque-relation-stage1.png Graphic file (type pn
 g)
@@ -2043,7 +2058,7 @@ g)
 Package pdftex.def Info: ./figs//plots/assessment-torque-relation-stage1.png  u
 sed on input line 157.
 (pdftex.def)             Requested size: 318.68909pt x 191.25507pt.
-) [45 <./figs//plots/assessment-torque-relation-stage1.png>]
+) [47 <./figs//plots/assessment-torque-relation-stage1.png>]
 \openout2 = `chaps-main/chap-analysis.aux'.
 
 
@@ -2054,7 +2069,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<./figs//plots/torque-experiment.png, id=270, 443.913pt x 268.713pt>
+<./figs//plots/torque-experiment.png, id=281, 443.913pt x 268.713pt>
 File: ./figs//plots/torque-experiment.png Graphic file (type png)
 <use ./figs//plots/torque-experiment.png>
 Package pdftex.def Info: ./figs//plots/torque-experiment.png  used on input lin
@@ -2065,7 +2080,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[46
+[48
 
 
 
@@ -2075,7 +2090,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-<./figs//plots/torque-comparison.png, id=276, 444.132pt x 268.494pt>
+<./figs//plots/torque-comparison.png, id=286, 444.132pt x 268.494pt>
 File: ./figs//plots/torque-comparison.png Graphic file (type png)
 <use ./figs//plots/torque-comparison.png>
 Package pdftex.def Info: ./figs//plots/torque-comparison.png  used on input lin
@@ -2091,7 +2106,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[47 <./figs//plots/torque-comparison.png>]
+[49 <./figs//plots/torque-comparison.png>]
 Overfull \hbox (56.43417pt too wide) in paragraph at lines 40--47
  [][] 
  []
@@ -2111,12 +2126,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 
  []
 
-[48]) [49]
+[50]) [51]
 \openout2 = `chaps-main/chap-conclusion.aux'.
 
  (chaps-main/chap-conclusion.tex
 Chapter 10.
-) [50
+) [52
 
 
 
@@ -2181,7 +2196,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 [][] 
  []
 
-) [51
+) [53
 
 
 
@@ -2217,7 +2232,7 @@ Overfull \hbox (16.69037pt too wide) in paragraph at lines 37--51
 y.wiley.com/doi/abs/10.1002/rob.21887 
  []
 
-) [52
+) [54
 
 
 
@@ -2235,10 +2250,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16472 strings out of 476339
- 340239 string characters out of 5797934
+ 16496 strings out of 476339
+ 341005 string characters out of 5797934
  1865340 words of memory out of 5000000
- 35945 multiletter control sequences out of 15000+600000
+ 35969 multiletter control sequences out of 15000+600000
  633845 words of font info for 515 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,17n,117p,1834b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2254,9 +2269,9 @@ fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program Files/MiKTeX/fonts/type1/
 mathdesign/mdbch/md-chr8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/m
 dbch/md-chri7m.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr
 i8t.pfb>
-Output written on Report.pdf (61 pages, 20754897 bytes).
+Output written on Report.pdf (63 pages, 21325197 bytes).
 PDF statistics:
- 383 PDF objects out of 1000 (max. 8388607)
+ 393 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 148169 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 148179 words of extra memory for PDF output out of 154059 (max. 10000000)
 

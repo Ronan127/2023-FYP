@@ -40,20 +40,22 @@
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Free body diagram of the LIM frame (component 1)\relax }}{23}{}%
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Free body diagram of the gears (components 2-5)\relax }}{24}{}%
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Definition of $\vec {l}_7$ and $\theta _7$\relax }}{26}{}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Relationship between LIM angle and required torque across all stages of motion\relax }}{30}{}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Relationship between LIM angle and required coefficient of friction.\relax }}{31}{}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Relationship between LIM gear ratio and required torque\relax }}{32}{}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Relationship between LIM gear ratio and required coefficient of friction\relax }}{32}{}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Flowchart for this project's solver\relax }}{29}{}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Relationship between LIM angle and required torque across all stages of motion\relax }}{31}{}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Relationship between LIM angle and required coefficient of friction.\relax }}{32}{}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Relationship between LIM gear ratio and required torque\relax }}{33}{}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Relationship between LIM gear ratio and required coefficient of friction\relax }}{34}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Screenshot of the device climbing steps in the Drake simulation.\relax }}{41}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{43}{}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Photograph of the experimental set-up, in which the device is performing Stage 4 motion.\relax }}{43}{}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{45}{}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{45}{}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Photograph of the experimental set-up, in which the device is performing Stage 4 motion.\relax }}{45}{}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{47}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Required torques for each stage determined experimentally\relax }}{46}{}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage from different sources.\relax }}{47}{}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Required torques for each stage determined experimentally\relax }}{48}{}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage from different sources.\relax }}{49}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
