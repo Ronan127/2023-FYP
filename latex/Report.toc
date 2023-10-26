@@ -41,24 +41,24 @@
 \contentsline {section}{\numberline {6.2}Body design}{33}{}%
 \contentsline {section}{\numberline {6.3}Motor selection}{34}{}%
 \contentsline {section}{\numberline {6.4}Control circuits and code}{34}{}%
-\contentsline {section}{\numberline {6.5}Construction and testing}{36}{}%
-\contentsline {chapter}{\numberline {7}Drake Simulation}{37}{}%
-\contentsline {section}{\numberline {7.1}Overview and objectives}{37}{}%
-\contentsline {section}{\numberline {7.2}Selection of simulator}{37}{}%
-\contentsline {section}{\numberline {7.3}CAD to simulation pipeline}{37}{}%
-\contentsline {section}{\numberline {7.4}Using the simulator}{38}{}%
-\contentsline {chapter}{\numberline {8}Experiment}{39}{}%
-\contentsline {section}{\numberline {8.1}Voltage-torque calibration}{39}{}%
-\contentsline {subsection}{\numberline {8.1.1}Variables}{39}{}%
-\contentsline {subsection}{\numberline {8.1.2}Method}{40}{}%
-\contentsline {subsection}{\numberline {8.1.3}Results}{40}{}%
-\contentsline {section}{\numberline {8.2}Torque measurement}{41}{}%
-\contentsline {subsection}{\numberline {8.2.1}Variables}{41}{}%
-\contentsline {subsection}{\numberline {8.2.2}Method}{43}{}%
-\contentsline {subsection}{\numberline {8.2.3}Results}{43}{}%
-\contentsline {chapter}{\numberline {9}Analysis}{45}{}%
-\contentsline {section}{\numberline {9.1}Quantitative comparison}{45}{}%
-\contentsline {section}{\numberline {9.2}Assessment of error}{46}{}%
-\contentsline {chapter}{\numberline {10}Conclusions}{50}{}%
-\contentsline {chapter}{\numberline {A}ECSA Outcome Self Assessment}{51}{}%
-\contentsline {chapter}{List of references}{52}{}%
+\contentsline {section}{\numberline {6.5}Construction and testing}{37}{}%
+\contentsline {chapter}{\numberline {7}Drake Simulation}{38}{}%
+\contentsline {section}{\numberline {7.1}Overview and objectives}{38}{}%
+\contentsline {section}{\numberline {7.2}Selection of simulator}{38}{}%
+\contentsline {section}{\numberline {7.3}CAD to simulation pipeline}{38}{}%
+\contentsline {section}{\numberline {7.4}Using the simulator}{39}{}%
+\contentsline {chapter}{\numberline {8}Experiment}{40}{}%
+\contentsline {section}{\numberline {8.1}Voltage-torque calibration}{40}{}%
+\contentsline {subsection}{\numberline {8.1.1}Variables}{40}{}%
+\contentsline {subsection}{\numberline {8.1.2}Method}{41}{}%
+\contentsline {subsection}{\numberline {8.1.3}Results}{41}{}%
+\contentsline {section}{\numberline {8.2}Torque measurement}{42}{}%
+\contentsline {subsection}{\numberline {8.2.1}Variables}{42}{}%
+\contentsline {subsection}{\numberline {8.2.2}Method}{44}{}%
+\contentsline {subsection}{\numberline {8.2.3}Results}{44}{}%
+\contentsline {chapter}{\numberline {9}Analysis}{46}{}%
+\contentsline {section}{\numberline {9.1}Quantitative comparison}{46}{}%
+\contentsline {section}{\numberline {9.2}Assessment of error}{47}{}%
+\contentsline {chapter}{\numberline {10}Conclusions}{51}{}%
+\contentsline {chapter}{\numberline {A}ECSA Outcome Self Assessment}{52}{}%
+\contentsline {chapter}{List of references}{53}{}%

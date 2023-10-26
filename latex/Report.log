@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  25 OCT 2023 15:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  26 OCT 2023 07:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1070,7 +1070,13 @@ le climb-ing (Delmerico
 \tf@lof=\write4
 \openout4 = `Report.lof'.
 
- (Report.lot)
+ (Report.lot
+Overfull \hbox (10.28049pt too wide) in paragraph at lines 18--18
+ [][] []\T1/mdbch/m/n/12 (-20) Recorded re-sults and cal-cu-lated torque from t
+he cal-i-bra-tion ex-per-i-ment. [][]  
+ []
+
+)
 \tf@lot=\write5
 \openout5 = `Report.lot'.
 
@@ -1368,27 +1374,27 @@ File: ./figs//Powrie-device.png Graphic file (type png)
 Package pdftex.def Info: ./figs//Powrie-device.png  used on input line 88.
 (pdftex.def)             Requested size: 139.42838pt x 104.53288pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
 <./figs//Powrie-falling.png, id=86, 614.295pt x 593.8185pt>
 File: ./figs//Powrie-falling.png Graphic file (type png)
 <use ./figs//Powrie-falling.png>
-Package pdftex.def Info: ./figs//Powrie-falling.png  used on input line 97.
+Package pdftex.def Info: ./figs//Powrie-falling.png  used on input line 98.
 (pdftex.def)             Requested size: 139.42838pt x 134.78131pt.
 [6 <./figs//Buch-robot.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 108--110
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
 
  []
 
 [7 <./figs//Powrie-falling.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
@@ -1396,10 +1402,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--121
 File: ./figs//Powrie-gear-differences.png Graphic file (type png)
 <use ./figs//Powrie-gear-differences.png>
 Package pdftex.def Info: ./figs//Powrie-gear-differences.png  used on input lin
-e 124.
+e 125.
 (pdftex.def)             Requested size: 358.52142pt x 74.54074pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
@@ -1941,25 +1947,105 @@ Package pdftex.def Info: ./figs//circuit-diagram.png  used on input line 38.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--46
-
- []
-
 [34 <./figs//Powrie-internals.png> <./figs//internals.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 50--52
+<./figs//controller-flowchart.png, id=232, 573.5829pt x 1171.0149pt>
+File: ./figs//controller-flowchart.png Graphic file (type png)
+<use ./figs//controller-flowchart.png>
+Package pdftex.def Info: ./figs//controller-flowchart.png  used on input line 4
+7.
+(pdftex.def)             Requested size: 189.42297pt x 386.7247pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-[35 <./figs//circuit-diagram.png>]) [36]
+[35 <./figs//circuit-diagram.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
+
+ []
+
+<./figs//device.png, id=237, 1806.75pt x 2793.43625pt>
+File: ./figs//device.png Graphic file (type png)
+<use ./figs//device.png>
+Package pdftex.def Info: ./figs//device.png  used on input line 71.
+(pdftex.def)             Requested size: 139.42838pt x 215.55133pt.
+[36 <./figs//controller-flowchart.png>]
+Underfull \hbox (badness 5637) in paragraph at lines 76--77
+[]\T1/mdbch/m/n/12 (+20) To build the de-vice, the parts were laser
+ []
+
+
+Underfull \hbox (badness 2111) in paragraph at lines 76--77
+\T1/mdbch/m/n/12 (+20) cut from Medium Den-sity Fi-bre-board (MDF)
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 76--77
+\T1/mdbch/m/n/12 (+20) and Acrylic. The outer sur-face of wheels is
+ []
+
+
+Underfull \hbox (badness 6725) in paragraph at lines 76--77
+\T1/mdbch/m/n/12 (+20) is left to dry, in-creas-ing the grip of the
+ []
+
+
+Underfull \hbox (badness 8113) in paragraph at lines 76--77
+\T1/mdbch/m/n/12 (+20) how-ever it was found that the laser cut
+ []
+
+
+Underfull \hbox (badness 3690) in paragraph at lines 76--77
+\T1/mdbch/m/n/12 (+20) gears did not mesh well, caus-ing them to
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 76--77
+\T1/mdbch/m/n/12 (+20) get stuck. To ad-dress this, the teeth of
+ []
+
+
+Underfull \hbox (badness 2393) in paragraph at lines 76--77
+\T1/mdbch/m/n/12 (+20) the gears were filed down un-til they could
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 76--77
+\T1/mdbch/m/n/12 (+20) mesh eas-ily. This has the dis-ad-van-tage of
+ []
+
+
+Underfull \hbox (badness 1748) in paragraph at lines 76--77
+\T1/mdbch/m/n/12 (+20) in-creas-ing kick-back on the gears. How-ever,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+79.
+
+<./figs//device-climbing.jpg, id=242, 4015.0pt x 1806.75pt>
+File: ./figs//device-climbing.jpg Graphic file (type jpg)
+<use ./figs//device-climbing.jpg>
+Package pdftex.def Info: ./figs//device-climbing.jpg  used on input line 81.
+(pdftex.def)             Requested size: 139.42838pt x 62.7189pt.
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 85
+.
+
+) [37 <./figs//device.png> <./figs//device-climbing.jpg>]
 \openout2 = `chaps-main/chap-drake-simulation.aux'.
 
- (chaps-main/chap-drake-simulation.tex
+
+(chaps-main/chap-drake-simulation.tex
 Chapter 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 5--7
@@ -1986,7 +2072,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
-[37
+[38
 
 
 
@@ -2001,13 +2087,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--21
 
  []
 
-<./figs//simulation-screenshot.png, id=242, 859.71187pt x 519.44063pt>
+<./figs//simulation-screenshot.png, id=249, 859.71187pt x 519.44063pt>
 File: ./figs//simulation-screenshot.png Graphic file (type png)
 <use ./figs//simulation-screenshot.png>
 Package pdftex.def Info: ./figs//simulation-screenshot.png  used on input line 
 24.
 (pdftex.def)             Requested size: 318.68909pt x 192.55461pt.
-) [38 <./figs//simulation-screenshot.png>]
+) [39 <./figs//simulation-screenshot.png>]
 \openout2 = `chaps-main/chap-experiment.aux'.
 
  (chaps-main/chap-experiment.tex
@@ -2028,58 +2114,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--26
 
  []
 
-[39
+[40
 
 
 
 
 ]
-
-Package caption Warning: \label without proper reference on input line 50.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `voltage-torque-table' on page 40 undefined on input l
-ine 47.
-
-<./figs//plots/torque-voltage-relation.png, id=250, 530.199pt x 529.761pt>
+<./figs//plots/torque-voltage-relation.png, id=258, 530.199pt x 529.761pt>
 File: ./figs//plots/torque-voltage-relation.png Graphic file (type png)
 <use ./figs//plots/torque-voltage-relation.png>
 Package pdftex.def Info: ./figs//plots/torque-voltage-relation.png  used on inp
-ut line 75.
+ut line 76.
 (pdftex.def)             Requested size: 318.68909pt x 318.4249pt.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[40]
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-<./figs//experiment-setup.jpg, id=255, 4015.0pt x 1806.75pt>
+<./figs//experiment-setup.jpg, id=262, 4015.0pt x 1806.75pt>
 File: ./figs//experiment-setup.jpg Graphic file (type jpg)
 <use ./figs//experiment-setup.jpg>
-Package pdftex.def Info: ./figs//experiment-setup.jpg  used on input line 94.
+Package pdftex.def Info: ./figs//experiment-setup.jpg  used on input line 95.
 (pdftex.def)             Requested size: 318.68909pt x 143.38506pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--108
+Underfull \hbox (badness 10000) in paragraph at lines 101--109
 
  []
 
-[41] [42 <./figs//plots/torque-voltage-relation.png> <./figs//experiment-setup.
-jpg>] [43]
-<./figs//plots/assessment-torque-relation-stage1.png, id=266, 362.007pt x 217.2
+[42] [43 <./figs//plots/torque-voltage-relation.png> <./figs//experiment-setup.
+jpg>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./figs//plots/assessment-torque-relation-stage1.png, id=270, 362.007pt x 217.2
 48pt>
 File: ./figs//plots/assessment-torque-relation-stage1.png Graphic file (type pn
 g)
 <use ./figs//plots/assessment-torque-relation-stage1.png>
 Package pdftex.def Info: ./figs//plots/assessment-torque-relation-stage1.png  u
-sed on input line 157.
+sed on input line 158.
 (pdftex.def)             Requested size: 318.68909pt x 191.25507pt.
-) [44 <./figs//plots/assessment-torque-relation-stage1.png>]
+) [44 <./figs//plots/assessment-torque-relation-stage1.png>] [45]
 \openout2 = `chaps-main/chap-analysis.aux'.
 
 
@@ -2090,7 +2172,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-<./figs//plots/torque-experiment.png, id=271, 443.913pt x 268.713pt>
+<./figs//plots/torque-experiment.png, id=278, 443.913pt x 268.713pt>
 File: ./figs//plots/torque-experiment.png Graphic file (type png)
 <use ./figs//plots/torque-experiment.png>
 Package pdftex.def Info: ./figs//plots/torque-experiment.png  used on input lin
@@ -2101,7 +2183,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
-[45
+[46
 
 
 
@@ -2111,7 +2193,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-<./figs//plots/torque-comparison.png, id=276, 444.132pt x 268.494pt>
+<./figs//plots/torque-comparison.png, id=284, 444.132pt x 268.494pt>
 File: ./figs//plots/torque-comparison.png Graphic file (type png)
 <use ./figs//plots/torque-comparison.png>
 Package pdftex.def Info: ./figs//plots/torque-comparison.png  used on input lin
@@ -2127,7 +2209,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-[46 <./figs//plots/torque-comparison.png>]
+[47 <./figs//plots/torque-comparison.png>]
 Overfull \hbox (60.10907pt too wide) in paragraph at lines 40--47
  [][] 
  []
@@ -2137,27 +2219,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--50
 
  []
 
+<./figs//imbalanced-climbing.jpg, id=289, 3072.47874pt x 1804.7425pt>
+File: ./figs//imbalanced-climbing.jpg Graphic file (type jpg)
+<use ./figs//imbalanced-climbing.jpg>
+Package pdftex.def Info: ./figs//imbalanced-climbing.jpg  used on input line 53
+.
+(pdftex.def)             Requested size: 139.42838pt x 81.89836pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--52
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--54
-
- []
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-[48]) [49]
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+[48 <./figs//imbalanced-climbing.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+[49]) [50]
 \openout2 = `chaps-main/chap-conclusion.aux'.
 
  (chaps-main/chap-conclusion.tex
 Chapter 10.
-) [50
+) [51
 
 
 
@@ -2175,6 +2263,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
 Underfull \hbox (badness 1043) in paragraph at lines 10--11
 \T1/mdbch/m/n/10 (+20) for-mu-late and solve con-ver-gent and di-ver-gent
+ []
+
+
+Underfull \hbox (badness 5817) in paragraph at lines 12--13
+[]|\T1/mdbch/m/n/10 (+20) The de-sign as-pect of this project
+ []
+
+
+Underfull \hbox (badness 3668) in paragraph at lines 16--17
+[]|\T1/mdbch/m/n/10 (+20) Producing the math-e-mat-i-cal model
  []
 
 
@@ -2222,7 +2320,7 @@ Overfull \hbox (1.8796pt too wide) in paragraph at lines 6--37
 [][] 
  []
 
-) [51
+) [52
 
 
 
@@ -2258,7 +2356,7 @@ Overfull \hbox (16.69037pt too wide) in paragraph at lines 37--51
 y.wiley.com/doi/abs/10.1002/rob.21887 
  []
 
-) [52
+) [53
 
 
 
@@ -2270,34 +2368,30 @@ y.wiley.com/doi/abs/10.1002/rob.21887
 (chaps-main/chap-design-requirements.aux) (chaps-main/chap-design.aux)
 (chaps-main/chap-drake-simulation.aux) (chaps-main/chap-experiment.aux)
 (chaps-main/chap-analysis.aux) (chaps-main/chap-conclusion.aux)
-(chaps-append/chap-ecsa.aux))
-
-LaTeX Warning: There were undefined references.
-
- ) 
+(chaps-append/chap-ecsa.aux)) ) 
 Here is how much of TeX's memory you used:
- 16604 strings out of 476339
- 343127 string characters out of 5797934
+ 16654 strings out of 476339
+ 344580 string characters out of 5797934
  1865340 words of memory out of 5000000
- 36079 multiletter control sequences out of 15000+600000
- 633610 words of font info for 512 fonts, out of 8000000 for 9000
+ 36131 multiletter control sequences out of 15000+600000
+ 633502 words of font info for 510 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,17n,117p,1834b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\Ronan\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi643\ectt
-1095.pk>{C:/Program Files/MiKTeX/fonts/enc/dvips/ly1/texnansi.enc}<C:/Program F
-iles/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/bitstrea/charter/bchr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bits
-trea/charter/bchr8a.pfb><C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/b
-chri8a.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chb8t.pfb><
-C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7t.pfb><C:/Program F
-iles/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7v.pfb><C:/Program Files/MiKTeX/
-fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program Files/MiKTeX/fonts/type1/
-mathdesign/mdbch/md-chr8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/m
-dbch/md-chri7m.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr
-i8t.pfb>
-Output written on Report.pdf (61 pages, 18768568 bytes).
+ <C:\Users\Ronan\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi643\ectt1095.pk>{C:/Program Files/MiKTeX/fonts/enc/dvips/l
+y1/texnansi.enc}<C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bchb8a.pf
+b><C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/bitstrea/charter/bchr8a.pfb><C:/Program Files/MiKTeX/f
+onts/type1/bitstrea/charter/bchri8a.pfb><C:/Program Files/MiKTeX/fonts/type1/ma
+thdesign/mdbch/md-chb8t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdb
+ch/md-chr7t.pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7v.
+pfb><C:/Program Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Prog
+ram Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr8t.pfb><C:/Program Files/Mi
+KTeX/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files/MiKTeX/fonts/
+type1/mathdesign/mdbch/md-chri8t.pfb>
+Output written on Report.pdf (62 pages, 27859146 bytes).
 PDF statistics:
- 387 PDF objects out of 1000 (max. 8388607)
+ 395 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 148179 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 148199 words of extra memory for PDF output out of 154059 (max. 10000000)
 

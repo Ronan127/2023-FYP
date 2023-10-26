@@ -40,30 +40,50 @@ In order to validate the model, the torque of the motors must be variable and re
 	\label{fig:circuit-diagram}
 \end{figure}
 
-The microcontroller is programmed to power off the motors when the sliders are centred, move the motors forward when the sliders are pushed forward, and move the motors in reverse when the sliders are pulled back. The flow diagram for this code is shown in Figure ???.\\
+The microcontroller is programmed to power off the motors when the sliders are centred, move the motors forward when the sliders are pushed forward, and move the motors in reverse when the sliders are pulled back. The PWM duty cycle is scaled such that when the ADC values are in the centre 20\% of their range, the PWM duty cycle is set to 0\%. When the ADC values are within the top or bottom 5\% of their range, the duty cycle is 100\%. The flow diagram for this code is shown in Figure \ref{fig:controller-flowchart}.
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=0.6\textheight]{controller-flowchart}
+	\caption{Microcontroller code flowchart.}
+	\label{fig:controller-flowchart}
+\end{figure}
 
 Initial tests showed that PWM duty cycle is not proportional to torque output on the motors. Instead, even at low duty cycles, the motors can lift a large load, they just do so slowly. This is likely because the self-locking gearbox prevents the axle from ever falling backwards. Consider a DC motor lifting a lever as seen in figure ???. Typically, when the PWM signal is on, the motor outputs full torque and moves forward, then when the PWM signal is off the motor outputs no torque and falls backwards. The PWM frequency is typically high enough that the human eye sees this as a smooth motion. However, because of the self-locking gearbox, the axle will lock when the PWM signal is off rather than moving backwards, resulting in an overall forward motion even at low duty cycles. This is quite useful for controlling the motors as the speed of the motors is proportional to the PWM duty cycle regardless of the load it must lift.\\
 
 However, for the validation of the model, the motor torque should be variable and measurable. Brushed DC motor torque is proportional to the current running through it, and the current reduces as the speed of the motor increases. The speed of the motor is also proportional to the terminal voltage. The approximate characteristics of a DC motor are given in Figure ???. The equation describing the torque of a DC motor in relation to motor voltage and speed is then,
 \begin{equation}
-	T = T_{Rated-stall}(\frac{V_{Terminal}}{V_{Rated}}-\frac{\omega}{\omega_{Rated-No-load}})
+	T = T_\mathrm{Rated-stall}(\frac{V_\mathrm{Terminal}}{V_\mathrm{Rated}}-\frac{\omega}{\omega_\mathrm{Rated-no-load}})
 \end{equation}
-where $T$ is the output torque, $T_{Rated-stall}$ is the stalling torque at the rated voltage, $V_{Terminal}$ is the supply voltage across the motor terminals, $V_{Rated}$ is the motor's rated supply voltage, $\omega$ is the rotational speed of the output shaft, and $\omega_{Rated-no-load}$ is the speed of the output shaft when no load is placed on it at the rated voltage.\\
+where $T$ is the output torque, $T_\mathrm{Rated-stall}$ is the stalling torque at the rated voltage, $V_\mathrm{Terminal}$ is the supply voltage across the motor terminals, $V_\mathrm{Rated}$ is the motor's rated supply voltage, $\omega$ is the rotational speed of the output shaft, and $\omega_\mathrm{Rated-no-load}$ is the speed of the output shaft when no load is placed on it at the rated voltage.\\
 
-To solve for the stalling torque, $\omega$ is set to $0$. This gives the relation,
+\noindent To solve for the stalling torque, $\omega$ is set to $0$. This gives the relation,
 \begin{equation}
-	T_{Stall} = T_{Rated-stall}\frac{V_{Terminal}}{V_{Rated}}
+	T_\mathrm{Stall} = T_\mathrm{Rated-stall}\frac{V_\mathrm{Terminal}}{V_\mathrm{Rated}}
 \end{equation}
 %??? Move to literature review?
 In order to vary the torque of the device, the terminal voltage must be varied. For this purpose, an LM2596S buck converter is used to vary the supply voltage.
 
 \section{Construction and testing}
 
-To build the device, the parts were laser cut from Medium Density Fibreboard (MDF) and Acrylic. The outer surface of wheels is coated with Patex, a rubbery adhesive which is left to dry, increasing the grip of the wheels. The assembly is relatively straightforward, however it was found that the laser cut gears did not mesh well, causing them to get stuck. To address this, the teeth of the gears were filed down to allow until they could mesh easily. This has the disadvantage of increasing kickback on the gears. However, this had little impact on performance as for all stages of motion, the gears will be engaged in one direction only.\\
-The device is shown in Figure ???.
-\\
-Initial tests show that the device is capable of climbing up two steps sequentially, which is more than any previous project achieved. This relative success can be attributed to the shorter forward protrusion of the body and possibly a higher grip on the surface of the wheels. However, the device struggled to climb a third step sequentially, this is because climbing the third step involves Stage 4 motion, which requires significantly higher torque than the previous stages. To address this, the body of the device was rebuilt using a JGY-370 gearbox motor which is geared for a higher torque. \\
-After this change, the device was able to consistently climb many sequential steps, and the lower speed due to the higher gear ratio made the device easier to control during the climbing motion. Figure ??? shows the device climbing a flight of stairs.
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\centering
+	\includegraphics[width=0.35\textwidth]{device}
+	\caption{Built device}
+	\label{fig:device}
+\end{wrapfigure}
+
+To build the device, the parts were laser cut from Medium Density Fibreboard (MDF) and Acrylic. The outer surface of wheels is coated with Patex, a rubbery adhesive which is left to dry, increasing the grip of the wheels. The assembly is relatively straightforward, however it was found that the laser cut gears did not mesh well, causing them to get stuck. To address this, the teeth of the gears were filed down until they could mesh easily. This has the disadvantage of increasing kickback on the gears. However, this has little impact on performance as for all stages of motion, the gears are engaged in one direction only. The device is shown in Figure \ref{fig:device}.\\
+
+
+\begin{wrapfigure}{l}{0.35\textwidth}
+	\centering
+	\includegraphics[width=0.35\textwidth]{device-climbing}
+	\caption{Device climbing stairs}
+	\label{fig:device-climbing}
+\end{wrapfigure}
+Initial tests show that the device is capable of climbing up two steps sequentially, which is more than any previous project achieved. This relative success can be attributed to the shorter forward protrusion of the body and possibly a higher grip on the surface of the wheels. However, the device struggled to climb a third step, this is because climbing the third step involves Stage 4 motion, which requires significantly higher torque than the previous stages. To address this, the body of the device was rebuilt using a JGY-370 gearbox motor which is geared for a higher torque. \\
+After this change, the device was able to consistently climb many sequential steps, and the lower speed due to the higher gear ratio made the device easier to control during the climbing motion. Figure \ref{fig:device-climbing} shows the device climbing a flight of stairs. Initial tests also show that by applying a forward torque to one LIM and a reverse torque to the other, the device is capable of turning on the spot. However this motion is inconsistent as the LIMs can start to lift, at which point the turning stops.
 
 %When the motor is turning it also acts as a generator, and produces a voltage known as back emf which is proportional to the speed of the motor. 
 %\begin{equation}

@@ -4,7 +4,7 @@ The objective of this analysis is to validate the model and the simulation. The 
 
 \section{Quantitative comparison}
 
-The torque measurement experiment gives two values for each stage of motion, the torque required to cause some partial movement, and the torque required to cause full movement. These values will be referred to as $T_{Partial}$ and $T_{Full}$ respectively, and are shown in Figure \ref{fig:torque-experiment}.\\
+The torque measurement experiment gives two values for each stage of motion, the torque required to cause some partial movement, and the torque required to cause full movement. These values will be referred to as $T_\mathrm{Partial}$ and $T_\mathrm{Full}$ respectively, and are shown in Figure \ref{fig:torque-experiment}.\\
 
 \begin{figure}[!h]
 	\centering
@@ -13,9 +13,9 @@ The torque measurement experiment gives two values for each stage of motion, the
 	\label{fig:torque-experiment}
 \end{figure}
 
-In Figure \ref{fig:torque-experiment}, there are two points for each stage, the higher of which is $T_{Full}$ and the lower is $T_{Partial}$. In cases where only a single point is present, there was no torque that would cause a partial movement; meaning that if the torque is high enough to start the movement, it is also high enough to complete the movement. Stages 0, 2, and 5 are omitted as the device does not push against gravity in these stages, so the torque required is negligible.\\
+In Figure \ref{fig:torque-experiment}, there are two points for each stage, the higher of which is $T_\mathrm{Full}$ and the lower is $T_\mathrm{Partial}$. In cases where only a single point is present, there was no torque that would cause a partial movement; meaning that if the torque is high enough to start the movement, it is also high enough to complete the movement. Stages 0, 2, and 5 are omitted as the device does not push against gravity in these stages, so the torque required is negligible.\\
 
-To determine the required torque in the simulation, the torque measurement experiment is simulated. The torque required across each stage of motion has already been calculated using the maths model, as shown in Figure \ref{fig:bigplot}. The required torque at the start of each stage is equivalent to $T_{Partial}$, as this is the torque that will cause the motion to start. The highest required torque for each stage is $T_{Full}$, as if the device can output this torque it will be able to complete the full stage of motion. The required torque produced by the simulation and the maths model are shown side by side with the experimental data in Figure \ref{fig:torque-comparison}.\\
+To determine the required torque in the simulation, the torque measurement experiment is simulated. The torque required across each stage of motion has already been calculated using the maths model, as shown in Figure \ref{fig:bigplot}. The required torque at the start of each stage is equivalent to $T_\mathrm{Partial}$, as this is the torque that will cause the motion to start. The highest required torque for each stage is $T_\mathrm{Full}$, as if the device can output this torque it will be able to complete the full stage of motion. The required torque produced by the simulation and the maths model are shown side by side with the experimental data in Figure \ref{fig:torque-comparison}.\\
 
 \begin{figure}[!h]
 	\centering
@@ -24,13 +24,13 @@ To determine the required torque in the simulation, the torque measurement exper
 	\label{fig:torque-comparison}
 \end{figure}
 
-Figure \ref{fig:torque-comparison} shows that the model, simulation, and experiment all produce similar values. In Stages 1, 4, and 6, the model and simulation both produce a lower required torque than the device actually needs. In Stage 3, the device needs less torque to complete the motion than the model and simulation predict.\\
+Figure \ref{fig:torque-comparison} shows that the model, simulation, and experiment all show similar trends but produce different values. In Stages 1, 4, and 6, the model and simulation both produce a lower required torque than the device actually needs. In Stage 3, the device needs less torque to complete the motion than the model and simulation predict.\\
 To test the accuracy of the model and simulation across a range of design parameters, the experiment and comparison were repeated twice, once with a 60 cm long tail in place of the 30 cm one, and once with a 340 g mass attached to the body of the device. The comparison between these results are shown in Figures ??? and ???.  
 \\
  
 \section{Assessment of error}
 
-Table \ref{tab:error} shows the percentage error of the required torque produced by the model and simulation. Negative error indicates that the experiment required less torque than the model or simulation predicted. The simulation is shown to be more accurate than the maths model at every data point, and the point with the highest error for both is the torque required to cause complete motion in Stage 3.\\
+Table \ref{tab:error} shows the percentage error of the required torque produced by the model and simulation. Negative error indicates that the experiment required less torque than the model or simulation predicted. The simulation is shown to be more accurate than the maths model at most data points.\\
  
 
 \begin{table}[!ht]
@@ -48,7 +48,14 @@ Table \ref{tab:error} shows the percentage error of the required torque produced
 
 Identifying the source of the error is not essential for the purposes of informing design, one can simply design the motors to have at least 2 times the calculated required torque. However, analysing the source of this error is important in order to improve future versions of the model.\\
 
-In Stage 1, the model predicts that there is no torque that will cause partial movement. As the device lifts the torque required decreases, so if the torque is high enough to start lifting, it is high enough to complete Stage 1 motion. However, Figure \ref{fig:torque-comparison} shows that there is a range of torques that produce partial motion in the experimental and simulated data. The most likely cause for this is that some assumption made in the maths model is invalid. Although the calculations are done differently, the simulation is subject to the same rigid body and friction assumptions as the maths model. The main discrepancy between the two is that the simulation allows motion in three dimensions while the model is limited to two. As there is a large difference between the results of the model and the simulation, it is likely that the three-dimensional movement is what allows the device to get stuck part way during Stage 1. Initial tests showed that if one of the LIMs moves ahead of the other, the device will tip slightly, putting more weight on the LIM that falls behind, preventing the LIM from lifting unless it has excessive torque. An example of this is shown in Figure ???. It is likely that even when the LIMs appear to move in unison, even a slight imbalance can cause the motion to stop part way when the motor torque is close to the required torque. To address this error, one could update the maths model to allow movement in three dimensions, however this would drastically increase the complexity and the calculation time of the model, and is excessive when tools for three-dimensional simulation such as Drake are readily available.\\
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\centering
+	\includegraphics[width=0.35\textwidth]{imbalanced-climbing}
+	\caption{Device failing to climb as one LIM lifts ahead of the other}
+	\label{fig:imbalanced-climbing}
+\end{wrapfigure}
+
+In Stage 1, the model predicts that there is no torque that will cause partial movement. As the device lifts the torque required decreases, so if the torque is high enough to start lifting, it is high enough to complete Stage 1 motion. However, Figure \ref{fig:torque-comparison} shows that there is a range of torques that produce partial motion in the experimental and simulated data. The most likely cause for this is that some assumption made in the maths model is invalid. Although the calculations are done differently, the simulation is subject to the same rigid body and friction assumptions as the maths model. The main discrepancy between the two is that the simulation allows motion in three dimensions while the model is limited to two. As there is a large difference between the results of the model and the simulation, it is likely that the three-dimensional movement is what allows the device to get stuck part way during Stage 1. Initial tests showed that if one of the LIMs moves ahead of the other, the device will tip slightly, putting more weight on the LIM that falls behind, preventing the LIM from lifting unless it has excessive torque. An example of this is shown in Figure \ref{fig:imbalanced-climbing}. It is likely that even when the LIMs appear to move in unison, even a slight imbalance can cause the motion to stop part way when the motor torque is close to the required torque. To address this error, one could update the maths model to allow movement in three dimensions, however this would drastically increase the complexity and the calculation time of the model, and is excessive when tools for three-dimensional simulation such as Drake are readily available.\\
 
 In Stage 3, the experiment shows that there is no torque that causes partial motion. However, the simulation indicates that there is a small range of torques that cause partial motion, and the maths model indicates that there is a large range of torques that cause partial motion. Both the simulation and the maths model also indicate that the required torque is higher than the experimental value. The reason for this error in the maths model is likely because it incorrectly assumes that the frame of the LIM will not come into contact with the step. When the device climbs in Stage 3, the frame of the LIM slides along the edge of the step while the front wheel pulls the device up the step, which is illustrated in Figure ???. \\
 

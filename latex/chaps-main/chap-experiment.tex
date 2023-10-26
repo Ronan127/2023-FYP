@@ -6,9 +6,9 @@ In order to validate that the model is accurate for each motion, the torque that
 The relationship between terminal voltage and stalling torque is determined experimentally, this will allow subsequent experiments to measure the terminal voltage and calculate the stalling torque.
 To characterise the motors, an experiment was set up to determine the stalling torque produced at different input voltages. In this experiment, the motor lifts a lever with a mass attached. The torque required to lift the lever increases as the lever angle increases, until the motor can no longer provide enough torque and stalls. The lever angle which causes the motor to stall can be used to calculate the stalling torque, specifically by using the horizontal displacement of the mass,
 \begin{equation}
-	T_{Stall} = m g s_x
+	T_\mathrm{Stall} = m g s_x
 \end{equation}
-where $T_{Stall}$ is the stalling torque, $m$ is the mass attached to the lever, $g$ is the gravitational acceleration, and $s_x$ is the horizontal displacement between the mass and the motor axis.
+where $T_\mathrm{Stall}$ is the stalling torque, $m$ is the mass attached to the lever, $g$ is the gravitational acceleration, and $s_x$ is the horizontal displacement between the mass and the motor axis.
 %figure here ????
 This test is repeated with different motor voltages.\\
 
@@ -47,11 +47,12 @@ $\bullet$ Ruler used\\
 The measured results, as well as the calculated torque, are shown in Table \ref{voltage-torque-table}, and visualised in Figure \ref{torque-voltage-plot}.
 
 \begin{table}[!ht]
-	\label{voltage-torque-table}
 	\centering
+	\caption{Recorded results and calculated torque from the calibration experiment.}
+	\label{voltage-torque-table}
 	\begin{tabular}{|l|l|l|l|}
 		\hline
-		Mass (g) & Lever (mm) & Voltage (V) & Torque (Nm) \\ \hline
+		Mass (g) & Lever (mm) & Voltage (V) & Torque (N$\cdot$m) \\ \hline
 		145 & 97 & 0.83 & 0.13797765 \\ \hline
 		145 & 101 & 0.92 & 0.14366745 \\ \hline
 		145 & 151 & 1.1 & 0.21478995 \\ \hline
@@ -79,10 +80,10 @@ The measured results, as well as the calculated torque, are shown in Table \ref{
 
 This plot shows a linear relationship between stalling torque and voltage, and gives the formula,
 \begin{equation}
-	T_{Stall} =  0.5166 V - 0.3598 \label{eqTorqueVoltage}
+	T_\mathrm{Stall} =  0.5166 V - 0.3598 \label{eqTorqueVoltage}
 \end{equation}
 where $V$ is the motor terminal voltage.
-This experiment did not attempt to measure torques beyond $2 Nm$ as this risked damaging the device and was beyond the expected requirements for the device.
+This experiment did not attempt to measure torques beyond 2 N$\cdot$m as this risked damaging the device and was beyond the expected requirements for the device.
 
 
 
@@ -122,15 +123,15 @@ $\bullet$ Multimeter used\\
 
 \subsection{Results}
 
-Table \ref{tableStage1Torque} shows the measured results for the Stage 1 motion, as well as the torques calculated using Equation \ref{eqTorqueVoltage}. The data for the other stages of motion can be found in Appendix ???.
+Table \ref{tab:Stage1Torque} shows the measured results for the Stage 1 motion, as well as the torques calculated using Equation \ref{eqTorqueVoltage}. The data for the other stages of motion can be found in Appendix ???.
 
 \begin{table}[!h]
-	\caption{Torque experiment results for Stage 1}
-	\label{tableStage1Torque}
 	\centering
+	\caption{Torque experiment results for Stage 1}
+	\label{tab:Stage1Torque}
 	\begin{tabular}{|l|l|l|}
 		\hline
-		Voltage (V) & Assessment of motion & Torque (Nm) \\ \hline
+		Voltage (V) & Assessment of motion & Torque (N$\cdot$m) \\ \hline
 		0.89 & None & 0.099974 \\ \hline
 		1.08 & None & 0.198128 \\ \hline
 		1.12 & None & 0.218792 \\ \hline
@@ -150,7 +151,7 @@ Table \ref{tableStage1Torque} shows the measured results for the Stage 1 motion,
 	\end{tabular}
 \end{table}
 
-This data is plotted in Figure \ref{plotassessment-torque-relation-stage1}, which shows that the full motion only happens with torques of at least $0.73 Nm$, while partial motion only requires $0.61 Nm$.
+This data is plotted in Figure \ref{plotassessment-torque-relation-stage1}, which shows that the full motion only happens with torques of at least 0.73 N$\cdot$m, while partial motion only requires 0.61 N$\cdot$m.
 
 \begin{figure}[h]
 	\centering

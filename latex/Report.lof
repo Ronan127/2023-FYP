@@ -46,15 +46,19 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Body design comparison.\relax }}{34}{}%
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Control system circuit diagram.\relax }}{35}{}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Microcontroller code flowchart.\relax }}{36}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Built device\relax }}{37}{}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Device climbing stairs\relax }}{37}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Screenshot of the device climbing steps in the Drake simulation.\relax }}{38}{}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Screenshot of the device climbing steps in the Drake simulation.\relax }}{39}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{42}{}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Photograph of the experimental set-up, in which the device is performing Stage 4 motion.\relax }}{42}{}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{43}{}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Photograph of the experimental set-up, in which the device is performing Stage 4 motion.\relax }}{43}{}%
 \contentsline {figure}{\numberline {8.3}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{44}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Required torques for each stage determined experimentally\relax }}{45}{}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage from different sources.\relax }}{46}{}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Required torques for each stage determined experimentally\relax }}{46}{}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage from different sources.\relax }}{47}{}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Device failing to climb as one LIM lifts ahead of the other\relax }}{48}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
