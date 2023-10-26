@@ -46,26 +46,33 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Body design comparison.\relax }}{34}{}%
 \contentsline {figure}{\numberline {6.2}{\ignorespaces Control system circuit diagram.\relax }}{35}{}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Lever example\relax }}{35}{}%
 \contentsline {figure}{\numberline {6.3}{\ignorespaces Microcontroller code flowchart.\relax }}{36}{}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Built device\relax }}{37}{}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Device climbing stairs\relax }}{37}{}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Torque speed plot of a typical DC motor \citep {Page-1999}.\relax }}{37}{}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Built device\relax }}{37}{}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Device climbing stairs\relax }}{38}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Screenshot of the device climbing steps in the Drake simulation.\relax }}{39}{}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Screenshot of the device climbing steps in the Drake simulation.\relax }}{40}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{43}{}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Photograph of the experimental set-up, in which the device is performing Stage 4 motion.\relax }}{43}{}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{44}{}%
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Calibration lever set-up.\relax }}{42}{}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{44}{}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Photograph of the experimental set-up, in which the device is performing Stage 4 motion.\relax }}{45}{}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{47}{}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Current recorded over time as the device completes Stage 1\relax }}{48}{}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Required torques for each stage determined experimentally\relax }}{46}{}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage from different sources.\relax }}{47}{}%
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Required torques for each stage from different sources, with varied design parameters.\relax }}{48}{}%
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Device failing to climb as one LIM lifts ahead of the other\relax }}{48}{}%
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Frame of the LIM making contact with the edge of the step in Stage 3\relax }}{49}{}%
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Simulated current and recorded torque.\relax }}{49}{}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage determined experimentally\relax }}{50}{}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Required torques for each stage from different sources.\relax }}{51}{}%
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Required torques for each stage from different sources, with varied design parameters.\relax }}{51}{}%
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Device failing to climb as one LIM lifts ahead of the other\relax }}{52}{}%
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Frame of the LIM making contact with the edge of the step in Stage 3\relax }}{53}{}%
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Visualisation of the mass acting as a pendulum on the end of the lever.\relax }}{54}{}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Gantt Chart with grey line indicating baseline\relax }}{55}{}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Gantt Chart with grey line indicating baseline\relax }}{59}{}%
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

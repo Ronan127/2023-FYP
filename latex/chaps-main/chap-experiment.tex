@@ -8,8 +8,13 @@ To characterise the motors, an experiment was set up to determine the stalling t
 \begin{equation}
 	T_\mathrm{Stall} = m g s_x
 \end{equation}
-where $T_\mathrm{Stall}$ is the stalling torque, $m$ is the mass attached to the lever, $g$ is the gravitational acceleration, and $s_x$ is the horizontal displacement between the mass and the motor axis.
-%figure here ????
+where $T_\mathrm{Stall}$ is the stalling torque, $m$ is the mass attached to the lever, $g$ is the gravitational acceleration, and $s_x$ is the horizontal displacement between the mass and the motor axis. The experiment set-up is illustrated in Figure \ref{fig:lever-labelled}.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{FBDs/lever-labelled}
+	\caption{Calibration lever set-up.}
+	\label{fig:lever-labelled}
+\end{figure}
 This test is repeated with different motor voltages.\\
 
 \subsection{Variables}
@@ -123,7 +128,7 @@ $\bullet$ Multimeter used\\
 
 \subsection{Results}
 
-Table \ref{tab:Stage1Torque} shows the measured results for the Stage 1 motion, as well as the torques calculated using Equation \ref{eqTorqueVoltage}. The data for the other stages of motion can be found in Appendix ???.
+Table \ref{tab:Stage1Torque} shows the measured results for the Stage 1 motion, as well as the torques calculated using Equation \ref{eqTorqueVoltage}. The data for the other stages of motion can be found in Appendix \ref{app:data}.
 
 \begin{table}[!h]
 	\centering
@@ -160,4 +165,38 @@ This data is plotted in Figure \ref{plotassessment-torque-relation-stage1}, whic
 	\label{plotassessment-torque-relation-stage1}
 \end{figure}
 
+\section{Current measurement}
+This experiment aims to measure the current running through the motors when the LIM climbs steps. Current is proportional to torque in DC motors, so the curve produced by this experiment can be compared with the simulated torque during the same movement. This will allow the kinematic aspects of the model and simulation to be validated, as the stalling torques from the previous experiment can only validate the statics. A 1 $\Omega$ resistor is placed in series with the motor, so that the voltage across the resistor will be equal to the current running through it.\\
 
+\subsection{Variables}
+Independent variable:\\
+$\bullet$ Time (s)\\
+Dependent variable:\\
+$\bullet$ Current (A)\\
+Controlled variables:\\
+$\bullet$ LIM device used\\
+$\bullet$ Power supply used\\
+$\bullet$ Oscilloscope used\\
+$\bullet$ Oscilloscope probes used\\
+$\bullet$ Resistor used\\
+
+\subsection{Method}
+
+\begin{enumerate}
+	\item Connect a 1 $\Omega$ resistor in series with one motor.
+	\item Attach the oscilloscope probe to either end of the resistor.
+	\item Configure the oscilloscope trigger on a rising edge with a 5 second period.
+	\item Place the device against a step or wall so that it will perform Stage 1 motion when powered.
+	\item Power on the device until it has completed stage 1 motion.
+	\item Record the voltage data from the oscilloscope.
+\end{enumerate}
+
+\subsection{Results}
+
+Figure \ref{fig:current-stage-1} shows the plot recorded by the oscilloscope. It shows that there is a large spike in current as the device powers on, followed by a fairly constant but noisy current until a slight dip at 2.7 s, then a drop when it completes stage 1 at 3.25 s. The spike at the start is due the motor producing no counter-electromotive force (EMF) when it is stationary. As the motor shaft initially accelerates, the current rapidly drops due to the counter-EMF produced by the motor. The noise shown in the plot can be attributed to the constant switching of the brushed DC motor. The noise could be eliminated by implementing a low pass filter, but this would also filter out the initial spike. 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{plots/current-stage-1}
+	\caption{Current recorded over time as the device completes Stage 1}
+	\label{fig:current-stage-1}
+\end{figure}

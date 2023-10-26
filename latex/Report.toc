@@ -3,7 +3,7 @@
 \contentsline {chapter}{Table of contents}{iv}{}%
 \contentsline {chapter}{List of figures}{vii}{}%
 \contentsline {chapter}{List of tables}{viii}{}%
-\contentsline {chapter}{List of symbols}{ix}{}%
+\contentsline {chapter}{List of symbols}{x}{}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{}%
 \contentsline {section}{\numberline {1.1}Background}{1}{}%
 \contentsline {section}{\numberline {1.2}Objectives}{2}{}%
@@ -42,28 +42,34 @@
 \contentsline {section}{\numberline {6.3}Motor selection}{34}{}%
 \contentsline {section}{\numberline {6.4}Control circuits and code}{34}{}%
 \contentsline {section}{\numberline {6.5}Construction and testing}{37}{}%
-\contentsline {chapter}{\numberline {7}Drake Simulation}{38}{}%
-\contentsline {section}{\numberline {7.1}Overview and objectives}{38}{}%
-\contentsline {section}{\numberline {7.2}Selection of simulator}{38}{}%
-\contentsline {section}{\numberline {7.3}CAD to simulation pipeline}{38}{}%
-\contentsline {section}{\numberline {7.4}Using the simulator}{39}{}%
-\contentsline {chapter}{\numberline {8}Experiment}{40}{}%
-\contentsline {section}{\numberline {8.1}Voltage-torque calibration}{40}{}%
-\contentsline {subsection}{\numberline {8.1.1}Variables}{40}{}%
-\contentsline {subsection}{\numberline {8.1.2}Method}{41}{}%
-\contentsline {subsection}{\numberline {8.1.3}Results}{41}{}%
-\contentsline {section}{\numberline {8.2}Torque measurement}{42}{}%
-\contentsline {subsection}{\numberline {8.2.1}Variables}{42}{}%
-\contentsline {subsection}{\numberline {8.2.2}Method}{44}{}%
-\contentsline {subsection}{\numberline {8.2.3}Results}{44}{}%
-\contentsline {chapter}{\numberline {9}Analysis}{46}{}%
-\contentsline {section}{\numberline {9.1}Quantitative comparison}{46}{}%
-\contentsline {section}{\numberline {9.2}Assessment of error}{47}{}%
-\contentsline {chapter}{\numberline {10}Recommendations for future work}{51}{}%
-\contentsline {section}{\numberline {10.1}Recommendation for design}{51}{}%
-\contentsline {chapter}{\numberline {11}Conclusions}{52}{}%
-\contentsline {chapter}{\numberline {A}ECSA Outcome Self Assessment}{53}{}%
-\contentsline {chapter}{\numberline {B}Techno-economic analysis}{54}{}%
-\contentsline {chapter}{\numberline {C}Risk Assessment}{56}{}%
-\contentsline {chapter}{\numberline {D}Resource use and end of life strategy}{57}{}%
-\contentsline {chapter}{List of references}{58}{}%
+\contentsline {chapter}{\numberline {7}Drake Simulation}{39}{}%
+\contentsline {section}{\numberline {7.1}Overview and objectives}{39}{}%
+\contentsline {section}{\numberline {7.2}Selection of simulator}{39}{}%
+\contentsline {section}{\numberline {7.3}CAD to simulation pipeline}{39}{}%
+\contentsline {section}{\numberline {7.4}Using the simulator}{40}{}%
+\contentsline {chapter}{\numberline {8}Experiment}{41}{}%
+\contentsline {section}{\numberline {8.1}Voltage-torque calibration}{41}{}%
+\contentsline {subsection}{\numberline {8.1.1}Variables}{41}{}%
+\contentsline {subsection}{\numberline {8.1.2}Method}{42}{}%
+\contentsline {subsection}{\numberline {8.1.3}Results}{43}{}%
+\contentsline {section}{\numberline {8.2}Torque measurement}{43}{}%
+\contentsline {subsection}{\numberline {8.2.1}Variables}{44}{}%
+\contentsline {subsection}{\numberline {8.2.2}Method}{45}{}%
+\contentsline {subsection}{\numberline {8.2.3}Results}{45}{}%
+\contentsline {section}{\numberline {8.3}Current measurement}{45}{}%
+\contentsline {subsection}{\numberline {8.3.1}Variables}{46}{}%
+\contentsline {subsection}{\numberline {8.3.2}Method}{47}{}%
+\contentsline {subsection}{\numberline {8.3.3}Results}{47}{}%
+\contentsline {chapter}{\numberline {9}Analysis}{49}{}%
+\contentsline {section}{\numberline {9.1}Qualitative comparison}{49}{}%
+\contentsline {section}{\numberline {9.2}Quantitative comparison}{50}{}%
+\contentsline {section}{\numberline {9.3}Assessment of error}{51}{}%
+\contentsline {chapter}{\numberline {10}Recommendations for future work}{55}{}%
+\contentsline {section}{\numberline {10.1}Recommendation for design}{55}{}%
+\contentsline {chapter}{\numberline {11}Conclusions}{56}{}%
+\contentsline {chapter}{\numberline {A}ECSA Outcome Self Assessment}{57}{}%
+\contentsline {chapter}{\numberline {B}Techno-economic analysis}{58}{}%
+\contentsline {chapter}{\numberline {C}Risk Assessment}{60}{}%
+\contentsline {chapter}{\numberline {D}Resource use and end of life strategy}{61}{}%
+\contentsline {chapter}{\numberline {E}Data}{62}{}%
+\contentsline {chapter}{List of references}{67}{}%

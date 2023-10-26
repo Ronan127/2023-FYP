@@ -49,9 +49,24 @@ The microcontroller is programmed to power off the motors when the sliders are c
 	\label{fig:controller-flowchart}
 \end{figure}
 
-Initial tests showed that PWM duty cycle is not proportional to torque output on the motors. Instead, even at low duty cycles, the motors can lift a large load, they just do so slowly. This is likely because the self-locking gearbox prevents the axle from ever falling backwards. Consider a DC motor lifting a lever as seen in figure ???. Typically, when the PWM signal is on, the motor outputs full torque and moves forward, then when the PWM signal is off the motor outputs no torque and falls backwards. The PWM frequency is typically high enough that the human eye sees this as a smooth motion. However, because of the self-locking gearbox, the axle will lock when the PWM signal is off rather than moving backwards, resulting in an overall forward motion even at low duty cycles. This is quite useful for controlling the motors as the speed of the motors is proportional to the PWM duty cycle regardless of the load it must lift.\\
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\centering
+	\includegraphics[width=0.35\textwidth]{FBDs/lever}
+	\caption{Lever example}
+	\label{fig:lever}
+\end{wrapfigure}
 
-However, for the validation of the model, the motor torque should be variable and measurable. Brushed DC motor torque is proportional to the current running through it, and the current reduces as the speed of the motor increases. The speed of the motor is also proportional to the terminal voltage. The approximate characteristics of a DC motor are given in Figure ???. The equation describing the torque of a DC motor in relation to motor voltage and speed is then,
+Initial tests showed that PWM duty cycle is not proportional to torque output on the motors. Instead, even at low duty cycles, the motors can lift a large load, they just do so slowly. This is likely because the self-locking gearbox prevents the axle from ever falling backwards. Consider a DC motor lifting a lever as seen in Figure \ref{fig:lever}. Typically, when the PWM signal is on, the motor outputs full torque and moves forward, then when the PWM signal is off the motor outputs no torque and falls backwards. The PWM frequency is typically high enough that the human eye sees this as a smooth motion. However, because of the self-locking gearbox, the axle will lock when the PWM signal is off rather than moving backwards, resulting in an overall forward motion even at low duty cycles. This is quite useful for controlling the motors as the speed of the motors is proportional to the PWM duty cycle regardless of the load it must lift.\\
+
+However, for the validation of the model, the motor torque should be variable and measurable. Brushed DC motor torque is proportional to the current running through it, and the current reduces as the speed of the motor increases. The speed of the motor is also proportional to the terminal voltage. The approximate characteristics of a DC motor are given in Figure \ref{fig:torque-speed}. 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.6\textwidth]{plots/colorTS1}
+	\caption{Torque speed plot of a typical DC motor \citep{Page-1999}.}
+	\label{fig:torque-speed}
+\end{figure}
+
+\noindent The equation describing the torque of a DC motor in relation to motor voltage and speed is then,
 \begin{equation}
 	T = T_\mathrm{Rated-stall}(\frac{V_\mathrm{Terminal}}{V_\mathrm{Rated}}-\frac{\omega}{\omega_\mathrm{Rated-no-load}})
 \end{equation}
