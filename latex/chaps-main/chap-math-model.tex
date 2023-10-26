@@ -134,7 +134,7 @@ Similarly, the sum of moments equation for the sun gear is derived
 \end{equation}
 where $I_2$ is the moment of inertia of component 2, $\theta_2$ is the angle of component 2, $T$ is the moment exerted by the motor on component 2, and $r_2$ is the radius of component 2. Note that in this project, all angles and moments are given in the clockwise direction.
 \\
-The full list of equations can be found in appendix ??? and in the MATLAB code.
+The full list of equations can be found in MATLAB/Core\_equations.mat in the project repository ???.
 
 
 
@@ -226,14 +226,16 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 	\begin{align}
 		u_x &= \mathrm{StepWidth}\cdot (N_2-1)- s_{1x}\\
 		u_y &= \mathrm{StepHeight}\cdot N_2 - s_{1y}\\
-		\tan{(-\theta_7)} &= \frac{u_y}{u_x}\\
-		\label{tailonstepposition}
-		-\ddot{\theta_7} &= \frac{ u_x^2 (a_{1x} u_y  - 2 v_{1x} v_{1y}) 
-			+ u_y^2 (a_{1x} u_y + 2  v_{1x}  v_{1y}  )  
-			-  a_{1y} u_x^3 
-			- u_x  u_y  (- 2  v_{1x}^2 + 2 v_{1y}^2 + a_{1y} u_x  )}
-		{(u_x^2 + u_y^2)^2}\\
-		\label{tailonstepaccelleration}
+		\tan{(-\theta_7)} &= \frac{u_y}{u_x}\label{tailonstepposition}\\
+		\begin{split}
+		-\ddot{\theta_7} &= \frac{1}
+		{(u_x^2 + u_y^2)^2}
+		\Big( u_x^2 (a_{1x} u_y  - 2 v_{1x} v_{1y})
+		+ u_y^2 (a_{1x} u_y + 2  v_{1x}  v_{1y}  )  \space ...\\
+		&-  a_{1y} u_x^3 
+		- u_x  u_y  (- 2  v_{1x}^2 + 2 v_{1y}^2 + a_{1y} u_x  )\Big)
+		\end{split}
+		\label{tailonstepaccelleration}\\
 		F_{\mathrm{React}7x}' &= -\mu_{\mathrm{tail}} F_{\mathrm{React}7y}'\\
 		\vec{F}_{\mathrm{React}7} &= \begin{bmatrix}
 			-\cos{(\theta_7)} & -\sin{(\theta_7)} & 0\\

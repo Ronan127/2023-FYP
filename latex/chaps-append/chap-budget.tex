@@ -1,40 +1,60 @@
 \chapter{Techno-economic analysis}
 
-This appendix contains an approximate budget and Gantt chart for the planned activities.
+This appendix contains the budget and Gantt chart for the project.
+
+\newlength\colB \setlength\colB{1.5em}
+\newlength\colC \setlength\colC{3em}
+\newlength\combinedlength 
+\setlength\combinedlength{\dimexpr\colB+\colC+1\tabcolsep+0\arrayrulewidth\relax}
+\newcolumntype{R}[1]{>{\RaggedLeft\arraybackslash}p{#1}}
+
+\hyphenation{Literature}
+
 
 \begin{table}[h!]
 	\centering
-	\begin{tabular}{ | m{15em} | m{3em} | m{3em} |m{4em} | m{4em} | m{4em}| } 
+	\footnotesize
+	\caption{Estimated cost per activity}
+	\begin{tabular}{|p{6em}|R{\colB}|R{\colC}|R{3.5em}|R{3em}|R{3em}|R{2em}|R{2em}|R{3em}|R{3em}|} 
 		\hline
-		Activity & \multicolumn{2}{|c|}{Engineering time} & Running costs & Facility use & Capital costs \\ 
+		Activity & 
+		\multicolumn{2}{p{\combinedlength}|}{Engineering time} &
+		\multicolumn{1}{p{3.5em}|}{Running costs} &
+		\multicolumn{1}{p{3em}|}{Facility use} &
+		\multicolumn{1}{p{3em}|}{Capital costs} &
+		\multicolumn{2}{c|}{MMW Labour} &
+		\multicolumn{1}{p{3em}|}{MMW Material} &
+		\multicolumn{1}{p{3em}|}{TOTAL}\\ 
 		\hline
-		&hr & R & R & R & R\\
+		&hr & R & R & R & R & hr & R & R & R\\
 		\hline
-		Review Literature &25&11250&250&&\\
+		Review Literature 			&25	&11250	&500	&		&		&	&		&		&11750\\
 		\hline
-		Compile Design Requirements&25&11250&250&&\\
+		2D Simulation				&25	&11250	&100	&150	&		&	&		&		&11500\\
 		\hline
-		Design localiser device&150&67500&500&500&\\
+		Create Model				&50	&22500	&200	&		&		&	&		&		&22700\\
 		\hline
-		Produce Prototype&125&56250&1000&1500&1500\\
+		Compile Design Requirements	&25	&11250	&		&		&		&	&		&		&11250\\
 		\hline
-		Test Prototype&50&22500&1000&500&\\
+		Design Platform				&100&45000	&500	&500	&		&	&		&		&46000\\
 		\hline
-		Finalise Report&100&45000&500&&\\
+		Simulate Platform			&75	&33750	&300	&1000	&		&	&		&		&35050\\
 		\hline
-		Total&475&213750&3500&2500&1500\\
+		Produce Prototype			&100&45000	&3000	&2000	&2000	&	&		&300	&52300\\
 		\hline
-		Grand Total (R)&221725&&&&\\ 
+		Validate Model				&25	&11250	&500	&300	&		&	&		&		&12050\\
+		\hline
+		Finalise Report				&100&45000	&100	&		&		&	&		&		&45100\\
+		\hline
+		Total						&525&236250	&5200	&3950	&2000	&	&		&300	&247700\\
 		\hline
 	\end{tabular}
-\caption{Estimated cost per activity}
 \end{table}
 
-\noindent This budget is based on a standard rate of R450/h. The capital costs include estimates for the microphones and Analogue to digital converter.
+\noindent This budget is based on a standard rate of R450/h.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=1.5\textwidth,angle=90]{Gantt}
-	\caption{Gantt Chart}
-	\label{fig:mesh1}
+	\includegraphics[width=1.6\textwidth,angle=90]{gantt}
+	\caption{Gantt Chart with grey line indicating baseline}
 \end{figure}

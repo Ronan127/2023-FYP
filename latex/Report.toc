@@ -1,9 +1,9 @@
 \contentsline {chapter}{Plagiarism declaration}{ii}{}%
 \contentsline {chapter}{Executive summary}{iii}{}%
 \contentsline {chapter}{Table of contents}{iv}{}%
-\contentsline {chapter}{List of figures}{vi}{}%
-\contentsline {chapter}{List of tables}{vii}{}%
-\contentsline {chapter}{List of symbols}{viii}{}%
+\contentsline {chapter}{List of figures}{vii}{}%
+\contentsline {chapter}{List of tables}{viii}{}%
+\contentsline {chapter}{List of symbols}{ix}{}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{}%
 \contentsline {section}{\numberline {1.1}Background}{1}{}%
 \contentsline {section}{\numberline {1.2}Objectives}{2}{}%
@@ -59,6 +59,11 @@
 \contentsline {chapter}{\numberline {9}Analysis}{46}{}%
 \contentsline {section}{\numberline {9.1}Quantitative comparison}{46}{}%
 \contentsline {section}{\numberline {9.2}Assessment of error}{47}{}%
-\contentsline {chapter}{\numberline {10}Conclusions}{51}{}%
-\contentsline {chapter}{\numberline {A}ECSA Outcome Self Assessment}{52}{}%
-\contentsline {chapter}{List of references}{53}{}%
+\contentsline {chapter}{\numberline {10}Recommendations for future work}{51}{}%
+\contentsline {section}{\numberline {10.1}Recommendation for design}{51}{}%
+\contentsline {chapter}{\numberline {11}Conclusions}{52}{}%
+\contentsline {chapter}{\numberline {A}ECSA Outcome Self Assessment}{53}{}%
+\contentsline {chapter}{\numberline {B}Techno-economic analysis}{54}{}%
+\contentsline {chapter}{\numberline {C}Risk Assessment}{56}{}%
+\contentsline {chapter}{\numberline {D}Resource use and end of life strategy}{57}{}%
+\contentsline {chapter}{List of references}{58}{}%

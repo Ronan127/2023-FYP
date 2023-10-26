@@ -25,12 +25,29 @@ To determine the required torque in the simulation, the torque measurement exper
 \end{figure}
 
 Figure \ref{fig:torque-comparison} shows that the model, simulation, and experiment all show similar trends but produce different values. In Stages 1, 4, and 6, the model and simulation both produce a lower required torque than the device actually needs. In Stage 3, the device needs less torque to complete the motion than the model and simulation predict.\\
-To test the accuracy of the model and simulation across a range of design parameters, the experiment and comparison were repeated twice, once with a 60 cm long tail in place of the 30 cm one, and once with a 340 g mass attached to the body of the device. The comparison between these results are shown in Figures ??? and ???.  
-\\
+To test the accuracy of the model and simulation across a range of design parameters, the experiment and comparison were repeated twice, once with a 60 cm long tail in place of the 30 cm one, and once with a 340 g mass attached to the body of the device. The comparison between these results are shown in Figures \ref{fig:torque-comparison-tail} and \ref{fig:torque-comparison-mass}. These plots show similar trends, indicating that the model and simulation give consistent results for a range of design parameters.
+
+\begin{figure}
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\linewidth]{plots/torque-comparison-tail}
+		\caption{Required torques for each stage when \\device has a 60 cm tail.}
+		\label{fig:torque-comparison-tail}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.9\linewidth]{plots/torque-comparison-mass}
+		\caption{Required torques for each stage when \\device has an added 340 g mass.}
+		\label{fig:torque-comparison-mass}
+	\end{subfigure}
+	\caption{Required torques for each stage from different sources, with varied design parameters.}
+	\label{fig:torque-comparison-tailMass}
+\end{figure}
  
 \section{Assessment of error}
 
-Table \ref{tab:error} shows the percentage error of the required torque produced by the model and simulation. Negative error indicates that the experiment required less torque than the model or simulation predicted. The simulation is shown to be more accurate than the maths model at most data points.\\
+Table \ref{tab:error} shows the percentage error of the required torque produced by the model and simulation for the original device. Negative error indicates that the model or simulation produced a lower torque value than the experiment required. The simulation is shown to be more accurate than the maths model for most data points.\\
  
 
 \begin{table}[!ht]
@@ -42,9 +59,11 @@ Table \ref{tab:error} shows the percentage error of the required torque produced
 		~ & Stage 1 & ~ & Stage 3 & ~ & Stage 4 & ~ & Stage 6 & ~ \\ \hline
 		~ & Partial & Full & Partial & Full & Partial & Full & Partial & Full \\ \hline
 		Model & -16.1\% & -28.8\% & -20.5\% & 33.3\% & -14.1\% & -13.5\% & -43.5\% & -11.5\% \\ \hline
-		Simulation & -14.5\% & -6.8\% & 5.1\% & 23.1\% & -30.8\% & -5.6\% & -24.2\% & -23.1\% \\ \hline
+		Simulation & -14.5\% & -6.8\% & 5.1\% & 23.1\% & -30.8\% & -5.6\% & -24.2\% & -24.4\% \\ \hline
 	\end{tabular}
 \end{table}
+
+The full torque required to complete Stage 4 motion is the most important to design around, as this is shown to be the highest torque the device will need. In this stage, the maths model has an error of -14.1\% and the simulation has an error of -5.6\%, which indicates that one should design for at least 16.4\% higher torque than the models suggest. However, other stages of motion show errors of up to 43.5\%, which is very high and indicates that there may be some incorrect assumptions in the models.\\
 
 Identifying the source of the error is not essential for the purposes of informing design, one can simply design the motors to have at least 2 times the calculated required torque. However, analysing the source of this error is important in order to improve future versions of the model.\\
 
@@ -55,9 +74,15 @@ Identifying the source of the error is not essential for the purposes of informi
 	\label{fig:imbalanced-climbing}
 \end{wrapfigure}
 
-In Stage 1, the model predicts that there is no torque that will cause partial movement. As the device lifts the torque required decreases, so if the torque is high enough to start lifting, it is high enough to complete Stage 1 motion. However, Figure \ref{fig:torque-comparison} shows that there is a range of torques that produce partial motion in the experimental and simulated data. The most likely cause for this is that some assumption made in the maths model is invalid. Although the calculations are done differently, the simulation is subject to the same rigid body and friction assumptions as the maths model. The main discrepancy between the two is that the simulation allows motion in three dimensions while the model is limited to two. As there is a large difference between the results of the model and the simulation, it is likely that the three-dimensional movement is what allows the device to get stuck part way during Stage 1. Initial tests showed that if one of the LIMs moves ahead of the other, the device will tip slightly, putting more weight on the LIM that falls behind, preventing the LIM from lifting unless it has excessive torque. An example of this is shown in Figure \ref{fig:imbalanced-climbing}. It is likely that even when the LIMs appear to move in unison, even a slight imbalance can cause the motion to stop part way when the motor torque is close to the required torque. To address this error, one could update the maths model to allow movement in three dimensions, however this would drastically increase the complexity and the calculation time of the model, and is excessive when tools for three-dimensional simulation such as Drake are readily available.\\
+In Stage 1, the model predicts that there is no torque that will cause partial movement. As the device lifts the torque required decreases, so if the torque is high enough to start lifting, it is high enough to complete Stage 1 motion. However, Figure \ref{fig:torque-comparison} shows that there is a range of torques that produce partial motion in the experimental and simulated data. The most likely cause for this is that some assumption made in the maths model is invalid. Although the calculations are done differently, the simulation is subject to the same rigid body and friction assumptions as the maths model. The main discrepancy between the two is that the simulation allows motion in three dimensions while the model is limited to two. As there is a large difference between the results of the model and the simulation, it is likely that the three-dimensional movement is what allows the device to get stuck part way during Stage 1. Initial tests showed that if one of the LIMs moves ahead of the other, the device will tip slightly, putting more weight on the LIM that falls behind, preventing the LIM from lifting unless it has excessive torque. An example of this is shown in Figure \ref{fig:imbalanced-climbing}. It is likely that even when the LIMs appear to move in unison, a slight imbalance can cause the motion to stop part way when the motor torque is close to the required torque. To address this error, one could update the maths model to allow movement in three dimensions, however this would drastically increase the complexity and the calculation time of the model, and is excessive when tools for three-dimensional simulation such as Drake are readily available.\\
 
-In Stage 3, the experiment shows that there is no torque that causes partial motion. However, the simulation indicates that there is a small range of torques that cause partial motion, and the maths model indicates that there is a large range of torques that cause partial motion. Both the simulation and the maths model also indicate that the required torque is higher than the experimental value. The reason for this error in the maths model is likely because it incorrectly assumes that the frame of the LIM will not come into contact with the step. When the device climbs in Stage 3, the frame of the LIM slides along the edge of the step while the front wheel pulls the device up the step, which is illustrated in Figure ???. \\
+\begin{wrapfigure}{r}{0.35\textwidth}
+	\centering
+	\includegraphics[width=0.35\textwidth]{FBDs/Stage-3-LIM-contact}
+	\caption{Frame of the LIM making contact with the edge of the step in Stage 3}
+	\label{fig:Stage-3-LIM-contact}
+\end{wrapfigure}
+In Stage 3, the experiment shows that there is no torque that causes partial motion. However, the simulation indicates that there is a small range of torques that cause partial motion, and the maths model indicates that there is a large range of torques that cause partial motion. Both the simulation and the maths model also indicate that the required torque is higher than the experimental value. The reason for this error in the maths model is likely because it incorrectly assumes that the frame of the LIM will not come into contact with the step. When the device climbs in Stage 3, the frame of the LIM slides along the edge of the step while the front wheel pulls the device up the step, which is illustrated in Figure \ref{fig:Stage-3-LIM-contact}. \\
 
 The step supports the frame of the LIM, so that the device needs less torque in order to overcome gravity, which explains why the actual device needs less torque to complete the stage of motion than the model predicted. Interestingly, the frame does not typically make contact with the step in Stage 6 because the backwards force from the tail on the step makes the LIMs favour lifting the rear wheel instead of rolling forward. To address this error, the model could be updated to model the contact between the step and the LIM frame, however this would be difficult to do analytically as the LIM frame has an irregular shape. The simulation does model the contact between the LIM frame and the step, however it still indicates that there should be partial movement and that the required torque is higher than the experimental value. This is likely because the coefficient of friction between the LIM frame and the step is higher in the simulation than in reality. Coefficients of friction in Drake default to 1.0, which is much larger than most real surfaces will have. This error could be eliminated by setting the coefficient of friction of the LIM frame to a lower value. \\
 
