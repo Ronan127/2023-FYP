@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Wells
+    given-names: Ronan Gray
+title: "LIM project repository"
+date-released: 2023010-26
