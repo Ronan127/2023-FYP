@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  27 OCT 2023 04:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 23.1) (preloaded format=pdflatex 2023.3.14)  27 OCT 2023 05:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1136,24 +1136,14 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 7.68005pt on input line 6.
 LaTeX Font Info:    Font shape `T1/mdbch/m/n' will be
 (Font)              scaled to size 5.76004pt on input line 19.
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--28
-
- []
-
-
-Overfull \hbox (32.20366pt too wide) in paragraph at lines 44--45
-[]\T1/mdbch/m/n/12 (-20) 3x1 Force vec-tor that gear n ex-erts on the in-ner ge
-ar that it con-tacts [] 
- []
-
 LaTeX Font Info:    Trying to load font information for TS1+mdbch on input line
- 47.
+ 19.
+
 (C:\Program Files\MiKTeX\tex/latex/mathdesign/mdbch\ts1mdbch.fd
 File: ts1mdbch.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdbch.
 )
 LaTeX Font Info:    Font shape `TS1/mdbch/m/n' will be
-(Font)              scaled to size 11.52008pt on input line 47.
+(Font)              scaled to size 11.52008pt on input line 19.
 Package microtype Info: Character `texttwelveudash ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1176,16 +1166,22 @@ Package microtype Info: Character `textcelsius ' is missing
 (microtype)             in font `TS1/mdbch/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Overfull \hbox (4.38464pt too wide) in paragraph at lines 63--64
+Overfull \hbox (4.38464pt too wide) in paragraph at lines 45--46
 []\T1/mdbch/m/n/12 (-20) Torque ex-erted by the mo-tor of com-po-nent 7 on com-
 po-nent 2 [] 
+ []
+
+
+Overfull \hbox (14.8505pt too wide) in paragraph at lines 47--48
+[]\T1/mdbch/m/n/12 (-20) The mo-tor stalling torque when the rated volt-age is 
+ap-plied [] 
  []
 
 [10
 
 
 ]
-Overfull \hbox (3.85594pt too wide) in paragraph at lines 80--81
+Overfull \hbox (3.85594pt too wide) in paragraph at lines 91--92
 []\T1/mdbch/m/n/12 (-20) 3x1 Dis-place-ment vec-tor from the mo-tor axis to com
 -po-nent n [] 
  []
@@ -1204,7 +1200,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-<./figs//Wilson-sketch.png, id=63, 302.93175pt x 234.8775pt>
+<./figs//Wilson-sketch.png, id=64, 302.93175pt x 234.8775pt>
 File: ./figs//Wilson-sketch.png Graphic file (type png)
 <use ./figs//Wilson-sketch.png>
 Package pdftex.def Info: ./figs//Wilson-sketch.png  used on input line 9.
@@ -1227,7 +1223,7 @@ Overfull \hbox (16.00053pt too wide) in paragraph at lines 18--19
 co-mo-tion) were built in-di-vid-u-ally
  []
 
-<./figs//Powrie-device.png, id=65, 666.69075pt x 499.8675pt>
+<./figs//Powrie-device.png, id=66, 666.69075pt x 499.8675pt>
 File: ./figs//Powrie-device.png Graphic file (type png)
 <use ./figs//Powrie-device.png>
 Package pdftex.def Info: ./figs//Powrie-device.png  used on input line 23.
@@ -1247,7 +1243,7 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 (chaps-main/chap-literature.tex
 Chapter 2.
-<./figs//stateof-tracked.png, id=75, 338.4645pt x 251.7405pt>
+<./figs//stateof-tracked.png, id=76, 338.4645pt x 251.7405pt>
 File: ./figs//stateof-tracked.png Graphic file (type png)
 <use ./figs//stateof-tracked.png>
 Package pdftex.def Info: ./figs//stateof-tracked.png  used on input line 7.
@@ -1264,7 +1260,7 @@ Underfull \hbox (badness 5652) in paragraph at lines 8--8
 Package wrapfig Warning: Collision between wrapping environments on input line 
 13.
 
-<./figs//stateof-wheelleg.png, id=76, 320.397pt x 324.0105pt>
+<./figs//stateof-wheelleg.png, id=77, 320.397pt x 324.0105pt>
 File: ./figs//stateof-wheelleg.png Graphic file (type png)
 <use ./figs//stateof-wheelleg.png>
 Package pdftex.def Info: ./figs//stateof-wheelleg.png  used on input line 15.
@@ -1341,7 +1337,7 @@ Overfull \hbox (16.00053pt too wide) in paragraph at lines 35--36
 co-mo-tion) were built in-di-vid-u-ally
  []
 
-<./figs//Wilson-robot.png, id=82, 838.93425pt x 631.76025pt>
+<./figs//Wilson-robot.png, id=83, 838.93425pt x 631.76025pt>
 File: ./figs//Wilson-robot.png Graphic file (type png)
 <use ./figs//Wilson-robot.png>
 Package pdftex.def Info: ./figs//Wilson-robot.png  used on input line 41.
@@ -1357,7 +1353,7 @@ Underfull \hbox (badness 1024) in paragraph at lines 46--47
  []
 
 [4 <./figs//Wilson-robot.png>]
-<./figs//Wilson-climbing.png, id=87, 408.3255pt x 306.54526pt>
+<./figs//Wilson-climbing.png, id=88, 408.3255pt x 306.54526pt>
 File: ./figs//Wilson-climbing.png Graphic file (type png)
 <use ./figs//Wilson-climbing.png>
 Package pdftex.def Info: ./figs//Wilson-climbing.png  used on input line 52.
@@ -1377,7 +1373,7 @@ Underfull \hbox (badness 2970) in paragraph at lines 57--58
 [][]\T1/mdbch/m/n/12 (+20) Wilson's robot had some lim-i-ta-tions that
  []
 
-<./figs//Haskel-robot.png, id=88, 514.92375pt x 275.8305pt>
+<./figs//Haskel-robot.png, id=89, 514.92375pt x 275.8305pt>
 File: ./figs//Haskel-robot.png Graphic file (type png)
 <use ./figs//Haskel-robot.png>
 Package pdftex.def Info: ./figs//Haskel-robot.png  used on input line 63.
@@ -1418,7 +1414,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 67--68
  []
 
 [5 <./figs//Wilson-climbing.png> <./figs//Haskel-robot.png>]
-<./figs//Buch-robot.png, id=94, 780.516pt x 446.8695pt>
+<./figs//Buch-robot.png, id=95, 780.516pt x 446.8695pt>
 File: ./figs//Buch-robot.png Graphic file (type png)
 <use ./figs//Buch-robot.png>
 Package pdftex.def Info: ./figs//Buch-robot.png  used on input line 75.
@@ -1437,7 +1433,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-<./figs//Powrie-falling.png, id=95, 614.295pt x 593.8185pt>
+<./figs//Powrie-falling.png, id=96, 614.295pt x 593.8185pt>
 File: ./figs//Powrie-falling.png Graphic file (type png)
 <use ./figs//Powrie-falling.png>
 Package pdftex.def Info: ./figs//Powrie-falling.png  used on input line 97.
@@ -1457,7 +1453,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
 
-<./figs//Powrie-gear-differences.png, id=105, 1187.637pt x 246.9225pt>
+<./figs//Powrie-gear-differences.png, id=106, 1187.637pt x 246.9225pt>
 File: ./figs//Powrie-gear-differences.png Graphic file (type png)
 <use ./figs//Powrie-gear-differences.png>
 Package pdftex.def Info: ./figs//Powrie-gear-differences.png  used on input lin
@@ -2780,7 +2776,7 @@ Here is how much of TeX's memory you used:
  37283 multiletter control sequences out of 15000+600000
  635129 words of font info for 532 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 73i,18n,117p,1855b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,18n,117p,1855b,662s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Ronan\AppData\Local\MiKTeX\fonts/p
 k/ljfour/jknappen/ec/dpi643\ectt1095.pk>{C:/Program Files/MiKTeX/fonts/enc/dvip
 s/ly1/texnansi.enc}<C:/Program Files/MiKTeX/fonts/type1/bitstrea/charter/bchb8a
@@ -2794,7 +2790,7 @@ rogram Files/MiKTeX/fonts/type1/mathdesign/mdbch/md-chr7y.pfb><C:/Program Files
 /MiKTeX/fonts/type1/mathdesign/mdbch/md-chr8t.pfb><C:/Program Files/MiKTeX/font
 s/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files/MiKTeX/fonts/type1/mat
 hdesign/mdbch/md-chri8t.pfb>
-Output written on Report.pdf (78 pages, 28188088 bytes).
+Output written on Report.pdf (78 pages, 28188498 bytes).
 PDF statistics:
  580 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
