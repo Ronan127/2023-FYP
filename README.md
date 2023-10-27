@@ -6,7 +6,7 @@ This repository contains the full project folder for my final year project. If y
 
 Using the maths model:
 
-The maths model was developed in MATLAB and can be found in MATLAB/v2/. The Calculations.mlx contains the code I used to produce the plots in the report. The section loads the stored sets of equations. These equations are produced by the scripts SetCoreEquations.m and SetDesignParameters.m. 
+The maths model was developed in MATLAB and can be found in MATLAB/v2/. The Calculations.mlx contains the code I used to produce the plots in the report. The first section loads the stored sets of equations. These equations are produced by the scripts SetCoreEquations.m and SetDesignParameters.m. 
 To model devices other than the one I used in this project, edit SetDesignParameters.m with your device's parameters and run it.
 
 The next sections in Calculations.mlx builds a set of equations from the core equations, the design parametes, the boundary conditions as described in the report, and the position of the device. The equations are fed to mysolver(), and the resulting solution contains T_z, the motor torque required to cause motion. 
