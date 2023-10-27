@@ -31,7 +31,7 @@ Brushed DC motors often include a gearbox to increase the torque of the output a
 Additionally, these motors have a self-locking gearbox, which improves the controllability of the device, as shutting off the motors will cause the gearbox to lock and the device to stop moving, rather than allowing the device to fall backwards down the steps.
 
 \section{Control circuits and code}
-In order to validate the model, the torque of the motors must be variable and reversible. This project uses a L298n H-bridge controlled by an STM32-F303RE Nucleo board to drive the motors. Two potentiometer sliders are used to control the torque of the two motors independently. The sliders are set up as voltage dividers and connected to the ADC channels of the STM32 microcontroller. The microcontroller sends a direction and PWM signal for each motor to the L298n H-bridge, which controls the motor using PWM. The circuit diagram for this set-up is shown in Figure \ref{fig:circuit-diagram}.\\
+In order to validate the model, the torque of the motors must be variable and reversible. This project uses a L298n H-bridge controlled by an STM32-F303RE Nucleo board to drive the motors. Two potentiometer sliders are used to control the torque of the two motors independently. The sliders are set up as voltage dividers and connected to the ADC channels of the STM32 microcontroller. The microcontroller sends a direction and PWM signal for each motor to the L298n H-bridge, which controls the motor using PWM. The circuit diagram for this set-up is shown in Figure \ref{fig:circuit-diagram}.
 
 \begin{figure}[!h]
 	\centering
@@ -44,24 +44,26 @@ The microcontroller is programmed to power off the motors when the sliders are c
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[height=0.6\textheight]{controller-flowchart}
+	\includegraphics[height=0.8\textheight]{controller-flowchart}
 	\caption{Microcontroller code flowchart.}
 	\label{fig:controller-flowchart}
 \end{figure}
 
+Initial tests showed that PWM duty cycle is not proportional to torque output on the motors. Instead, even at low duty cycles, the motors can lift a large load, they just do so slowly. This is likely because the self-locking gearbox prevents the axle from ever falling backwards. Consider a DC motor lifting a lever as seen in Figure \ref{fig:lever}. 
+
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\includegraphics[width=0.35\textwidth]{FBDs/lever}
-	\caption{Lever example}
+	\caption{Lever example.}
 	\label{fig:lever}
 \end{wrapfigure}
 
-Initial tests showed that PWM duty cycle is not proportional to torque output on the motors. Instead, even at low duty cycles, the motors can lift a large load, they just do so slowly. This is likely because the self-locking gearbox prevents the axle from ever falling backwards. Consider a DC motor lifting a lever as seen in Figure \ref{fig:lever}. Typically, when the PWM signal is on, the motor outputs full torque and moves forward, then when the PWM signal is off the motor outputs no torque and falls backwards. The PWM frequency is typically high enough that the human eye sees this as a smooth motion. However, because of the self-locking gearbox, the axle will lock when the PWM signal is off rather than moving backwards, resulting in an overall forward motion even at low duty cycles. This is quite useful for controlling the motors as the speed of the motors is proportional to the PWM duty cycle regardless of the load it must lift.\\
+Typically, when the PWM signal is on, the motor outputs full torque and moves forward, then when the PWM signal is off the motor outputs no torque and falls backwards. The PWM frequency is typically high enough that the human eye sees this as a smooth motion. However, because of the self-locking gearbox, the axle will lock when the PWM signal is off rather than moving backwards, resulting in an overall forward motion even at low duty cycles. This is quite useful for controlling the motors as the speed of the motors is proportional to the PWM duty cycle regardless of the load it must lift.\\
 
 However, for the validation of the model, the motor torque should be variable and measurable. Brushed DC motor torque is proportional to the current running through it, and the current reduces as the speed of the motor increases. The speed of the motor is also proportional to the terminal voltage. The approximate characteristics of a DC motor are given in Figure \ref{fig:torque-speed}. 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.6\textwidth]{plots/colorTS1}
+	\includegraphics[width=0.35\textwidth]{plots/colorTS1}
 	\caption{Torque speed plot of a typical DC motor \citep{Page-1999}.}
 	\label{fig:torque-speed}
 \end{figure}
@@ -79,27 +81,26 @@ where $T$ is the output torque, $T_\mathrm{Rated-stall}$ is the stalling torque 
 %??? Move to literature review?
 In order to vary the torque of the device, the terminal voltage must be varied. For this purpose, an LM2596S buck converter is used to vary the supply voltage.
 
-\section{Construction and testing}
+\section{Construction and testing}\label{sec:construction}
 
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\includegraphics[width=0.35\textwidth]{device}
-	\caption{Built device}
+	\caption{Built device.}
 	\label{fig:device}
 \end{wrapfigure}
 
 To build the device, the parts were laser cut from Medium Density Fibreboard (MDF) and Acrylic. The outer surface of wheels is coated with Patex, a rubbery adhesive which is left to dry, increasing the grip of the wheels. The assembly is relatively straightforward, however it was found that the laser cut gears did not mesh well, causing them to get stuck. To address this, the teeth of the gears were filed down until they could mesh easily. This has the disadvantage of increasing kickback on the gears. However, this has little impact on performance as for all stages of motion, the gears are engaged in one direction only. The device is shown in Figure \ref{fig:device}.\\
 
 
-\begin{wrapfigure}{l}{0.35\textwidth}
-	\centering
-	\includegraphics[width=0.35\textwidth]{device-climbing}
-	\caption{Device climbing stairs}
-	\label{fig:device-climbing}
-\end{wrapfigure}
 Initial tests show that the device is capable of climbing up two steps sequentially, which is more than any previous project achieved. This relative success can be attributed to the shorter forward protrusion of the body and possibly a higher grip on the surface of the wheels. However, the device struggled to climb a third step, this is because climbing the third step involves Stage 4 motion, which requires significantly higher torque than the previous stages. To address this, the body of the device was rebuilt using a JGY-370 gearbox motor which is geared for a higher torque. \\
 After this change, the device was able to consistently climb many sequential steps, and the lower speed due to the higher gear ratio made the device easier to control during the climbing motion. Figure \ref{fig:device-climbing} shows the device climbing a flight of stairs. Initial tests also show that by applying a forward torque to one LIM and a reverse torque to the other, the device is capable of turning on the spot. However this motion is inconsistent as the LIMs can start to lift, at which point the turning stops.
-
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=0.8\textwidth]{device-climbing}
+	\caption{Device climbing stairs.}
+	\label{fig:device-climbing}
+\end{figure}
 %When the motor is turning it also acts as a generator, and produces a voltage known as back emf which is proportional to the speed of the motor. 
 %\begin{equation}
 %	E_b \propto \omega

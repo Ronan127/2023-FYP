@@ -82,12 +82,18 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{titlesec}
+
 %
-\xpatchcmd{\@makechapterhead}{\vspace*{50\p@}}{\vspace*{5pt}}{\typeout{Success}}{\typeout{Failure!!!}}
+
 %
 \newcommand{\customlabel}[2]{%
 	\protected@write \@auxout {}{\string \newlabel {#1}{{#2}{}}}}
 
+\titleformat{\chapter}[hang] 
+{\normalfont\huge\bfseries}{\thechapter}{1em}{} 
+\titlespacing*{\chapter}{0pt}{*0}{10pt}
 
 \makeatother
 
@@ -145,6 +151,10 @@
 %\include{chaps-main/chap-conclusion}
 
 \appendix%------------------------------------------------------------
+\titleformat{\chapter}[hang] 
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{1em}{} 
+
+
 \include{chaps-append/chap-ecsa}
 \include{chaps-append/chap-budget}
 \include{chaps-append/chap-risk}

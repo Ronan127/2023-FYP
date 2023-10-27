@@ -1,37 +1,36 @@
  \chapter{Literature review}
 
-\section{USAR Robots}
+\section{USAR robots}
 
 \begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the right
 	\centering
 	\includegraphics[width=0.35\textwidth]{stateof-tracked}
-	\caption{A tracked USAR robot, with paddles for obstacle climbing \citep{stateof}}
+	\caption{A tracked USAR robot, with paddles for obstacle climbing \citep{stateof}.}
 	\label{stateof tracked}
 \end{wrapfigure}
 
-In both natural and man-made disasters, USAR operations are critical for reducing casualties. Robots can be deployed in USAR operations to complement human and canine rescuers. Robots have the advantage of being able to be deployed in scenarios too small or too dangerous for humans, and aerial robots such as quadcopters are extremely effective at quickly mapping terrain and providing situational awareness to teams. Other emerging applications of USAR robotics are remote fire fighting, victim interaction and extraction \citep{stateof}.\\
-
+In both natural and man-made disasters, USAR operations are critical for reducing casualties. Robots can be deployed in USAR operations to complement human and canine rescuers. Robots have the advantage of being able to be deployed in scenarios too small or too dangerous for humans, and aerial robots such as quadcopters are extremely effective at quickly mapping terrain and providing situational awareness to teams. Other emerging applications of USAR robotics are remote fire fighting, victim interaction, and extraction \citep{stateof}.\\
 \begin{wrapfigure}{l}{0.35\textwidth} %this figure will be at the left
 	\centering
 	\includegraphics[width=0.35\textwidth]{stateof-wheelleg}
-	\caption{ANYmal, a legged USAR robot \citep{stateof}}
+	\caption{ANYmal, a legged USAR robot \citep{stateof}.}
 	\label{stateof wheelleg}
 \end{wrapfigure}
 
 In order to perform USAR operations, robots need some form of locomotion. For ground robots, this typically involves either tracks, wheels, or legs. \citep{stateof}. Tracked robots with actuated paddles for obstacle climbing, such as the one shown in Figure \ref{stateof tracked}, have been found to perform extremely well. This is evident by their representation in the winners of the Robocup Rescue Robot League (RRL), an event in which teams compete to produce robots for versatile USAR operations \citep{Sheh-2016}. Wheeled robots are generally the simplest and easiest to repair, but can get stuck more easily in uneven terrain. Legged robots provide the advantage of not needing a continuous path, and rapid developments in optical sensors and control systems are enabling them to be even more viable, one of these robots is shown in Figure. Wheel-leg hybrid systems will use legged motion for navigating difficult terrain, and wheels when on smooth ground \citep{stateof}. 
-
+\newpage
 \section{Load-Intuitive Modules} %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \begin{wrapfigure}{r}{0.35\textwidth} %this figure will be at the right
 	\centering
 	\includegraphics[width=0.35\textwidth]{Wilson-sketch}
-	\caption{Systems layout of Wilson's LIM device \citep{Wilson-2013}}
+	\caption{Systems layout of Wilson's LIM device \citep{Wilson-2013}.}
 	\label{Wilson sketch-lit}
 \end{wrapfigure}
 
 A Load-Intuitive Module (LIM) refers to a wheel system proposed by Matthew Wilson, shown in Figure \ref{Wilson sketch-lit} \citep{Wilson-2013}. The LIM system uses a two outer "minor wheels" placed on a central hub that can be rotated as a "major wheel". The minor wheels are geared to the central hub such that they drive the vehicle, however if they experience high resistance, for example from hitting an obstacle, the torque will cause the major wheel to rotate instead, flipping one of the minor wheels over the obstacle to automatically climb it. The system is referred to as "Load-Intuitive" because it will intuitively climb over obstacles in response to increased load on the wheels. LIMs are designed to be used in low cost USAR robots, allowing them to climb over objects without the need for many actuators.\\
 
-One advantage LIMs provide over existing locomotion methods is that they can climb obstacles higher than their profile, meaning they can enter low voids while rolling, and climb relatively tall obstacles by flipping over them. Another advantage is that LIMS require minimal actuation, one motor can be used to drive both the rolling and flipping motion, which will reduce costs when compared with other designs.\\
+One advantage LIMs provide over existing locomotion methods is that they can climb obstacles higher than their profile, meaning they can enter low voids while rolling, and climb relatively tall obstacles by flipping over them. Another advantage is that LIMs require minimal actuation, one motor can be used to drive both the rolling and flipping motion, which will reduce costs when compared with other designs.\\
 
 \noindent "LIMed" robot platforms (platforms using LIMs for locomotion) were built individually by four final year students at UCT \citep{Wilson-2013}, \citep{Haskel-2017}, \citep{Buchanan-2018}, and \citep{Powrie-2019}. These platforms show some success in climbing a single step, albeit inconsistently.
 
@@ -40,7 +39,7 @@ One advantage LIMs provide over existing locomotion methods is that they can cli
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\includegraphics[width=0.35\textwidth]{Wilson-robot}
-	\caption{Wilson's Robot \citep{Wilson-2013}}
+	\caption{Wilson's Robot \citep{Wilson-2013}.}
 	\label{Wilson robot}
 \end{wrapfigure}
 
@@ -51,7 +50,7 @@ Wilson designed and built the first LIM robot in 2013, shown in Figure \ref{Wils
 \begin{wrapfigure}{l}{0.35\textwidth}
 	\centering
 	\includegraphics[width=0.35\textwidth]{Wilson-climbing}
-	\caption{Wilson's half assembly climbing a stair \citep{Wilson-2013}}
+	\caption{Wilson's half assembly climbing a stair \citep{Wilson-2013}.}
 	\label{Wilson climbing}
 \end{wrapfigure}
 
@@ -62,7 +61,7 @@ Wilson's robot had some limitations that prevented him from performing extensive
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\includegraphics[width=0.35\textwidth]{Haskel-robot}
-	\caption{Haskel's Theseus \citep{Haskel-2017}}
+	\caption{Haskel's Theseus \citep{Haskel-2017}.}
 	\label{Haskel robot}
 \end{wrapfigure}
 Haskel designed and built a LIMed robot to further test the concept, which he named "Theseus", shown in Figure \ref{Haskel robot}. Unlike Wilson, Haskel assumes that using LIMs for rear wheels is not necessary for the stair climbing motion, and instead chooses to use a dragging tail to provide counter torque, similar to the tail-dragging half assembly used by Wilson. Theseus is much smaller and lighter than Wilson's robot.\\
@@ -74,7 +73,7 @@ Haskel tested different concepts for the tire tread, dragging tail, and gear rat
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\includegraphics[width=0.35\textwidth]{Buch-robot}
-	\caption{Buchanan's Ascender \citep{Buchanan-2018}}
+	\caption{Buchanan's Ascender \citep{Buchanan-2018}.}
 	\label{Buch robot}
 \end{wrapfigure}
 Buchanan designed and built "Ascender", a robot platform using LIMs for locomotion, shown in Figure \ref{Buch robot}. Buchanan iterated on the design several times in order to reduce mass and increase torque. The intention was to build a drivetrain that could be combined with the electronics of Haskel's Theseus to produce a successful stair climbing robot. As such, the Ascender does not include any electronic control systems, and is instead controlled externally by power supplies connected to the motors.
@@ -86,7 +85,7 @@ Buchanan's testing showed that the Ascender was able to climb a single step of 1
 \begin{wrapfigure}{r}{0.35\textwidth}
 	\centering
 	\includegraphics[width=0.35\textwidth]{Powrie-device}
-	\caption{Powrie's Di-Wheel Robot \citep{Powrie-2019}}
+	\caption{Powrie's Di-Wheel Robot \citep{Powrie-2019}.}
 	\label{fig:Powrie robot}
 \end{wrapfigure}
 Powrie developed a robot using LIMs, however in his report he referred to LIMs as Di-Wheels. His reason for renaming them is that the behaviour of the LIMs does not only respond to external loads on the wheels, it also depends on the torque applied by the motors. He chose the name "Di-Wheel" in reference to a similar design by the name of "Tri-Wheel", which used three minor wheels instead of two, developed by \cite{Smith-2015}. Powrie's Di-Wheel robot is larger and more robust than Buchanan's Ascender, while being lighter than Wilson's LIMed robot. It is shown in Figure \ref{fig:Powrie robot}.\\
@@ -95,8 +94,8 @@ Powrie developed a robot using LIMs, however in his report he referred to LIMs a
 The Di-Wheel robot was successful in climbing a single step of 220 mm. Further testing was not performed as noise from the robot's motors would interfere with the control system, preventing untethered driving. Powrie ran out of time before he was able to solve this issue. Powrie also found that when both motors are powered on, one of the LIMs would flip first, putting all the weight on the other LIM so preventing it from flipping. The result is that the robot would fall on its side, as seen in Figure \ref{Powrie falling} \citep{Powrie-2019}.\\
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=0.35\textwidth]{Powrie-falling}
-	\caption{The Di-Wheel robot falling due to unsynchronised LIMs \citep{Powrie-2019}}
+	\includegraphics[width=0.5\textwidth]{Powrie-falling}
+	\caption{The Di-Wheel robot falling due to unsynchronised LIMs \citep{Powrie-2019}.}
 	\label{Powrie falling}
 \end{figure}
 
@@ -123,7 +122,7 @@ This means that during flipping motion, if $\frac{N_\mathrm{Planet}}{N_\mathrm{S
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.9\textwidth]{Powrie-gear-differences}
-	\caption{Two different climbing motions using different gear ratios \citep{Powrie-2019}}
+	\caption{Two different climbing motions using different gear ratios \citep{Powrie-2019}.}
 	\label{Powrie gears}
 \end{figure}
 
@@ -132,8 +131,8 @@ The two cases are shown in Figure \ref{Powrie gears}, with the left showing the 
 
 
 
-\subsection{Control requirements} %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-LIMs are considered "Load intuitive" because of their ability to adapt to terrain mechanically. Open-loop control is ideal in this case, as an operator need only turn the motor on and the LIM will drive forward if it can, or attempt to climb an obstacle if it is obstructed \citep{Wilson-2013}. However, Powrie found that his robot was not suited to open loop control. When full voltage is provided to the motor, the LIMS would flip even if when is on a flat plane. Powrie's calculations suggest that whether the LIM flips or not is largely dependent on the torque applied to it. A low torque results rolling, and a high torque results in flipping. His report suggests that LIMs only responds to terrain intuitively for a "medium torque" \citep{Powrie-2019}. In this case a medium torque would be defined as a torque that results in rolling when the LIM is unobstructed, and flipping only when it is obstructed. This indicates that it may be necessary to have a control system that manages the torque provided to the LIMs to ensure that they do not flip on flat terrain if the motors are sufficiently powerful.\\
-
-Powrie also found that when climbing a step, one LIM could flip first, putting weight on the other and preventing it from flipping, as seen previously in Figure \ref{Powrie falling} \citep{Powrie-2019}. This suggest that a control system is needed to roughly synchronise the LIMs, if one is ahead of the other, more torque should be provided to the trailing LIM to correct its motion.
+%\subsection{Control requirements} %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%
+%LIMs are considered "Load intuitive" because of their ability to adapt to terrain mechanically. Open-loop control is ideal in this case, as an operator need only turn the motor on and the LIM will drive forward if it can, or attempt to climb an obstacle if it is obstructed \citep{Wilson-2013}. However, Powrie found that his robot was not suited to open loop control. When full voltage is provided to the motor, the LIMs would flip even if when is on a flat plane. Powrie's calculations suggest that whether the LIM flips or not is largely dependent on the torque applied to it. A low torque results rolling, and a high torque results in flipping. His report suggests that LIMs only responds to terrain intuitively for a "medium torque" \citep{Powrie-2019}. In this case a medium torque would be defined as a torque that results in rolling when the LIM is unobstructed, and flipping only when it is obstructed. This indicates that it may be necessary to have a control system that manages the torque provided to the LIMs to ensure that they do not flip on flat terrain if the motors are sufficiently powerful.\\
+%
+%Powrie also found that when climbing a step, one LIM could flip first, putting weight on the other and preventing it from flipping, as seen previously in Figure \ref{Powrie falling} \citep{Powrie-2019}. This suggest that a control system is needed to roughly synchronise the LIMs, if one is ahead of the other, more torque should be provided to the trailing LIM to correct its motion.

@@ -5,7 +5,7 @@ The objective of this analysis is to validate the model and the simulation. The 
 \section{Qualitative comparison}
 
 The motor torque over time for Stage 1 motion was recorded during the Drake simulation, and is shown in Figure \ref{fig:current-stage-1}. This shows a similar curve to the plot of recorded current, which is shown again in Figure \ref{fig:current-2}. The simulation completed Stage 1 in 2.8 s, which is faster than the real device which took 3.25 s. The noise in the simulated data is due to oscillations caused by Equation \ref{eq:torqueVoltageSpeed}, which acts as a proportional feedback controller on the speed in the simulation. This oscillation could be reduced by decreasing the simulation time step, however this would proportionally increase the simulation time taken, and a low time step of 0.01 ms is already selected. Both plots show a large spike as the motors are powered on and a slight dip before Stage 1 completes. This indicates that the torque produced by the device throughout the simulation accurately matches the torque that the real device would produce.
-\begin{figure}
+\begin{figure}[!ht]
 	\centering
 	\begin{subfigure}{.5\textwidth}
 		\centering

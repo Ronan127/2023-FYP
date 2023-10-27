@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{14}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -18,10 +18,6 @@
 \newcommand{\Capitalize}[1]{\uppercase{#1}}
 \newcommand{\capitalize}[1]{\expandafter\Capitalize#1}
 \providecommand{\eprint}[2][]{\url{#2}}
-
-\bibitem[{Pag(1999)}]{Page-1999}
- (1999).
-\newblock Understanding d.c. motor characteristics.
 
 \bibitem[{SAN(2010)}]{SANS}
  (2010).
@@ -66,13 +62,24 @@
 \bibnamefont{Haskel}, \bibfnamefont{J.} (2017).
 \newblock A cost effective, tele-operated observation search and rescue robot.
 
+\bibitem[{\citenamefont{Inc.}(2022)}]{matlab}
+\bibnamefont{Inc.}, \bibfnamefont{T.M.} (2022).
+\newblock Matlab version: 9.13.0 (r2022b).
+\newline\bblurlpre\url{https://www.mathworks.com}
+
+\bibitem[{\citenamefont{Page}(1999)}]{Page-1999}
+\bibnamefont{Page}, \bibfnamefont{M.} (1999).
+\newblock {Understanding D.C. Motor Characteristics}.
+\newline\bblurlpre\url{http://lancet.mit.edu/motors/index.html}
+
 \bibitem[{\citenamefont{Powrie}(2019)}]{Powrie-2019}
 \bibnamefont{Powrie}, \bibfnamefont{R.} (2019).
 \newblock Di-wheel robot.
 
-\bibitem[{\citenamefont{Robillard}(2019)}]{rob2014}
-\bibnamefont{Robillard}, \bibfnamefont{D.} (2019).
-\newblock Di-wheel robot.
+\bibitem[{\citenamefont{Rhoban}(2022)}]{converter}
+\bibnamefont{Rhoban} (2022).
+\newblock onshape-to-robot.
+\newline\bblurlpre\url{https://github.com/Rhoban/onshape-to-robot}
 
 \bibitem[{\citenamefont{Sheh} \emph{\bbletal{}}(2016)\citenamefont{Sheh},
   \citenamefont{Schwertfeger} \protect\BIBand{}
@@ -92,6 +99,13 @@
 \newblock The tri-wheel: A novel wheel-leg mobility concept.
 \newblock \capitalize\bblin{}: \emph{2015 IEEE/RSJ International Conference on
   Intelligent Robots and Systems (IROS)}, \bblpp{} 4146--4152.
+
+\bibitem[{\citenamefont{Tedrake} \protect\BIBand{} \citenamefont{the Drake
+  Development~Team}(2019)}]{drake}
+\bibnamefont{Tedrake}, \bibfnamefont{R.} \protect\BIBand{} \bibnamefont{the
+  Drake Development~Team} (2019).
+\newblock Drake: Model-based design and verification for robotics.
+\newline\bblurlpre\url{https://drake.mit.edu}
 
 \bibitem[{\citenamefont{Wells}(2023)}]{repo}
 \bibnamefont{Wells}, \bibfnamefont{R.G.} (2023 \bbloct{}).
