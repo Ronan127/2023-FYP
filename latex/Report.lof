@@ -5,68 +5,68 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Systems layout of Wilson's LIM device \citep {Wilson-2013}.\relax }}{1}{}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Powrie's "Di-Wheel" robot \citep {Powrie-2019}.\relax }}{2}{}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Systems layout of Wilson's LIM device \citep {Wilson-2013}.\relax }}{1}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Powrie's "Di-Wheel" robot \citep {Powrie-2019}.\relax }}{2}{figure.caption.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A tracked USAR robot, with paddles for obstacle climbing \citep {stateof}.\relax }}{3}{}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces ANYmal, a legged USAR robot \citep {stateof}.\relax }}{3}{}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Systems layout of Wilson's LIM device \citep {Wilson-2013}.\relax }}{4}{}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Wilson's Robot \citep {Wilson-2013}.\relax }}{4}{}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Wilson's half assembly climbing a stair \citep {Wilson-2013}.\relax }}{5}{}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Haskel's Theseus \citep {Haskel-2017}.\relax }}{5}{}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Buchanan's Ascender \citep {Buchanan-2018}.\relax }}{6}{}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Powrie's Di-Wheel Robot \citep {Powrie-2019}.\relax }}{6}{}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces The Di-Wheel robot falling due to unsynchronised LIMs \citep {Powrie-2019}.\relax }}{7}{}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Two different climbing motions using different gear ratios \citep {Powrie-2019}.\relax }}{8}{}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A tracked USAR robot, with paddles for obstacle climbing \citep {stateof}.\relax }}{3}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces ANYmal, a legged USAR robot \citep {stateof}.\relax }}{3}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Systems layout of Wilson's LIM device \citep {Wilson-2013}.\relax }}{4}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Wilson's Robot \citep {Wilson-2013}.\relax }}{4}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Wilson's half assembly climbing a stair \citep {Wilson-2013}.\relax }}{5}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Haskel's Theseus \citep {Haskel-2017}.\relax }}{5}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Buchanan's Ascender \citep {Buchanan-2018}.\relax }}{6}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Powrie's Di-Wheel Robot \citep {Powrie-2019}.\relax }}{6}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces The Di-Wheel robot falling due to unsynchronised LIMs \citep {Powrie-2019}.\relax }}{7}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Two different climbing motions using different gear ratios \citep {Powrie-2019}.\relax }}{8}{figure.caption.24}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces LIM climbing with wheel contact and LIM frame contact.\relax }}{10}{}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces LIM climbing with robot body contact.\relax }}{10}{}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces LIM climbing with wheel contact and LIM frame contact.\relax }}{10}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces LIM climbing with robot body contact.\relax }}{10}{figure.caption.26}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Stage 1 motion.\relax }}{11}{}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Stage 2 motion.\relax }}{12}{}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Stage 3 motion.\relax }}{12}{}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Stage 4 motion.\relax }}{12}{}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Stage 5 motion.\relax }}{13}{}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Stage 6 motion.\relax }}{13}{}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Labelled components.\relax }}{14}{}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Free body diagram of the LIM frame (component 1).\relax }}{14}{}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Free body diagram of the gears (components 2-5).\relax }}{14}{}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Definition of $\vec {l}_7$ and $\theta _7$.\relax }}{17}{}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Flowchart for this project's solver.\relax }}{20}{}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Relationship between LIM angle and required torque across all stages of motion.\relax }}{22}{}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Relationship between LIM angle and required coefficient of friction.\relax }}{23}{}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Relationship between LIM gear ratio and required torque.\relax }}{24}{}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces Relationship between LIM gear ratio and required coefficient of friction.\relax }}{24}{}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Body design comparison.\relax }}{28}{}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Control system circuit diagram.\relax }}{29}{}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Lever example.\relax }}{29}{}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Microcontroller code flowchart.\relax }}{30}{}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Torque speed plot of a typical DC motor \citep {Page-1999}.\relax }}{31}{}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Built device.\relax }}{31}{}%
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Device climbing stairs.\relax }}{32}{}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Screenshot of the device climbing steps in the Drake simulation.\relax }}{34}{}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Calibration lever set-up.\relax }}{35}{}%
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{38}{}%
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Photograph of the experimental set-up, in which the device is performing Stage 4 motion.\relax }}{38}{}%
-\contentsline {figure}{\numberline {8.4}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{40}{}%
-\contentsline {figure}{\numberline {8.5}{\ignorespaces Current recorded over time as the device completes Stage 1.\relax }}{42}{}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Simulated current and recorded torque.\relax }}{43}{}%
-\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage determined experimentally\relax }}{44}{}%
-\contentsline {figure}{\numberline {9.3}{\ignorespaces Required torques for each stage from different sources.\relax }}{45}{}%
-\contentsline {figure}{\numberline {9.4}{\ignorespaces Required torques for each stage from different sources, with varied design parameters.\relax }}{45}{}%
-\contentsline {figure}{\numberline {9.5}{\ignorespaces Device failing to climb as one LIM lifts ahead of the other\relax }}{46}{}%
-\contentsline {figure}{\numberline {9.6}{\ignorespaces Frame of the LIM making contact with the edge of the step in Stage 3\relax }}{47}{}%
-\contentsline {figure}{\numberline {9.7}{\ignorespaces Visualisation of the mass acting as a pendulum on the end of the lever.\relax }}{48}{}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Stage 1 motion.\relax }}{11}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Stage 2 motion.\relax }}{12}{figure.caption.28}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Stage 3 motion.\relax }}{12}{figure.caption.29}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Stage 4 motion.\relax }}{12}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Stage 5 motion.\relax }}{13}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Stage 6 motion.\relax }}{13}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Labelled components.\relax }}{14}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Free body diagram of the LIM frame (component 1).\relax }}{14}{figure.caption.34}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Free body diagram of the gears (components 2-5).\relax }}{14}{figure.caption.35}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Definition of $\vec {l}_7$ and $\theta _7$.\relax }}{17}{figure.caption.36}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Flowchart for this project's solver.\relax }}{20}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Relationship between LIM angle and required torque across all stages of motion.\relax }}{22}{figure.caption.38}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Relationship between LIM angle and required coefficient of friction.\relax }}{23}{figure.caption.39}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Relationship between LIM gear ratio and required torque.\relax }}{24}{figure.caption.40}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Relationship between LIM gear ratio and required coefficient of friction.\relax }}{24}{figure.caption.41}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Body design comparison.\relax }}{28}{figure.caption.45}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Control system circuit diagram.\relax }}{29}{figure.caption.46}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Lever example.\relax }}{29}{figure.caption.48}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Microcontroller code flowchart.\relax }}{30}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Torque speed plot of a typical DC motor \citep {Page-1999}.\relax }}{31}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Built device.\relax }}{31}{figure.caption.50}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Device climbing stairs.\relax }}{32}{figure.caption.51}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Screenshot of the device climbing steps in the Drake simulation.\relax }}{34}{figure.caption.52}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Calibration lever set-up.\relax }}{35}{figure.caption.53}%
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Relationship between motor voltage and stalling torque.\relax }}{38}{figure.caption.55}%
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Photograph of the experimental set-up, in which the device is performing Stage 4 motion.\relax }}{38}{figure.caption.56}%
+\contentsline {figure}{\numberline {8.4}{\ignorespaces Relationship between torque and motion for Stage 1, with 0, 0.5, and 1 representing "None", "Partial", and "Full" respectively.\relax }}{40}{figure.caption.58}%
+\contentsline {figure}{\numberline {8.5}{\ignorespaces Current recorded over time as the device completes Stage 1.\relax }}{42}{figure.caption.59}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Simulated current and recorded torque.\relax }}{43}{figure.caption.60}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces Required torques for each stage determined experimentally\relax }}{44}{figure.caption.61}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces Required torques for each stage from different sources.\relax }}{45}{figure.caption.62}%
+\contentsline {figure}{\numberline {9.4}{\ignorespaces Required torques for each stage from different sources, with varied design parameters.\relax }}{45}{figure.caption.63}%
+\contentsline {figure}{\numberline {9.5}{\ignorespaces Device failing to climb as one LIM lifts ahead of the other\relax }}{46}{figure.caption.65}%
+\contentsline {figure}{\numberline {9.6}{\ignorespaces Frame of the LIM making contact with the edge of the step in Stage 3\relax }}{47}{figure.caption.66}%
+\contentsline {figure}{\numberline {9.7}{\ignorespaces Visualisation of the mass acting as a pendulum on the end of the lever.\relax }}{48}{figure.caption.67}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Gantt Chart with grey line indicating baseline\relax }}{53}{}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Gantt Chart with grey line indicating baseline\relax }}{53}{figure.caption.70}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
