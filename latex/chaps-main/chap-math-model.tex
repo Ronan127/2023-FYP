@@ -209,7 +209,7 @@ Once the LIM is vertical, there is no longer a force pushing the bottom wheel fo
 			0
 		\end{bmatrix}\\
 		s_{5x} &= \theta_{5} r_w;\\
-		M_{\mathrm{React}5} &= - F_{\mathrm{React}51} r_w;
+		M_{\mathrm{React}5} &= - F_{\mathrm{React}5x} r_w;
 	\end{align}
 \end{subequations}
 where $M_{\mathrm{React}5}$ is the reaction moment on wheel 5 as a result of the reaction forces.
@@ -221,7 +221,7 @@ In Stage 3, the front and back wheel have swapped. To simplify the movements, co
 The front wheel is rolling and the tail is on the ground, which are the same conditions as in Stage 2. As such, Stage 3 is subject to Equations \ref{wheel1rolling} and \ref{tailonground}.
 
 \subsection*{Stage 4: Lifting with tail on step}
-Stage 4 is similar to stage 1, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1locked} because the wheel is locked, and a set of new conditions because the tail is on the edge of the step,
+Stage 4 is similar to Stage 1, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1locked} because the wheel is locked, and a set of new conditions because the tail is on the edge of the step,
 
 \begin{subequations}
 	\label{tailonstep}
@@ -233,8 +233,8 @@ Stage 4 is similar to stage 1, except the tail is on the step. As such, this mot
 		-\ddot{\theta_7} &= \frac{1}
 		{(u_x^2 + u_y^2)^2}
 		\Big( u_x^2 (a_{1x} u_y  - 2 v_{1x} v_{1y})
-		+ u_y^2 (a_{1x} u_y + 2  v_{1x}  v_{1y}  )  \space ...\\
-		&-  a_{1y} u_x^3 
+		+ u_y^2 (a_{1x} u_y + 2  v_{1x}  v_{1y}  )  \: ...\\
+		&\;\;\;\;\;-  a_{1y} u_x^3 
 		- u_x  u_y  (- 2  v_{1x}^2 + 2 v_{1y}^2 + a_{1y} u_x  )\Big)
 		\end{split}
 		\label{tailonstepaccelleration}\\
@@ -252,7 +252,7 @@ where $N_2$ is the number of the step that the tail makes contact with, $\mathrm
 Stage 5 is similar to Stage 2, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
 
 \subsection*{Stage 6: Climbing from step}
-Stage 6 is similar to stage 3, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
+Stage 6 is similar to Stage 3, except the tail is on the step. As such, this motion is subject to Equations \ref{wheel1rolling} because the wheel is locked, and Equations \ref{tailonstep} because the tail is on the step.\\
 
 \section{Solving technique}
 The MATLAB symbolic toolbox comes with the solve() function, which can be used to solve sets of non-linear simultaneous equations. However, it struggles with this large set of equations that contain trigonometric functions, often stalling. This project develops a function that breaks down the set of equations into smaller, easier to solve sets, then substitutes these solutions into the remaining equations. Figure \ref{fig:solver-flowchart} shows the flowchart for this function. \\
@@ -263,7 +263,7 @@ The MATLAB symbolic toolbox comes with the solve() function, which can be used t
 	\caption{Flowchart for this project's solver.}
 	\label{fig:solver-flowchart}
 \end{figure}
-The function loops through the equations until they have all been solved, or it cannot find any more solutions. First, it identifies any trivial equations that contain only one variable, such as $a = 1$, and solves them. This will also pick up equations with more than one solution, such as $\sin{a} = 1$; to resolve this, the solver will look for inequalities that contain the relevant variable, in this case $a$, and apply them to the solution. For example, if you were to provide the function with the set of equations:\\
+The function loops through the equations until they have all been solved, or it cannot find any more solutions. First, it identifies any trivial equations that contain only one variable, such as $a = 1$, and solves them. This will also pick up equations with more than one solution, such as $\sin(a) = 1$; to resolve this, the solver will look for inequalities that contain the relevant variable, in this case $a$, and apply them to the solution. For example, if you were to provide the function with the set of equations:\\
 
 \begin{subequations}
 	\label{exampleinput}

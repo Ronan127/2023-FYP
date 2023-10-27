@@ -23,9 +23,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="0.52954145"
-     inkscape:cx="640.17652"
-     inkscape:cy="831.85179"
+     inkscape:zoom="4.2363316"
+     inkscape:cx="498.07244"
+     inkscape:cy="1432.7254"
      inkscape:window-width="2560"
      inkscape:window-height="1377"
      inkscape:window-x="2552"
@@ -931,7 +931,7 @@
      font-size="24.0008px"
      transform="scale(0.999965,1.000035)"
      id="text52"
-     x="468.99042"
+     x="471.5871"
      y="1372.9519"
      style="stroke-width:1.00004">0</text>
   <text
@@ -939,8 +939,17 @@
      font-weight="400"
      font-size="24.0008px"
      transform="scale(0.999965,1.000035)"
+     id="text52-2"
+     x="463.47998"
+     y="1371.1237"
+     style="stroke-width:1.00004">-</text>
+  <text
+     font-family="'Cambria Math', 'Cambria Math_MSFontService', sans-serif"
+     font-weight="400"
+     font-size="24.0008px"
+     transform="scale(0.999965,1.000035)"
      id="text53"
-     x="482.32489"
+     x="484.92157"
      y="1372.9519"
      style="stroke-width:1.00004">.</text>
   <text
@@ -949,7 +958,7 @@
      font-size="24.0008px"
      transform="scale(0.999965,1.000035)"
      id="text54"
-     x="487.32504"
+     x="489.92172"
      y="1372.9519"
      style="stroke-width:1.00004">2</text>
   <text

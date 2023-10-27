@@ -28,9 +28,9 @@
 \contentsline {section}{\numberline {4.6}Required torque}{21}{}%
 \contentsline {section}{\numberline {4.7}Required coefficient of friction}{22}{}%
 \contentsline {section}{\numberline {4.8}Using the model to size components}{23}{}%
-\contentsline {chapter}{\numberline {5}Design Requirements}{25}{}%
+\contentsline {chapter}{\numberline {5}Design requirements}{25}{}%
 \contentsline {section}{\numberline {5.1}Stakeholder requirements}{25}{}%
-\contentsline {section}{\numberline {5.2}Engineering Requirements}{26}{}%
+\contentsline {section}{\numberline {5.2}Engineering requirements}{26}{}%
 \contentsline {chapter}{\numberline {6}Design}{27}{}%
 \contentsline {section}{\numberline {6.1}Selection of design parameters}{27}{}%
 \contentsline {section}{\numberline {6.2}Body design}{27}{}%
@@ -51,8 +51,8 @@
 \contentsline {subsection}{\numberline {8.2.1}Variables}{39}{}%
 \contentsline {subsection}{\numberline {8.2.2}Method}{39}{}%
 \contentsline {subsection}{\numberline {8.2.3}Results}{39}{}%
-\contentsline {section}{\numberline {8.3}Current measurement}{39}{}%
-\contentsline {subsection}{\numberline {8.3.1}Variables}{40}{}%
+\contentsline {section}{\numberline {8.3}Current measurement}{41}{}%
+\contentsline {subsection}{\numberline {8.3.1}Variables}{41}{}%
 \contentsline {subsection}{\numberline {8.3.2}Method}{41}{}%
 \contentsline {subsection}{\numberline {8.3.3}Results}{41}{}%
 \contentsline {chapter}{\numberline {9}Analysis}{43}{}%

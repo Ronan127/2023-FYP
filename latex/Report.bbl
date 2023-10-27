@@ -62,8 +62,8 @@
 \bibnamefont{Haskel}, \bibfnamefont{J.} (2017).
 \newblock A cost effective, tele-operated observation search and rescue robot.
 
-\bibitem[{\citenamefont{Inc.}(2022)}]{matlab}
-\bibnamefont{Inc.}, \bibfnamefont{T.M.} (2022).
+\bibitem[{\citenamefont{MathWorks}(2022)}]{matlab}
+\bibnamefont{MathWorks} (2022).
 \newblock Matlab version: 9.13.0 (r2022b).
 \newline\bblurlpre\url{https://www.mathworks.com}
 

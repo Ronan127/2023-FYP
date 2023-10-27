@@ -1,6 +1,6 @@
 \chapter{Experiment}
 
-In order to validate that the model is accurate for each motion, the torque that causes the device to perform each motion is determined experimentally. The equivalent values produced by the model can be compared with the measured torques to validate the model quantitatively. However, the torque produced by a DC motor cannot be measured or set directly. The torque of a DC motor is proportional to the current running through it, and when the motor isn't moving, the current is proportional to the voltage across the motor terminals. The terminal voltage is varied in this experiment.
+In order to validate that the model is accurate for each motion, the torque that causes the device to perform each motion is determined experimentally. The equivalent values produced by the model can be compared with the measured torques to validate the model quantitatively. However, the torque produced by a DC motor cannot be measured or set directly. The torque of a DC motor is proportional to the current running through it, and when the motor isn't moving, the current is proportional to the voltage across the motor terminals.
 
 \section{Voltage-torque calibration} \label{sec:Voltage-torque calibration}
 The relationship between terminal voltage and stalling torque is determined experimentally, this will allow subsequent experiments to measure the terminal voltage and calculate the stalling torque.
@@ -165,8 +165,9 @@ This data is plotted in Figure \ref{plotassessment-torque-relation-stage1}, whic
 	\label{plotassessment-torque-relation-stage1}
 \end{figure}
 
+\clearpage
 \section{Current measurement}
-This experiment aims to measure the current running through the motors when the LIM climbs steps. Current is proportional to torque in DC motors, so the curve produced by this experiment can be compared with the simulated torque during the same movement. This will allow the kinematic aspects of the model and simulation to be validated, as the stalling torques from the previous experiment can only validate the statics. A 1 $\Omega$ resistor is placed in series with the motor, so that the voltage across the resistor will be equal to the current running through it.\\
+This experiment aims to measure the current running through the motors when the LIM climbs steps. Current is proportional to torque in DC motors, so the curve produced by this experiment can be compared with the simulated torque during the same movement. This will allow the kinematic aspects of the model and simulation to be validated, as the stalling torques from the previous experiment can only validate the statics. A 1 $\Omega$ resistor is placed in series with the motor, so that the voltage across the resistor will be equal to the current running through it.
 
 \subsection{Variables}
 Independent variable:\\
@@ -187,13 +188,13 @@ $\bullet$ Resistor used\\
 	\item Attach the oscilloscope probe to either end of the resistor.
 	\item Configure the oscilloscope trigger on a rising edge with a 5 second period.
 	\item Place the device against a step or wall so that it will perform Stage 1 motion when powered.
-	\item Power on the device until it has completed stage 1 motion.
+	\item Power on the device until it has completed Stage 1 motion.
 	\item Record the voltage data from the oscilloscope.
 \end{enumerate}
 
 \subsection{Results}
 
-Figure \ref{fig:current-stage-1} shows the plot recorded by the oscilloscope. It shows that there is a large spike in current as the device powers on, followed by a fairly constant but noisy current until a slight dip at 2.7 s, then a drop when it completes stage 1 at 3.25 s. The spike at the start is due the motor producing no counter-electromotive force (EMF) when it is stationary. As the motor shaft initially accelerates, the current rapidly drops due to the counter-EMF produced by the motor. The noise shown in the plot can be attributed to the constant switching of the brushed DC motor. The noise could be eliminated by implementing a low pass filter, but this would also filter out the initial spike. 
+Figure \ref{fig:current-stage-1} shows the plot recorded by the oscilloscope. It shows that there is a large spike in current as the device powers on, followed by a fairly constant but noisy current until a slight dip at 2.7 s, then a drop when it completes Stage 1 at 3.25 s. The spike at the start is due the motor producing no counter-electromotive force (EMF) when it is stationary. As the motor shaft initially accelerates, the current rapidly drops due to the counter-EMF produced by the motor. The noise shown in the plot can be attributed to the constant switching of the brushed DC motor. The noise could be eliminated by implementing a low pass filter, but this would also filter out the initial spike. 
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.8\textwidth]{plots/current-stage-1}
