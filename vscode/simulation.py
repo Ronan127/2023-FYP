@@ -26,43 +26,33 @@ from pydrake.all import JointIndex
 # Click the link and a MeshCat tab should appear in your browser.
 meshcat = StartMeshcat()
 
-
-
 working_directory=os.path.abspath(os.getcwd())
 
-# Create a model visualizer and add the robot arm.
-# visualizer = ModelVisualizer(meshcat=meshcat)
-# visualizer.parser().AddModels(url=myrobot_url)
-# # When this notebook is run in test mode it needs to stop execution without
-# # user interaction. For interactive model visualization you won't normally
-# # need the 'loop_once' flag.
-# test_mode = True if "TEST_SRCDIR" in os.environ else False
-
-# # Start the interactive visualizer.
-# # Click the "Stop Running" button in MeshCat when you're finished.
-# visualizer.Run(loop_once=test_mode)
 
 FRICTION_COEFFICIENT = 1
 STEP_HEIGHT = 0.10
 STEP_PITCH = 0.20
 SLIDER_RANGE = 12
-SLIDER_SETTING = "Stall Torque"
-SLIDER_DEFAULT = 0.5
+SLIDER_SETTING = "Voltage"
+SLIDER_DEFAULT = 0
 STALL_TORQUE = 6
 NO_LOAD_SPEED = 6
 SPEED_BETA_FILTER = 0
 KP = 10
 KD = 0
-TIME_STEP = 0.0001
-START_STEP = 3   
+TIME_STEP = 0.0005
+START_STEP = 1   
 START_OFFSET = 0.08
-SDF_ADDRESS = "/my-robot-addedWeight/robot.sdf"
+SDF_ADDRESS = "/my-robot/robot.sdf"
 SIM_DURATION = 15
 RECORDING = 0
 
 START_POS_X = 0
 START_POS_Y = 0.5-STEP_PITCH*START_STEP+START_OFFSET
 START_POS_Z = STEP_HEIGHT*START_STEP
+
+ANGLEPARTIAL = -0.29
+ANGLEFULL = 0.22
 
 
 
@@ -609,7 +599,7 @@ def find_threshold_torques(start_torque, partial_angle, full_angle):
         assessment = assessAngle(angle, partial_angle, full_angle)
         recordValues(torque, angle, assessment, record)
         if angle > full_angle:
-            fullbracket = torque
+            fullbracket = torque -0.1
         else:
             torque += 0.1
 
@@ -683,14 +673,7 @@ def find_threshold_torques(start_torque, partial_angle, full_angle):
     print("Partial torque: " + str(partial_torque) + "Full torque: " + str(full_torque))
 
 
-    
-
-
-
-
-
-
 # Run the simulation with a small time step. Try gradually increasing it!
-# run_simulation(sim_time_step=TIME_STEP)
-find_threshold_torques(0.5, 0.04, 0.5)
+run_simulation(sim_time_step=TIME_STEP)
+# find_threshold_torques(0.5, ANGLEPARTIAL, ANGLEFULL)
 
