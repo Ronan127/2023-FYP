@@ -46,4 +46,4 @@ Using the simulator:
 
 To run the simulation, run simulation.py. This will open a meshcat instance, which can be opened at http://localhost:7000/. The code here is pramarily based on the tutorial https://deepnote.com/workspace/Drake-0b3b2c53-a7ad-441b-80f8-bf8350752305/project/Tutorials-2b4fc509-aef2-417d-a40d-6071dfed9199/notebook/authoring_multibody_simulation-add293478aac40a984845aa3705eefdd?
 simulation.py has many private defines that can be edited, such as the .sdf file location, stair sizes, and motor properties.
-If the simulator ever pulls an eception, try decreasing the time step or increasing the no load speed, it is likely because the feedback from the motor equation is too sharp.
+If the simulator ever pulls an exception, try decreasing the time step or increasing the no load speed, it is likely because the feedback from the motor equation is too sharp.
