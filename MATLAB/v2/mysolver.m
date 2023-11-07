@@ -1,8 +1,9 @@
-function [solution, remainingEquations] = mysolver(inputs, useSolve, solution)
+function [solution, remainingEquations] = mysolver(inputs, useSolve, solution, setSize)
 arguments 
     inputs = cell;
     useSolve = 1;
     solution = struct;
+    setSize = 10;
 end
 
 %UNTITLED Solves a set of equations through a series of substitutions
@@ -34,7 +35,7 @@ while isempty(equations) == 0
         end
     end
     if timeout == 2
-        [solution, equations, inequalities, timeout] = solveSets(solution, equations, inequalities, timeout);
+        [solution, equations, inequalities, timeout] = solveSets(solution, equations, inequalities, timeout, setSize);
     end
     if timeout == 3
         if (length(symvar(equations)) <= length(equations))&&(useSolve == 1)
@@ -185,7 +186,7 @@ function [solution, equations, inequalities, timeout] = solveEqual(solution, equ
     end
 end
 
-function [solution, equations, inequalities, timeout] = solveSets(solution, equations, inequalities, timeout)
+function [solution, equations, inequalities, timeout] = solveSets(solution, equations, inequalities, timeout, setSize)
     %Find fully defined sets
     varlist = {};
     %List variables in each eq
@@ -201,7 +202,7 @@ function [solution, equations, inequalities, timeout] = solveSets(solution, equa
     for i = 1:length(vareqs)
         if length(vareqs{i}) == minimum
             combination = vareqs{i};
-            for j = 1:10 %Test adding up to 10 equations before giving up
+            for j = 1:setSize %Test adding up to 10 equations before giving up
                 [combination, combinationvars, numvars] = addequations(combination, varlist);
                 if  numvars <= length(combination)
                     %Solve equations through substitution

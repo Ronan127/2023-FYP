@@ -132,6 +132,7 @@ tailKinematics = subs(tailKinematics, y, -ta73);
 tailKinematics = subs(tailKinematics, x, l72);
 tailKinematics = subs(tailKinematics, x1, -v22);
 tailKinematics = subs(tailKinematics, x2, -a22);
+tailKinematics = subs(tailKinematics, c, l7_ab);
 
 
 
@@ -239,6 +240,12 @@ condition_wheel1locked = [a5 == 0; ta5 == 0; v5 == 0; tv5 == 0;
     F_react52 == F_react5g2 + F_react5w2;
     M_react53 == -rw*(F_react5g1+F_react5w2)
     C_friction5 > 0;];
+
+condition_wheel1locked_simple = [a5 == 0; ta5 == 0; v5 == 0; tv5 == 0;
+   C_friction5 == F_react51/F_react52;
+   ];
+
+
 condition_angle_quadrants = [
     -pi/2 <= t13; t13 <= pi/2;
     pi/2 <= t73; t73 <= pi;];
@@ -249,4 +256,4 @@ Core_equations=[eqns_weight; eqns_force;  eqns_gearForce; eqns_moments;  eqns_le
     ]; 
 
 
-save CoreEquations.mat Core_equations condition_2d condition_tailOnStep condition_rolling condition_wheel2NoContact condition_wheel1locked condition_tailOnGround condition_angle_quadrants eqns_radius
+save CoreEquations.mat Core_equations condition_2d condition_tailOnStep condition_rolling condition_wheel2NoContact condition_wheel1locked condition_tailOnGround condition_angle_quadrants eqns_radius condition_wheel1locked_simple
